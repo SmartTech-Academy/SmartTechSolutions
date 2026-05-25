@@ -1,0 +1,49 @@
+{
+  "siderbar": [
+    {
+      "link": "/dashboard/overview",
+      "text": "Dashboard",
+      "icon": "feather-home"
+    },
+    {
+      "link": "/dashboard/enrolled-courses",
+      "text": "Enrolled Courses",
+      "icon": "feather-book-open"
+    },
+    {
+      "link": "/dashboard/wishlist",
+      "text": "My Wishlist",
+      "icon": "feather-bookmark"
+    },
+    {
+      "link": "/dashboard/browse-courses",
+      "text": "Browse Courses",
+      "icon": "feather-shopping-bag"
+    },
+    {
+      "link": "/dashboard/events",
+      "text": "Events",
+      "icon": "feather-list"
+    },
+    {
+      "link": "/dashboard/student-profile",
+      "text": "My Profile",
+      "icon": "feather-user"
+    },
+    {
+      "link": "/dashboard/student-quiz-attempts",
+      "text": "My Quiz Attempts",
+      "icon": "feather-message-square"
+    },
+    {
+      "link": "/dashboard/settings",
+      "text": "Settings",
+      "icon": "feather-settings"
+    },
+    {
+      "link": "/",
+      "text": "Logout",
+      "icon": "feather-log-out"
+    }
+  ]
+}

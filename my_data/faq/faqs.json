@@ -1,0 +1,419 @@
+{
+
+
+    "WebsiteFaqData": [
+    {
+      "faqBody": [
+        {
+          "collapse": "collapseTwenty3",
+          "heading": "headingTwenty3",
+          "expanded": true,
+          "collapsed": true,
+          "show": true,
+          "accordionTitle": "How do you ensure code quality and testing?",
+          "desc": "Quality is built in via automated CI/CD pipelines, mandatory code reviews, and a combination of unit, integration, and end-to-end testing in every sprint. Dedicated QA engineers partner with development teams to catch issues early and maintain a defect rate below 1%."
+        },
+        {
+          "collapse": "collapseTwentyOne3",
+          "heading": "headingTwentyOne3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "How do you handle project management and communication?",
+          "desc": "We use well-defined processes for planning, status reporting, and stakeholder alignment, ensuring transparency at every step. Weekly or bi-weekly checkpoints, supplemented by real-time dashboards, keep you fully informed and empowered to guide the project."
+        },
+        {
+          "collapse": "collapseTwentyTwo3",
+          "heading": "headingTwentyTwo3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "What industries have you served?",
+          "desc": "We've successfully executed projects in e-commerce, healthcare, real estate, fintech, telecommunications, and niche sectors like AR/VR and blockchain. Our deep industry expertise means we understand sector-specific compliance, performance requirements, and market dynamics."
+        },
+        {
+          "collapse": "collapseTwentyThree3",
+          "heading": "headingTwentyThree3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "How do you ensure data security and compliance?",
+          "desc": "We implement robust security controls encryption at rest and in transit, strict access management, and continuous vulnerability scanning to protect your data. Our processes align with ISO/IEC 27001, PCI DSS, and CISA Secure Software Development Attestation standards to keep you audit-ready."
+        },
+        {
+          "collapse": "collapseTwentyFour3",
+          "heading": "headingTwentyFour3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "Can you integrate with our existing systems and third-party services?",
+          "desc": "We handle end-to-end data migrations, mapping and transferring your legacy data into modern platforms with zero downtime. Through Web API Services, we build connectors that seamlessly integrate your CRM, ERP, and other enterprise tools."
+        },
+        {
+          "collapse": "collapseTwentyFive3",
+          "heading": "headingTwentyFive3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "How do you manage changes in project scope?",
+          "desc": "All change requests undergo a formal impact assessment evaluating timeline, budget, and resource implications before approval. This transparent process prevents scope creep and keeps your project on track and within budget."
+        },
+        {
+          "collapse": "collapseTwentySix3",
+          "heading": "headingTwenty3Six",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "What level of customer involvement is expected?",
+          "desc": "You choose your level of engagement, whether that's weekly strategy sessions or milestone-based demos so you stay in full control. We actively involve you through collaborative tools and feedback loops, ensuring your vision shapes every decision."
+        },
+        {
+          "collapse": "collapseTwentySeven3",
+          "heading": "headingTwentySeven3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "Who owns the intellectual property and deliverables?",
+          "desc": "Upon full payment, we transfer all IP rights—including source code, documentation, and design assets—to you, with no hidden licensing fees. Our straightforward IP agreements guarantee you unfettered freedom to extend, adapt, or maintain your solution long after launch."
+        },
+        {
+          "collapse": "collapseTwentyEight3",
+          "heading": "headingTwentyEight3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "What maintenance and support do you provide post-launch?",
+          "desc": "Once your solution goes live, we offer proactive maintenance including updates, security patches, and performance optimizations to keep systems running smoothly. Our dedicated support team is available under a formal SLA, with critical issues addressed on average within two hours."
+        },
+        {
+          "collapse": "collapseOne3",
+          "heading": "headingOne3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "What budget estimate can I expect for a mobile or web app?",
+          "desc": "We tailor estimates based on complexity, feature set, and platform choice, refining costs through an initial discovery phase to align with your financial goals and deliverables"
+        },
+        {
+          "collapse": "collapseTwo3",
+          "heading": "headingTwo3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "What is blockchain and how can it benefit my business?",
+          "desc": "Blockchain is a decentralized ledger that ensures trust and transparency without intermediaries, enabling secure transactions and immutable records. <br /><br /> Blockchain can benefit businesses by providing a transparent, secure, and immutable ledger for tracking transactions and managing data, fostering trust and efficiency."
+        },
+        {
+          "collapse": "collapseThree3",
+          "heading": "headingThree3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "Which industries can leverage blockchain to drive efficiency?",
+          "desc": "Finance, supply chain, real estate, digital identity, and voting systems are among the sectors adopting blockchain to enhance security and streamline operations."
+        },
+        {
+          "collapse": "collapseFour3",
+          "heading": "headingFour3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "What business goals should my website or app achieve?",
+          "desc": "Whether it's lead generation, user engagement, or e-commerce conversions, we define clear KPIs up front and design solutions optimized to hit those targets."
+        },
+        {
+          "collapse": "collapseFive3",
+          "heading": "headingFive3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "What is AI and how can it benefit my business?",
+          "desc": "AI refers to systems that perform tasks requiring human intelligence—like pattern recognition and decision-making—driving automation, insights, and efficiency across industries. <br /><br /> AI can benefit businesses by automating tasks, improving decision-making through data analysis, and enhancing customer experiences."
+        },
+        {
+          "collapse": "collapseSix3",
+          "heading": "headingSix3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "What types of AI projects accelerate operational efficiency?",
+          "desc": "Enterprises deploy generative AI tools, virtual assistants, and document-summarization bots to streamline workflows and empower employees with decision-support."
+        },
+        {
+          "collapse": "collapseSeven3",
+          "heading": "headingSeven3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "How do you choose the right game engine and platform?",
+          "desc": "We assess scope, target devices, and performance needs to recommend engines like Unity or Unreal for cross-platform scalability."
+        },
+        {
+          "collapse": "collapseEight3",
+          "heading": "headingEight3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "Should I choose Web, Native, or Hybrid development for my project?",
+          "desc": "Native apps deliver the best performance and UX by targeting a single platform (iOS or Android), while hybrid solutions leverage web technologies for cross-platform reach and faster time-to-market."
+        },
+        {
+          "collapse": "collapseNine3",
+          "heading": "headingNine3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "What is an NFT marketplace and how does it work?",
+          "desc": "An NFT marketplace combines a user-friendly front end with blockchain-powered back end, letting creators mint, list, and trade unique tokens securely."
+        },
+        {
+          "collapse": "collapseTen3",
+          "heading": "headingTen3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "How long does it take and what does it cost to build an NFT marketplace?",
+          "desc": "Fully custom platforms can take 4-7 months, while white-label solutions launch in 3 weeks at a fraction of the cost"
+        },
+        {
+          "collapse": "collapseEleven3",
+          "heading": "headingEleven3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "What is your process for game monetization and revenue generation?",
+          "desc": "We integrate models, paid downloads, in-app purchases, ads, or subscriptions tailored to your genre and audience to maximize ROI."
+        },
+        {
+          "collapse": "collapseTwelve3",
+          "heading": "headingTwelve3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "What should I consider before implementing AI?",
+          "desc": "Prioritize ethical guidelines, data privacy, and bias mitigation to ensure responsible, compliant AI that delivers reliable outcomes."
+        },
+        {
+          "collapse": "collapseThirteen3",
+          "heading": "headingThirteen3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "How secure is blockchain technology?",
+          "desc": "Its distributed consensus and cryptographic hashing make blockchains virtually tamper-proof, ensuring data integrity and resistance to single-point failures."
+        },
+        {
+          "collapse": "collapseForteen3",
+          "heading": "headingForteen3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "How long does product design typically take?",
+          "desc": "Simple digital products finish in 4-8 weeks, while complex multi-platform solutions may require 12-16 weeks."
+        },
+        {
+          "collapse": "collapseFifteen3",
+          "heading": "headingFifteen3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "What is a Minimum Viable Product (MVP)?",
+          "desc": "An MVP is the simplest version of a product with just enough features to attract early adopters and validate ideas."
+        },
+        {
+          "collapse": "collapseSixteen3",
+          "heading": "headingSixteen3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "Why build an MVP for my business and what features should be included?",
+          "desc": "An MVP enables rapid market validation, reduces risk, and guides iterative development using real user feedback. <br /><br /> Prioritize core functionality that solves the critical user problem and delivers immediate value."
+        },
+        {
+          "collapse": "collapseSeventeen3",
+          "heading": "headingSeventeen3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "What is your code audit process and how do you handle audit clauses and forbearance?",
+          "desc": "After NDA signing, we review infrastructure, perform manual and automated code analysis, and deliver a prioritized findings report. We negotiate balanced audit terms during renewals and advise on audit forbearance to mitigate vendor disputes."
+        },
+        {
+          "collapse": "collapseEighteen3",
+          "heading": "headingEighteen3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "How often should I schedule updates and maintenance?",
+          "desc": "Follow vendor release cycles—monthly or quarterly—for updates, with health checks scheduled per usage patterns."
+        },
+        {
+          "collapse": "collapseNinteen3",
+          "heading": "headingNinteen3",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "What is a maintenance window and how is it managed?",
+          "desc": "A maintenance window is a pre-planned downtime period for critical updates, coordinated via SLAs and client notifications."
+        }
+      ],
+      "faqBody2": [
+        {
+          "collapse": "collapseOne4",
+          "heading": "headingOne4",
+          "expanded": true,
+          "collapsed": true,
+          "show": true,
+          "accordionTitle": "Are the courses completely free?",
+          "desc": "Absolutely, every course on our platform is 100% free, from start to finish. You'll never encounter hidden fees, paywalls, or surprise subscription charges. Just sign up, dive into our curated videos, and start building your skills today, no credit card required."
+        },
+        {
+          "collapse": "collapseTwo4",
+          "heading": "headingTwo4",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "How do I enroll and start a course?",
+          "desc": "Enrollment is as simple as clicking “Start Course” on any course page for registered members, but unregistered members could simply sign up first. <br /><br /> Registration is free, no approvals just instant access. Within seconds, you'll be watching engaging video lessons and tackling real-world projects. Plus, our platform automatically saves your place, so you can pick up right where you left off."
+        },
+        {
+          "collapse": "collapseThree4",
+          "heading": "headingThree4",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "Do I need any prerequisites or prior experience?",
+          "desc": "Most of our courses are beginner-friendly, requiring no prior coding knowledge. We've structured paths from Web Development to AI and Blockchain, so you can choose your starting point based on interest rather than expertise. If you're aiming for advanced topics like machine learning, a basic understanding of programming logic can help, but it's never a barrier to getting started."
+        },
+        {
+          "collapse": "collapseFour4",
+          "heading": "headingFour4",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "What hardware or software do I need?",
+          "desc": "All you need is a modern web browser like Chrome, Firefox, Edge, or Safari and a reliable internet connection. There are no specialized hardware requirements for most courses, and since our courses run entirely in the cloud or through embedded videos, you won't need to install complex toolchains. That means you can learn on any laptop, desktop, or even some tablets without hassle."
+        },
+        {
+          "collapse": "collapseFive4",
+          "heading": "headingFive4",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "How long will it take to complete a course?",
+          "desc": "Our courses are self-paced. If you're tackling a short guided project, you can finish in just a few hours. More comprehensive paths like a full Web Development or AI track might span 4-16 weeks at a relaxed pace of 4-8 hours per week. You're in control: accelerate through familiar topics or take extra time on challenging modules."
+        },
+        {
+          "collapse": "collapseSix4",
+          "heading": "headingSix4",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "Can I audit courses without paying",
+          "desc": "Yes, your access to all instructional materials, including videos and exercises, is completely unrestricted. You'll never be asked to pay to view lessons. Audit any course at zero cost, forever."
+        },
+        {
+          "collapse": "collapseSeven4",
+          "heading": "headingSeven4",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "How do I track my progress?",
+          "desc": "Our intuitive dashboard shows you which lessons you've completed, pending exercises, and earned badges. Behind the scenes, we leverage a Skill-XP system—similar to those on leading platforms, to visualize your evolving mastery and motivate your next learning milestone."
+        },
+        {
+          "collapse": "collapseEight4",
+          "heading": "headingEight4",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "What support is available if I get stuck?",
+          "desc": "You're never alone. Our volunteer-driven support forum is monitored around the clock by experienced contributors who'll guide you through challenges. Ask a question, share code snippets, and receive constructive feedback, often within hours."
+        },
+        {
+          "collapse": "collapseNine4",
+          "heading": "headingNine4",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "Is there a community to help me learn together?",
+          "desc": "Yes, join our vibrant community of fellow learners in topic-specific channels, study groups, and live coding sessions. Whether you're debugging a tricky bug or celebrating a project launch, you'll find like-minded peers ready to collaborate, mentor, and cheer you on."
+        },
+        {
+          "collapse": "collapseTen4",
+          "heading": "headingTen4",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "Can I learn at my own pace?",
+          "desc": "Our library of on-demand video lessons and exercises is available 24/7. Jump ahead, revisit tricky topics, or pause entirely your learning schedule is entirely flexible. There are no deadlines, only milestones you set for yourself."
+        },
+        {
+          "collapse": "collapseEleven4",
+          "heading": "headingEleven4",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "How can I interact with instructors and fellow learners?",
+          "desc": "Although lessons are on-demand, you're never isolated. Join topic-specific discussion forums, schedule peer coding sessions, and tap into our volunteer-led support channels where seasoned mentors and enthusiastic classmates will help you debug code or brainstorm project ideas"
+        },
+        {
+          "collapse": "collapseTwelve4",
+          "heading": "headingTwelve4",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "What programs and learning paths do you offer?",
+          "desc": "We provide a spectrum of learning paths, from beginner-friendly Web Development and UI/UX Design to advanced AI, Blockchain, and 3D Animation tracks, curated from expert created videos and organized into clear, step-by-step curricula so you can follow a proven roadmap to mastery."
+        },
+        {
+          "collapse": "collapseThirdteen4",
+          "heading": "headingThirdteen4",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "What kind of technical support is available?",
+          "desc": "If you hit a technical snag—whether it's streaming issues or code environment setup—our dedicated support team is ready to assist you via live chat, email, and a comprehensive help center, ensuring you stay focused on learning rather than troubleshooting."
+        },
+        {
+          "collapse": "collapseForteen4",
+          "heading": "headingForteen4",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "How are assessments and feedback handled?",
+          "desc": "We embed quizzes and capstone projects throughout each track. Automated tests give you instant feedback, while volunteer mentors provide qualitative insights to refine your approach—mirroring real-world development workflows."
+        },
+        {
+          "collapse": "collapseFifteen4",
+          "heading": "headingFifteen4",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "How is my progress tracked?",
+          "desc": "Your personalized dashboard highlights completed lessons, pending exercises, and skill-level milestones while detailed progress reports help you identify strengths and focus areas."
+        },
+        {
+          "collapse": "collapseSixteen4",
+          "heading": "headingSixteen4",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "What if I need to pause or withdraw from a course?",
+          "desc": "You control your journey. Pause at any point without penalty, your progress is saved indefinitely. If you decide to withdraw, simply stop accessing the course; there are no financial commitments or formal drop-out procedures required."
+        },
+        {
+          "collapse": "collapseSeventeen4",
+          "heading": "headingSeventeen4",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "accordionTitle": "Is the curriculum regularly updated to reflect industry trends?",
+          "desc": "Absolutely. Our content team continuously reviews emerging technologies and incorporates the latest videos—so you're always learning cutting-edge skills, whether that's the newest JavaScript framework or breakthroughs in AI and blockchain, etc."
+        }
+      ]
+    }
+  ]
+
+
+}

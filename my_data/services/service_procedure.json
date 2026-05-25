@@ -1,0 +1,409 @@
+{
+  "web_dev_service_procedure": [
+    {
+      "number_1": "01",
+      "title_1": "Discovery Phase",
+      "desc_1": "We begin by gaining a deep understanding of your vision and defining a clear project scope.",
+      "number_2": "02",
+      "title_2": "Architecture",
+      "desc_2": "We strategically design your project's framework to align with your business objectives.",
+      "serviceProcedureBodyRemains": [
+        {
+          "number": "03",
+          "title": "UI/UX Design",
+          "desc": "Our designers craft intuitive, user-friendly and visually appealing interfaces that captivate and engage effortlessly."
+        },
+        {
+          "number": "04",
+          "title": "Front-end Development",
+          "desc": "We transform the designs into immersive digital experiences with intuitive, responsive interfaces."
+        },
+        {
+          "number": "05",
+          "title": "Back-end Development",
+          "desc": "We deliver seamless, frictionless experiences combined with bulletproof data management."
+        },
+        {
+          "number": "06",
+          "title": "API Integration",
+          "desc": "Seamlessly connect your web solution with third-party systems."
+        },
+        {
+          "number": "07",
+          "title": "Quality Assurance & Testing",
+          "desc": "We rigorously test every aspect of your web solution to ensure seamless performance and flawless functionality."
+        },
+        {
+          "number": "08",
+          "title": "Dedicated Support",
+          "desc": "We ensure your web solution stays ahead with ongoing updates and dedicated support."
+        }
+      ]
+    }
+  ],
+  "mobile_app_dev_service_procedure": [
+    {
+      "number_1": "01",
+      "title_1": "Planning & Research",
+      "desc_1": "We analyze requirements, set clear goals, and conduct market research to align your app with user needs and attunes to your business objectives.",
+      "number_2": "02",
+      "title_2": "Design & Wireframing",
+      "desc_2": "Our designers craft wireframes to map out the app's structure, ensuring seamless user experience. Interactive prototypes help you visualize the flow and refine details early on.",
+      "serviceProcedureBodyRemains": [
+        {
+          "number": "03",
+          "title": "Development & Integration",
+          "desc": "We kick off the development process, simultaneous creating and testing builds to ensure top-tier performance, security, and scalability. Whether creating a new app or integrating with existing systems, we ensure seamless functionality and top performance."
+        },
+        {
+          "number": "04",
+          "title": "Quality Assurance & Testing",
+          "desc": "Our team rigorously tests the final build of your app for functionality, usability, performance, and compatibility across devices, to identify and resolve any issues. We conduct functional, security, and performance tests to guarantee a smooth and secure app experience."
+        },
+        {
+          "number": "05",
+          "title": "Final Deployment",
+          "desc": "Next, we prioritize a secure launch for your iPhone & Android app, strictly following Apple's and Google Play guidelines and ensuring all required documentation and assets are in place."
+        },
+        {
+          "number": "06",
+          "title": "Post-launch Support",
+          "desc": "After the app goes live, we provide continuous monitoring, to ensure your app stays updated, optimized, and aligned with evolving user needs and platform changes."
+        }
+      ]
+    }
+  ],
+  "blockchain_dev_procedure": [
+    {
+      "number_1": "01",
+      "title_1": "Conceptualization & Strategy",
+      "desc_1": "We understand your idea, clearly defining your vision and target audience, set business goals, and meticulously mapping the blockchain journey to pinpoint core features.",
+      "number_2": "02",
+      "title_2": "Design and Prototyping",
+      "desc_2": "We continue by crafting detailed wireframes and interactive prototypes that elegantly map out the entire user journey. This technical blueprint, places smart contract and security at its core.",
+      "serviceProcedureBodyRemains": [
+        {
+          "number": "03",
+          "title": "Development & Testing",
+          "desc": "Develop a next-generation Web3 solution that leverages cutting-edge technologies, adheres to industry best practices, and undergoes rigorous testing for unmatched performance and ironclad security."
+        },
+        {
+          "number": "04",
+          "title": "Deployment & Integration",
+          "desc": "We expertly launch your blockchain products and seamlessly integrate them into your existing systems."
+        },
+        {
+          "number": "05",
+          "title": "Support and Evolution",
+          "desc": "Experience seamless operations with our comprehensive maintenance and dependable post-launch support."
+        }
+      ]
+    }
+  ],
+  "nft_marketplace_dev_procedure": [
+    {
+      "number_1": "01",
+      "title_1": "Ideation and Assets Selection",
+      "desc_1": "Discover and curate the assets that truly deserve tokenization, ones that resonate with your platform's unique identity and capture your audience's interests.",
+      "number_2": "02",
+      "title_2": "User Role Establishment",
+      "desc_2": "Establish clear user roles and tailored permissions to foster seamless interactions and effortless management throughout your NFT marketplace ecosystem.",
+      "serviceProcedureBodyRemains": [
+        {
+          "number": "03",
+          "title": "Plan Development Workflow",
+          "desc": "Craft a comprehensive development roadmap by clearly defining each project phase with precise milestones and set timelines. This strategic approach ensures every step is measurable and aligned with your objectives, paving the way for a transparent and successful project journey."
+        },
+        {
+          "number": "04",
+          "title": "Build Smart Contracts",
+          "desc": "Craft powerful smart contracts customized for your marketplace, ensuring every transaction is executed with uncompromising security and crystal-clear transparency."
+        },
+        {
+          "number": "05",
+          "title": "Token Integration",
+          "desc": "Seamlessly integrate tokens into your platform, empowering users to effortlessly mint, buy, sell, and trade NFTs. This streamlined approach creates a frictionless digital experience, opening up endless possibilities in the evolving world of blockchain innovation."
+        },
+        {
+          "number": "06",
+          "title": "Quality Assurance, Launch and Iterate",
+          "desc": "Experience a seamless user journey with our meticulous quality testing process that uncovers and fixes every glitch. Launch your NFT marketplace with confidence, leveraging real-time user feedback to continuously refine and elevate your platform."
+        }
+      ]
+    }
+  ],
+  "game_dev_service_procedure": [
+    {
+      "number_1": "01",
+      "title_1": "Concept & Planning",
+      "desc_1": "We begin by immersing ourselves in your vision and business objectives, carefully defining the game concept, its core mechanics, the audience it will captivate and platform requirements to establish a clear project roadmap.",
+      "number_2": "02",
+      "title_2": "Game Design Document (GDD)",
+      "desc_2": "We develop a comprehensive Game Design Document (GDD) that meticulously outlines gameplay mechanics, narrative arcs, and core features, ensuring that every team member is aligned for a seamless development journey.",
+      "serviceProcedureBodyRemains": [
+        {
+          "number": "03",
+          "title": "Concept Art & Storyboarding",
+          "desc": "Our talented artists craft intricate storyboards and original concept art, bringing characters, environments, and key game elements to life. These visuals serve as a creative blueprint, shaping the game's direction and setting the perfect tone for an immersive experience."
+        },
+        {
+          "number": "04",
+          "title": "Game Asset Creation",
+          "desc": "Our talented team of 3D and 2D artists crafts premium game assets using state-of-the-art tools and technologies. We design visually stunning characters, immersive environments, and detailed in-game elements that bring your game to life."
+        },
+
+        {
+          "number": "05",
+          "title": "Art & Animation",
+          "desc": "Bring your game to life with our team of expert animators, who craft fluid, lifelike animations for characters and objects. This meticulous attention to detail delivers a captivating, realistic gaming experience that truly immerses your players."
+        },
+        {
+          "number": "06",
+          "title": "Game Mechanics Development",
+          "desc": "During the development of core mechanics, we prioritize intuitive controls, balanced gameplay, and seamless physics, ensuring a game that's both engaging and accessible for players of every skill level."
+        },
+        {
+          "number": "07",
+          "title": "AI Integration and Game Optimization",
+          "desc": "We harness advanced AI systems that enable NPCs and environments to dynamically respond to player actions, deepening the gameplay and intensifying challenges at every level. Additionally, our performance optimization guarantees crisp graphics and smooth gameplay across all devices, from high-end consoles to mobile platforms."
+        },
+
+        {
+          "number": "08",
+          "title": "Testing & Game Launch",
+          "desc": "Our dedicated QA team meticulously tests every aspect of your game, identifying and resolving bugs, glitches, and performance issues, to ensure a polished, flawless experience across multiple platforms at launch. We also guide you through a seamless launch process, expertly releasing your game on your chosen platforms."
+        },
+        {
+          "number": "09",
+          "title": "Post-launch Dedicated Support",
+          "desc": "Our commitment doesn't stop at launch. We continuously update, refine, and enhance your game, delivering timely bug fixes and exciting improvements to keep it fresh and engaging. With our dedicated support, your game evolves seamlessly and remains at the forefront of innovation."
+        }
+      ]
+    }
+  ],
+  "product_design_service_procedure": [
+    {
+      "number_1": "01",
+      "title_1": "Discovery",
+      "desc_1": "We ensure you gain a deep understanding of your market and users, empowering you to make strategic decisions that accelerate your path to product-market fit in record time.",
+      "number_2": "02",
+      "title_2": "UX Design",
+      "desc_2": "We ensure your users are delighted by leveraging a research-driven design process. We begin with detailed mockups and comprehensive usability audits, enabling us to pinpoint and implement measurable product enhancements that truly resonate.",
+      "serviceProcedureBodyRemains": [
+        {
+          "number": "03",
+          "title": "UI Design",
+          "desc": "We specialize in crafting a seamless, visually compelling experience that embodies your brand's unique language. By designing intuitive interfaces and consistent messaging, we forge a deep emotional connection with your customers, transforming every interaction into a memorable, engaging journey."
+        },
+        {
+          "number": "04",
+          "title": "Desktop & Mobile Optimization",
+          "desc": "We deliver a seamless, responsive design that ensures your application performs brilliantly on every device, desktop, mobile, or tablet. Our expert solutions guarantee that your digital experience remains intuitive and captivating, no matter where or how your users connect."
+        },
+        {
+          "number": "05",
+          "title": "Design Systems",
+          "desc": "Unlock a robust design ecosystem with our comprehensive library of pre-built components and integrated code. Our design systems empower your teams to achieve unparalleled scalability and consistent brand experiences, streamlining collaboration and accelerating your product's evolution."
+        }
+      ]
+    }
+  ],
+  "two_dimentional_animation_service_procedure": [
+    {
+      "number_1": "01",
+      "title_1": "Discovery & Conceptualization ",
+      "desc_1": "Understanding your brand's essence and objectives is fundamental to crafting an animation strategy that truly connects with your audience. By delving into your brand identity and goals, we ensure that each animated frame not only captures attention but also embodies your message, fostering a deeper and more meaningful engagement with your viewers.",
+      "number_2": "02",
+      "title_2": "Storyboarding & Design",
+      "desc_2": "Our creative team crafts detailed storyboards and initial design concepts to map out the look, feel, and flow of your project. This early visual blueprint ensures every element aligns perfectly with your goals, setting a clear direction before production begins.",
+      "serviceProcedureBodyRemains": [
+        {
+          "number": "03",
+          "title": "Animation Development",
+          "desc": "From the initial spark to the final flourish, our seasoned team partners with you at every stage of your journey. Leveraging advanced animation software, our skilled animators transform your concepts into lifelike 2D designs with seamless motion, ensuring each feature is meticulously crafted to perfection."
+        },
+        {
+          "number": "04",
+          "title": "Refinements & Sound Design",
+          "desc": "We don't just edit video, we craft an immersive audio-visual journey. Our editing process fine-tunes every voiceover, layers dynamic sound effects, and adds subtle audio accents to transform your content into a captivating cinematic experience. By meticulously editing voiceovers, sound effects, and ambient sounds, we elevate your video's auditory landscape, ensuring clarity and immersion."
+        },
+        {
+          "number": "05",
+          "title": "Final Review & Delivery",
+          "desc": "We collaborate closely with you, refining the animation through your valuable feedback to ensure it surpasses your expectations, delivering it in your preferred format for a flawless final product. Our expert team refines every detail to ensure your project not only meets but exceeds your expectations, delivered in the format you love."
+        }
+      ]
+    }
+  ],
+  "three_dimentional_animation_service_procedure": [
+    {
+      "number_1": "01",
+      "title_1": "Discovery & Conceptualization",
+      "desc_1": "Understanding your vision, goals, and overall animation approach is fundamental to crafting an animation strategy that truly connects with your audience. By delving into your brand identity and goals, we ensure that each animated frame not only captures attention but also embodies your message, fostering a deeper and more meaningful engagement with your viewers.",
+      "number_2": "02",
+      "title_2": "Scriptwriting & Storyboarding",
+      "desc_2": "We craft a captivating narrative, writing a polished script and detailed storyboards to seamlessly guide viewers through each pivotal scene, ensuring your animation unfolds with irresistible flow, emotional impact, and visual clarity.",
+      "serviceProcedureBodyRemains": [
+        {
+          "number": "03",
+          "title": "3D Modeling",
+          "desc": "Our veteran 3D artists bring decades of expertise to every project—crafting hyper-realistic characters, immersive environments, and meticulously detailed props that not only meet your highest quality standards but consistently surpass them, ensuring your vision comes to life with unparalleled precision and cinematic flair."
+        },
+        {
+          "number": "04",
+          "title": "Texturing and Rigging",
+          "desc": "We breathe life into every character by meticulously crafting a detailed skeletal rig and layering it with rich, lifelike textures ensuring every movement feels as seamless and captivating as the story you're telling."
+        },
+        {
+          "number": "05",
+          "title": "Animation & Motion Design",
+          "desc": "With decades of animation mastery behind us, our seasoned artists breathe life into every scene, crafting ultra-realistic movements, expressive character nuances, and dazzling visual effects that captivate and convince your audience at first glance."
+        },
+        {
+          "number": "06",
+          "title": "Lighting and Shading",
+          "desc": "By harnessing our cutting-edge techniques, from dynamic lighting and lifelike shadows to expert color grading. We transform every animation into an immersive, visually stunning experience that captivates viewers and elevates your brand's storytelling."
+        },
+        {
+          "number": "07",
+          "title": "Rendering",
+          "desc": "Our rendering team meticulously perfects every frame, ensuring each pixel is crafted with precision to deliver high-definition visuals. By focusing on frame-by-frame detail, we enhance the clarity and fluidity of motion, resulting in animations that are not only visually stunning but also rich in depth and realism."
+        },
+        {
+          "number": "08",
+          "title": "Compositing & Special Effects",
+          "desc": "By seamlessly integrating cutting-edge visual effects (VFX), meticulously crafted backgrounds, and advanced post-production techniques, we transform ordinary footage into cinematic masterpieces that elevate your storytelling to unparalleled heights."
+        },
+        {
+          "number": "09",
+          "title": "Review & Revisions",
+          "desc": "We present the initial draft for your review, encouraging detailed feedback to guide precise refinements. This collaborative process guarantees the final product not only meets but exceeds your expectations, delivering a compelling visual narrative tailored to your objectives."
+        },
+        {
+          "number": "10",
+          "title": "Project Delivery & Support",
+          "desc": "We deliver meticulously crafted animations in versatile formats, ensuring seamless integration into your marketing strategies, presentations, and campaigns. By providing content that is both captivating and adaptable, we help you engage your audience effectively across various platforms, enhancing your brand's impact and reach."
+        }
+      ]
+    }
+  ],
+  "three_dimentional_modeling_service_procedure": [
+    {
+      "number_1": "01",
+      "title_1": "Conceptualization",
+      "desc_1": "By crafting thoughtful initial designs and drafts, you establish a robust conceptual framework that accelerates precise 3D modeling, enabling rapid prototyping, iterative refinement, and an optimized final design that perfectly brings your vision to life",
+      "number_2": "02",
+      "title_2": "3D Modeling",
+      "desc_2": "Crafting detailed 3D models with precise geometry ensures accurate representation of a product's design, structure, and functionality, facilitating enhanced visualization, efficient prototyping, and early detection of design flaws, thereby streamlining the development process and reducing costs.",
+      "serviceProcedureBodyRemains": [
+        {
+          "number": "03",
+          "title": "Texturing & Material Application",
+          "desc": "Applying realistic textures and materials to 3D models significantly enhances their visual appeal by adding intricate surface details and simulating real-world material properties, resulting in a lifelike representation that closely mirrors the final product's look and feel."
+        },
+        {
+          "number": "04",
+          "title": "Rendering & Visualization",
+          "desc": "Harnessing advanced 3D rendering techniques, we produce high-quality, photorealistic images and animations that showcase your product from multiple angles, providing potential customers with a comprehensive visual experience that enhances engagement and drives informed purchasing decisions."
+        },
+        {
+          "number": "05",
+          "title": "Review & Refinement",
+          "desc": "By actively collaborating on feedback and meticulously fine-tuning the model to meet your specifications, we ensure the final output aligns seamlessly with your vision, resulting in a product that truly reflects your goals."
+        },
+        {
+          "number": "06",
+          "title": "Final Delivery",
+          "desc": "We deliver meticulously optimized 3D models and assets, primed for seamless integration across platforms, from rapid prototyping to dynamic marketing campaigns and immersive interactive experiences, ensuring exceptional performance and visual fidelity."
+        }
+      ]
+    }
+  ],
+  "two_dimentional_art_service_procedure": [
+    {
+      "number_1": "01",
+      "title_1": "Concept Development",
+      "desc_1": "This initial phase involves understanding the project's goals, target audience, and desired style. Artists collaborate with clients to brainstorm ideas, create mood boards, and establish a clear vision for the artwork.",
+      "number_2": "02",
+      "title_2": "Sketching and Drafting",
+      "desc_2": "Artists produce rough sketches to outline the composition and structure of the artwork. This step allows for experimentation with different layouts and elements before committing to a final design.",
+      "serviceProcedureBodyRemains": [
+        {
+          "number": "03",
+          "title": "Color Exploration",
+          "desc": "Once the sketches are approved, color schemes are explored to determine the mood and tone of the piece. Artists may create color studies to visualize different palettes and lighting scenarios."
+        },
+        {
+          "number": "04",
+          "title": "Refinement and Detailing",
+          "desc": "The chosen design is refined with added details, textures, and shading to enhance depth and realism. This stage focuses on polishing the artwork to meet the desired quality standards."
+        },
+        {
+          "number": "05",
+          "title": "Integration and Testing",
+          "desc": "The finalized art assets are integrated into the intended platform, such as a game or animation. Testing ensures that the visuals function correctly within the context, maintaining consistency and performance."
+        },
+        {
+          "number": "06",
+          "title": "Quality Assurance",
+          "desc": "A thorough review is conducted to verify that the artwork aligns with the project's requirements and is free of errors. Feedback is gathered, and necessary adjustments are made to achieve the final product."
+        }
+      ]
+    }
+  ],
+  "mvp_development_service_procedure": [
+    {
+      "number_1": "01",
+      "title_1": "Analysis",
+      "desc_1": "Aligning your vision with market trends and our technical expertise enables us to craft a strategic product roadmap that not only meets current demands but also positions your product for future success.",
+      "number_2": "02",
+      "title_2": "Design",
+      "desc_2": "By conducting thorough user research to understand behaviors and pain points, we design intuitive interfaces and develop functional prototypes that align with user needs and enhance overall user experience.",
+      "serviceProcedureBodyRemains": [
+        {
+          "number": "03",
+          "title": "Development",
+          "desc": "By strategically selecting an optimal tech stack aligned with your project's goals and collaborating closely with Quality Assurance teams, we ensure the development of a stable, high-performance MVP that accelerates time-to-market and enhances user satisfaction."
+        },
+        {
+          "number": "04",
+          "title": "QA & Delivery",
+          "desc": "To ensure your MVP meets quality standards and functions seamlessly across platforms, conduct comprehensive testing, including unit, integration, and system tests, followed by meticulous cross-platform evaluations to identify and resolve inconsistencies, and accompany the release with detailed notes that document new features, resolved issues, and any known limitations, thereby enhancing user experience and facilitating transparent communication."
+        },
+        {
+          "number": "05",
+          "title": "Support",
+          "desc": "To effectively monitor your Minimum Viable Product (MVP) and drive its evolution, implement a feedback loop that involves tracking key performance indicators (KPIs), gathering user feedback through surveys and analytics, and iteratively refining the product based on these insights. This approach ensures your MVP remains aligned with user needs and market demands."
+        }
+      ]
+    }
+  ],
+  "ai_development_service_procedure": [
+    {
+      "number_1": "01",
+      "title_1": "Discovery Phase",
+      "desc_1": "By conducting a thorough assessment of your business needs and clearly defining the project scope, we align AI solutions with your strategic objectives, ensuring that the implementation addresses specific challenges and delivers measurable value.",
+      "number_2": "02",
+      "title_2": "Planning Stage",
+      "desc_2": "We develop tailored AI strategies that align with your project's scope and vision, ensuring that each initiative is purpose-driven, ethically grounded, and designed to deliver measurable business value.",
+      "serviceProcedureBodyRemains": [
+        {
+          "number": "03",
+          "title": "AI Development",
+          "desc": "We employ an agile development methodology tailored for AI projects, enabling us to iteratively integrate AI features and build standalone products through collaborative, cross-functional teams, continuous feedback, and adaptive planning, ensuring rapid delivery of high-quality, data-driven solutions."
+        },
+        {
+          "number": "04",
+          "title": "Testing and Deployment",
+          "desc": "We rigorously test your AI solutions for functionality, accuracy, and responsiveness, adhering to best practices in AI testing and documentation to ensure reliability and transparency before deployment."
+        },
+        {
+          "number": "05",
+          "title": "Ongoing Support",
+          "desc": "Our comprehensive AI support services ensure your models remain accurate and efficient by continuously updating them with new datasets, retraining to mitigate model drift, and optimizing performance to adapt to evolving data patterns, thereby maintaining their relevance and reliability in dynamic environments."
+        }
+      ]
+    }
+  ]
+  
+}

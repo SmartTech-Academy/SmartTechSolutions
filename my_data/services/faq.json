@@ -1,0 +1,696 @@
+{
+  "web_dev_faqs": [
+    {
+      "tag": false,
+      "title": "Common questions about Web Development",
+      "img": "/app_images/faq/faq.webp",
+      "faqBody": [
+        {
+          "collapse": "tutioncollapseOne",
+          "heading": "tutionheadingOne",
+          "expanded": true,
+          "collapsed": true,
+          "show": true,
+          "subTitle": "How much does web development cost?",
+          "text": "Pricing depends on project complexity. A basic website typically falls between $1,000 and $3,000, while advanced websites such as e-commerce platforms with custom features can surpass $5,000."
+        },
+        {
+          "collapse": "tutioncollapseTwo",
+          "heading": "tutionheadingTwo",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "How long does the development process take?",
+          "text": "A project of medium complexity usually requires between 4 to 8 months for successful completion."
+        },
+        {
+          "collapse": "tutioncollapseThree",
+          "heading": "tutionheadingThree",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "Why should I choose SmartTech over other developers?",
+          "text": "Remember: Anyone can code, but it takes true expertise to build clean, scalable, and production-ready solutions. With over a decade of expertise and a track record of over 100 successful projects, SmartTech is the go-to choice for top companies seeking dependable web development solutions. Our experience with global brands, established processes and certified developers guarantee that your app will be built to the highest standards."
+        },
+        {
+          "collapse": "tutioncollapseFour",
+          "heading": "tutionheadingFour",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "Do you offer ongoing support after my website is launched?",
+          "text": "Yes, we provide post-launch support and maintenance services to ensure your website stays up-to-date, secure, and running smoothly."
+        },
+        {
+          "collapse": "tutioncollapseFive",
+          "heading": "tutionheadingFive",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "Will my website be SEO-friendly?",
+          "text": "Absolutely. We follow SEO best practices during the development phase to ensure your site is optimized for search engines and performs well in search rankings."
+        },
+        {
+          "collapse": "tutioncollapseSix",
+          "heading": "tutionheadingSix",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "What happens if something goes wrong with my website?",
+          "text": "We offer troubleshooting and quick fixes as part of our ongoing support. If any technical issues arise, we'll ensure they are addressed promptly."
+        },
+        {
+          "collapse": "tutioncollapseSeven",
+          "heading": "tutionheadingSeven",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "How do I get started with my web development project?",
+          "text": "Simply reach out to us at info@smarttechacademy.org, with your ideas and goals. We'll schedule a consultation to discuss your project in detail and provide you with a proposal tailored to your needs."
+        }
+      ]
+    }
+  ],
+  "mobile_app_dev_faqs": [
+    {
+      "tag": false,
+      "title": "Faq about Mobile App development",
+      "img": "/app_images/faq/faq.webp",
+      "faqBody": [
+        {
+          "collapse": "tutioncollapseOne",
+          "heading": "tutionheadingOne",
+          "expanded": true,
+          "collapsed": true,
+          "show": true,
+          "subTitle": "How long does it take to develop an Android app?",
+          "text": "Development timelines depend on project complexity, with an average of 2 to 12 months from concept to launch."
+        },
+        {
+          "collapse": "tutioncollapseTwo",
+          "heading": "tutionheadingTwo",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "Does SmartTech develop apps for all Android & iPhone models?",
+          "text": "SmartTech is a top mobile app development company, specializing in creating apps that perform seamlessly across all iPhone and Android models, from the latest releases to older versions. With our expert team, you can trust that your app will deliver optimal performance."
+        },
+        {
+          "collapse": "tutioncollapseThree",
+          "heading": "tutionheadingThree",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "How much does iPhone and Android app development cost?",
+          "text": "Partnering with a reputable iOS or Android app development company can cost upwards of $20K, though this varies depending on factors like technology, team size, and project timelines. For an accurate quote, visit our website or reach out to us at info@smarttechacademy.org."
+        },
+        {
+          "collapse": "tutioncollapseFour",
+          "heading": "tutionheadingFour",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "Why should I choose SmartTech over other developers?",
+          "text": "Remember: Anyone can code, but it takes true expertise to build clean, scalable, and production-ready solutions. Our experience working with global brands, proven processes, and certified developers distinguish us—guaranteeing your app is built to impeccable standards."
+        },
+        {
+          "collapse": "tutioncollapseFive",
+          "heading": "tutionheadingFive",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "Can you develop apps for Android TV or wearables?",
+          "text": "We excel in crafting innovative apps for Android TV, WearOS, tablets, and mobile devices—ensuring seamless, engaging experiences across every screen."
+        },
+        {
+          "collapse": "tutioncollapseSix",
+          "heading": "tutionheadingSix",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "Do you provide maintenance and support services after app deployment?",
+          "text": "Yes, we provide ongoing support and maintenance, including regular updates to ensure compatibility with new iOS or Android OS versions, bug fixes, performance improvements, and technical assistance to keep your app running smoothly."
+        },
+        {
+          "collapse": "tutioncollapseSeven",
+          "heading": "tutionheadingSeven",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "How do I get started with my Mobile App Development project?",
+          "text": "Simply reach out to us at info@smarttechacademy.org, with your ideas and goals. We'll schedule a consultation to discuss your project in detail and provide you with a proposal tailored to your needs."
+        }
+      ]
+    }
+  ],
+  "blockchain_dev_faqs": [
+    {
+      "tag": false,
+      "title": "Faq about Blockchain development",
+      "img": "/app_images/faq/faq.webp",
+      "faqBody": [
+        {
+          "collapse": "tutioncollapseOne",
+          "heading": "tutionheadingOne",
+          "expanded": true,
+          "collapsed": true,
+          "show": true,
+          "subTitle": "Cost of Blockchain app development and timeline?",
+          "text": "The cost of Blockchain development depends on several key factors: application complexity, desired features, and the chosen technology stack. At SmartTech, we take all these elements into account to craft a strategic development roadmap that fits within your budget—without compromising on innovation. <br /> <ul> <li><strong>Simple Blockchain App</strong> - $5,000 to $10,000 | <strong>3 to 6 months</strong></li> <li><strong>Moderately Complex App</strong> - $10,000 to $50,000 | <strong>6 to 8 months</strong></li> <li><strong>Highly Complex App</strong> - $50,000 to $200,000+ | <strong>9 to 12+ months</strong></li> </ul> With SmartTech, you're not just getting a development team, you're gaining a partner in innovation. Let's build the future together."
+        },
+        {
+          "collapse": "tutioncollapseTwo",
+          "heading": "tutionheadingTwo",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "Which Blockchain platforms are your team proficient in?",
+          "text": "At SmartTech, we tailor blockchain solutions to your unique business needs. Our seasoned developers command a broad array of blockchain platforms, ensuring that every project finds its perfect match. By blending your specific requirements with our strategic insights, we deliver robust, scalable solutions designed to power your business today and set the stage for future success."
+        },
+        {
+          "collapse": "tutioncollapseThree",
+          "heading": "tutionheadingThree",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "How we keep clients updated on their Blockchain project's progress?",
+          "text": "At our company, we harness industry-leading tools like JIRA and Slack to streamline project management and communication. This ensures you receive real-time progress updates every step of the way. In addition, a dedicated account manager serves as your primary point of contact, guaranteeing transparent communication and consistent milestone updates throughout your blockchain app development journey."
+        },
+        {
+          "collapse": "tutioncollapseFour",
+          "heading": "tutionheadingFour",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "Why should I choose SmartTech over other developers?",
+          "text": "Remember: Anyone can code, but it takes true expertise to build clean, scalable, and production-ready solutions. Our experience working with global brands, proven processes, and certified developers distinguish us—guaranteeing your app is built to impeccable standards."
+        }
+      ]
+    }
+  ],
+  "nft_marketplace_dev_faqs": [
+    {
+      "tag": false,
+      "title": "Faq about NFT Marketplace development",
+      "img": "/app_images/faq/faq.webp",
+      "faqBody": [
+        {
+          "collapse": "tutioncollapseOne",
+          "heading": "tutionheadingOne",
+          "expanded": true,
+          "collapsed": true,
+          "show": true,
+          "subTitle": "What is the cost of building an NFT Marketplace?",
+          "text": "The cost of developing an NFT marketplace varies based on features, complexity, and third-party integrations. On average, it can range from $5,000 to $100,000, depending on the functionality and customization required."
+        },
+        {
+          "collapse": "tutioncollapseTwo",
+          "heading": "tutionheadingTwo",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "Why choose SmartTech for NFT marketplace development?",
+          "text": "Here at SmartTech, our developers blend technical expertise with creative innovation to deliver top-tier NFT marketplace solutions. Prioritizing user experience, security, and scalability, we craft platforms that stand out in a competitive digital landscape."
+        },
+        {
+          "collapse": "tutioncollapseThree",
+          "heading": "tutionheadingThree",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "How long does it take to develop an NFT Marketplace?",
+          "text": "The timeline for developing an NFT marketplace depends on the project's scope, features, and complexity. At SmartTech, our expert developers typically deliver fully functional platforms within 4 to 8 months, ensuring rigorous testing and refinements. <br /><br /> Contact our team for precise cost estimates and a tailored development schedule that aligns with your business requirements."
+        },
+        {
+          "collapse": "tutioncollapseFour",
+          "heading": "tutionheadingFour",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "What technologies do SmartTech developers use for NFT marketplace development?",
+          "text": "Our expert developers craft highly secure and robust NFT marketplace solutions using cutting-edge technologies like blockchain, smart contracts, DeFi, and advanced authentication protocols. <br /> <br /> By staying ahead of the latest trends, we ensure your platform remains fresh, secure, and future-proof."
+        },
+        {
+          "collapse": "tutioncollapseFive",
+          "heading": "tutionheadingFive",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "Can SmartTech provide ongoing support and maintenance for my NFT Marketplace?",
+          "text": "SmartTech offers comprehensive support and maintenance throughout your NFT marketplace's lifecycle, ensuring it operates seamlessly and remains fully compliant with evolving industry standards. <br /> <br /> Our dedicated team of experts is always on standby to address any issues promptly, keeping your platform running at peak performance."
+        }
+      ]
+    }
+  ],
+  "game_dev_faqs": [
+    {
+      "tag": false,
+      "title": "Addressing your Game Development inquiries",
+      "img": "/app_images/faq/faq.webp",
+      "faqBody": [
+        {
+          "collapse": "tutioncollapseZero",
+          "heading": "tutionheadingZero",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "What Game Engines do you use and why?",
+          "text": "At SmartTech, we leverage Unity's flexibility and cross-platform capabilities to power indie and mobile games, while Unreal Engine delivers the high-end graphics and performance needed for console and PC experiences. <br /> <br /> Together, these engines enable us to craft a diverse portfolio of outstanding games that captivate and inspire."
+        },
+        {
+          "collapse": "tutioncollapseOne",
+          "heading": "tutionheadingOne",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "How much does the development of 2D games cost?",
+          "text": "Pricing is tailored to your game's complexity, features, and overall scope. We work closely with you to determine a custom quote that reflects your vision. <br /><br /> For example, a basic 2D mobile game with simple mechanics and art might range from $10,000 to $40,000, while more sophisticated projects, with rich storylines, expansive environments, and advanced features can exceed $70,000."
+        },
+        {
+          "collapse": "tutioncollapseTwo",
+          "heading": "tutionheadingTwo",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "How much does 3D game development cost?",
+          "text": "Every game is unique, and so is its cost. Custom 3D game development costs can vary widely based on scope and complexity. Typically, an indie game requires a modest investment compared to a full-fledged AAA title, which demands extensive resources for high-quality graphics, intricate gameplay, and thorough testing. For example, a simple game project might range between $30K and $70K, whereas a complex game with advanced features could cost above $300K <br /> <br /> Pricing is shaped by factors such as game genre, platform (mobile or console), and narrative depth. We collaborate with you to craft a budget that aligns with your project's scope and ambition, ensuring every dollar delivers maximum value."
+        },
+        {
+          "collapse": "tutioncollapseThree",
+          "heading": "tutionheadingThree",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "What is the difference between 2D and 3D game development?",
+          "text": "2D game development leverages flat, side-scrolling, or top-down graphics to create stylized and engaging levels, while 3D development concentrate on the three-dimensional view of the game, bringing immersive realistic worlds to life. <br /><br />At SmartTech, our streamlined game development services are designed for speed, performance and scalability."
+        },
+        {
+          "collapse": "tutioncollapseFour",
+          "heading": "tutionheadingFour",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "How long does it take to develop game?",
+          "text": "Our timeline is as unique as your game. Depending on its complexity, our comprehensive process, from initial planning to launch typically spans several months."
+        },
+        {
+          "collapse": "tutioncollapseEight",
+          "heading": "tutionheadingEight",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "Is outsourcing video Game development services a good idea?",
+          "text": "It's smart—literally! Outsourcing unlocks global talent and cutting-edge technology in a cost-effective way. Unlike conventional game development agencies, SmartTech leverages international expertise in 3D modeling and AR/VR to elevate game quality and accelerate production."
+        },
+        {
+          "collapse": "tutioncollapseSeven",
+          "heading": "tutionheadingSeven",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "Benefits of hiring a professional game development company?",
+          "text": "There are countless advantages to partnering with a professional game development company like SmartTech. With decades of expertise, our team crafts premium games that save you time and resources while delivering mesmerizing visuals and captivating game mechanics. <br /><br /> We harness the latest tools and technologies to engage your players and elevate your game to new heights. <br /> <br /> From the spark of your initial idea to the final launch, our project management team meticulously oversees every step, allowing you to focus solely on your vision without the burden of technical challenges."
+        },
+        {
+          "collapse": "tutioncollapseFive",
+          "heading": "tutionheadingFive",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "Do you develop games for all platforms?",
+          "text": "Absolutely! We design and make games for mobile, PC, VR, and more, ensuring flawless compatibility and an optimized, engaging experience across all platforms."
+        },
+        {
+          "collapse": "tutioncollapseSix",
+          "heading": "tutionheadingSix",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "Can you help with game publishing and marketing?",
+          "text": "Absolutely! Our robust post-launch support covers everything from publishing and strategic marketing to continuous updates, ensuring your game remains dynamic and ahead of the curve."
+        }
+      ]
+    }
+  ],
+  "product_design_faqs": [
+    {
+      "tag": false,
+      "title": "Common Questions About Product Design",
+      "img": "/app_images/faq/faq.webp",
+      "faqBody": [
+        {
+          "collapse": "tutioncollapseOne",
+          "heading": "tutionheadingOne",
+          "expanded": true,
+          "collapsed": true,
+          "show": true,
+          "subTitle": "Why is Product Design Important for my Business?",
+          "text": "A robust design system is the cornerstone of exceptional product design, ensuring every interaction is seamless and engaging. By harmonizing aesthetics with functionality and usability, our design systems go beyond visual appeal to create intuitive, satisfying user experiences that drive loyalty. <BR /><BR /> With meticulous attention to detail, these systems enhance engagement, boost conversion rates, and solidify customer retention, transforming your design into a strategic asset that directly impacts your bottom line."
+        },
+        {
+          "collapse": "tutioncollapseTwo",
+          "heading": "tutionheadingTwo",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "How Long Does It Take to Complete a Product Design Project?",
+          "text": "In our design system, every project is approached with a tailored framework that adapts to your unique requirements. Depending on factors like project complexity, feature demands, and team size, product design projects typically span anywhere from 2 to 6 months. <BR /><BR /> Our process is divided into distinct phases, such as discovery, UX, UI, and testing, each meticulously aligned with your specific goals. By working closely with you to establish realistic milestones, we ensure a smooth, timely, and successful delivery of your product design project."
+        },
+        {
+          "collapse": "tutioncollapseThree",
+          "heading": "tutionheadingThree",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "How does SmartTech Balance Creativity and Functionality in UI/UX Design?",
+          "text": "At SmartTech, creativity and functionality coexist in perfect harmony. Our design team artfully blends innovative aesthetics with robust usability principles to create digital experiences that are both captivating and intuitive. By prioritizing seamless navigation, crisp visuals, and a unified design language, every element is carefully crafted to engage users without compromising ease of use. <BR /><BR /> Backed by data, user insights, and industry best practices, SmartTech's approach ensures that every design decision not only delights the eye but also drives effortless, effective interactions."
+        },
+        {
+          "collapse": "tutioncollapseFive",
+          "heading": "tutionheadingFive",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "What is SmartTech's Approach to Product Discovery?",
+          "text": "At SmartTech, product discovery is an art and a science. We begin with comprehensive market research, immersing ourselves in your industry, understanding your target audience, and aligning with your business objectives. Through interactive workshops, insightful user interviews, and thorough competitor analysis, we uncover hidden opportunities and validate groundbreaking ideas. The result is a meticulously crafted roadmap that not only echoes your vision but also maximizes product-market fit for sustainable success."
+        },
+        {
+          "collapse": "tutioncollapseSix",
+          "heading": "tutionheadingSix",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "What are Design Systems, and how do they Benefit my Project?",
+          "text": "Design systems are cohesive libraries of reusable components, styles, and guidelines that create a unified interface, enabling your teams to accelerate development, maintain a strong brand identity, and efficiently scale design across complex, multi-product ecosystems."
+        },
+        {
+          "collapse": "tutioncollapseSeven",
+          "heading": "tutionheadingSeven",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "How does SmartTech ensure a user-centered design approach?",
+          "text": "We embrace a user-first design approach, our UX team rigorously researches, tests, and iterates every detail to ensure your product not only meets user needs and resolves pain points but also minimizes risks and maximizes overall appeal."
+        }
+      ]
+    }
+  ],
+  "two_dimentional_animation_service_faqs": [
+    {
+      "tag": false,
+      "title": "Common questions about 2D Animations",
+      "img": "/app_images/faq/faq.webp",
+      "faqBody": [
+        {
+          "collapse": "tutioncollapseOne",
+          "heading": "tutionheadingOne",
+          "expanded": true,
+          "collapsed": true,
+          "show": true,
+          "subTitle": "What is the cost of 2D animation services?",
+          "text": "Our 2D animation pricing is tailored to your unique vision, factoring in complexity, duration, and creative scope, so you receive a custom quote that ensures maximum value and a compelling visual result worth every dollar."
+        },
+        {
+          "collapse": "tutioncollapseTwo",
+          "heading": "tutionheadingTwo",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "How many stages are involved in 2D animations?",
+          "text": "The 2D animation production process unfolds in three key stages: <br /><br /> <ul> <li><strong>Pre-Production:</strong> where ideas are conceptualized through scriptwriting, storyboarding, and character design. </li> <li><strong>Production:</strong> which brings these concepts to life via layout creation, animation, and compositing</li> <li><strong>Post-Production:</strong> where the animation is refined with editing, sound design, and visual effects to deliver a polished final product. </li> </ul>"
+        },
+        {
+          "collapse": "tutioncollapseThree",
+          "heading": "tutionheadingThree",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "What Sets SmartTech Apart?",
+          "text": "By seamlessly blending cutting-edge technology with artistic creativity, and emphasizing personalized solutions alongside deep industry expertise, we have positioned ourselves as a leader in marketing 2D animated films, delivering captivating content that enhances brand identity and resonates emotionally with audiences."
+        }
+      ]
+    }
+  ],
+  "three_dimentional_animation_service_faqs": [
+    {
+      "tag": false,
+      "title": "Common questions about 3D Animations",
+      "img": "/app_images/faq/faq.webp",
+      "faqBody": [
+        {
+          "collapse": "tutioncollapseZero",
+          "heading": "tutionheadingZero",
+          "expanded": true,
+          "collapsed": true,
+          "show": true,
+          "subTitle": "How long does it take to produce a 3D animation?",
+          "text": "Production timelines depend on length and complexity: <br /> <b>Simple 30-sec animation: </b>2 to 4 weeks <br /> <b>Advanced 1-2 min animation: </b>5 to 9 weeks <br /> <b>High-end cinematic animation: </b>3+ months "
+        },
+        {
+          "collapse": "tutioncollapseOne",
+          "heading": "tutionheadingOne",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "What is the Cost of 3D Animation Services?",
+          "text": "The cost of 3D animation is influenced by factors such as project complexity, animation length, desired quality, and level of detail. Below are key pricing elements that affect animation costs: <br /><br /> <b>Project Complexity: </b>Explainer videos cost less than high-end cinematic animations. <br /><br /> <b>Animation Length: </b>Shorter clips <i>(30-60 seconds)</i> are more budget-friendly than longer animations <i>(2+ minutes)</i>. <br /><br /> <b>Detail & Quality Level: </b>Photorealistic rendering and advanced VFX elevate costs but offer superior visual impact. <br /><br /> <b>Animation Style: </b>3D character animation, motion graphics, and product modeling have distinct pricing structures. <br /><br /> <b>Turnaround Time: </b>Rush projects may incur extra charges for expedited delivery. <br /><br /> <ul> <li><strong>Basic 3D Animation </strong> - $2,500,000 to $4,5,000 | <strong>30 seconds</strong></li> <li><strong>Advanced 3D Animation</strong> - $7,000 to $14,000 | <strong>1-2 minutes</strong></li> <li><strong>High-End Cinematic Animation</strong> - $20,000+ depending on complexity</li> </ul>  Contact us today for a detailed, personalized estimate!"
+        },
+        {
+          "collapse": "tutioncollapseTwo",
+          "heading": "tutionheadingTwo",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "What software do you use for 3D animation?",
+          "text": "We use top-tier software for exceptional results: Autodesk Maya, Blender, Cinema 4D, Houdini, Unreal Engine, and 3ds Max."
+        }
+      ]
+    }
+  ],
+  "three_dimentional_modeling_service_faqs": [
+    {
+      "tag": false,
+      "title": "Common Questions About 3D Modeling",
+      "img": "/app_images/faq/faq.webp",
+      "faqBody": [
+        {
+          "collapse": "tutioncollapseOne",
+          "heading": "tutionheadingOne",
+          "expanded": true,
+          "collapsed": true,
+          "show": true,
+          "subTitle": "What is the cost of 3D product modeling services?",
+          "text": "Our 3D modeling services are priced based on factors such as model complexity, product quantity, and detail level, with customized quotes tailored to your project's unique needs; please contact us for a personalized estimate."
+        },
+        {
+          "collapse": "tutioncollapseTwo",
+          "heading": "tutionheadingTwo",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "What is the average time it takes to complete a 3D modeling project?",
+          "text": "Completion timelines for 3D modeling projects vary based on complexity, with simple models taking a few hours to a couple of days, and more intricate designs requiring several weeks; we provide clear timelines upfront to ensure transparency and alignment with your project's needs."
+        },
+        {
+          "collapse": "tutioncollapseThree",
+          "heading": "tutionheadingThree",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "What is 3D product modeling, and how does it help my business?",
+          "text": "3D product modeling is a process where graphical representations of a character, environment or products are created. It transforms your concepts into photorealistic digital replicas, enabling rapid design iterations, cost-effective virtual prototyping, and consistently stunning marketing assets without costly photoshoots, so you can captivate customers with interactive experiences, and drive higher engagement and sales."
+        },
+        {
+          "collapse": "tutioncollapseFive",
+          "heading": "tutionheadingFive",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "Which techniques do you use to create your 3D models?",
+          "text": "Our team excels in polygonal modeling, digital sculpting, photogrammetry, NURBS, and other specialized techniques, ensuring each 3D model is meticulously optimized for its intended medium, be it animation, rendering, or software integration, delivering detailed and impactful visual representations."
+        },
+        {
+          "collapse": "tutioncollapseSix",
+          "heading": "tutionheadingSix",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "Can your team design complete models with textures?",
+          "text": "Yes, our versatile team of skilled 2D and 3D artists offers comprehensive, full-stack content production services, adept at crafting detailed models and textures, as well as providing advanced skinning, rigging, animation, and complete media production to bring your creative visions to life."
+        },
+        {
+          "collapse": "tutioncollapseSeven",
+          "heading": "tutionheadingSeven",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "What formats will I receive my 3D models in?",
+          "text": "We offer 3D models in various formats, including OBJ, STL, FBX, and others tailored to your needs, ensuring seamless compatibility across diverse applications and platforms."
+        },
+        {
+          "collapse": "tutioncollapseEight",
+          "heading": "tutionheadingEight",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "Can we provide feedback during the production phase of 3D product modeling?",
+          "text": "We wholeheartedly welcome adjustments to model specifications, ensuring our creations align seamlessly with your vision and requirements."
+        }
+      ]
+    }
+  ],
+  "two_dimentional_art_service_faqs": [
+    {
+      "tag": false,
+      "title": "Common Questions About 2D Art",
+      "img": "/app_images/faq/faq.webp",
+      "faqBody": [
+        {
+          "collapse": "tutioncollapseOne",
+          "heading": "tutionheadingOne",
+          "expanded": true,
+          "collapsed": true,
+          "show": true,
+          "subTitle": "Which techniques does your team use to create 2D art?",
+          "text": "At our studio, we seamlessly blend digital painting with collage, vector art, and photo-painting—always starting with a precise sketch and refined line work before layering rich colors and dynamic shadows, to craft bespoke artworks that perfectly capture and elevate your vision."
+        },
+        {
+          "collapse": "tutioncollapseTwo",
+          "heading": "tutionheadingTwo",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "What is your approach to ensuring art quality?",
+          "text": "With crystal-clear client briefs and seamless team collaboration, guided by our QA specialists, senior artists, and managers—we adopt a step-by-step, iterative art process that ensures every specification is met and allows unlimited, detail-driven revisions so your vision shines flawlessly from concept to completion."
+        },
+        {
+          "collapse": "tutioncollapseThree",
+          "heading": "tutionheadingThree",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "What Is 2D Art?",
+          "text": "2D art transforms flat canvases into vibrant, emotive worlds—leveraging hand-drawn, pixel, vector, or digital techniques to craft visually stunning characters, environments, and interfaces that evoke nostalgia, streamline production timelines, and deliver cohesive, memorable gaming experiences that captivate players and elevate your brand's impact."
+        },
+        {
+          "collapse": "tutioncollapseFive",
+          "heading": "tutionheadingFive",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "How Can Your 2D Game Art Services Benefit My Game Development Process?",
+          "text": "Our 2D game art services bring your vision to life with beautifully crafted characters, immersive environments, and intuitive UI designs—delivering high-quality, stylistically versatile assets that captivate players, strengthen your brand identity, and save you precious time and resources so you can focus on building an unforgettable gaming experience."
+        },
+        {
+          "collapse": "tutioncollapseSix",
+          "heading": "tutionheadingSix",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "Can You Work With Specific Art Styles or Adapt to My Game's Unique Art Direction?",
+          "text": "From nostalgic pixel art to sleek vector illustrations, our seasoned 2D art studio masterfully crafts any style, be it cartoon-charm, monochrome minimalism, or hyper-realistic visuals—ensuring consistent, on-brand artistry that streamlines your production, elevates player engagement, and brings your game's unique vision to life in stunning, unforgettable detail."
+        }
+      ]
+    }
+  ],
+  "mvp_development_service_faqs": [
+    {
+      "tag": false,
+      "title": "Addressing your MVP Development inquiries",
+      "img": "/app_images/faq/faq.webp",
+      "faqBody": [
+        {
+          "collapse": "tutioncollapseOne",
+          "heading": "tutionheadingOne",
+          "expanded": true,
+          "collapsed": true,
+          "show": true,
+          "subTitle": "How does MVP development provide business value?",
+          "text": "MVP development empowers you to launch a lean version of your product that engages real users early, validates key concepts through invaluable feedback, and uncovers potential issues before full-scale development, saving time and resources while paving the way for a more successful launch."
+        },
+        {
+          "collapse": "tutioncollapseTwo",
+          "heading": "tutionheadingTwo",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "How much does MVP development cost?",
+          "text": "Our MVP development pricing is uniquely tailored to your project's complexity and tech stack, so speak with our experts to receive a personalized estimate within our competitive range. <br /><br /> <ul> <li><strong>Simple MVP <i>(basic features)</i>:</strong> $2,500 - $10,000 </li> <li><strong>Moderate Complexity MVP <i>(core functionalities):</i></strong> $10,000 - $25,000 </li> <li><strong>Complex MVP <i>(advanced features)</i>:</strong> $25,000 - $50,000+ </li> </ul>"
+        },
+        {
+          "collapse": "tutioncollapseThree",
+          "heading": "tutionheadingThree",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "How long does it take to develop an MVP?",
+          "text": "Leveraging our agile development process, we typically deliver a functional MVP within 2 to 6 months precisely tailored to your project's unique features, complexity, and scope, so you can swiftly test innovations and secure a competitive edge."
+        },
+        {
+          "collapse": "tutioncollapseFive",
+          "heading": "tutionheadingFive",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "What technologies are used in MVP development?",
+          "text": "Leveraging a modular architecture built on lightweight, agile technologies, we rapidly develop and easily modify digital solutions while harnessing robust cloud services like AWS for optimal performance."
+        }
+      ]
+    }
+  ],
+  "ai_development_service_faqs": [
+    {
+      "tag": false,
+      "title": "Addressing your AI Development inquiries",
+      "img": "/app_images/faq/faq.webp",
+      "faqBody": [
+        {
+          "collapse": "tutioncollapseOne",
+          "heading": "tutionheadingOne",
+          "expanded": true,
+          "collapsed": true,
+          "show": true,
+          "subTitle": "How much does an Artificial Intelligence-based app cost?",
+          "text": "Developing an AI application typically costs upwards $30,000, influenced by factors such as app complexity, desired features, and design intricacies; for precise budget estimates tailored to your project's needs, please contact us directly."
+        },
+        {
+          "collapse": "tutioncollapseTwo",
+          "heading": "tutionheadingTwo",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "How do artificial intelligence development services help businesses?",
+          "text": "Partnering with seasoned AI development experts means crafting bespoke machine learning, natural language processing, computer vision, and predictive analytics solutions that not only automate complex workflows and uncover deep data-driven insights but also elevate decision-making, accelerate innovation, and secure your competitive edge in today's fast-moving market."
+        },
+        {
+          "collapse": "tutioncollapseThree",
+          "heading": "tutionheadingThree",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "What sets SmartTech apart as an AI Development Company?",
+          "text": "SmartTech combines decades of innovation with a deep mastery of emerging technologies to streamline your operations through intelligent automation, captivate and retain customers with personalized AI-driven experiences, and unlock new revenue streams by monetizing your data with a highly skilled AI workforce that drives measurable growth and client success."
+        },
+        {
+          "collapse": "tutioncollapseFive",
+          "heading": "tutionheadingFive",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "How can AI software development services benefit my business?",
+          "text": "Harness AI services to automate mundane workflows, personalize customer interactions in real time, and extract actionable insights from your data—fueling efficiency gains, data-driven decisions, and a lasting competitive edge."
+        },
+        {
+          "collapse": "tutioncollapseSix",
+          "heading": "tutionheadingSix",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "What are the key components of AI App Development Services?",
+          "text": "From meticulous data preprocessing to robust model training, seamless deployment, and proactive ongoing support, our AI app development delivers scalable, high-performance solutions that evolve with your business needs—driving efficiency, innovation, and sustained competitive advantage."
+        }
+      ]
+    }
+  ]
+
+}
