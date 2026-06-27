@@ -18,7 +18,7 @@ const wishlist = () => {
 
     <Provider store={Store}>
       <Context>
-        <PageHead title="Wishlist | SmartTech Academy Student Dashboard" />
+        <PageHead title="Wishlist | SmartTech Solutions Student Dashboard" />
         <HeaderContainer headerSticky="rbt-sticky" headerType="" topBarToggle="off"  />
 
         <StudentWishlist />

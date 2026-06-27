@@ -7,8 +7,8 @@ import Search from "../Offcanvas/Search";
 import Category from "../Category/Category";
 import Nav from "../Nav";
 
-import logo from "../../../public/images/logo/logo.png";
-import logoLight from "../../../public/images/dark/logo/logo-light.png";
+import logo from "@/public/app_images/logo/logo-blue.png";
+import logoLight from "@/public/app_images/logo/logo-white.png";
 import { useAppContext } from "@/context/Context";
 
 import { ROUTE } from "@/route/app_routes.js";
@@ -67,7 +67,7 @@ const HeaderNavigations = ({ headerType, gapSpaceBetween, sticky, headerSticky, 
                         width={152}
                         height={50}
                         priority={true}
-                        alt="Education Logo Images"
+                        alt="SmartTech Official Logo"
                       />
                     ) : (
                       <Image
@@ -75,7 +75,7 @@ const HeaderNavigations = ({ headerType, gapSpaceBetween, sticky, headerSticky, 
                         width={152}
                         height={50}
                         priority={true}
-                        alt="Education Logo Images"
+                        alt="SmartTech Official Logo"
                       />
                     )}
                   </Link>
@@ -83,7 +83,7 @@ const HeaderNavigations = ({ headerType, gapSpaceBetween, sticky, headerSticky, 
               </div>
 
               <div className="header-info d-none d-lg-block">
-                <Category />
+                {/* <Category /> */}
               </div>
             </div>
 
@@ -93,11 +93,11 @@ const HeaderNavigations = ({ headerType, gapSpaceBetween, sticky, headerSticky, 
               <Nav />
             </div>
 
-            <HeaderRight userType="Admin" btnText="Enroll Now" btnClass="rbt-marquee-btn marquee-auto btn-border-gradient radius-round btn-sm hover-transform-none" />
+            <HeaderRight btnClass="rbt-marquee-btn marquee-auto btn-border-gradient radius-round btn-sm hover-transform-none" />
             
           </div>
         </div>
-        <Search />
+        {/* <Search /> */}
       </div>
     </>
   );

@@ -24,7 +24,7 @@ const Two_Dimension_Animations = () => {
 
         <>
 
-            <PageHead title="2D Animation Services | SmartTech Academy" />
+            <PageHead title="2D Animation Services | SmartTech Solutions" />
 
             <Provider store={Store}>
                 <Context>

@@ -18,7 +18,7 @@ const Settings = () => {
 
     <Provider store={Store}>
       <Context>
-        <PageHead title="settings | SmartTech Academy Student Dashboard" />
+        <PageHead title="settings | SmartTech Solutions Student Dashboard" />
         <HeaderContainer headerSticky="rbt-sticky" headerType="" topBarToggle="off"  />
 
         <StudentSettings />

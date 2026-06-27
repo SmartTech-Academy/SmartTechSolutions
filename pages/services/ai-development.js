@@ -24,7 +24,7 @@ const AIDevelopment = () => {
 
         <>
 
-            <PageHead title="Artificial Intelligence Development Services | SmartTech Academy" />
+            <PageHead title="Artificial Intelligence Development Services | SmartTech Solutions" />
 
             <Provider store={Store}>
                 <Context>

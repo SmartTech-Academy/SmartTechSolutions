@@ -17,7 +17,7 @@ export default function ServicesProp({ courseData, image }) {
           <div className="modern-course-features-box h-100">
               <div className="inner">
                 <div className="thumbnail">
-                  <Image src={image_url("/app_images/services/service1.webp", true)} width={604} height={408} alt="Image" />
+                  <Image src={image_url("/app_images/services/service_images/smarttech_web_development.png", true)} width={604} height={408} alt="Image" />
                 </div>
 
                 <div className="content">
@@ -43,7 +43,7 @@ export default function ServicesProp({ courseData, image }) {
           <div className="modern-course-features-box h-100">
               <div className="inner">
                 <div className="thumbnail">
-                  <Image src={image_url("/app_images/services/service1.webp", true)} width={604} height={408} alt="Image" />
+                  <Image src={image_url("/app_images/services/service_images/smarttech_mobile_app_development.png", true)} width={604} height={408} alt="Image" />
                 </div>
 
                 <div className="content">
@@ -81,16 +81,15 @@ export default function ServicesProp({ courseData, image }) {
 
       <div className="col-lg-6">
         {courseData.map((data, index) => (
-          <div className="modern-course-features-box one-colume-grid h-100" >
+          <div className="modern-course-features-box one-colume-grid h-100" key={`blockchain-service-${index}`}>
             {data.certificateTwo.map((innerData, innerIndex) => (
-              <div className="inner">
+              <div className="inner" key={`blockchain-service-inner-${innerIndex}`}>
                 <div className="thumbnail">
-                  <Image src={image_url("/app_images/services/service2.webp", true)} width={558} height={397} alt="Image" />
+                  <Image src={image_url("/app_images/services/service_images/smarttech_blockchain_development.png", true)} width={558} height={397} alt="Image" />
                 </div>
                 <div className="content">
                   <h2 className="title">{"Blockchain Development Services"}</h2>
-                  <p>{"Our expertise in blockchain development empowers businesses to harness the transformative potential of decentralized technology, delivering secure, transparent, and "
-                  +"efficient solutions that enhance trust, streamline operations, and drive innovation in your industry."}</p>
+                  <p>{"Our expertise in blockchain development empowers businesses to harness the transformative potential of decentralized technology, whether you want to build your own blockchain, cryptocurrency, token, NFT, crypto wallet, exchange, NFT marketplace, or tokenize real-world and digital assets with a dedicated marketplace for trading and sales, we deliver secure, transparent, and scalable solutions that foster trust, streamline operations, and drive innovation across your industry."}</p>
 
                   <Link className="rbt-btn hover-icon-reverse btn-border color-white-off" href={ROUTE.blockchain_dev_service}>
                     <span className="icon-reverse-wrapper">
@@ -112,7 +111,10 @@ export default function ServicesProp({ courseData, image }) {
         <div className="modern-course-features-box grid-content-reverse h-100">
           <div className="inner">
 
-            <CourseSlider />
+            {/* <CourseSlider /> */}
+            <div className="thumbnail">
+              <Image src={image_url("/app_images/services/service_images/smarttech_game_development.png", true)} width={558} height={397} alt="Image" />
+            </div>
 
             <div className="content">
               <h2 className="title">{"Game Development Services"}</h2>
@@ -142,7 +144,7 @@ export default function ServicesProp({ courseData, image }) {
         <div className="modern-course-features-box h-100">
           <div className="inner">
             <div className="thumbnail">
-              <Image src={image_url("/app_images/services/service1.webp", true)} width={604} height={408} alt="Image" />
+              <Image src={image_url("/app_images/services/service_images/smarttech_uiux.png", true)} width={604} height={408} alt="Image" />
             </div>
 
             <div className="content">
@@ -167,7 +169,7 @@ export default function ServicesProp({ courseData, image }) {
         <div className="modern-course-features-box h-100">
           <div className="inner">
             <div className="thumbnail">
-              <Image src={image_url("/app_images/services/service1.webp", true)} width={604} height={408} alt="Image" />
+              <Image src={image_url("/app_images/services/service_images/smarttech_mvp_development.png", true)} width={604} height={408} alt="Image" />
             </div>
 
             <div className="content">
@@ -193,7 +195,7 @@ export default function ServicesProp({ courseData, image }) {
         <div className="modern-course-features-box h-100">
             <div className="inner">
               <div className="thumbnail">
-                <Image src={image_url("/app_images/services/service1.webp", true)} width={604} height={408} alt="Image" />
+                <Image src={image_url("/app_images/services/service_images/smarttech_3d_modeling.png", true)} width={604} height={408} alt="Image" />
               </div>
 
               <div className="content">
@@ -219,7 +221,7 @@ export default function ServicesProp({ courseData, image }) {
         <div className="modern-course-features-box h-100">
             <div className="inner">
               <div className="thumbnail">
-                <Image src={image_url("/app_images/services/service1.webp", true)} width={604} height={408} alt="Image" />
+                <Image src={image_url("/app_images/services/service_images/smarttech_3d_animation.png", true)} width={604} height={408} alt="Image" />
               </div>
 
               <div className="content">
@@ -245,7 +247,7 @@ export default function ServicesProp({ courseData, image }) {
         <div className="modern-course-features-box h-100">
           <div className="inner">
             <div className="thumbnail">
-              <Image src={image_url("/app_images/services/service1.webp", true)} width={604} height={408} alt="Image" />
+              <Image src={image_url("/app_images/services/service_images/smarttech_2d_arts.png", true)} width={604} height={408} alt="Image" />
             </div>
 
             <div className="content">
@@ -270,7 +272,7 @@ export default function ServicesProp({ courseData, image }) {
         <div className="modern-course-features-box h-100">
             <div className="inner">
               <div className="thumbnail">
-                <Image src={image_url("/app_images/services/service1.webp", true)} width={604} height={408} alt="Image" />
+                <Image src={image_url("/app_images/services/service_images/smarttech_2d_animations.png", true)} width={604} height={408} alt="Image" />
               </div>
 
               <div className="content">
@@ -296,7 +298,7 @@ export default function ServicesProp({ courseData, image }) {
         <div className="modern-course-features-box h-100">
           <div className="inner">
             <div className="thumbnail">
-              <Image src={image_url("/app_images/services/service1.webp", true)} width={604} height={408} alt="Image" />
+              <Image src={image_url("/app_images/services/service_images/smarttech_ai_development.png", true)} width={604} height={408} alt="Image" />
             </div>
 
             <div className="content">
@@ -322,7 +324,7 @@ export default function ServicesProp({ courseData, image }) {
         <div className="modern-course-features-box h-100">
             <div className="inner">
               <div className="thumbnail">
-                <Image src={image_url("/app_images/services/service1.webp", true)} width={604} height={408} alt="Image" />
+                <Image src={image_url("/app_images/services/service_images/smarttech_nft_marketplace.png", true)} width={604} height={408} alt="Image" />
               </div>
 
               <div className="content">
@@ -346,7 +348,7 @@ export default function ServicesProp({ courseData, image }) {
         <div className="modern-course-features-box h-100">
           <div className="inner">
             <div className="thumbnail">
-              <Image src={image_url("/app_images/services/service1.webp", true)} width={604} height={408} alt="Image" />
+              <Image src={image_url("/app_images/services/service_images/smarttech_audit.jpg", true)} width={604} height={408} alt="Image" />
             </div>
 
             <div className="content">
@@ -379,7 +381,7 @@ export default function ServicesProp({ courseData, image }) {
           <div className="modern-course-features-box h-100">
               <div className="inner">
                 <div className="thumbnail">
-                  <Image src={image_url("/app_images/services/service1.webp", true)} width={604} height={408} alt="Image" />
+                  <Image src={image_url("/app_images/services/service_images/smarttech_support.png", true)} width={604} height={408} alt="Image" />
                 </div>
 
                 <div className="content">

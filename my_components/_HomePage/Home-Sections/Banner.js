@@ -14,28 +14,17 @@ export const Banner = () => {
 
   return (
 
-      <div className="slider-area rbt-banner-5 height-750 bg_image" data-gradient-overlay="7" style={{ backgroundImage: "url(/app_images/bg/banner.jpg)" }}>
+      <div className="slider-area rbt-banner-5 height-800 bg_image" data-gradient-overlay="7" style={{ backgroundImage: "url(/app_images/bg/banner.jpg)" }}>
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <div className="inner text-center">
                 <h1 className="title display-one">
-                  {/* We Build <span>Industry-leading</span>
-                  <span>Tech Solutions</span> with unmatched expertise */}
-
-                  {/* We Build expert <span>Software Solutions</span>
-                  <span>for Your Business</span> Growth */}
-
-                  We're a <span>software agency</span> 
-                  <span>& free online</span> School
-                  
+                  We are a <span>Technology &</span> 
+                  <span>Digital Solutions Company</span>
                 </h1>
                 <p className="description">
-                  {/* At {CONFIG.APP_NAME}, we specialize in bringing your vision to life. We create robust digital solutions for diverse industries with our creative, 
-                  dedicated team of professionals. */}
-                  We are your reliable development partner with just one goal in focus, to create products that deliver enduring value and drive profitability. 
-                  {/* We build robust digital 
-                  solutions for diverse industries with our creative, dedicated team of professionals. */}
+                  We are your reliable development partner with just one goal in focus, to create products that deliver enduring value and drive profitability. We transforming Industries with Robust, Creative Digital Solutions.
                 </p>
                 <div className="rbt-button-group">
                   <Link className="rbt-btn btn-white hover-icon-reverse" href={ROUTE.appointment}>

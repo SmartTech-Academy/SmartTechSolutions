@@ -18,10 +18,10 @@ const Newsletter = () => {
             NewsletterData.newsletterTwo.map((data, index) => (
               <div className="inner text-center" key="1">
                 <div className="section-title text-center">
-                  <span className="subtitle bg-white-opacity"> GET LATEST SMARTTECH ACADEMY UPDATE </span>
+                  <span className="subtitle bg-white-opacity"> GET LATEST SMARTTECH SOLUTIONS UPDATE </span>
                   <h2 className="title color-white"> Subscribe Our Newsletter </h2>
                   <p className="description color-white mt--20">
-                    {"Be the first to get our latest articles, exclusive updates, and insider tips. Subscribe to our content and stay ahead with everything we share—directly to your inbox."}
+                    {"Be the first to get our latest articles, exclusive updates, and insider tips. Subscribe to our content and stay ahead with everything we share, directly to your inbox."}
                   </p>
                 </div>
 
@@ -50,12 +50,12 @@ const Newsletter = () => {
                         <div className="content">
                           <h3 className="counter color-white">
                             <span className="odometer">
-                              <Odometer value={500} />
+                              <Odometer value={350} />
                             </span>
                           </h3>
-                          <h5 className="title color-white">{"Successfully Trained"}</h5>
+                          <h5 className="title color-white">{"Designers and Developers"}</h5>
                           <span className="subtitle color-white">
-                            {"Learners & counting"}
+                            {"Engineers & counting"}
                           </span>
                         </div>
                       </div>
@@ -68,12 +68,12 @@ const Newsletter = () => {
                         <div className="content">
                           <h3 className="counter color-white">
                             <span className="odometer">
-                              <Odometer value={100} />
+                              <Odometer value={410} />
                             </span>
                           </h3>
-                          <h5 className="title color-white">{"Certified Students"}</h5>
+                          <h5 className="title color-white">{"Satisfied Clients"}</h5>
                           <span className="subtitle color-white">
-                            {"Online Course"}
+                            {"Worldwide"}
                           </span>
                         </div>
                       </div>

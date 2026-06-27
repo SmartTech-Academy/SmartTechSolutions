@@ -24,7 +24,7 @@ const Two_Dimension_Art = () => {
 
         <>
 
-            <PageHead title="2D Art Services | SmartTech Academy" />
+            <PageHead title="2D Art Services | SmartTech Solutions" />
 
             <Provider store={Store}>
                 <Context>

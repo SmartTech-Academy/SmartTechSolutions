@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
 import "plyr/dist/plyr.css";
-import Plyr from "plyr";
 
 import LessonSidebar from "@/my_components/Lesson/LessonSidebar";
 import LessonPagination from "@/my_components/Lesson/LessonPagination";
@@ -17,18 +16,20 @@ import { CONFIG } from "@/app_config.js";
 const StudentEvents = () => {
 
   useEffect(() => {
-    new Plyr(".rbtplayer", {
-      muted: false,
-      volume: 1,
-      controls: [
-        "play-large",
-        "play",
-        "progress",
-        "current-time",
-        "mute",
-        "volume",
-        "fullscreen",
-      ],
+    import("plyr").then(({ default: Plyr }) => {
+      new Plyr(".rbtplayer", {
+        muted: false,
+        volume: 1,
+        controls: [
+          "play-large",
+          "play",
+          "progress",
+          "current-time",
+          "mute",
+          "volume",
+          "fullscreen",
+        ],
+      });
     });
   }, []);
 

@@ -35,9 +35,8 @@ const AboutTwo = () => {
 
   return (
     <>
-      {AboutData &&
-        AboutData.aboutTwo.map((data, index) => (
-          <div className="row g-5 align-items-center" key={index}>
+
+          <div className="row g-5 align-items-center" key="1">
             <div className="col-lg-6">
               <div className="thumbnail-wrapper">
 
@@ -52,58 +51,44 @@ const AboutTwo = () => {
                     <Image src={aboutImg3} width={405} height={490} alt="Education Images" />
                   </div>
                 </div>
-                {/* {data.images.map((img) => (
-                  <div
-                    className={`thumbnail image-${img.id} ${img.class}`}
-                    key={img.id}
-                  >
-                    <Image
-                      data-parallax='{"x": 0, "y": -20}'
-                      src={img.image}
-                      width={img.width}
-                      height={img.height}
-                      alt="Education Images"
-                    />
-                  </div>
-                ))} */}
+
               </div>
             </div>
             <div className="col-lg-6">
               <div className="inner pl--50 pl_sm--0 pl_md--0">
                 <div className="section-title text-start">
-                  <span className="subtitle bg-coral-opacity">{data.tag}</span>
+                  {/* <span className="subtitle bg-coral-opacity">{data.tag}</span> */}
                   <h2 className="title">
-                    A Software Agency <br /> and Tech School
+                    Our Objectives remains <br /> as simple as ABC..
                   </h2>
                 </div>
 
                 <p className="description mt--30">
-                  We are a leading software agency and tech school dedicated to empowering businesses and individuals alike.
+                  To be your reliable development partner with just one goal in focus, to create products that deliver enduring value and drive profitability.
                 </p>
 
                 <div className="rbt-feature-wrapper mt--20 ml_dec_20">
 
                   <div className="rbt-feature feature-style-2 rbt-radius" key="1">
                     <div className={`icon ${"bg-primary-opacity"}`}>
-                      <i className="feather-monitor"></i>
+                      <i className="feather-briefcase"></i>
                     </div>
                     <div className="feature-content">
-                      <h6 className="feature-title">Software Agency</h6>
+                      <h6 className="feature-title">MISSION</h6>
                       <p className="feature-description">
-                        Our agency specializes in developing innovative digital solutions tailored to diverse industries, ensuring robust performance 
-                        and seamless user experiences. 
+                        Transforming Industries with Robust, Creative Digital Solutions & Training Future Experts.
                       </p>
                     </div>
                   </div>
 
                   <div className="rbt-feature feature-style-2 rbt-radius" key="2">
                     <div className={`icon ${"bg-pink-opacity"}`}>
-                      <i className="feather-book"></i>
+                      <i className="feather-eye"></i>
                     </div>
                     <div className="feature-content">
-                      <h6 className="feature-title">Tech School</h6>
+                      <h6 className="feature-title">VISION</h6>
                       <p className="feature-description">
-                        Our tech school nurtures the next generation of tech experts through comprehensive online training programs led by seasoned professionals.
+                        Bridging the gap between industry needs and technological prowess, driving progress and fostering future leaders in technology.
                       </p>
                     </div>
                   </div>
@@ -111,26 +96,13 @@ const AboutTwo = () => {
                 </div>
 
                 <p className="description mt--30">
-                  Together, we bridge the gap between industry needs and technological prowess, driving progress and fostering future leaders in technology.
+                  Together, we bridge the gap between industry needs and technological prowess, driving progress and fostering the next generation of technological solutions.
                 </p>
 
-                {/* <div className="about-btn mt--40">
-                  <Link className="rbt-btn btn-gradient hover-icon-reverse" href="#">
-                    <span className="icon-reverse-wrapper">
-                      <span className="btn-text">More About Us</span>
-                      <span className="btn-icon">
-                        <i className="feather-arrow-right"></i>
-                      </span>
-                      <span className="btn-icon">
-                        <i className="feather-arrow-right"></i>
-                      </span>
-                    </span>
-                  </Link>
-                </div> */}
               </div>
             </div>
           </div>
-        ))}
+
     </>
   );
 };

@@ -48,7 +48,7 @@ const ServiceFaq = ({ data }) => {
 
               <div className="col-lg-5 order-1 order-lg-2">
                 <div className="thumbnail">
-                  <Image className="radius-6" src={image_url(data.img)} width={526} height={644} alt="SmartTech Academy Web Development image" />
+                  <Image className="radius-6" src={image_url(data.img)} width={526} height={644} alt="SmartTech Solutions Web Development image" />
                 </div>
               </div>
             </div>

@@ -9,11 +9,17 @@
 
 const getLocalStorage = () => {
   if (typeof window !== "undefined") {
-    let cart = localStorage.getItem("hiStudy");
+    const cart = localStorage.getItem("hiStudy");
 
-    if (cart) {
-      return JSON.parse(cart);
-    } else {
+    if (!cart) {
+      return [];
+    }
+
+    try {
+      const parsedCart = JSON.parse(cart);
+      return Array.isArray(parsedCart) ? parsedCart : [];
+    } catch {
+      localStorage.removeItem("hiStudy");
       return [];
     }
   } else {

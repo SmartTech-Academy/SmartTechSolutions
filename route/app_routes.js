@@ -27,9 +27,11 @@ export const ROUTE = {
   two_D_art_service: "/services/2D-arts",
   mvp_development_service: "/services/mvp-development",
 
-  course: "/courses",
-  course_details: "/courses/details/",
   project: "/projects",
+  digistate_project: "/projects/digistate",
+
+  our_process: "/our-process",
+  course_details: "/courses/details/",
   contact: "/contact",
   events: "/events",
   event_details: "/events/details/",

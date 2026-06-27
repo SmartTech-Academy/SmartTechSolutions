@@ -24,7 +24,7 @@ const index = () => {
 
     <>
 
-      <PageHead title="Ticket Purchase | SmartTech Academy" />
+      <PageHead title="Ticket Purchase | SmartTech Solutions" />
 
       <Provider store={Store}>
         <Context>

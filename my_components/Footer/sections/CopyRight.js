@@ -20,8 +20,8 @@ const CopyRight = () => {
             <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12">
               <p className="rbt-link-hover text-center text-lg-start">
                 {"Copyright © "}{year}{" "}
-                <Link href="https://smarttechacademy.org/">
-                  SmartTech Academy.
+                <Link href="https://smarttech.ng">
+                  SmartTech Solutions.
                 </Link>{" "}
                 All Rights Reserved
               </p>
@@ -30,7 +30,6 @@ const CopyRight = () => {
               <ul className="copyright-link rbt-link-hover justify-content-center justify-content-lg-end mt_sm--10 mt_md--10">
                 <li><Link href={ ROUTE.terms }>Terms of Service</Link></li>
                 <li><Link href={ ROUTE.privacy }>Privacy Policy</Link></li>
-                <li><Link href={ ROUTE.Faq }>Faq</Link></li>
               </ul>
             </div>
           </div>

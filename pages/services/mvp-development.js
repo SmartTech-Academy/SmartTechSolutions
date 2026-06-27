@@ -24,7 +24,7 @@ const MVPDevelopment = () => {
 
         <>
 
-            <PageHead title="MVP Development Services | SmartTech Academy" />
+            <PageHead title="MVP Development Services | SmartTech Solutions" />
 
             <Provider store={Store}>
                 <Context>

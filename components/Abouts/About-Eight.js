@@ -2,24 +2,25 @@ import React, { useEffect } from "react";
 import "plyr/dist/plyr.css";
 
 import Link from "next/link";
-import Plyr from "plyr";
 
 import AboutData from "../../data/elements/about.json";
 
 const AboutEight = () => {
   useEffect(() => {
-    new Plyr(".rbtplayer", {
-      muted: false,
-      volume: 1,
-      controls: [
-        "play-large",
-        "play",
-        "progress",
-        "current-time",
-        "mute",
-        "volume",
-        "fullscreen",
-      ],
+    import("plyr").then(({ default: Plyr }) => {
+      new Plyr(".rbtplayer", {
+        muted: false,
+        volume: 1,
+        controls: [
+          "play-large",
+          "play",
+          "progress",
+          "current-time",
+          "mute",
+          "volume",
+          "fullscreen",
+        ],
+      });
     });
   }, []);
   return (

@@ -13,7 +13,7 @@ import { TRUSTED_BY_BRANDS_DATAS } from "@/AppDatas/trusted_by_brands";
 export const CONFIG = {
   
     // GENERAL APP INFO's
-    APP_NAME: "SmartTech Academy",
+    APP_NAME: "SmartTech Solutions",
     NICK_NAME: "SmartTech",
     PHONE_1: "+234 803 443 6977",
     PHONE_2: "+234 802 326 6696",

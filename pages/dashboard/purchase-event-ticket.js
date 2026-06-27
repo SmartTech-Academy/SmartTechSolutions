@@ -18,7 +18,7 @@ const purchaseEventTicket = () => {
 
     <Provider store={Store}>
       <Context>
-        <PageHead title="Purchase Event Ticket | SmartTech Academy Student Dashboard" />
+        <PageHead title="Purchase Event Ticket | SmartTech Solutions Student Dashboard" />
         <HeaderContainer headerSticky="rbt-sticky" headerType="" topBarToggle="off"  />
 
         <StudentPurchaseEventTicket />

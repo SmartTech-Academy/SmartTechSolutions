@@ -18,7 +18,7 @@ const EditEvent = () => {
 
     <Provider store={Store}>
       <Context>
-        <PageHead title="Edit Event | SmartTech Academy Student Dashboard" />
+        <PageHead title="Edit Event | SmartTech Solutions Student Dashboard" />
         <HeaderContainer headerSticky="rbt-sticky" headerType="" topBarToggle="off"  />
 
         <StudentEvent usage_type="edit" />

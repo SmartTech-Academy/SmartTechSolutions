@@ -26,7 +26,11 @@ const index = () => {
 
     <>
 
+<<<<<<< ours
         <PageHead title="Blog Post | SmartTech Academy" />
+=======
+        <PageHead title="Blog Post | SmartTech Solutions" />
+>>>>>>> theirs
 
         <Provider store={Store}>
             <Context>

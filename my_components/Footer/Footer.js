@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import logo from "@/public/images/logo/logo.png";
-import logoLight from "@/public/images/dark/logo/logo-light.png";
+import logo from "@/public/app_images/logo/logo-blue.png";
+import logoLight from "@/public/app_images/logo/logo-white.png";
 
 import FooterData from "@/data/footer.json";
 import SingleFooter from "./sections/SingleFooter";
@@ -36,18 +36,18 @@ const Footer = ({bg="white"}) => {
                       <div className="logo">
                         <Link href={ ROUTE.home }>
                           {isLightTheme ? (
-                            <Image src={logo} width={152} height={50} priority={true} alt="SmartTech Logo" />
+                            <Image src={logo} width={152} height={50} priority={true} alt="SmartTech Solutions Logo" />
                           ) : (
-                            <Image src={logoLight} width={152} height={50} priority={true} alt="SmartTech Logo" />
+                            <Image src={logoLight} width={152} height={50} priority={true} alt="SmartTech Solutions Logo" />
                           )}
                         </Link>
                       </div>
 
-                      <p className="description mt--20">{"Transforming industries with innovative digital solutions while nurturing tomorrow's tech leaders. As a premier software agency and "+
-                      "tech school, we empower businesses and individuals to innovate, grow, and succeed."}</p>
+                      <p className="description mt--20">{"We are transforming industries with innovative digital solutions. As your reliable development partner, "
+                      +"our focus is to build products that delivers enduring value and drive profitability."}</p>
 
                       <div className="contact-btn mt--30">
-                        <Link className="rbt-btn hover-icon-reverse btn-border-gradient radius-round" href={ ROUTE.appointment }>
+                        <Link className="rbt-btn hover-icon-reverse btn-border-gradient radius-round" href={ ROUTE.contact }>
                           <div className="icon-reverse-wrapper">
                             <span className="btn-text">Contact With Us</span>
                             <span className="btn-icon">
@@ -65,9 +65,8 @@ const Footer = ({bg="white"}) => {
 
 
                   <SingleFooter classOne="offset-lg-1 col-lg-2 col-md-6 col-sm-6 col-12 mt--30" title="Our Company" data={[ { text: "Home", link: ROUTE.home }, 
-                    { text: "About Us", link: ROUTE.about }, { text: "Courses", link: ROUTE.course }, { text: "Services", link: ROUTE.service }, { text: "Projects", link: ROUTE.project }, 
-                    { text: "Events", link: ROUTE.events }, { text: "Blog", link: ROUTE.blog }, { text: "Contact Us", link: ROUTE.contact }, { text: "Register", link: ROUTE.register }, 
-                    { text: "Login", link: ROUTE.login }, { text: "Appointment", link: ROUTE.appointment } ]} />
+                    { text: "About Us", link: ROUTE.about }, { text: "Our Process", link: ROUTE.our_process }, { text: "Services", link: ROUTE.service }, { text: "Projects", link: ROUTE.project }, 
+                    { text: "Blog", link: ROUTE.blog }, { text: "Contact Us", link: ROUTE.contact }, { text: "Appointment", link: ROUTE.appointment } ]} />
 
 
 

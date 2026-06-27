@@ -26,22 +26,13 @@ const AllBlogs = () => {
         <main className="rbt-main-wrapper">
             
 
-            <Banner col="col-lg-10 offset-lg-1" text={"The "+CONFIG.APP_NAME+" Blog"} ArticlesLength={"0"} />
+            <Banner col="col-lg-10 offset-lg-1" text={"SmartTech Blog"} ArticlesLength={"0"} />
+
 
 
 
 
             <div className="rbt-blog-area rbt-section-overlayping-top rbt-section-gapBottom">
-                <div className="container">
-                    <BlogWidget extra_class=" sal-animate" />
-                </div>
-            </div>
-
-
-
-
-
-            <div className="rbt-blog-area rbt-section-overlayping-top rbt-section-gap">
                 <div className="container">
                     <BlogList isPagination={true} />
                 </div>
@@ -54,30 +45,6 @@ const AllBlogs = () => {
 
             <div className="rbt-callto-action rbt-cta-default style-4 bg-gradient-6 mt--75">
                 <CallToActionOne btnClass="rbt-btn btn-gradient hover-icon-reverse" extra_class=" sal-animate" />
-            </div>
-
-
-
-
-
-
-
-            <div className="rbt-event-area rbt-section-gap bg-gradient-3">
-                <div className="container">
-                    <div className="row mb--55">
-                        <div className="section-title text-center">
-                            <span className="subtitle bg-white-opacity">
-                                STIMULATED TO TAKE PART IN?
-                            </span>
-                            <h2 className="title color-white">Upcoming Events</h2>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <EventCarouse />
-                        </div>
-                    </div>
-                </div>
             </div>
 
 

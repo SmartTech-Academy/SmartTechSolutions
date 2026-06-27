@@ -5,6 +5,9 @@ export const CreateContext = createContext();
 
 export const useAppContext = () => useContext(CreateContext);
 
+const THEME_STORAGE_KEY = "histudy-theme";
+const DARK_MODE_CLASS = "active-dark-mode";
+
 const Context = ({ children }) => {
   const dispatch = useDispatch();
   // const { cart } = useSelector((state) => state.CartReducer);
@@ -27,25 +30,41 @@ const Context = ({ children }) => {
 
 
   useEffect(() => {
-    const themeType = localStorage.getItem("histudy-theme");
-    if (themeType === "dark") {
-      setLightTheme(false);
-      document.body.classList.add("active-dark-mode");
-    }
-  }, []);
-
-  useEffect(() => {
     if (isLightTheme) {
-      document.body.classList.remove("active-dark-mode");
-      localStorage.setItem("histudy-theme", "light");
+      document.body.classList.remove(DARK_MODE_CLASS);
     } else {
-      document.body.classList.add("active-dark-mode");
-      localStorage.setItem("histudy-theme", "dark");
+      document.body.classList.add(DARK_MODE_CLASS);
     }
   }, [isLightTheme]);
 
+  useEffect(() => {
+    const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+    if (savedTheme === "dark" || savedTheme === "light") {
+      setLightTheme(savedTheme === "light");
+      return;
+    }
+
+    setLightTheme(!systemTheme.matches);
+
+    const handleSystemThemeChange = (event) => {
+      setLightTheme(!event.matches);
+    };
+
+    systemTheme.addEventListener("change", handleSystemThemeChange);
+
+    return () => {
+      systemTheme.removeEventListener("change", handleSystemThemeChange);
+    };
+  }, []);
+
   const toggleTheme = () => {
-    setLightTheme((prevTheme) => !prevTheme);
+    setLightTheme((prevTheme) => {
+      const nextTheme = !prevTheme;
+      localStorage.setItem(THEME_STORAGE_KEY, nextTheme ? "light" : "dark");
+      return nextTheme;
+    });
   };
 
   return (

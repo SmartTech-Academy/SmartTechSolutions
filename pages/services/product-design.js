@@ -24,7 +24,7 @@ const ProductDesign = () => {
 
         <>
 
-            <PageHead title="Product Design Services | SmartTech Academy" />
+            <PageHead title="Product Design Services | SmartTech Solutions" />
 
             <Provider store={Store}>
                 <Context>

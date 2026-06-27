@@ -24,7 +24,7 @@ const Three_Dimension_Modeling = () => {
 
         <>
 
-            <PageHead title="3D Modeling Services | SmartTech Academy" />
+            <PageHead title="3D Modeling Services | SmartTech Solutions" />
 
             <Provider store={Store}>
                 <Context>

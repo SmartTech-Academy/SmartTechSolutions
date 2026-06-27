@@ -36,25 +36,11 @@ const CourseCardTwo = ({ course }) => {
                 </Link>
               </div>
               <div className="rbt-card-body">
-                <div className="rbt-category">
-                  {data.courseFor &&
-                    data.courseFor.map((crs, i) => (
-                      <a key={i} href="#">
-                        {crs}
-                      </a>
-                    ))}
-                </div>
                 <h4 className="rbt-card-title">
                   <Link href={ROUTE.course_details+`1`}> 
                     {data.courseTitle}
                   </Link>
                 </h4>
-                <span className="lesson-number">
-                  {data.lesson} lessons
-                  <span className="lesson-time ms-2">
-                    ({data.days} hours total)
-                  </span>
-                </span>
                 <p className="rbt-card-text">
                   It is a long established fact that a reader will be
                   distracted.

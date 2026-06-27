@@ -23,7 +23,7 @@ const index = () => {
 
     <>
 
-        <PageHead title="Blog | SmartTech Academy" />
+        <PageHead title="Blog | SmartTech Solutions" />
 
         <Provider store={Store}>
             <Context>

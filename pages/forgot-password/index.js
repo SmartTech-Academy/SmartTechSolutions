@@ -13,7 +13,7 @@ const ErrorPage = () => {
   return (
     <Provider store={Store}>
       <Context>
-        <PageHead title="Forgot Password | SmartTech Academy" />
+        <PageHead title="Forgot Password | SmartTech Solutions" />
         <HeaderContainer headerSticky="rbt-sticky" headerType=" rbt-transparent-header" topBarToggle="off" />
 
         <ForgotPassword />

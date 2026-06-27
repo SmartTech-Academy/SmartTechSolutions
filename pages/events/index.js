@@ -17,7 +17,7 @@ const index = () => {
 
     <>
 
-        <PageHead title="Events | SmartTech Academy" />
+        <PageHead title="Events | SmartTech Solutions" />
 
         <Provider store={Store}>
             <Context>

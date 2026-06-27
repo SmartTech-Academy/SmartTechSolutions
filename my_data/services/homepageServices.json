@@ -1,0 +1,46 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "service": "Web Application Development",
+      "description": "Unlock the full potential of your business with expertly crafted web applications that are fast, scalable, and tailored to deliver exceptional user experiences. The web applications we build are always designed to drive results and set you ahead of the competition.",
+      "image": "/app_images/services/service_images/smarttech_web_development.png",
+      "routeKey": "web_dev_service"
+    },
+    {
+      "id": 2,
+      "service": "Mobile Application Development",
+      "description": "We specialize in crafting custom mobile applications that prioritize user experience, drive engagement, and align perfectly with your business objectives. With our wealth of experienced and skilled engineers, we are able to work with the most reliable technology to deliver an enterprise class solution, ensuring your vision comes to life with seamless functionality and unparalleled quality.",
+      "image": "/app_images/services/service_images/smarttech_mobile_app_development.png",
+      "routeKey": "mobile_dev_service"
+    },
+    {
+      "id": 3,
+      "service": "Blockchain Development",
+      "description": "Our expertise in blockchain development empowers businesses to harness the transformative potential of decentralized technology, whether you want to build your own blockchain, cryptocurrency, token, NFT, crypto wallet, exchange, NFT marketplace, or tokenize real-world and digital assets with a dedicated marketplace for trading and sales, we deliver secure, transparent, and scalable solutions that foster trust, streamline operations, and drive innovation across your industry.",
+      "image": "/app_images/services/service_images/smarttech_blockchain_development.png",
+      "routeKey": "blockchain_dev_service"
+    },
+    {
+      "id": 4,
+      "service": "2D/3D Game Development",
+      "description": "From concept to launch, our award-winning team harnesses Unity and Unreal Engine to craft immersive 2D, 3D, and NFT games. We seamlessly blend stunning visuals, intricate storytelling, dynamic gameplay, and innovative play-to-own mechanics to deliver rich interactive experiences that captivate players on mobile, VR, PC, and console platforms.",
+      "image": "/app_images/services/service_images/smarttech_game_development.png",
+      "routeKey": "game_dev_service"
+    },
+    {
+      "id": 5,
+      "service": "Artificial Intelligence Development",
+      "description": "We empower your business with groundbreaking AI solutions that drive growth and boost efficiency. Our expert team seamlessly integrates cutting-edge technology into your operations, transforming workflows and providing a competitive edge in today's dynamic market. Let us help you unlock AI's full potential to streamline processes, enhance decision-making, and propel your business forward.",
+      "image": "/app_images/services/service_images/smarttech_ai_development.png",
+      "routeKey": "ai_development_service"
+    },
+    {
+      "id": 6,
+      "service": "NFT Market Place Development",
+      "description": "We make ideas into valuable digital assets with custom-built NFT marketplaces, immersive gaming platforms, and dynamic ecosystems that drive engagement and growth.",
+      "image": "/app_images/services/service_images/smarttech_nft_marketplace.png",
+      "routeKey": "nft_marketplace_service"
+    }
+  ]
+}

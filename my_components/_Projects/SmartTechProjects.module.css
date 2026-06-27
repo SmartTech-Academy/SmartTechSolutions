@@ -1,0 +1,709 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   SmartTechProjects — component styles
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── CSS Variables ──────────────────────────────────────────────────── */
+.pageRoot {
+  --c-orange: #f97316;
+  --c-ink: #172033;
+  --c-muted: #697287;
+  --c-line: rgba(23, 32, 51, 0.1);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   HERO  —  Template banner pattern (rbt-banner-area / rbt-banner-19)
+   The banner shell, bg image, breadcrumb, title, description, and buttons
+   all use existing template classes.  Only the stats bar needs new CSS.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.heroStatBar {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+.heroStatItem strong {
+  display: block;
+  color: #ffffff;
+  font-size: clamp(28px, 3.2vw, 44px);
+  font-weight: 900;
+  line-height: 1;
+}
+.heroStatItem span {
+  display: block;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-top: 6px;
+}
+.heroStatDivider {
+  width: 1px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.18);
+  flex-shrink: 0;
+}
+
+/* force breadcrumb links white on the dark banner */
+.bannerPageList li,
+.bannerPageList li a {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+.bannerPageList li a:hover { color: #f97316 !important; }
+.bannerPageList .icon-right i { color: rgba(255, 255, 255, 0.5) !important; }
+
+@media (max-width: 575px) {
+  .heroStatBar { gap: 24px; flex-wrap: wrap; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   STATS STRIP
+   ═══════════════════════════════════════════════════════════════════════ */
+.statsStrip {
+  background:
+    radial-gradient(circle at 20% 50%, rgba(249,115,22,0.14), transparent 35%),
+    linear-gradient(135deg, #080f1a, #172033);
+  padding: 48px 0;
+}
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 24px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+.statItem:last-child { border-right: 0; }
+.statItem i { color: #f97316; font-size: 24px; margin-bottom: 6px; }
+.statItem strong {
+  display: block;
+  color: #ffffff;
+  font-size: clamp(28px, 3.5vw, 46px);
+  font-weight: 900;
+  line-height: 1;
+}
+.statItem span {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   SECTION HEADER
+   ═══════════════════════════════════════════════════════════════════════ */
+.projectsHeader { background: #ffffff; }
+.sectionTitle {
+  color: #172033;
+  font-size: clamp(30px, 4vw, 54px);
+  line-height: 1.1;
+  margin: 0;
+}
+.titleAccent {
+  background: linear-gradient(135deg, #f97316, #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.sectionDesc {
+  color: #697287;
+  font-size: 17px;
+  line-height: 1.78;
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   FEATURED PROJECT (Digistate)
+   ═══════════════════════════════════════════════════════════════════════ */
+.featuredSection {
+  background: linear-gradient(180deg, #f7f9fc 0%, #ffffff 100%);
+  padding: 90px 0 90px;
+}
+.featuredWrap {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 72px;
+  align-items: center;
+}
+
+/* visual side */
+.featVisual {
+  position: relative;
+  min-height: 600px;
+}
+.featBrowser {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--c-line);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 40px 120px rgba(23, 32, 51, 0.14);
+  z-index: 1;
+}
+.featBrowserChrome {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  height: 42px;
+  padding: 0 16px;
+  background: #f4f6fa;
+  border-bottom: 1px solid var(--c-line);
+}
+.featBrowserChrome span {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: #f97316;
+}
+.featBrowserChrome span:nth-child(2) { background: #f5c542; }
+.featBrowserChrome span:nth-child(3) { background: #76b82a; }
+.featUrl {
+  flex: 1; max-width: 200px;
+  height: 22px; padding: 0 10px;
+  margin-left: 8px;
+  border: 1px solid var(--c-line);
+  border-radius: 4px;
+  background: #fff;
+  color: #697287;
+  font-size: 11px;
+  display: flex; align-items: center;
+}
+.featBrowser img { display: block; width: 100%; height: auto; }
+
+.featPhone {
+  position: absolute;
+  overflow: hidden;
+  border: 8px solid #0b1220;
+  border-radius: 28px;
+  background: #0b1220;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
+  z-index: 2;
+}
+.featPhone img {
+  display: block; width: 100%; height: 100%;
+  object-fit: cover; object-position: top;
+}
+.featPhoneLeft {
+  left: -30px; bottom: -30px;
+  width: 170px; height: 370px;
+  transform: rotate(-6deg);
+  animation: phoneFloatA 7s ease-in-out infinite;
+}
+.featPhoneRight {
+  right: -20px; bottom: -20px;
+  width: 140px; height: 300px;
+  transform: rotate(6deg);
+  animation: phoneFloatB 8s ease-in-out infinite;
+}
+.featLabel {
+  position: absolute;
+  top: -14px; right: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(249, 115, 22, 0.12);
+  border: 1px solid rgba(249, 115, 22, 0.28);
+  color: #c05c12;
+  font-size: 12px;
+  font-weight: 800;
+  z-index: 3;
+}
+.featLabel i { color: #f97316; font-size: 14px; }
+
+@keyframes phoneFloatA {
+  0%, 100% { transform: rotate(-6deg) translateY(0); }
+  50%       { transform: rotate(-4deg) translateY(-12px); }
+}
+@keyframes phoneFloatB {
+  0%, 100% { transform: rotate(6deg) translateY(0); }
+  50%       { transform: rotate(4deg) translateY(-10px); }
+}
+
+/* content side */
+.featEyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.featNumber {
+  font-size: 80px;
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(135deg, #f97316, #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -2px;
+}
+.featBadge {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(249, 115, 22, 0.25);
+  background: rgba(249, 115, 22, 0.08);
+  color: #c05c12;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.featTitle {
+  color: #172033;
+  font-size: clamp(34px, 4vw, 58px);
+  font-weight: 900;
+  line-height: 1.05;
+  margin: 0 0 8px;
+}
+.featTagline {
+  color: #f97316;
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 0 18px;
+}
+.featDesc {
+  color: #697287;
+  font-size: 16px;
+  line-height: 1.78;
+  margin: 0 0 28px;
+}
+.featMeta { display: grid; gap: 10px; margin-bottom: 28px; }
+.featMetaRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #172033;
+  font-size: 14px;
+}
+.featMetaRow i { color: #f97316; font-size: 16px; flex-shrink: 0; }
+.featMetaRow strong { font-weight: 800; margin-right: 4px; }
+.featStats {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 28px;
+  padding: 22px 24px;
+  border: 1px solid var(--c-line);
+  border-radius: 12px;
+  background: #f7f9fc;
+}
+.featStat strong {
+  display: block;
+  color: #172033;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1;
+}
+.featStat span {
+  display: block;
+  color: #697287;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+.featStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.featStack span {
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(249, 115, 22, 0.2);
+  background: rgba(249, 115, 22, 0.07);
+  color: #a54305;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   MORE PROJECTS GRID
+   ═══════════════════════════════════════════════════════════════════════ */
+.moreSection { background: #f6f8fb; }
+.moreLabel {
+  color: #697287;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 16px;
+}
+.moreDivider {
+  height: 2px;
+  background: linear-gradient(90deg, rgba(249, 115, 22, 0.5), transparent);
+  margin-bottom: 48px;
+}
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.projectCard {
+  overflow: hidden;
+  border: 1px solid var(--c-line);
+  border-radius: 16px;
+  background: #ffffff;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+.projectCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 32px 90px rgba(23, 32, 51, 0.13);
+}
+.projectCardImg {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+}
+.projectCardImg img {
+  display: block; width: 100%; height: 100%;
+  object-fit: cover; object-position: top;
+  transition: transform 0.4s ease;
+}
+.projectCard:hover .projectCardImg img { transform: scale(1.04); }
+.projectCardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(8, 15, 26, 0.55) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+.projectNumber {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(135deg, #f97316, #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0.85;
+}
+.projectCardBody { padding: 32px; }
+.projectIndustry {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(249, 115, 22, 0.1);
+  border: 1px solid rgba(249, 115, 22, 0.2);
+  color: #c05c12;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 14px;
+}
+.projectCardBody h3 {
+  color: #172033;
+  font-size: 26px;
+  font-weight: 900;
+  margin: 0 0 6px;
+}
+.projectTagline {
+  color: #f97316;
+  font-size: 15px;
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+.projectDesc {
+  color: #697287;
+  font-size: 15px;
+  line-height: 1.74;
+  margin: 0 0 20px;
+}
+.projectStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 18px;
+}
+.projectStack span {
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(23, 32, 51, 0.12);
+  background: #f4f6fa;
+  color: #172033;
+  font-size: 12px;
+  font-weight: 800;
+}
+.projectMetaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+  color: #697287;
+  font-size: 13px;
+  font-weight: 700;
+}
+.projectMetaRow span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.projectMetaRow i { color: #f97316; font-size: 14px; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   INVITE STRIP
+   ═══════════════════════════════════════════════════════════════════════ */
+.inviteStrip {
+  background:
+    radial-gradient(circle at 80% 30%, rgba(249, 115, 22, 0.18), transparent 35%),
+    linear-gradient(135deg, #080f1a, #172033);
+  padding: 72px 0;
+}
+.inviteInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.inviteText h3 {
+  color: #ffffff;
+  font-size: clamp(24px, 3vw, 44px);
+  font-weight: 900;
+  margin: 0 0 12px;
+  line-height: 1.1;
+}
+.inviteText p {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 520px;
+}
+.inviteActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  flex-shrink: 0;
+}
+.inviteBtnGhost {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════════════════════════════ */
+@media (max-width: 1199px) {
+  .heroLeft { padding: 120px 48px 80px; }
+  .heroRight { padding: 80px 36px 60px 36px; }
+  .featuredWrap { gap: 44px; }
+  .featVisual { min-height: 500px; }
+}
+
+@media (max-width: 991px) {
+  .projHero { grid-template-columns: 1fr; }
+  .heroLeft { padding: 130px 32px 64px; min-height: auto; }
+  .heroLeft::before { display: none; }
+  .heroRight { padding: 48px 32px 64px; }
+  .heroRight::before { display: none; }
+  .heroImgMain { min-height: 360px; }
+  .heroSub { max-width: 100%; }
+
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+  .statItem:nth-child(2) { border-right: 0; }
+  .statItem:nth-child(1),
+  .statItem:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.1); }
+
+  .featuredWrap { grid-template-columns: 1fr; }
+  .featVisual { min-height: 440px; max-width: 640px; margin: 0 auto; }
+  .featPhoneLeft { left: -10px; width: 150px; height: 320px; }
+  .featPhoneRight { right: -8px; width: 120px; height: 260px; }
+}
+
+@media (max-width: 767px) {
+  .heroLeft { padding: 110px 24px 56px; }
+  .heroRight { padding: 36px 24px 56px; }
+  .heroHeadline { font-size: 38px; }
+  .heroActions { flex-direction: column; }
+  .heroStats { gap: 16px; flex-wrap: wrap; }
+
+  .projectsGrid { grid-template-columns: 1fr; }
+  .featStats { gap: 16px; flex-wrap: wrap; }
+  .inviteInner { flex-direction: column; align-items: flex-start; }
+  .inviteActions { width: 100%; }
+
+  .featPhoneRight { display: none; }
+  .heroImgRow { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   VIDEO THUMBNAIL + LIGHTBOX (project card)
+   ═══════════════════════════════════════════════════════════════════════ */
+.videoThumb {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  text-decoration: none;
+}
+.videoThumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+.videoThumb:hover img { transform: scale(1.04); }
+
+.videoOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: rgba(7, 17, 30, 0.38);
+  transition: background 0.3s ease;
+}
+.videoThumb:hover .videoOverlay { background: rgba(7, 17, 30, 0.55); }
+
+.videoPlayBtn {
+  width: 72px !important;
+  height: 72px !important;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.videoThumb:hover .videoPlayBtn {
+  transform: scale(1.1);
+  box-shadow: 0 0 0 14px rgba(255, 255, 255, 0.18);
+}
+
+.videoLabel {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(249, 115, 22, 0.85);
+  padding: 5px 14px;
+  border-radius: 999px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   DARK MODE
+   active-dark-mode is added to <body> by Context.js
+   :global() escapes the module scope so we can target the body class
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── CSS variables in dark mode ─────────────────────────────────────── */
+:global(.active-dark-mode) .pageRoot {
+  --c-line: rgba(255, 255, 255, 0.08);
+}
+
+/* ── Section header ─────────────────────────────────────────────────── */
+:global(.active-dark-mode) .projectsHeader {
+  background: #192335;
+}
+:global(.active-dark-mode) .sectionTitle {
+  color: #ffffff;
+}
+:global(.active-dark-mode) .sectionDesc {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ── Featured section ───────────────────────────────────────────────── */
+:global(.active-dark-mode) .featuredSection {
+  background: linear-gradient(180deg, #192335 0%, #1e2d42 100%);
+}
+
+/* browser mockup */
+:global(.active-dark-mode) .featBrowser {
+  background: #273041;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.4);
+}
+:global(.active-dark-mode) .featBrowserChrome {
+  background: #1a2538;
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+:global(.active-dark-mode) .featUrl {
+  background: #273041;
+  border-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* featured label pill */
+:global(.active-dark-mode) .featLabel {
+  background: rgba(249, 115, 22, 0.18);
+  border-color: rgba(249, 115, 22, 0.35);
+  color: #f97316;
+}
+
+/* featured copy */
+:global(.active-dark-mode) .featBadge {
+  background: rgba(249, 115, 22, 0.14);
+  border-color: rgba(249, 115, 22, 0.3);
+  color: #f97316;
+}
+:global(.active-dark-mode) .featTitle {
+  color: #ffffff;
+}
+:global(.active-dark-mode) .featDesc {
+  color: rgba(255, 255, 255, 0.62);
+}
+:global(.active-dark-mode) .featMetaRow {
+  color: rgba(255, 255, 255, 0.85);
+}
+:global(.active-dark-mode) .featStats {
+  background: #273041;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+:global(.active-dark-mode) .featStat strong {
+  color: #ffffff;
+}
+:global(.active-dark-mode) .featStat span {
+  color: rgba(255, 255, 255, 0.55);
+}
+:global(.active-dark-mode) .featStack span {
+  background: rgba(249, 115, 22, 0.12);
+  border-color: rgba(249, 115, 22, 0.25);
+  color: #f97316;
+}
+
+/* ── More projects section ──────────────────────────────────────────── */
+:global(.active-dark-mode) .moreSection {
+  background: #192335;
+}
+:global(.active-dark-mode) .moreLabel {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* project cards */
+:global(.active-dark-mode) .projectCard {
+  background: #273041;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+:global(.active-dark-mode) .projectCard:hover {
+  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.4);
+}
+:global(.active-dark-mode) .projectCardBody h3 {
+  color: #ffffff;
+}
+:global(.active-dark-mode) .projectDesc {
+  color: rgba(255, 255, 255, 0.6);
+}
+:global(.active-dark-mode) .projectStack span {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.82);
+}
+:global(.active-dark-mode) .projectMetaRow {
+  color: rgba(255, 255, 255, 0.55);
+}

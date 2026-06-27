@@ -18,7 +18,7 @@ const overview = () => {
 
     <Provider store={Store}>
       <Context>
-        <PageHead title="Dashboard Overview | SmartTech Academy Student Dashboard" />
+        <PageHead title="Dashboard Overview | SmartTech Solutions Student Dashboard" />
         <HeaderContainer headerSticky="rbt-sticky" headerType="" topBarToggle="off"  />
 
         <StudentDashboardOverview />

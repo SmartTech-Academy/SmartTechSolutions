@@ -24,7 +24,7 @@ const GameDevelopment = () => {
 
         <>
 
-            <PageHead title="Game Development Services | SmartTech Academy" />
+            <PageHead title="Game Development Services | SmartTech Solutions" />
 
             <Provider store={Store}>
                 <Context>

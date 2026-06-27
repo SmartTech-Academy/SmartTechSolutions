@@ -1,8 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
+// load library functions
 import { image_url } from "@/helper/Utilities";
 
+// CONFIGS AND ROUTE
+import { ROUTE } from "@/route/app_routes.js";
 
 
 
@@ -19,11 +22,11 @@ const CallToActionOne = ({ btnClass, extra_class }) => {
         <div className="col-lg-8 mt--30 offset-lg-3">
           <div className="inner">
             <div className="content text-left">
-              <h2 className={"title"+extra_class} data-sal="slide-up">Ready to start creating a Educational Website?</h2>
+              <h2 className={"title"+extra_class} data-sal="slide-up">Ready to start building your next product?</h2>
               <div className="call-to-btn text-start mt--30">
-                <Link className={btnClass} href="#">
+                <Link className={btnClass} href={ROUTE.appointment}>
                   <span className="icon-reverse-wrapper">
-                    <span className="btn-text">Purchase Histudy</span>
+                    <span className="btn-text">Get in Touch Quickly</span>
                     <span className="btn-icon">
                       <i className="feather-arrow-right"></i>
                     </span>

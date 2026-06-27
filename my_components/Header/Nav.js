@@ -29,20 +29,20 @@ const Nav = () => {
         </li>
 
         <li className="with-megamenu has-menu-child-item position-static">
-          <Link className={`${isActive(ROUTE.course) ? "active d-block" : ""}`} href={ROUTE.course}>Courses</Link>
+          <Link className={`${isActive(ROUTE.our_process) ? "active d-block" : ""}`} href={ROUTE.our_process}>Our Process</Link>
         </li>
 
         <li className="with-megamenu has-menu-child-item position-static">
-          <Link className={`${isActive(ROUTE.service) ? "active d-block" : ""}`} href={ROUTE.service}>Services</Link>
+          <Link className={`${isActive(ROUTE.service) ? "active d-block" : ""}`} href={ROUTE.service}>Our Services</Link>
         </li>
 
         <li className="with-megamenu has-menu-child-item position-static">
-          <Link className={`${isActive(ROUTE.project) ? "active d-block" : ""}`} href={ROUTE.project}>Projects</Link>
+          <Link className={`${isActive(ROUTE.project) ? "active d-block" : ""}`} href={ROUTE.project}>Our Projects</Link>
         </li>
 
-        <li className="with-megamenu has-menu-child-item position-static">
+        {/* <li className="with-megamenu has-menu-child-item position-static">
           <Link className={`${isActive(ROUTE.events) ? "active d-block" : ""}`} href={ROUTE.events}>Events</Link>
-        </li>
+        </li> */}
 
         <li className="with-megamenu has-menu-child-item position-static">
           <Link className={`${isActive(ROUTE.blog) ? "active d-block" : ""}`} href={ROUTE.blog}>Blog</Link>

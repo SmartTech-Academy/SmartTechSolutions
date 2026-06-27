@@ -18,7 +18,7 @@ const Events = () => {
 
     <Provider store={Store}>
       <Context>
-        <PageHead title="Events | SmartTech Academy Student Dashboard" />
+        <PageHead title="Events | SmartTech Solutions Student Dashboard" />
         <HeaderContainer headerSticky="rbt-sticky" headerType="" topBarToggle="off"  />
 
         <StudentEvents />

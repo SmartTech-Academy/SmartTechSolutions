@@ -24,7 +24,7 @@ const NftMarketplaceDevelopment = () => {
 
         <>
 
-            <PageHead title="NFT Marketplace Development Services | SmartTech Academy" />
+            <PageHead title="NFT Marketplace Development Services | SmartTech Solutions" />
 
             <Provider store={Store}>
                 <Context>

@@ -18,7 +18,7 @@ const rePurposeEvent = () => {
 
     <Provider store={Store}>
       <Context>
-        <PageHead title="Re-Purpose Event | SmartTech Academy Student Dashboard" />
+        <PageHead title="Re-Purpose Event | SmartTech Solutions Student Dashboard" />
         <HeaderContainer headerSticky="rbt-sticky" headerType="" topBarToggle="off"  />
 
         <StudentEvent usage_type="rePurpose" />

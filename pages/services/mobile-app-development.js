@@ -24,7 +24,7 @@ const MobileAppDevelopment = () => {
 
         <>
 
-            <PageHead title="Mobile Application Development Services | SmartTech Academy" />
+            <PageHead title="Mobile Application Development Services | SmartTech Solutions" />
 
             <Provider store={Store}>
                 <Context>

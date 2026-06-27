@@ -16,7 +16,7 @@ const ElegantBanner = () => {
 
   useEffect(() => {
     const typeitInstance = new Typed(".is-visible", {
-      strings: ["English.", "Finance.", "Math."],
+      strings: ["Tech Product.", "Web App.", "Mobile App.", "3D Game", "AI Solution.", "Blockchain Project.", "AR/VR Experience."],
       typeSpeed: 80,
       backSpeed: 60,
       startDelay: 200,
@@ -40,10 +40,10 @@ const ElegantBanner = () => {
             <div className="content">
               <div className="inner text-center">
                 <div className="rbt-new-badge rbt-new-badge-one">
-                  <span className="rbt-new-badge-icon">🏆</span> The Leader in Online Learning
+                  <span className="rbt-new-badge-icon">🏆</span> The Leader in Product Engineering
                 </div>
 
-                <h1 className="title"> Popular Courses
+                <h2 className="title"> Let's Build Your Next{" "} 
                   <span className="header-caption ms-2">
                     <span className="cd-headline clip is-full-width">
                       <span className="cd-words-wrapper">
@@ -51,32 +51,12 @@ const ElegantBanner = () => {
                       </span>
                     </span>
                   </span>
-                </h1>
+                </h2>
 
                 <p className="description has-medium-font-size mt--20">
-                  Dive in and learn React.js from scratch! Learn Reactjs, Hooks, Redux, React Routing, Animations, Next.js and way more!
+                  {"From ambitious startups to established enterprises, we've helped organizations unlock new opportunities and accelerate growth. Yours could be our next success story."}
                 </p>
-
-                {/* <div className="slider-btn rbt-button-group justify-content-center">
-                  <Link className="rbt-btn btn-gradient hover-icon-reverse" href="#">
-                    <span className="icon-reverse-wrapper">
-                      <span className="btn-text">Log in to Start</span>
-                      <span className="btn-icon"><i className="feather-arrow-right"></i></span>
-                      <span className="btn-icon"><i className="feather-arrow-right"></i></span>
-                    </span>
-                  </Link>
-                  <Link className="rbt-btn hover-icon-reverse btn-white" href="#">
-                    <span className="icon-reverse-wrapper">
-                      <span className="btn-text">Buy The Course</span>
-                      <span className="btn-icon"><i className="feather-arrow-right"></i></span>
-                      <span className="btn-icon"><i className="feather-arrow-right"></i></span>
-                    </span>
-                  </Link>
-                </div> */}
-
-                {/* <div className="row mt--20">
-                  <Link href="contact.html">Contact Us</Link>
-                </div> */}
+                
               </div>
             </div>
           </div>

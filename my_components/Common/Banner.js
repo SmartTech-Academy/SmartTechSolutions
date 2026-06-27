@@ -35,7 +35,7 @@ const Banner = ({ text, col, ArticlesLength }) => {
 
                   <p className="description"> {"Stay informed with the latest updates and announcements from "+CONFIG.NICK_NAME+"! "} </p>
 
-                  <div className="col-lg-7 col-md-12 mb--30">
+                  {/* <div className="col-lg-7 col-md-12 mb--30">
                     <div className="rbt-sorting-list d-flex flex-wrap justify-content-start">
                       <div className="rbt-short-item">
                         <form action="#" className="rbt-search-style me-0">
@@ -46,7 +46,7 @@ const Banner = ({ text, col, ArticlesLength }) => {
                         </form>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
 
                 </div>

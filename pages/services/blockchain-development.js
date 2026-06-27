@@ -24,7 +24,7 @@ const BlockchainDevelopment = () => {
 
         <>
 
-            <PageHead title="Blockchain Development Services | SmartTech Academy" />
+            <PageHead title="Blockchain Development Services | SmartTech Solutions" />
 
             <Provider store={Store}>
                 <Context>

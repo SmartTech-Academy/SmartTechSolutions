@@ -23,8 +23,8 @@ const HeaderContainer = ({ headerSticky, headerType="", topBarToggle="on", topBa
       {/* <header className="rbt-header rbt-header-10 rbt-transparent-header"> */}
       <header className={`rbt-header rbt-header-10${headerType}`}>
 
-      {topBarToggle=== "on" ? (
-          topBarType=== "type 1" ? (
+      {topBarToggle=== "off" ? (
+          topBarType === "type 1" ? (
             <HeaderTopBar />
           ) : (
             <TopBar

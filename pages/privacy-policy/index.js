@@ -17,7 +17,7 @@ const index = () => {
 
     <>
 
-        <PageHead title="Privacy Policy | SmartTech Academy" />
+        <PageHead title="Privacy Policy | SmartTech Solutions" />
 
         <Provider store={Store}>
             <Context>

@@ -8,8 +8,13 @@ import Testimonial_3 from "@/my_components/Testimonials/Testimonial_3";
 import BlogGridMinimal from "@/my_components/Blogs/Components/BlogGridMinimal";
 import Newsletter_2 from "@/my_components/Newsletters/Newsletter_2";
 import Testimonial_2 from "@/my_components/Testimonials/Testimonial_2";
+import HomePageCounter from "@/my_components/Counters/HomePageCounter";
+import BlogWidget from "@/my_components/Blogs/Widgets/BlogWidget";
+import Brands2 from "../TrustedByBrands/Brands2";
 // At the top of your file
 import dynamic from "next/dynamic";
+
+import AboutUsBanner from "./sections/AboutUsBanner";
 
 // Dynamically import Odometer with SSR disabled
 const Odometer = dynamic(() => import("react-odometerjs"), {
@@ -33,6 +38,11 @@ import cap from "../../public/images/shape/o-icon-2.png";
 import coach from "../../public/app_images/about/about_us.webp";
 import signature from "../../public/app_images/about/signatures.webp";
 import dots from "../../public/images/shape/a-dot-01.png";
+import lineArrow from "@/public/app_images/shape/o-line-arrow.png";
+
+
+// RADUX STORE
+import { useAppContext } from "@/context/Context";
 
 
 import { image_url } from "../../helper/Utilities";
@@ -40,10 +50,15 @@ import { image_url } from "../../helper/Utilities";
 
 
 
+
+
+
+
 const SmartTechAcademy = () => {
 
-    const sinceParallax = useParallax({ translateX: [-20, 0] });
-    const enrolledParallax = useParallax({ translateX: [30, 0] });
+    const { isLightTheme } = useAppContext();
+
+    useEffect(() => {}, [isLightTheme]);
 
     useEffect(() => {
         sal({
@@ -54,112 +69,28 @@ const SmartTechAcademy = () => {
 
 
 
+
     return (
 
         <>
 
 
+
+            <AboutUsBanner />
+
+
+
             <main className="rbt-main-wrapper">
 
 
-                
-            
-
-                <div className="rbt-banner-area rbt-banner-3 bg-gradient-1 theme-shape header-transperent-spacer"> 
-                    <div className="wrapper w-100">
-                        <div className="container">
-                            <div className="row g-5 justify-content-between align-items-center">
-                                <div className="col-lg-6 order-2 order-lg-1">
-                                    <div className="content">
-                                        <div className="inner">
-                                            <div className="section-title text-start">
-                                                <span className="subtitle bg-primary-opacity"> SMARTTECH ACADEMY </span>
-                                            </div>
-
-                                            <h1 className="title"> 
-                                                Transforming <span className="theme-gradient">Industries with Robust, Creative</span> Digital Solutions & 
-                                                Training <span className="theme-gradient">Future Experts</span>. </h1>
-
-                                            <div className="rbt-like-total">
-                                                <div className="profile-share">
-                                                    <Link href="#" className="avatar" data-tooltip="Mark JOrdan" tabIndex="0">
-                                                        <Image src={image_url("/app_images/clients/client_2.webp")} width={55} height={55} alt="education" />
-                                                    </Link>
-
-                                                    <Link href="#" className="avatar" data-tooltip="Mark" tabIndex="0">
-                                                        <Image src={image_url("/app_images/clients/client_3.webp")} width={55} height={55} alt="education" />
-                                                    </Link>
-
-                                                    <Link href="#" className="avatar" data-tooltip="Jordan" tabIndex="0">
-                                                        <Image src={image_url("/app_images/clients/client_4.webp")} width={55} height={55} alt="education" />
-                                                    </Link>
-
-                                                    <div className="more-author-text">
-                                                        <h5 className="total-join-students"> Join Over 150+ Happy Clients </h5>
-                                                        <p className="subtitle"> Let's Help Transform your ideas to Reality. </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            {/* <div className="rbt-button-group justify-content-start mt--30">
-                                                <Link className="rbt-btn btn-gradient rbt-switch-btn" href="#">
-                                                    <span data-text="LET'S TALK ABOUT YOUR PROJECT">LET'S TALK ABOUT YOUR PROJECT</span>
-                                                </Link>
-                                                <Link className="rbt-btn btn-border rbt-switch-btn" href="#"> <span data-text="FIND COURSES">FIND COURSES</span> </Link>
-                                            </div> */}
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-6 order-1 order-lg-2">
-                                    <div className="thumbnail-wrapper">
-                                        <div className="thumbnail text-end">
-                                            <Image src={image_url("/app_images/clients/client_1.webp")} width={597} height={479} alt="Education Images" />
-                                        </div>
-
-                                        {/* <div className="card-info bounce-slide">
-                                            <div className="inner">
-                                                <div className="name">
-                                                    Hillery. <span>/ USA</span>
-                                                </div>
-                                                <div className="rating-wrapper d-block d-sm-flex">
-                                                    <div className="rating">
-                                                        <i className="fas fa-star"></i>                                                                                                                                                                <i className="fas fa-star"></i> <i className="fas fa-star"></i>
-                                                        <i className="fas fa-star"></i> <i className="fas fa-star"></i>
-                                                    </div>
-                                                    <span>they are the best in this</span>
-                                                </div>
-                                            </div>
-                                            <div className="notify-icon">
-                                                <Image src={image_url("/app_images/clients/client_5.webp")} width={100} height={100} alt="Client Images" />
-                                            </div>
-                                        </div> */}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-                <div className="rbt-brand-area bg-color-white rbt-section-gap bg-gradient-11">
+                <div className="rbt-brand-area bg-color-white bg-gradient-18 mb--70">
                     <div className="container">
                         <div className="row align-items-center">
                             <div className="col-lg-10 offset-lg-1">
-                                <Brands />
+                                <Brands2 hide_text="false" />
                             </div>
                         </div>
                     </div>
@@ -200,6 +131,26 @@ const SmartTechAcademy = () => {
 
 
 
+                <div className="rbt-counterup-area counterup-section-02 rbt-section-gap">
+                    <div className="shape-1">
+                        <Image src={lineArrow} width={86} height={50} alt="Shape" />
+                    </div>
+
+                    <HomePageCounter />
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -219,7 +170,7 @@ const SmartTechAcademy = () => {
 
                                     <div className="col-lg-6 col-xl-7" key="1">
                                         <div className="section-title">
-                                            <h2 className="title">Why SmartTech Academy</h2>
+                                            <h2 className="title">Why SmartTech Solutions</h2>
                                             <p className="b1 mt--15">{"Our software agency delivers unmatched technological expertise honed across diverse industries, pairs you with a "+
                                             "dedicated, scalable team that accelerates your project's time-to-market, and ensures seamless collaboration and quality that freelance or other "+
                                             "agencies simply can't match."}</p>
@@ -284,146 +235,6 @@ const SmartTechAcademy = () => {
 
 
 
-                <div className="rbt-about-area rbt-section-gap overflow-hidden">
-                    <div className="about-style-4 version-04">
-                        <div className="shape-2">
-                            <Image src={bookShape} width={1393} height={956} unoptimized={true} alt="Shape" />
-                        </div>
-
-                        <div className="container">
-                            <div className="row row--60 mt_dec--40 align-items-center">
-
-                                <div className="col-xl-5 col-12 mt--40">
-                                    <div className="about-thumb">
-                                        <div className="shape-1">
-                                            <Image src={dots} width={87} height={140} unoptimized={true} alt="Shape" />
-                                        </div>
-
-                                        <div className="since" ref={sinceParallax.ref}>
-                                            <span>
-                                                <Image src={awardImage} width={36} height={51} alt="Award Icon" />
-                                            </span>
-                                            <div className="title-wrap">
-                                                <h4 className="number">
-                                                    <span className="odometer rbt-font-primary">
-                                                        <Odometer value={1890} />
-                                                    </span>
-                                                </h4>
-                                                <h6 className="subtitle">Since</h6>
-                                            </div>
-                                        </div>
-
-                                        <div className="enrolled" ref={enrolledParallax.ref}>
-                                            <div className="enrolled-cont">
-                                                <span><Image src={cap} width={41} height={31} alt="image" /></span>
-                                                <div>
-                                                    <h6 className="enrolled-title d-flex align-items-center">
-                                                        <span className="odometer rbt-font-primary"> <Odometer value={36} /> </span>
-                                                        k+
-                                                    </h6>
-                                                    <p className="enrolled-description"> Success Students </p>
-                                                </div>
-                                            </div>
-                                            <div className="profile-share">
-                                                 <Link href="#" className="avatar" data-tooltip="Mark JOrdan" tabIndex="0">
-                                                    <Image src={image_url("/app_images/clients/client_2.webp")} width={55} height={55} alt="education" />
-                                                </Link>
-
-                                                <Link href="#" className="avatar" data-tooltip="Mark" tabIndex="1">
-                                                    <Image src={image_url("/app_images/clients/client_3.webp")} width={55} height={55} alt="education" />
-                                                </Link>
-
-                                                <Link href="#" className="avatar" data-tooltip="Jordan" tabIndex="2">
-                                                    <Image src={image_url("/app_images/clients/client_4.webp")} width={55} height={55} alt="education" />
-                                                </Link>
-                                                <Link href="#" className="avatar" data-tooltip="Mark" tabIndex="1">
-                                                    <Image src={image_url("/app_images/clients/client_3.webp")} width={55} height={55} alt="education" />
-                                                </Link>
-                                            </div>
-                                        </div>
-
-                                        <div className="thumb-1">
-                                            <Image src={coach} width={474} height={662} alt="COACH" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-xl-6 col-12 mt--40">
-                                    <div className="content">
-                                        <div className="section-title">
-                                            <span className="subtitle bg-primary-opacity">
-                                                About SmartTech
-                                            </span>
-                                            <h2 className="title w-600">
-                                                I Help People to Discover Their True Potential.
-                                            </h2>
-                                        </div>
-                                        <p className="mt--20">
-                                            At Histudy University, we are moving boldly - and
-                                            concertedly - to expand tomorrow's frontiers. We believe
-                                            that we have the power to shape the future, for the better
-                                        </p>
-                                        <ul className="mt--30 mb--25">
-                                            <li>
-                                                <span className="icon bg-primary-opacity">
-                                                    <i className="feather-heart"></i>
-                                                </span>
-                                                <span className="text">Flexible Classes</span>
-                                            </li>
-                                            <li>
-                                                <span className="icon bg-secondary-opacity">
-                                                    <i className="feather-book"></i>
-                                                </span>
-                                                <span className="text">Learn From Anywhere</span>
-                                            </li>
-                                        </ul>
-                                        <div className="d-flex align-items-center gap-5 flex-wrap">
-                                            <a className="rbt-btn btn-gradient hover-icon-reverse" href="#">
-                                                <span className="icon-reverse-wrapper">
-                                                    <span className="btn-text">Chat With Us</span>
-                                                    <span className="btn-icon">
-                                                        <i className="feather-arrow-right"></i>
-                                                    </span>
-                                                    <span className="btn-icon">
-                                                        <i className="feather-arrow-right"></i>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                            <div>
-                                                <Image src={signature} width={150} height={106} alt="Signature" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                 <div className="rbt-call-to-action-area rbt-section-gap bg-color-secondary-alt">
                     <div className="container">
@@ -433,7 +244,7 @@ const SmartTechAcademy = () => {
                                     <div className="content">
                                         <h1 className="title"> {"Let's bring your"}
                                         <br /> vision to life. </h1>
-                                        <p>Pull the Trigger!</p>
+                                        {/* <p>We are SmartTech Solutions! driven by Passion, Committed to the Process</p> */}
                                         <div className="rbt-button-group justify-content-center">
                                             <Link className="rbt-btn btn-gradient" href={ROUTE.appointment}> Hire Us </Link>
                                             <Link className="rbt-btn btn-border" href={ROUTE.project}> Explore our Projects </Link>
@@ -484,48 +295,37 @@ const SmartTechAcademy = () => {
 
 
 
-                <div className="rbt-testimonial-area bg-color-extra2 rbt-section-gap">
+                <div className={`rbt-rbt-blog-area rbt-section-gap ${isLightTheme ? 'bg-gradient-5' : ''}`}>
                     <div className="container">
-                        <div className="testimonial-item-3-activation swiper rbt-arrow-between gutter-swiper-30">
-                            <Testimonial_3 />
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-                <div className="rbt-ready-area ready-section-01 rbt-section-gap bg_image" style={{ backgroundImage: `url(${image_url('/app_images/bg/bg_img.jpg')})` }}>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <div className="section-title text-center">
-                                    <span className="subtitle bg-primary-opacity"> Ready to start? </span>
-                                    <h2 className="title w-600">Self Development Course</h2>
-                                    <p className="mt--10 description"> We believe that we have the power to shape the <br />{" "} future, for the better lifelong </p>
-                                    <Link className="rbt-btn btn-gradient hover-icon-reverse" href={ROUTE.course}>
-                                        <span className="icon-reverse-wrapper">
-                                            <span className="btn-text">Browse Courses</span>
-                                            <span className="btn-icon">
-                                                <i className="feather-arrow-right"></i>
-                                            </span>
-                                            <span className="btn-icon">
-                                                <i className="feather-arrow-right"></i>
-                                            </span>
-                                        </span>
+                        <div className="row g-5 align-items-center mb--30">
+                            <div className="col-lg-6 col-md-6 col-12">
+                                <div className="section-title">
+                                    <span className="subtitle bg-primary-opacity">Blog Posts</span>
+                                    <h2 className="title">Never miss what we are up to</h2>
+                                </div>
+                            </div>
+                            <div className="col-lg-6 col-md-6 col-12">
+                                <div className="read-more-btn text-start text-md-end">
+                                    <Link className="rbt-btn btn-gradient hover-icon-reverse" href={ROUTE.blog}>
+                                        <div className="icon-reverse-wrapper">
+                                            <span className="btn-text">See All Articles</span>
+                                            <span className="btn-icon"><i className="feather-arrow-right"></i></span>
+                                            <span className="btn-icon"><i className="feather-arrow-right"></i></span>
+                                        </div>
                                     </Link>
                                 </div>
                             </div>
                         </div>
+
+                        <BlogWidget extra_class="" />
                     </div>
                 </div>
+
+
+
+
+
+
 
 
 
@@ -577,18 +377,6 @@ const SmartTechAcademy = () => {
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
-                {/* <div className="rbt-newsletter-area bg-color-primary newsletter-style-2 rbt-section-gap" 
-                style={{ background: "url("+image_url('../app_images/bg/dots.png')+") repeat center/auto" }}>
-                <Newsletter />
-                </div> */}
 
 
             </main>
