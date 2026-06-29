@@ -1,0 +1,347 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   FlatshareProject — Emerald Green / PropTech Theme
+   All rules are scoped to .flat-theme so they never bleed into other
+   project pages. Import via pages/_app.js.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── CSS variable overrides ───────────────────────────────────────────── */
+.flat-theme {
+  --digi-orange: #059669;
+  --digi-green:  #0d9488;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   HERO
+   ════════════════════════════════════════════════════════════════════════ */
+
+.flat-theme .digi-hero {
+  background:
+    radial-gradient(ellipse at 72% 14%, rgba(16, 185, 129, 0.34) 0%, transparent 42%),
+    radial-gradient(ellipse at 18% 82%, rgba(5, 150, 105, 0.20) 0%, transparent 32%),
+    linear-gradient(155deg, #040d0a 0%, #061a12 55%, #030c09 100%);
+}
+
+/* Aurora blobs — emerald + teal */
+.flat-theme .digi-aurora span:nth-child(1) {
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.50) 0%, transparent 70%);
+  animation-duration: 18s;
+}
+.flat-theme .digi-aurora span:nth-child(2) {
+  background: radial-gradient(circle, rgba(5, 150, 105, 0.36) 0%, transparent 70%);
+  animation-duration: 24s;
+  animation-delay: -8s;
+}
+.flat-theme .digi-aurora span:nth-child(3) {
+  background: radial-gradient(circle, rgba(13, 148, 136, 0.28) 0%, transparent 70%);
+  animation-duration: 28s;
+  animation-delay: -15s;
+}
+
+/* Gradient text — emerald shimmer (background-size must be explicit to keep digi-shimmer working) */
+.flat-theme .digi-hero-title .digi-gradient {
+  background: linear-gradient(90deg,
+    #059669 0%,
+    #10b981 25%,
+    #a7f3d0 50%,
+    #10b981 75%,
+    #059669 100%
+  );
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero tag */
+.flat-theme .digi-hero-tag.tag-primary {
+  background:   rgba(16, 185, 129, 0.18);
+  border-color: rgba(16, 185, 129, 0.45);
+  color: #10b981;
+}
+.flat-theme .digi-hero-tag.tag-accent {
+  background:   rgba(13, 148, 136, 0.14);
+  border-color: rgba(13, 148, 136, 0.35);
+  color: #0d9488;
+}
+
+/* Scroll cue */
+.flat-theme .digi-scroll-mouse {
+  border-color: rgba(16, 185, 129, 0.5);
+}
+.flat-theme .digi-scroll-mouse::after {
+  background: #10b981;
+}
+
+/* HV glow */
+.flat-theme .digi-hv-glow {
+  background: radial-gradient(ellipse at center, rgba(16, 185, 129, 0.30) 0%, transparent 70%);
+}
+
+/* Browser chrome — first dot emerald */
+.flat-theme .digi-hv-db-chrome span:nth-child(1) { background: #10b981; }
+
+/* Glass stats */
+.flat-theme .digi-glass-stat strong { color: #10b981; }
+.flat-theme .digi-glass-stat strong em { color: #34d399; }
+
+/* ════════════════════════════════════════════════════════════════════════
+   KICKER & HEADING SHIMMER
+   ════════════════════════════════════════════════════════════════════════ */
+
+.flat-theme .digi-kicker::before {
+  background: #10b981;
+}
+
+.flat-theme .digi-client-heading::before,
+.flat-theme .digi-app-heading::before,
+.flat-theme .digi-process-heading::before,
+.flat-theme .digi-craft-heading::before,
+.flat-theme .digi-engage-heading::before {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(16, 185, 129, 0.42) 50%,
+    transparent 100%
+  );
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   FACTS TABLE
+   ════════════════════════════════════════════════════════════════════════ */
+
+.flat-theme .digi-facts-header {
+  background: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #047857 100%);
+}
+.flat-theme .digi-fact-row:hover { background: #f0fdf4; }
+.flat-theme .digi-fact-row--highlight span { color: #059669; }
+.flat-theme .digi-fact-row--highlight { background: linear-gradient(90deg, #ecfdf5 0%, #ffffff 100%); }
+
+/* Client badge icon */
+.flat-theme .digi-cb-icon {
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   ABOUT THE APP
+   ════════════════════════════════════════════════════════════════════════ */
+
+.flat-theme .digi-app-visual-glow {
+  background: radial-gradient(ellipse at 80% 50%, rgba(16, 185, 129, 0.20) 0%, transparent 65%);
+}
+
+.flat-theme .digi-app-browser-chrome span:nth-child(1) { background: #10b981; }
+
+/* Browser chrome standard dots */
+.flat-theme .digi-browser-chrome span:nth-child(1) { background: #fc5f5a; }
+.flat-theme .digi-browser-chrome span:nth-child(2) { background: #fdbc40; }
+.flat-theme .digi-browser-chrome span:nth-child(3) { background: #35cd4b; }
+
+/* Stack tags */
+.flat-theme .digi-stack-tag {
+  background:   rgba(16, 185, 129, 0.07);
+  border-color: rgba(16, 185, 129, 0.28);
+  color: #059669;
+}
+.flat-theme .digi-stack-tag:hover {
+  background:   rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.50);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   CHALLENGE
+   ════════════════════════════════════════════════════════════════════════ */
+
+.flat-theme .digi-challenge-section {
+  background:
+    radial-gradient(ellipse at 80% 12%, rgba(16, 185, 129, 0.18) 0%, transparent 40%),
+    radial-gradient(ellipse at 10% 88%, rgba(5, 150, 105, 0.12) 0%, transparent 36%),
+    linear-gradient(160deg, #04100c 0%, #071a14 60%, #050f0c 100%);
+}
+
+.flat-theme .digi-challenge-num {
+  background: rgba(16, 185, 129, 0.16);
+  color: #10b981;
+}
+.flat-theme .digi-challenge-card:hover {
+  border-color: rgba(16, 185, 129, 0.45);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(16, 185, 129, 0.18);
+}
+.flat-theme .digi-challenge-card:hover h4         { color: #34d399; }
+.flat-theme .digi-challenge-card:hover .digi-challenge-num {
+  background: rgba(16, 185, 129, 0.26);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   MARQUEE (USER ENGAGEMENT)
+   ════════════════════════════════════════════════════════════════════════ */
+
+.flat-theme .digi-engage-section {
+  background: linear-gradient(180deg, #f0fdf4 0%, #ecfdf5 55%, #f8fffe 100%);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   PROCESS
+   ════════════════════════════════════════════════════════════════════════ */
+
+.flat-theme .digi-process-section {
+  background:
+    radial-gradient(ellipse at 88% 10%, rgba(16, 185, 129, 0.20) 0%, transparent 42%),
+    radial-gradient(ellipse at 8%  90%, rgba(16, 185, 129, 0.14) 0%, transparent 38%),
+    radial-gradient(ellipse at 50% 50%, rgba(5, 150, 105, 0.10) 0%, transparent 65%),
+    linear-gradient(150deg, #042f20 0%, #064e35 45%, #031a13 100%);
+}
+
+/* Section text — white on dark */
+.flat-theme .digi-process-section .digi-kicker { color: rgba(255, 255, 255, 0.65); }
+.flat-theme .digi-process-heading { color: #ffffff; }
+.flat-theme .digi-process-lead    { color: rgba(255, 255, 255, 0.62); }
+
+/* Cards */
+.flat-theme .digi-process-card {
+  background:   rgba(255, 255, 255, 0.06);
+  border-color: rgba(16, 185, 129, 0.25);
+}
+.flat-theme .digi-process-card h4 { color: #ffffff; }
+.flat-theme .digi-process-card p  { color: rgba(255, 255, 255, 0.60); }
+
+/* Emerald-to-teal top-bar accent */
+.flat-theme .digi-process-card::before {
+  background: linear-gradient(90deg, #10b981, #0d9488);
+}
+
+/* Process number ghost */
+.flat-theme .digi-process-num {
+  color: rgba(16, 185, 129, 0.22);
+}
+
+/* Card hover */
+.flat-theme .digi-process-card:hover {
+  background:   rgba(16, 185, 129, 0.10);
+  border-color: rgba(16, 185, 129, 0.48);
+  box-shadow:   0 28px 68px rgba(2, 44, 30, 0.55);
+}
+.flat-theme .digi-process-card:hover .digi-process-num {
+  color:       rgba(16, 185, 129, 0.38);
+  text-shadow: 0 0 40px rgba(16, 185, 129, 0.45);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   ENHANCING EXPERIENCE (CRAFT)
+   ════════════════════════════════════════════════════════════════════════ */
+
+.flat-theme .digi-craft-section {
+  background:
+    radial-gradient(ellipse at 70% 30%, rgba(16, 185, 129, 0.07) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 75%, rgba(13, 148, 136, 0.05) 0%, transparent 45%),
+    linear-gradient(150deg, #f0fdf4 0%, #ecfdf5 45%, #f0fdfa 100%);
+}
+
+.flat-theme .digi-li-icon {
+  background: rgba(16, 185, 129, 0.10);
+  color: #059669;
+}
+.flat-theme .digi-craft-list li:hover .digi-li-icon {
+  background: rgba(16, 185, 129, 0.20);
+}
+.flat-theme .digi-craft-list li:hover {
+  box-shadow:   0 8px 30px rgba(16, 185, 129, 0.10);
+  border-color: rgba(16, 185, 129, 0.30);
+}
+
+/* Float cards */
+.flat-theme .digi-float-card {
+  border-color: rgba(16, 185, 129, 0.22);
+}
+.flat-theme .digi-float-card strong { color: #059669; }
+
+/* ════════════════════════════════════════════════════════════════════════
+   SOLUTION & RESULTS
+   ════════════════════════════════════════════════════════════════════════ */
+
+.flat-theme .digi-solution-section {
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(16, 185, 129, 0.14) 0%, transparent 40%),
+    radial-gradient(ellipse at 80% 20%, rgba(13, 148, 136, 0.10) 0%, transparent 38%),
+    linear-gradient(155deg, #04100c 0%, #071a14 60%, #050f0c 100%);
+}
+
+.flat-theme .digi-result-icon {
+  background: rgba(16, 185, 129, 0.14);
+  color: #10b981;
+}
+.flat-theme .digi-result-card:hover {
+  border-color: rgba(16, 185, 129, 0.38);
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(16, 185, 129, 0.14);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   METRICS STRIP
+   ════════════════════════════════════════════════════════════════════════ */
+
+.flat-theme .digi-metrics-strip {
+  background: linear-gradient(135deg, #040f0b 0%, #061a12 60%, #040c08 100%);
+  border-top:    1px solid rgba(16, 185, 129, 0.12);
+  border-bottom: 1px solid rgba(16, 185, 129, 0.12);
+}
+.flat-theme .digi-info-icon  { color: #10b981; }
+.flat-theme .digi-info-num   { color: #34d399; }
+.flat-theme .digi-info-label { color: rgba(255, 255, 255, 0.50); }
+.flat-theme .digi-info-item  { border-right-color: rgba(16, 185, 129, 0.12); }
+.flat-theme .digi-info-item:hover { background: rgba(16, 185, 129, 0.06); }
+
+/* ════════════════════════════════════════════════════════════════════════
+   ENHANCED HOVER & TRANSITION OVERRIDES (emerald variants)
+   ════════════════════════════════════════════════════════════════════════ */
+
+.flat-theme .digi-client-badge:hover {
+  border-color: rgba(16, 185, 129, 0.35);
+  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.10);
+}
+.flat-theme .digi-client-badge:hover .digi-cb-icon {
+  background: rgba(16, 185, 129, 0.18);
+}
+
+.flat-theme .digi-stack-tag:hover {
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.20);
+}
+
+.flat-theme .digi-web-card:hover {
+  box-shadow: 0 32px 80px rgba(4, 30, 20, 0.20),
+              0 0 0 2px rgba(16, 185, 129, 0.22);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   DARK MODE OVERRIDES
+   ════════════════════════════════════════════════════════════════════════ */
+
+.active-dark-mode .flat-theme .digi-engage-section {
+  background: linear-gradient(180deg, #040f0b 0%, #061208 100%);
+}
+.active-dark-mode .flat-theme .digi-process-section {
+  background:
+    radial-gradient(ellipse at 88% 10%, rgba(16, 185, 129, 0.14) 0%, transparent 42%),
+    linear-gradient(150deg, #031a10 0%, #042f20 45%, #020f09 100%);
+}
+.active-dark-mode .flat-theme .digi-process-card {
+  background:   rgba(255, 255, 255, 0.05);
+  border-color: rgba(16, 185, 129, 0.20);
+}
+.active-dark-mode .flat-theme .digi-craft-section {
+  background: linear-gradient(150deg, #040f0b 0%, #051209 100%);
+}
+.active-dark-mode .flat-theme .digi-fact-row:hover {
+  background: rgba(16, 185, 129, 0.06);
+}
+.active-dark-mode .flat-theme .digi-float-card {
+  border-color: rgba(16, 185, 129, 0.18);
+  background: rgba(16, 185, 129, 0.04);
+}
+.active-dark-mode .flat-theme .digi-stack-tag {
+  background:   rgba(16, 185, 129, 0.06);
+  border-color: rgba(16, 185, 129, 0.22);
+  color: #34d399;
+}
+.active-dark-mode .flat-theme .digi-result-card:hover {
+  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.10);
+}

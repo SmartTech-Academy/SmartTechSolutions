@@ -19,6 +19,12 @@ import "swiper/css/thumbs";
 
 import "../public/scss/styles.scss";
 
+// ========= Page-level CSS START =========
+import "../public/css/pages/DigistateProject.css";
+import "../public/css/pages/JpgcProject.css";
+import "../public/css/pages/FlatshareProject.css";
+// ========= Page-level CSS END =========
+
 import Context from "@/context/Context";
 import { Provider } from "react-redux";
 import Store from "@/redux/store";

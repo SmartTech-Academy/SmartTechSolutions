@@ -10,197 +10,158 @@ import BlogWidget from "@/my_components/Blogs/Widgets/BlogWidget";
 
 import { ROUTE } from "@/route/app_routes.js";
 
-const webImg = (name) => `/app_images/projects/digistate/website/${name}.png`;
-const appImg = (name) => `/app_images/projects/digistate/mobile app/${name}.png`;
-
-
-
-
-
-
-
-
+const jpgcImg = (name) => `/app_images/projects/jpgc_app/${name}.png`;
 
 const webScreens = [
-  { file: "homepage",                  label: "Marketing Homepage" },
-  { file: "exchange page",             label: "Exchange Marketplace" },
-  { file: "investor dashboard",        label: "Investor Dashboard" },
-  { file: "broker page",               label: "Broker Management" },
-  { file: "homeowner page",            label: "Homeowner Operations" },
-  { file: "buy and sell",              label: "Buy & Sell Flow" },
-  { file: "transactions page",         label: "Transaction Monitoring" },
-  { file: "Digistate admin dashboard", label: "Admin Overview" },
+  { file: "jpgc_home",             label: "Marketing Homepage" },
+  { file: "jpgc_dashboard",        label: "Investor Dashboard" },
+  { file: "jpgc_token_purchase",   label: "Token Purchase" },
+  { file: "jpgc_checkout",         label: "Checkout Flow" },
+  { file: "app_wallet_connect",    label: "Wallet Connect" },
+  { file: "jpg_nft_marketplace",   label: "NFT Marketplace" },
+  { file: "jpg_nft_management",    label: "NFT Management" },
+  { file: "transactions",          label: "Transaction History" },
+  { file: "jpgc_display_picture",  label: "Profile Settings" },
 ];
-
-
 
 const mobileScreens = [
-  { file: "flash screen",       label: "Splash" },
-  { file: "auth screen",        label: "Authentication" },
-  { file: "stock page",         label: "Stock Details" },
-  { file: "invest screen",      label: "Investment" },
-  { file: "buy and sell stock", label: "Buy & Sell" },
-  { file: "portfolio",          label: "Portfolio" },
-  { file: "broker integration", label: "Broker Integration" },
-  { file: "p2p",                label: "P2P Market" },
-  { file: "order screens",      label: "Orders" },
-  { file: "profile settings",   label: "Profile" },
+  { file: "mobile_homepage",               label: "Splash / Home" },
+  { file: "mobile_dashboard",              label: "Dashboard" },
+  { file: "mobile_token_purchase",         label: "Token Purchase" },
+  { file: "mobile_nft_purchase_checkout",  label: "NFT Checkout" },
+  { file: "mobile_nft_shopping_cart",      label: "Shopping Cart" },
+  { file: "mobile_my_nft",                 label: "My NFTs" },
+  { file: "mobile_transactions",           label: "Transactions" },
+  { file: "mobile_wallet_connect",         label: "Wallet Connect" },
 ];
-
-
 
 const challenges = [
   {
-    title: "Regulatory Compliance",
-    body: "Navigating Nigeria's SEC framework for digital asset trading required extensive legal mapping and a compliance architecture that could tokenize and list real estate assets within regulatory boundaries.",
+    title: "Dual-Chain Architecture",
+    body: "Engineering a token that lives simultaneously on Solana (SPL standard) and Ethereum (ERC-20 bridge) required building a robust cross-chain bridge with atomic swap mechanics, security guards, and consistent state reconciliation across both networks.",
   },
   {
-    title: "Blockchain Architecture Complexity",
-    body: "Implementing ERC-721 NFTs with proxy-upgradeable smart contract patterns, DAO governance, and dynamic on-chain pricing demanded advanced Solidity engineering and rigorous audit planning.",
+    title: "Gold-Peg Compliance & Valuation",
+    body: "Maintaining a credible 1g-gold-to-1-JPGC peg demanded legal frameworks, real-time oracle integration for gold spot prices, reserve proof mechanisms, and regulatory positioning within Nigeria's SEC and CBN digital asset guidelines.",
   },
   {
-    title: "Five-Role Access System",
-    body: "Engineering five distinct dashboards — Homeowner, Investor, Broker, Verification Team, and Exchange Admin — each with isolated permissions, approval workflows, and unique data visibility rules.",
+    title: "NFT Fractionalization Mechanics",
+    body: "Implementing on-chain NFT fractionalization required designing custom smart contracts that split ownership rights into tradable micro-positions, manage redemption windows, and enforce provenance — all while preserving the NFT's underlying gold backing.",
   },
   {
-    title: "Real-Time Exchange Engine",
-    body: "Building a functional secondary market with live bidding, fractional ownership transfers, escrow management, and demand-driven dynamic pricing required a robust, low-latency backend system.",
+    title: "Multi-Gateway Payment Integration",
+    body: "Supporting Stripe (fiat), a crypto gateway (multi-coin), and native SOL as purchase paths meant engineering a unified checkout engine that handles currency conversion, settlement delays, partial failures, and cross-gateway reconciliation in real time.",
   },
   {
-    title: "Multi-Level Verification Pipelines",
-    body: "Designing a four-stage property approval process — legal, valuation, operational, and exchange reviews — while keeping the experience clear and trustworthy for all user types involved.",
+    title: "Staking Engine & Smart Contract Security",
+    body: "Building a staking mechanism for both JPGC tokens and NFTs on Solana demanded time-locked escrow contracts, reward distribution logic, and a rigorous security audit process — including proxy-upgrade patterns to allow future improvements without breaking staked positions.",
   },
   {
-    title: "eNaira CBDC Integration",
-    body: "Integrating Nigeria's Central Bank Digital Currency as the platform's in-wallet currency required custom token minting, real-time fiat conversion flows, and compliance with CBN's digital currency guidelines.",
+    title: "Real-Time Cross-Chain Data Sync",
+    body: "Surfacing live token balances, NFT ownership, staking status, and transaction feeds consistently across both blockchain networks required a custom middleware layer using WebSockets, Redis caching, and event-driven reconciliation to eliminate state drift.",
   },
 ];
-
-
 
 const processSteps = [
   {
     num: "01",
-    title: "Discovery & Requirements",
-    body: "Deep discovery sessions with Ribiax mapped all five user roles, regulatory requirements, blockchain mechanics, and exchange model. Output: full PRD and technical feasibility report.",
+    title: "Discovery & Tokenomics Strategy",
+    body: "In-depth sessions with Japaul Digital mapped the dual-chain model, gold-peg mechanics, investor journey, staking economics, and NFT utility. Output: full tokenomics paper, PRD, and technical feasibility report.",
   },
   {
     num: "02",
-    title: "System Architecture Design",
-    body: "Architects designed the five-role permission model, exchange engine, smart contract upgrade strategy, API layer, eNaira wallet integration, and scalable microservices infrastructure.",
+    title: "Legal & Blockchain Architecture",
+    body: "Legal and blockchain architects aligned on the compliance structure, chain bridge design, proxy-upgradeable smart contract strategy, SPL and ERC-20 token standards, and the secure middleware layer for all contract interactions.",
   },
   {
     num: "03",
     title: "UI/UX Design & Prototyping",
-    body: "All five dashboards were designed for web and mobile — clarity for non-technical homeowners, familiarity for financial investors. Every flow validated in high-fidelity prototype before code.",
+    body: "All screens — token purchase, NFT marketplace, staking interface, dashboard, bridge, and checkout — were designed for web and mobile. Every flow was validated in high-fidelity prototype before a single line of code was written.",
   },
   {
     num: "04",
     title: "Smart Contract Development",
-    body: "Solidity engineers built ERC-721 property NFTs, fractional ownership logic, DAO governance voting, dynamic pricing models, proxy-upgrade patterns, and full on-chain audit trails.",
+    body: "Solidity and Rust engineers built SPL token contracts, ERC-20 bridge contracts, NFT fractionalization logic, staking vaults, proxy-upgrade patterns, and a secure software middleware layer handling all on-chain interactions.",
   },
   {
     num: "05",
     title: "Full-Stack Development",
-    body: "Web app, React Native mobile, NestJS API, admin dashboards, and exchange engine built in parallel sprints with continuous blockchain node connectivity tested at every milestone.",
+    body: "Next.js web app, React Native mobile, NestJS API, and PostgreSQL/Redis data layer built in parallel sprints — with WebSocket feeds, Stripe integration, crypto gateway, and live blockchain connectivity tested at every milestone.",
   },
   {
     num: "06",
-    title: "QA, Testing & Launch",
-    body: "End-to-end testing of all approval workflows, smart contract interactions, exchange order states, wallet flows, and broker permissions — followed by staged access rollout and live monitoring.",
+    title: "Security Audit, QA & Launch",
+    body: "End-to-end smart contract audits, payment gateway stress tests, cross-chain state validation, and full user-flow QA across web and mobile — followed by a staged rollout with live monitoring and on-call engineering support.",
   },
 ];
-
-
 
 const craftFeatures = [
   {
-    icon: "feather-eye",
-    title: "Clarity First Design",
-    body: "Complex flows — IPO bidding, fractional ownership, escrow — distilled into step-by-step guided actions any user can follow without a blockchain background.",
+    icon: "feather-layers",
+    title: "Web3 Made Approachable",
+    body: "Connecting wallets, buying gold-backed tokens, staking NFTs, and bridging chains — all made as intuitive as online banking. No blockchain expertise required to invest with confidence.",
   },
   {
     icon: "feather-shield",
-    title: "Trust-Driven Visual Language",
-    body: "Every UI decision — colour, spacing, hierarchy — was made to communicate reliability and reduce anxiety at high-stakes investment moments.",
+    title: "Trust-First Design Language",
+    body: "Every interface decision — from colour selection to micro-copy — was made to signal security, legitimacy, and reliability. Gold-backed investing demands a premium that investors can feel.",
   },
   {
     icon: "feather-smartphone",
-    title: "Cross-Platform Consistency",
-    body: "Web and mobile share the same design system. Investors get an identical experience on browser or phone — no learning curve between platforms.",
+    title: "Seamless Cross-Platform Experience",
+    body: "Web and mobile share one unified design system. Investors switching between browser and phone find the same familiar, polished experience without any learning curve.",
   },
   {
     icon: "feather-zap",
-    title: "Optimised for Speed & Flow",
-    body: "User journeys engineered to reduce clicks, eliminate dead-ends, and surface the right information at the right moment — maximising conversion and confidence.",
+    title: "Speed-Optimised User Journeys",
+    body: "Purchase-to-confirmation flows engineered to minimise friction. The right information at the right moment — maximising investor confidence at every high-stakes decision point.",
   },
 ];
-
-
 
 const results = [
   {
-    icon: "feather-globe",
-    title: "Nigeria's First Real Estate Tokenization Exchange",
-    body: "A first-of-its-kind platform converting verified properties into tradable blockchain-backed digital assets on a live secondary market.",
+    icon: "feather-cpu",
+    title: "Dual-Chain JPGC Token",
+    body: "A gold-backed digital asset live on both Solana and Ethereum — bridgeable between chains in one click, giving investors maximum liquidity and network flexibility.",
   },
   {
     icon: "feather-grid",
-    title: "Five Production-Ready Dashboards",
-    body: "Homeowner, Investor, Broker, Verification Team, and Exchange Admin — each built for the specific job with isolated workflows.",
+    title: "Gold-Backed NFT Marketplace",
+    body: "A fully functional peer-to-peer NFT marketplace where investors buy, sell, list, gift, and fractionalize gold-backed NFTs with on-chain provenance and settlement.",
   },
   {
-    icon: "feather-repeat",
-    title: "Functional Secondary Market Exchange",
-    body: "A fully operational stock-style exchange where investors trade fractional property-backed positions with live pricing, escrow, and order management.",
+    icon: "feather-percent",
+    title: "NFT Fractionalization System",
+    body: "Custom smart contracts that split NFT ownership into tradable micro-positions — making high-value gold NFTs accessible to smaller investors without sacrificing on-chain integrity.",
+  },
+  {
+    icon: "feather-lock",
+    title: "Integrated Staking Engine",
+    body: "Time-locked staking vaults for both JPGC tokens and NFTs — offering investors structured yield on their gold-backed digital assets with transparent on-chain reward mechanics.",
   },
   {
     icon: "feather-credit-card",
-    title: "eNaira Wallet Funding System",
-    body: "First-of-its-kind eNaira integration enabling users to fund investment wallets with Nigeria's Central Bank Digital Currency.",
+    title: "Multi-Gateway Purchase System",
+    body: "Investors purchase JPGC and NFTs via Stripe (fiat), a crypto gateway (multi-coin), or native SOL — all unified in a single, seamless checkout experience.",
   },
   {
-    icon: "feather-trending-up",
-    title: "Dynamic Pricing Engine",
-    body: "Asset prices update in real time based on exchange supply and demand — genuine market behaviour, not fixed valuations.",
+    icon: "feather-bar-chart-2",
+    title: "BitMart Exchange Listing",
+    body: "JPGC is listed and actively traded on BitMart — one of the world's leading centralized exchanges — giving the token global market visibility, real-time price discovery, and 24/7 liquidity for investors worldwide.",
   },
   {
     icon: "feather-shield",
-    title: "DAO Governance & On-Chain Transparency",
-    body: "Governance decisions, ownership transfers, bid records, and asset histories preserved on-chain for full auditability and investor trust.",
+    title: "Secure Smart Contract Middleware",
+    body: "A proprietary software layer between the web app and blockchain contracts — handling signature validation, replay protection, and secure state relay without exposing raw contract calls.",
   },
 ];
 
-
-
-
-
 const galleryImages = [
-  ...webScreens.map((s) => ({ src: webImg(s.file), label: s.label })),
-  ...mobileScreens.map((s) => ({ src: appImg(s.file), label: s.label })),
+  ...webScreens.map((s)    => ({ src: jpgcImg(s.file), label: s.label })),
+  ...mobileScreens.map((s) => ({ src: jpgcImg(s.file), label: s.label })),
 ];
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const DigistateProject = () => {
-
-
+const JpgcProject = () => {
   useEffect(() => {
     sal({ threshold: 0.01, once: true });
   }, []);
@@ -208,8 +169,8 @@ const DigistateProject = () => {
   const [lbIndex, setLbIndex] = useState(0);
   const [lbOpen,  setLbOpen]  = useState(false);
 
-  const openLightbox = (idx) => { setLbIndex(idx); setLbOpen(true); };
-  const closeLightbox = () => setLbOpen(false);
+  const openLightbox  = (idx) => { setLbIndex(idx); setLbOpen(true); };
+  const closeLightbox = ()    => setLbOpen(false);
   const prevImg = () => setLbIndex((i) => (i - 1 + galleryImages.length) % galleryImages.length);
   const nextImg = () => setLbIndex((i) => (i + 1) % galleryImages.length);
 
@@ -228,23 +189,14 @@ const DigistateProject = () => {
     };
   }, [lbOpen]);
 
-
-
-
-
-
-
   return (
-
-
-    <div className="digi-case-page">
+    <div className="digi-case-page jpgc-theme">
       <main className="rbt-main-wrapper">
 
 
         {/* ── HERO ─────────────────────────────────────────────────── */}
         <section className="digi-hero">
 
-          {/* Animated aurora blobs */}
           <div className="digi-aurora" aria-hidden="true">
             <span></span>
             <span></span>
@@ -255,22 +207,33 @@ const DigistateProject = () => {
             <div className="digi-hero-inner">
               <div className="digi-hero-cols">
 
-                {/* ── Left: text content ── */}
                 <div className="digi-hero-content">
 
-                  {/* Category tags */}
+                  <div data-sal="fade" data-sal-duration="500">
+                    <div className="digi-trust-badge">
+                      <div className="digi-tb-dot"></div>
+                      <span>Gold-Backed · Dual-Chain · Listed on BitMart Exchange</span>
+                    </div>
+                  </div>
+
                   <div className="digi-hero-tags" data-sal="fade" data-sal-duration="600" data-sal-delay="60">
                     <span className="digi-hero-tag tag-primary">Case Study</span>
+                    <span className="digi-hero-tag">DeFi</span>
+                    <span className="digi-hero-tag">Blockchain</span>
+                    <span className="digi-hero-tag">Gold-backed</span>
+                    <span className="digi-hero-tag">BitMart Listed</span>
+                    <span className="digi-hero-tag">Web · Mobile</span>
                   </div>
 
                   <h1 className="digi-hero-title" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
-                    Digi<span className="digi-gradient">state</span>
+                    JPGC<span className="digi-gradient"> App</span>
                   </h1>
 
                   <p className="digi-hero-lead" data-sal="slide-up" data-sal-duration="700" data-sal-delay="160">
-                    Real estate, tokenized and tradable. Digistate converts verified properties into
-                    exchange-ready blockchain assets — giving homeowners liquidity and investors
-                    fractional ownership in the Nigerian property market.
+                    The official platform of the Japaul Gold Coin — a gold-backed digital asset live on
+                    Solana and Ethereum, and actively traded on BitMart Exchange. Buy tokens, trade NFTs,
+                    stake assets, bridge chains, and manage gold-backed investments from one world-class
+                    web and mobile app.
                   </p>
 
                   <div className="digi-hero-actions" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">
@@ -290,13 +253,12 @@ const DigistateProject = () => {
                     </Link>
                   </div>
 
-                  {/* Glassmorphism stats */}
                   <div className="digi-hero-glass-stats" data-sal="slide-up" data-sal-duration="700" data-sal-delay="240">
                     {[
-                      { val: "5",  suffix: "", label: "Dashboards" },
-                      { val: "3",  suffix: "",  label: "Platforms"  },
-                      { val: "10", suffix: "+", label: "Developers & Designers"  },
-                      { val: "5",  suffix: "+",  label: "QA Engineers" },
+                      { val: "2",  suffix: "",  label: "Blockchains"      },
+                      { val: "5",  suffix: "+", label: "Core Modules"    },
+                      { val: "12", suffix: "+", label: "Engineers"        },
+                      { val: "1",  suffix: "",  label: "CEX — BitMart"   },
                     ].map(({ val, suffix, label }) => (
                       <div className="digi-glass-stat" key={label}>
                         <strong>{val}<em>{suffix}</em></strong>
@@ -305,7 +267,6 @@ const DigistateProject = () => {
                     ))}
                   </div>
 
-                  {/* Scroll indicator */}
                   <div className="digi-scroll-cue" aria-hidden="true">
                     <div className="digi-scroll-mouse"></div>
                     <span>Scroll to explore</span>
@@ -313,16 +274,15 @@ const DigistateProject = () => {
 
                 </div>
 
-                {/* ── Right: perspective-tilted dashboard (desktop only) ── */}
                 <div className="digi-hero-visual" aria-hidden="true">
                   <div className="digi-hv-glow"></div>
                   <div className="digi-hv-dashboard-wrap">
                     <div className="digi-hv-dashboard-tilt">
                       <div className="digi-hv-db-chrome">
                         <span></span><span></span><span></span>
-                        <div className="digi-hv-db-url">digistate.io/investor/dashboard</div>
+                        <div className="digi-hv-db-url">jpgcapp.io/dashboard</div>
                       </div>
-                      <img src={webImg("investor dashboard")} alt="" loading="eager" />
+                      <img src={jpgcImg("jpgc_dashboard")} alt="" loading="eager" />
                     </div>
                   </div>
                 </div>
@@ -336,20 +296,16 @@ const DigistateProject = () => {
 
 
 
-
-
-
-
         {/* ── METRICS STRIP ────────────────────────────────────────── */}
         <div className="digi-metrics-strip">
           <div className="container">
             <div className="digi-info-row">
               {[
-                { icon: "feather-layout",       num: "5",   label: "Dashboards"          },
-                { icon: "feather-monitor",       num: "3",   label: "Platforms"           },
-                { icon: "feather-link",          num: "ERC-721", label: "NFT Standard"    },
-                { icon: "feather-users",         num: "18+", label: "Engineers"           },
-                { icon: "feather-credit-card",   num: "eNaira", label: "CBDC Integrated" },
+                { icon: "feather-cpu",          num: "2",        label: "Blockchains"         },
+                { icon: "feather-trending-up",  num: "BitMart",  label: "Exchange Listed"     },
+                { icon: "feather-layers",       num: "5+",       label: "Core Modules"        },
+                { icon: "feather-users",        num: "12+",      label: "Engineers"           },
+                { icon: "feather-shield",       num: "1g Gold",  label: "Per 1 JPGC Token"    },
               ].map(({ icon, num, label }) => (
                 <div className="digi-info-item" key={label}>
                   <i className={`digi-info-icon ${icon}`}></i>
@@ -369,27 +325,27 @@ const DigistateProject = () => {
 
               <div className="col-lg-6" data-sal="slide-right" data-sal-duration="700">
                 <span className="digi-kicker">About the Client</span>
-                <h2 className="digi-client-heading">Ribiax Engineering Limited</h2>
+                <h2 className="digi-client-heading">Japaul Digital Solutions Limited</h2>
                 <div className="digi-client-body">
                   <p>
-                    Ribiax Engineering Limited is a technology-driven engineering and innovation
-                    company headquartered in Nigeria. The firm specialises in building transformative
-                    digital platforms that address deep inefficiencies in high-value sectors — with a
-                    particular focus on real estate, financial technology, and blockchain-powered asset
-                    management.
+                    Japaul Digital Solutions Limited is the blockchain and digital assets arm of Japaul
+                    Gold and Ventures Limited — a publicly listed Nigerian conglomerate on the Nigerian
+                    Exchange Group (NGX), with decades of operational history spanning gold mining,
+                    marine services, and real estate.
                   </p>
                   <p>
-                    With a mission to unlock the economic value trapped in Nigeria&apos;s property market,
-                    Ribiax commissioned Digistate as its flagship product — a regulated, multi-role
-                    exchange where tokenized property assets can be discovered, bid on, fractionalized,
-                    and actively traded by verified investors and brokers.
+                    Leveraging Japaul&apos;s proven gold mining heritage, Japaul Digital was established to
+                    bridge the physical gold market with blockchain technology — creating the Japaul Gold
+                    Coin (JPGC) as a fully gold-backed digital asset. JPGC is now listed and actively
+                    traded on BitMart Exchange, one of the world&apos;s leading centralized crypto exchanges,
+                    giving the token global market exposure and real-time liquidity for investors worldwide.
                   </p>
                 </div>
                 <div className="digi-client-badge">
                   <div className="digi-cb-icon"><i className="feather-briefcase"></i></div>
                   <div>
-                    <strong>Ribiax Engineering Limited</strong>
-                    <small>Product Owner · Nigeria</small>
+                    <strong>Japaul Digital Solutions Limited</strong>
+                    <small>Product Owner · Nigeria · NGX Listed</small>
                   </div>
                 </div>
               </div>
@@ -403,13 +359,14 @@ const DigistateProject = () => {
                   </div>
 
                   {[
-                    { icon: "feather-briefcase",  label: "Industry",     value: "Real Estate, Blockchain & Financial Technology" },
-                    { icon: "feather-box",         label: "Product",      value: "Real Estate Tokenization & Trading Exchange" },
-                    { icon: "feather-monitor",     label: "Platforms",    value: "Web Application, Mobile App (iOS & Android), Admin Dashboards" },
-                    { icon: "feather-link",        label: "Blockchain",   value: "ERC-721 NFTs, eNaira Token, DAO Governance, Proxy Upgradeable" },
-                    { icon: "feather-layout",      label: "Dashboards",   value: "Homeowner · Investor · Broker · Verification · Exchange Admin" },
-                    { icon: "feather-users",       label: "Team",         value: "10 Developers, 8 QA Engineers, 3 Blockchain Specialists" },
-                    { icon: "feather-award",       label: "Delivered By", value: "SmartTech Solutions", highlight: true },
+                    { icon: "feather-briefcase", label: "Industry",     value: "Digital Assets, Blockchain & Gold-Backed Finance" },
+                    { icon: "feather-box",        label: "Product",      value: "JPGC Token Web App & NFT Investment Platform" },
+                    { icon: "feather-monitor",    label: "Platforms",    value: "Web Application, Mobile App (iOS & Android)" },
+                    { icon: "feather-link",       label: "Blockchain",   value: "Solana (SPL), Ethereum Bridge (ERC-20), Proxy Pattern" },
+                    { icon: "feather-trending-up",label: "Exchange",     value: "Listed & Actively Traded on BitMart Exchange (CEX)" },
+                    { icon: "feather-package",    label: "Core Modules", value: "Token Trading · NFT Marketplace · Staking · Bridge · Fractionalization" },
+                    { icon: "feather-users",      label: "Team",         value: "8 Developers, 5 QA Engineers, 4 Blockchain Specialists" },
+                    { icon: "feather-award",      label: "Delivered By", value: "SmartTech Solutions", highlight: true },
                   ].map(({ icon, label, value, highlight }, i) => (
                     <div
                       className={`digi-fact-row${highlight ? " digi-fact-row--highlight" : ""}`}
@@ -435,12 +392,6 @@ const DigistateProject = () => {
 
 
 
-
-
-
-
-
-
         {/* ── ABOUT THE APP ────────────────────────────────────────── */}
         <section className="rbt-section-gap digi-app-section">
           <div className="container">
@@ -449,31 +400,33 @@ const DigistateProject = () => {
               <div className="col-lg-6" data-sal="slide-right" data-sal-duration="700">
                 <span className="digi-kicker">About the App</span>
                 <h2 className="digi-app-heading">
-                  A complete exchange for property-backed digital assets.
+                  The complete platform for gold-backed digital asset investing.
                 </h2>
                 <div className="digi-app-body">
                   <p>
-                    Digistate is a blockchain-powered real estate tokenization platform that converts
-                    verified properties into tradable digital assets — making an inherently illiquid
-                    market liquid. Property owners onboard assets through a structured multi-stage
-                    verification and IPO pipeline. Once listed, investors trade fractional positions
-                    on a fully functioning secondary market exchange.
+                    JPGC App is the official web and mobile platform of the Japaul Gold Coin — a digital
+                    asset pegged at 1 gram of physical gold per 1 JPGC, live on both the Solana and
+                    Ethereum networks, and listed for trading on BitMart Exchange. The platform gives
+                    investors a single destination to buy, manage, and grow gold-backed digital wealth
+                    without needing any blockchain expertise.
                   </p>
                   <p>
-                    The platform operates across five distinct dashboards serving Homeowners, Investors,
-                    Brokers, Verification Teams, and Exchange Administrators. A custom eNaira wallet
-                    system bridges fiat currency to blockchain-backed investments, while ERC-721 NFTs
-                    ensure each property has a unique, tamper-proof digital identity on-chain.
+                    Investors can purchase JPGC tokens using fiat currency through Stripe, or with other
+                    cryptocurrencies via an integrated crypto gateway. A built-in chain bridge allows
+                    seamless movement of assets between Solana and Ethereum. For NFT investors, the
+                    platform features a peer-to-peer marketplace, fractionalization tools, gifting
+                    capabilities, and direct listing management.
                   </p>
                   <p>
-                    Dynamic pricing driven by supply, demand, and bidding activity means the exchange
-                    behaves like a genuine securities market — with DAO governance providing transparency
-                    and community-led decision-making on top of every listed asset.
+                    A fully integrated staking engine lets investors stake both JPGC tokens and NFTs for
+                    structured returns — all secured through a proprietary smart contract middleware layer
+                    that protects every on-chain interaction with enterprise-grade validation and replay
+                    protection.
                   </p>
                 </div>
                 <div className="digi-stack">
-                  {["NextJS", "NestJS", "React Native", "Solidity", "ERC-721", "Proxy Pattern",
-                    "Java", "MySQL", "Redis", "Android Native", "iOS Native", "WebSocket"].map((t, i) => (
+                  {["NextJS", "NestJS", "React Native", "Solidity", "SPL", "Proxy Pattern",
+                    "Java", "PostgreSQL", "Redis", "WebSocket", "Stripe", "Crypto Gateway"].map((t, i) => (
                     <span
                       key={t}
                       className="digi-stack-tag"
@@ -487,39 +440,25 @@ const DigistateProject = () => {
 
               <div className="col-lg-6" data-sal="zoom-in" data-sal-duration="800">
                 <div className="digi-app-visual">
-
-                  {/* Ambient glow */}
                   <div className="digi-app-visual-glow" aria-hidden="true"></div>
-
-                  {/* Desktop browser mockup */}
                   <div className="digi-app-browser">
                     <div className="digi-app-browser-chrome">
                       <span></span><span></span><span></span>
-                      <div className="digi-app-browser-url">digistate.io/investor</div>
+                      <div className="digi-app-browser-url">jpgcapp.io/dashboard</div>
                     </div>
-                    <img src={webImg("investor dashboard")} alt="Digistate investor dashboard" loading="lazy" />
+                    <img src={jpgcImg("jpgc_dashboard")} alt="JPGC investor dashboard" loading="lazy" />
                   </div>
-
-                  {/* Mobile phone mockup overlapping */}
                   <div className="digi-app-phone">
                     <div className="digi-app-phone-speaker"></div>
-                    <img src={appImg("invest screen")} alt="Digistate mobile invest screen" loading="lazy" />
+                    <img src={jpgcImg("mobile_dashboard")} alt="JPGC mobile dashboard" loading="lazy" />
                     <div className="digi-app-phone-home"></div>
                   </div>
-
                 </div>
               </div>
 
             </div>
           </div>
         </section>
-
-
-
-
-
-
-
 
 
 
@@ -531,12 +470,12 @@ const DigistateProject = () => {
               <div className="col-lg-8" data-sal="slide-up" data-sal-duration="700">
                 <span className="digi-kicker">The Challenge</span>
                 <h2 className="digi-challenge-heading">
-                  Building a compliant, multi-role Web3 exchange from the ground up.
+                  Building a dual-chain, gold-backed Web3 investment platform at scale.
                 </h2>
                 <p className="digi-challenge-lead">
-                  Digistate combined real estate regulation, blockchain engineering, exchange mechanics,
-                  five-role access design, and a central bank digital currency into one coherent product.
-                  These were the six hardest problems we solved.
+                  JPGC App combined gold-peg compliance, dual-chain architecture, multi-gateway
+                  payments, NFT fractionalization, staking mechanics, and real-time cross-chain
+                  data sync into one seamless product. These were the six hardest problems we solved.
                 </p>
               </div>
             </div>
@@ -561,14 +500,6 @@ const DigistateProject = () => {
 
 
 
-
-
-
-
-
-
-
-
         {/* ── USER ENGAGEMENT — Marquee ─────────────────────────────── */}
         <section className="rbt-section-gap digi-engage-section">
           <div className="container">
@@ -577,11 +508,11 @@ const DigistateProject = () => {
                 User Engagement
               </span>
               <h2 className="digi-engage-heading">
-                Designed for every user, built for every screen.
+                Designed for investors, built for every screen.
               </h2>
               <p className="digi-engage-desc">
-                From homeowner onboarding to live exchange trading, every screen was crafted
-                for clarity, speed, and trust — across web and mobile.
+                From wallet connection to gold-backed NFT checkout, every screen was crafted
+                for clarity, confidence, and conversion — across web and mobile.
               </p>
             </div>
           </div>
@@ -597,7 +528,7 @@ const DigistateProject = () => {
                   <div className="digi-browser-chrome">
                     <span></span><span></span><span></span>
                   </div>
-                  <img src={webImg(s.file)} alt={s.label} loading="lazy" />
+                  <img src={jpgcImg(s.file)} alt={s.label} loading="lazy" />
                 </div>
               ))}
             </div>
@@ -611,19 +542,12 @@ const DigistateProject = () => {
                   key={`m-${i}`}
                   onClick={() => openLightbox(webScreens.length + (i % mobileScreens.length))}
                 >
-                  <img src={appImg(s.file)} alt={s.label} loading="lazy" />
+                  <img src={jpgcImg(s.file)} alt={s.label} loading="lazy" />
                 </div>
               ))}
             </div>
           </div>
         </section>
-
-
-
-
-
-
-
 
 
 
@@ -635,13 +559,13 @@ const DigistateProject = () => {
               <div className="col-lg-7" data-sal="slide-right" data-sal-duration="700">
                 <span className="digi-kicker">The Process</span>
                 <h2 className="digi-process-heading">
-                  How we turned a complex idea into a live product.
+                  How we turned gold and blockchain into one live product.
                 </h2>
               </div>
               <div className="col-lg-5" data-sal="slide-left" data-sal-duration="700">
                 <p className="digi-process-lead mt_md--20 mt_sm--20">
-                  Six structured phases took Digistate from concept to production-ready exchange —
-                  each stage building on the last with zero shortcuts in compliance, design, or engineering.
+                  Six structured phases took JPGC App from tokenomics strategy to production-ready
+                  platform — no shortcuts on compliance, smart contract security, or user experience.
                 </p>
               </div>
             </div>
@@ -666,14 +590,6 @@ const DigistateProject = () => {
 
 
 
-
-
-
-
-
-
-
-
         {/* ── ENHANCING EXPERIENCE ─────────────────────────────────── */}
         <section className="rbt-section-gap digi-craft-section">
           <div className="container">
@@ -682,19 +598,19 @@ const DigistateProject = () => {
               <div className="col-lg-6" data-sal="slide-right" data-sal-duration="700">
                 <span className="digi-kicker">Enhancing Experience</span>
                 <h2 className="digi-craft-heading">
-                  World-class UI craft for a world-first product.
+                  World-class UI for the world of gold-backed Web3.
                 </h2>
                 <div className="digi-craft-body">
                   <p>
-                    Digistate operates in a domain where trust is everything. Every pixel,
-                    interaction, and information flow was designed to make complex financial
-                    and blockchain operations feel simple, reliable, and professional — removing
-                    the intimidation that typically keeps everyday users away from Web3.
+                    JPGC App serves investors who are putting real wealth on-chain. SmartTech Solutions
+                    built every interface to communicate one thing above all else: trust. Clean layouts,
+                    zero visual noise, and precision-designed user journeys remove the complexity from
+                    blockchain investing — leaving only confidence.
                   </p>
                   <p>
-                    SmartTech Solutions applied the same level of UI precision to Digistate that
-                    you expect from the world&apos;s leading fintech and crypto trading platforms —
-                    calibrated for the Nigerian market and its users&apos; real behaviour.
+                    From token purchase flows to NFT fractionalization to staking dashboards, SmartTech
+                    applied the same design precision you expect from the world&apos;s leading fintech
+                    platforms — engineered specifically for the JPGC investor&apos;s journey.
                   </p>
                 </div>
                 <ul className="digi-craft-list">
@@ -718,25 +634,26 @@ const DigistateProject = () => {
               <div className="col-lg-6" data-sal="zoom-in" data-sal-duration="800">
                 <div className="digi-craft-visual">
                   <div className="digi-float-card fc-tl">
-                    <strong>5 Dashboards</strong>
-                    <span>Role-Specific UX</span>
-                    <small>+ Exchange Engine</small>
+                    <strong>Dual-Chain</strong>
+                    <span>Solana + Ethereum</span>
+                    <small>Seamless bridge</small>
                   </div>
                   <div className="digi-craft-mockup">
                     <div className="digi-browser-chrome">
                       <span></span><span></span><span></span>
                     </div>
                     <Image
-                      src={webImg("investor dashboard")}
+                      src={jpgcImg("jpgc_home")}
                       width={1782}
                       height={1242}
-                      alt="Digistate investor dashboard UI"
+                      alt="JPGC App homepage UI"
+                      loading="lazy"
                     />
                   </div>
                   <div className="digi-float-card fc-br">
-                    <strong>Cross-Platform</strong>
-                    <span>Web + iOS + Android</span>
-                    <small>One design system</small>
+                    <strong>5 Core Modules</strong>
+                    <span>Token · NFT · Stake · Bridge</span>
+                    <small>One unified platform</small>
                   </div>
                 </div>
               </div>
@@ -744,15 +661,6 @@ const DigistateProject = () => {
             </div>
           </div>
         </section>
-
-
-
-
-
-
-
-
-
 
 
 
@@ -765,18 +673,18 @@ const DigistateProject = () => {
               <div className="col-lg-5" data-sal="slide-right" data-sal-duration="700">
                 <span className="digi-kicker">Solution &amp; Results</span>
                 <h2 className="digi-solution-heading">
-                  A launch-ready foundation for tokenized property trading.
+                  A production-grade platform for gold-backed digital investing.
                 </h2>
                 <div className="digi-solution-body">
                   <p>
-                    SmartTech Solutions architected, designed, and shipped the complete Digistate
-                    platform — from the blockchain layer and exchange engine to the five dashboard
-                    interfaces and cross-platform mobile application.
+                    SmartTech Solutions designed, engineered, and shipped the complete JPGC App platform —
+                    from dual-chain smart contracts and secure middleware to a world-class web and mobile
+                    investment experience.
                   </p>
                   <p>
-                    The result is a serious, production-grade product that makes real estate
-                    tokenization, IPO mechanics, broker operations, and stock-style trading
-                    feel like a native, trustworthy experience for every stakeholder.
+                    The result is a first-of-its-kind gold-backed Web3 platform that makes token trading,
+                    NFT investing, staking, and cross-chain bridging feel like a native, premium financial
+                    product — not a blockchain experiment.
                   </p>
                 </div>
                 <div className="mt--36">
@@ -817,18 +725,6 @@ const DigistateProject = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
         {/* ── CTA ──────────────────────────────────────────────────── */}
         <section className="rbt-call-to-action-area rbt-section-gap bg-color-secondary-alt">
           <div className="container">
@@ -848,11 +744,6 @@ const DigistateProject = () => {
             </div>
           </div>
         </section>
-
-
-
-
-
 
 
 
@@ -877,17 +768,7 @@ const DigistateProject = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-        {/* ── BLOG ────────────────────────────────────────────────────────── */}
+        {/* ── BLOG ─────────────────────────────────────────────────── */}
         <section className="rbt-rbt-blog-area rbt-section-gapBottom">
           <div className="container">
             <div className="row g-5 align-items-center mb--30">
@@ -916,16 +797,7 @@ const DigistateProject = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-        {/* ── BLOG ─────────────────────────────────────────────────── */}
+        {/* ── BLOG GRID ────────────────────────────────────────────── */}
         <section className="rbt-rbt-blog-area rbt-section-gapTop bg-gradient-8 rbt-round-bottom-shape">
           <div className="wrapper pb--50 rbt-index-upper">
             <div className="container">
@@ -955,12 +827,6 @@ const DigistateProject = () => {
 
 
 
-
-
-
-
-
-
         {/* ── NEWSLETTER ───────────────────────────────────────────── */}
         <section className="rbt-newsletter-area bg-color-white rbt-section-gapBottom pt--60">
           <div className="container">
@@ -971,20 +837,9 @@ const DigistateProject = () => {
             </div>
           </div>
         </section>
-        
+
 
       </main>
-
-
-
-
-
-
-
-
-
-
-
 
 
       {/* ── LIGHTBOX ─────────────────────────────────────────────── */}
@@ -1028,11 +883,8 @@ const DigistateProject = () => {
       )}
 
 
-
     </div>
-
   );
-
 };
 
-export default DigistateProject;
+export default JpgcProject;

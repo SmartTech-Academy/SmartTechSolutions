@@ -10,69 +10,52 @@ import BlogWidget from "@/my_components/Blogs/Widgets/BlogWidget";
 
 import { ROUTE } from "@/route/app_routes.js";
 
-const webImg = (name) => `/app_images/projects/digistate/website/${name}.png`;
-const appImg = (name) => `/app_images/projects/digistate/mobile app/${name}.png`;
+const flatImg = (name) => `/app_images/projects/flatshare/${name}.png`;
 
 
 
-
-
-
-
-
-
-const webScreens = [
-  { file: "homepage",                  label: "Marketing Homepage" },
-  { file: "exchange page",             label: "Exchange Marketplace" },
-  { file: "investor dashboard",        label: "Investor Dashboard" },
-  { file: "broker page",               label: "Broker Management" },
-  { file: "homeowner page",            label: "Homeowner Operations" },
-  { file: "buy and sell",              label: "Buy & Sell Flow" },
-  { file: "transactions page",         label: "Transaction Monitoring" },
-  { file: "Digistate admin dashboard", label: "Admin Overview" },
+const screens = [
+  { file: "homepage",           label: "Marketing Homepage"   },
+  { file: "dashboard",          label: "User Dashboard"       },
+  { file: "dashboard_launcher", label: "Dashboard Launcher"   },
+  { file: "find_apartment",     label: "Find a Flatmate"      },
+  { file: "chats",              label: "Messaging"            },
+  { file: "create_ads",         label: "Create Listing"       },
+  { file: "profile",            label: "User Profile"         },
+  { file: "profile_settings",   label: "Profile Settings"     },
+  { file: "interest_settings",  label: "Interest Settings"    },
+  { file: "onboarding",         label: "Onboarding Flow"      },
+  { file: "request_management", label: "Request Management"   },
 ];
 
-
-
-const mobileScreens = [
-  { file: "flash screen",       label: "Splash" },
-  { file: "auth screen",        label: "Authentication" },
-  { file: "stock page",         label: "Stock Details" },
-  { file: "invest screen",      label: "Investment" },
-  { file: "buy and sell stock", label: "Buy & Sell" },
-  { file: "portfolio",          label: "Portfolio" },
-  { file: "broker integration", label: "Broker Integration" },
-  { file: "p2p",                label: "P2P Market" },
-  { file: "order screens",      label: "Orders" },
-  { file: "profile settings",   label: "Profile" },
-];
+const galleryImages = screens.map((s) => ({ src: flatImg(s.file), label: s.label }));
 
 
 
 const challenges = [
   {
-    title: "Regulatory Compliance",
-    body: "Navigating Nigeria's SEC framework for digital asset trading required extensive legal mapping and a compliance architecture that could tokenize and list real estate assets within regulatory boundaries.",
+    title: "Building Trust Between Strangers",
+    body: "The core challenge: convincing users to share a home with someone they met online. The platform needed profile verification, trust signals, interest matching, and transparent reviews that genuinely reduce the risk of bad flatmate experiences.",
   },
   {
-    title: "Blockchain Architecture Complexity",
-    body: "Implementing ERC-721 NFTs with proxy-upgradeable smart contract patterns, DAO governance, and dynamic on-chain pricing demanded advanced Solidity engineering and rigorous audit planning.",
+    title: "Real-Time Messaging at Scale",
+    body: "Engineering a low-latency WebSocket chat system that handles concurrent conversations, read receipts, typing indicators, and notification delivery without lag — across a distributed server environment.",
   },
   {
-    title: "Five-Role Access System",
-    body: "Engineering five distinct dashboards — Homeowner, Investor, Broker, Verification Team, and Exchange Admin — each with isolated permissions, approval workflows, and unique data visibility rules.",
+    title: "Complex Multi-Dimensional Search",
+    body: "Location-based filtering had to account for radius, budget range, move-in date, lifestyle, pet tolerance, gender preference, and shared interests — all composited in real time with sub-100ms query responses.",
   },
   {
-    title: "Real-Time Exchange Engine",
-    body: "Building a functional secondary market with live bidding, fractional ownership transfers, escrow management, and demand-driven dynamic pricing required a robust, low-latency backend system.",
+    title: "Privacy & Data Compliance",
+    body: "Handling sensitive personal data — home addresses, income ranges, lifestyle preferences, and identity documents — while maintaining GDPR-aligned policies, granular privacy controls, and secure storage patterns.",
   },
   {
-    title: "Multi-Level Verification Pipelines",
-    body: "Designing a four-stage property approval process — legal, valuation, operational, and exchange reviews — while keeping the experience clear and trustworthy for all user types involved.",
+    title: "Proxy Architecture & Session Management",
+    body: "Designing a reverse-proxy pattern between the Next.js frontend and Laravel API to avoid CORS issues, centralise authentication, manage session state at the edge, and rate-limit abuse across shared-IP environments.",
   },
   {
-    title: "eNaira CBDC Integration",
-    body: "Integrating Nigeria's Central Bank Digital Currency as the platform's in-wallet currency required custom token minting, real-time fiat conversion flows, and compliance with CBN's digital currency guidelines.",
+    title: "Real-Time Listing Freshness",
+    body: "Flatshare listings go stale fast. Redis-backed caching strategies, automated expiry rules, host dashboard notifications, and re-listing flows had to keep the live inventory genuinely current without burdening hosts.",
   },
 ];
 
@@ -81,33 +64,33 @@ const challenges = [
 const processSteps = [
   {
     num: "01",
-    title: "Discovery & Requirements",
-    body: "Deep discovery sessions with Ribiax mapped all five user roles, regulatory requirements, blockchain mechanics, and exchange model. Output: full PRD and technical feasibility report.",
+    title: "Discovery & User Research",
+    body: "In-depth interviews with prospective flatmates and property hosts mapped the exact pain points of traditional flatmate search — trust anxiety, search friction, and communication failures. Output: full product spec and user journey maps.",
   },
   {
     num: "02",
-    title: "System Architecture Design",
-    body: "Architects designed the five-role permission model, exchange engine, smart contract upgrade strategy, API layer, eNaira wallet integration, and scalable microservices infrastructure.",
+    title: "System Architecture & API Design",
+    body: "Architects designed the Next.js + Laravel proxy pattern, MySQL schema, Redis cache strategy, WebSocket message broker, and the modular listing engine that powers all search and filtering logic.",
   },
   {
     num: "03",
     title: "UI/UX Design & Prototyping",
-    body: "All five dashboards were designed for web and mobile — clarity for non-technical homeowners, familiarity for financial investors. Every flow validated in high-fidelity prototype before code.",
+    body: "From onboarding to profile creation, listing browsing, and live messaging — every flow was wireframed, iterated, and validated in high-fidelity Figma prototypes before a single line of code was written.",
   },
   {
     num: "04",
-    title: "Smart Contract Development",
-    body: "Solidity engineers built ERC-721 property NFTs, fractional ownership logic, DAO governance voting, dynamic pricing models, proxy-upgrade patterns, and full on-chain audit trails.",
+    title: "Full-Stack Development",
+    body: "Next.js frontend and Laravel API built in parallel sprints. Vite-powered build pipeline for fast HMR during development. Every feature shipped behind feature flags, tested in staging before merge to production.",
   },
   {
     num: "05",
-    title: "Full-Stack Development",
-    body: "Web app, React Native mobile, NestJS API, admin dashboards, and exchange engine built in parallel sprints with continuous blockchain node connectivity tested at every milestone.",
+    title: "Real-Time Systems & Integrations",
+    body: "WebSocket server for live messaging, push notification delivery, location services for radius search, and Redis pub/sub for real-time listing updates, user presence indicators, and application status tracking.",
   },
   {
     num: "06",
-    title: "QA, Testing & Launch",
-    body: "End-to-end testing of all approval workflows, smart contract interactions, exchange order states, wallet flows, and broker permissions — followed by staged access rollout and live monitoring.",
+    title: "QA, Security Audit & Launch",
+    body: "End-to-end testing across all user flows — search, match, message, apply, list, manage. Penetration testing of auth and messaging layers. Staged rollout with live monitoring before full public launch.",
   },
 ];
 
@@ -115,24 +98,24 @@ const processSteps = [
 
 const craftFeatures = [
   {
-    icon: "feather-eye",
-    title: "Clarity First Design",
-    body: "Complex flows — IPO bidding, fractional ownership, escrow — distilled into step-by-step guided actions any user can follow without a blockchain background.",
+    icon: "feather-heart",
+    title: "Human-Centered by Design",
+    body: "Every interaction — profile creation, interest tagging, browsing — was designed around real human behaviour and the emotional weight of choosing a person to share your home with.",
   },
   {
     icon: "feather-shield",
-    title: "Trust-Driven Visual Language",
-    body: "Every UI decision — colour, spacing, hierarchy — was made to communicate reliability and reduce anxiety at high-stakes investment moments.",
-  },
-  {
-    icon: "feather-smartphone",
-    title: "Cross-Platform Consistency",
-    body: "Web and mobile share the same design system. Investors get an identical experience on browser or phone — no learning curve between platforms.",
+    title: "Trust-First Visual Language",
+    body: "Verification badges, transparent profiles, and review systems are woven into the visual hierarchy so users feel safe and informed at every decision point — not as afterthoughts.",
   },
   {
     icon: "feather-zap",
-    title: "Optimised for Speed & Flow",
-    body: "User journeys engineered to reduce clicks, eliminate dead-ends, and surface the right information at the right moment — maximising conversion and confidence.",
+    title: "Speed-Optimized for Discovery",
+    body: "Listings load instantly, filters respond in real time, and the entire search experience was engineered to surface the right match in as few clicks as possible.",
+  },
+  {
+    icon: "feather-monitor",
+    title: "Responsive & Screen-Adaptive",
+    body: "The full product experience — browsing, messaging, managing listings — works flawlessly on desktop and mobile without feature compromise or layout degradation.",
   },
 ];
 
@@ -140,66 +123,40 @@ const craftFeatures = [
 
 const results = [
   {
-    icon: "feather-globe",
-    title: "Nigeria's First Real Estate Tokenization Exchange",
-    body: "A first-of-its-kind platform converting verified properties into tradable blockchain-backed digital assets on a live secondary market.",
+    icon: "feather-search",
+    title: "Advanced Flatmate Matching Engine",
+    body: "Multi-dimensional search combining location radius, budget, move-in date, lifestyle preferences, and shared interests — surfacing genuinely compatible flatmates, not just nearby ones.",
   },
   {
-    icon: "feather-grid",
-    title: "Five Production-Ready Dashboards",
-    body: "Homeowner, Investor, Broker, Verification Team, and Exchange Admin — each built for the specific job with isolated workflows.",
+    icon: "feather-message-circle",
+    title: "Real-Time Messaging System",
+    body: "WebSocket-powered chat with typing indicators, read receipts, and push notifications — enabling fluid, in-context communication between hosts and prospective flatmates.",
   },
   {
-    icon: "feather-repeat",
-    title: "Functional Secondary Market Exchange",
-    body: "A fully operational stock-style exchange where investors trade fractional property-backed positions with live pricing, escrow, and order management.",
+    icon: "feather-home",
+    title: "Full Listing Management Suite",
+    body: "Hosts create, manage, and refresh property listings with rich media, pricing controls, availability settings, and applicant tracking from a single organised dashboard.",
   },
   {
-    icon: "feather-credit-card",
-    title: "eNaira Wallet Funding System",
-    body: "First-of-its-kind eNaira integration enabling users to fund investment wallets with Nigeria's Central Bank Digital Currency.",
+    icon: "feather-users",
+    title: "Interest & Lifestyle Profiling",
+    body: "Deep preference mapping lets users signal who they are and how they live — enabling matches that go far beyond geography and budget to genuine lifestyle compatibility.",
+  },
+  {
+    icon: "feather-inbox",
+    title: "Request Management Dashboard",
+    body: "Hosts receive, review, and respond to flatmate applications in one organised space — with status tracking, shortlisting tools, and full communication history preserved.",
   },
   {
     icon: "feather-trending-up",
-    title: "Dynamic Pricing Engine",
-    body: "Asset prices update in real time based on exchange supply and demand — genuine market behaviour, not fixed valuations.",
-  },
-  {
-    icon: "feather-shield",
-    title: "DAO Governance & On-Chain Transparency",
-    body: "Governance decisions, ownership transfers, bid records, and asset histories preserved on-chain for full auditability and investor trust.",
+    title: "Scalable PropTech Infrastructure",
+    body: "Built on a proxy-pattern architecture with Redis caching and a Laravel API — a foundation engineered to handle growth without performance degradation as the community scales.",
   },
 ];
 
 
 
-
-
-const galleryImages = [
-  ...webScreens.map((s) => ({ src: webImg(s.file), label: s.label })),
-  ...mobileScreens.map((s) => ({ src: appImg(s.file), label: s.label })),
-];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const DigistateProject = () => {
-
+const FlatshareProject = () => {
 
   useEffect(() => {
     sal({ threshold: 0.01, once: true });
@@ -230,47 +187,39 @@ const DigistateProject = () => {
 
 
 
-
-
-
-
   return (
 
-
-    <div className="digi-case-page">
+    <div className="digi-case-page flat-theme">
       <main className="rbt-main-wrapper">
 
 
         {/* ── HERO ─────────────────────────────────────────────────── */}
         <section className="digi-hero">
 
-          {/* Animated aurora blobs */}
           <div className="digi-aurora" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
           </div>
 
           <div className="container">
             <div className="digi-hero-inner">
               <div className="digi-hero-cols">
 
-                {/* ── Left: text content ── */}
+                {/* ── Left: text ── */}
                 <div className="digi-hero-content">
 
-                  {/* Category tags */}
                   <div className="digi-hero-tags" data-sal="fade" data-sal-duration="600" data-sal-delay="60">
                     <span className="digi-hero-tag tag-primary">Case Study</span>
+                    <span className="digi-hero-tag tag-accent">PropTech · Social Platform</span>
                   </div>
 
                   <h1 className="digi-hero-title" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
-                    Digi<span className="digi-gradient">state</span>
+                    Flat<span className="digi-gradient">share</span>
                   </h1>
 
                   <p className="digi-hero-lead" data-sal="slide-up" data-sal-duration="700" data-sal-delay="160">
-                    Real estate, tokenized and tradable. Digistate converts verified properties into
-                    exchange-ready blockchain assets — giving homeowners liquidity and investors
-                    fractional ownership in the Nigerian property market.
+                    A social flatmate-matching web platform that connects people looking to share
+                    property — with rich profiles, real-time messaging, smart listing filters, and
+                    location-based search built for speed, safety, and genuine human connection.
                   </p>
 
                   <div className="digi-hero-actions" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">
@@ -290,13 +239,12 @@ const DigistateProject = () => {
                     </Link>
                   </div>
 
-                  {/* Glassmorphism stats */}
                   <div className="digi-hero-glass-stats" data-sal="slide-up" data-sal-duration="700" data-sal-delay="240">
                     {[
-                      { val: "5",  suffix: "", label: "Dashboards" },
-                      { val: "3",  suffix: "",  label: "Platforms"  },
-                      { val: "10", suffix: "+", label: "Developers & Designers"  },
-                      { val: "5",  suffix: "+",  label: "QA Engineers" },
+                      { val: "5+",    suffix: "", label: "Core Modules"    },
+                      { val: "11",    suffix: "", label: "App Screens"     },
+                      { val: "8+",    suffix: "", label: "Engineers"       },
+                      { val: "15+",   suffix: "", label: "Smart Filters"   },
                     ].map(({ val, suffix, label }) => (
                       <div className="digi-glass-stat" key={label}>
                         <strong>{val}<em>{suffix}</em></strong>
@@ -305,7 +253,6 @@ const DigistateProject = () => {
                     ))}
                   </div>
 
-                  {/* Scroll indicator */}
                   <div className="digi-scroll-cue" aria-hidden="true">
                     <div className="digi-scroll-mouse"></div>
                     <span>Scroll to explore</span>
@@ -313,16 +260,16 @@ const DigistateProject = () => {
 
                 </div>
 
-                {/* ── Right: perspective-tilted dashboard (desktop only) ── */}
+                {/* ── Right: browser mockup ── */}
                 <div className="digi-hero-visual" aria-hidden="true">
                   <div className="digi-hv-glow"></div>
                   <div className="digi-hv-dashboard-wrap">
                     <div className="digi-hv-dashboard-tilt">
                       <div className="digi-hv-db-chrome">
                         <span></span><span></span><span></span>
-                        <div className="digi-hv-db-url">digistate.io/investor/dashboard</div>
+                        <div className="digi-hv-db-url">flatshare.app/dashboard</div>
                       </div>
-                      <img src={webImg("investor dashboard")} alt="" loading="eager" />
+                      <img src={flatImg("homepage")} alt="" loading="eager" />
                     </div>
                   </div>
                 </div>
@@ -336,20 +283,16 @@ const DigistateProject = () => {
 
 
 
-
-
-
-
         {/* ── METRICS STRIP ────────────────────────────────────────── */}
         <div className="digi-metrics-strip">
           <div className="container">
             <div className="digi-info-row">
               {[
-                { icon: "feather-layout",       num: "5",   label: "Dashboards"          },
-                { icon: "feather-monitor",       num: "3",   label: "Platforms"           },
-                { icon: "feather-link",          num: "ERC-721", label: "NFT Standard"    },
-                { icon: "feather-users",         num: "18+", label: "Engineers"           },
-                { icon: "feather-credit-card",   num: "eNaira", label: "CBDC Integrated" },
+                { icon: "feather-home",           num: "5+",       label: "Core Modules"    },
+                { icon: "feather-message-circle", num: "Real-Time",label: "WebSocket Chat"  },
+                { icon: "feather-filter",         num: "15+",      label: "Smart Filters"   },
+                { icon: "feather-users",          num: "8+",       label: "Engineers"       },
+                { icon: "feather-map-pin",        num: "Location", label: "Based Search"    },
               ].map(({ icon, num, label }) => (
                 <div className="digi-info-item" key={label}>
                   <i className={`digi-info-icon ${icon}`}></i>
@@ -362,6 +305,8 @@ const DigistateProject = () => {
         </div>
 
 
+
+
         {/* ── ABOUT THE CLIENT ─────────────────────────────────────── */}
         <section className="rbt-section-gap bg-color-white">
           <div className="container">
@@ -369,27 +314,27 @@ const DigistateProject = () => {
 
               <div className="col-lg-6" data-sal="slide-right" data-sal-duration="700">
                 <span className="digi-kicker">About the Client</span>
-                <h2 className="digi-client-heading">Ribiax Engineering Limited</h2>
+                <h2 className="digi-client-heading">Scalabu Digitals</h2>
                 <div className="digi-client-body">
                   <p>
-                    Ribiax Engineering Limited is a technology-driven engineering and innovation
-                    company headquartered in Nigeria. The firm specialises in building transformative
-                    digital platforms that address deep inefficiencies in high-value sectors — with a
-                    particular focus on real estate, financial technology, and blockchain-powered asset
-                    management.
+                    Scalabu Digitals is a digital product company specialising in building
+                    consumer-facing technology that solves real-world social and housing challenges.
+                    With a sharp focus on PropTech and community-driven platforms, Scalabu designs
+                    and ships products that make everyday experiences — like finding a home and
+                    choosing who to share it with — safer, smarter, and significantly less stressful.
                   </p>
                   <p>
-                    With a mission to unlock the economic value trapped in Nigeria&apos;s property market,
-                    Ribiax commissioned Digistate as its flagship product — a regulated, multi-role
-                    exchange where tokenized property assets can be discovered, bid on, fractionalized,
-                    and actively traded by verified investors and brokers.
+                    Recognising the broken, trust-deficient process of flatmate search — dominated
+                    by unverified listings, anonymous classifieds, and uncomfortable cold outreach —
+                    Scalabu commissioned Flatshare as their flagship platform: a purpose-built
+                    social network for people who need to find the right person to live with.
                   </p>
                 </div>
                 <div className="digi-client-badge">
                   <div className="digi-cb-icon"><i className="feather-briefcase"></i></div>
                   <div>
-                    <strong>Ribiax Engineering Limited</strong>
-                    <small>Product Owner · Nigeria</small>
+                    <strong>Scalabu Digitals</strong>
+                    <small>Product Owner · PropTech</small>
                   </div>
                 </div>
               </div>
@@ -403,13 +348,13 @@ const DigistateProject = () => {
                   </div>
 
                   {[
-                    { icon: "feather-briefcase",  label: "Industry",     value: "Real Estate, Blockchain & Financial Technology" },
-                    { icon: "feather-box",         label: "Product",      value: "Real Estate Tokenization & Trading Exchange" },
-                    { icon: "feather-monitor",     label: "Platforms",    value: "Web Application, Mobile App (iOS & Android), Admin Dashboards" },
-                    { icon: "feather-link",        label: "Blockchain",   value: "ERC-721 NFTs, eNaira Token, DAO Governance, Proxy Upgradeable" },
-                    { icon: "feather-layout",      label: "Dashboards",   value: "Homeowner · Investor · Broker · Verification · Exchange Admin" },
-                    { icon: "feather-users",       label: "Team",         value: "10 Developers, 8 QA Engineers, 3 Blockchain Specialists" },
-                    { icon: "feather-award",       label: "Delivered By", value: "SmartTech Solutions", highlight: true },
+                    { icon: "feather-briefcase", label: "Industry",     value: "PropTech & Social Networking" },
+                    { icon: "feather-home",       label: "Product",      value: "Flatmate Matching & Property Sharing Platform" },
+                    { icon: "feather-monitor",    label: "Platforms",    value: "Web Application, Admin Dashboard" },
+                    { icon: "feather-code",       label: "Tech Stack",   value: "NextJS · Laravel · Vite · Proxy Pattern · MySQL · Redis · WebSocket" },
+                    { icon: "feather-layout",     label: "Core Modules", value: "Search · Listings · Profiles · Messaging · Request Management" },
+                    { icon: "feather-users",      label: "Team",         value: "6 Engineers, 2 UI/UX Designers, 2 QA Specialists" },
+                    { icon: "feather-award",      label: "Delivered By", value: "SmartTech Solutions", highlight: true },
                   ].map(({ icon, label, value, highlight }, i) => (
                     <div
                       className={`digi-fact-row${highlight ? " digi-fact-row--highlight" : ""}`}
@@ -435,12 +380,6 @@ const DigistateProject = () => {
 
 
 
-
-
-
-
-
-
         {/* ── ABOUT THE APP ────────────────────────────────────────── */}
         <section className="rbt-section-gap digi-app-section">
           <div className="container">
@@ -449,31 +388,31 @@ const DigistateProject = () => {
               <div className="col-lg-6" data-sal="slide-right" data-sal-duration="700">
                 <span className="digi-kicker">About the App</span>
                 <h2 className="digi-app-heading">
-                  A complete exchange for property-backed digital assets.
+                  The smarter way to find your perfect flatmate.
                 </h2>
                 <div className="digi-app-body">
                   <p>
-                    Digistate is a blockchain-powered real estate tokenization platform that converts
-                    verified properties into tradable digital assets — making an inherently illiquid
-                    market liquid. Property owners onboard assets through a structured multi-stage
-                    verification and IPO pipeline. Once listed, investors trade fractional positions
-                    on a fully functioning secondary market exchange.
+                    Flatshare is a social property-sharing web platform built to replace the
+                    broken, trust-deficient process of finding a flatmate. Users create rich
+                    lifestyle profiles, signal their preferences and deal-breakers, and discover
+                    compatible people through an intelligent, filter-driven discovery engine —
+                    not random listings from strangers.
                   </p>
                   <p>
-                    The platform operates across five distinct dashboards serving Homeowners, Investors,
-                    Brokers, Verification Teams, and Exchange Administrators. A custom eNaira wallet
-                    system bridges fiat currency to blockchain-backed investments, while ERC-721 NFTs
-                    ensure each property has a unique, tamper-proof digital identity on-chain.
+                    Hosts who already have a property can list their spare room with full control
+                    over pricing, move-in dates, and applicant criteria. Seekers looking to live
+                    in expensive areas can find and connect with potential co-renters to split
+                    costs intelligently — with in-app messaging, structured applications, and
+                    request management tools keeping the entire process organised and transparent.
                   </p>
                   <p>
-                    Dynamic pricing driven by supply, demand, and bidding activity means the exchange
-                    behaves like a genuine securities market — with DAO governance providing transparency
-                    and community-led decision-making on top of every listed asset.
+                    Built on a Next.js and Laravel proxy architecture with Redis caching and
+                    WebSocket real-time messaging, Flatshare is engineered for speed, security,
+                    and the kind of social trust that turns a platform visit into a signed tenancy.
                   </p>
                 </div>
                 <div className="digi-stack">
-                  {["NextJS", "NestJS", "React Native", "Solidity", "ERC-721", "Proxy Pattern",
-                    "Java", "MySQL", "Redis", "Android Native", "iOS Native", "WebSocket"].map((t, i) => (
+                  {["NextJS", "Laravel", "Vite", "Proxy Pattern", "MySQL", "Redis", "WebSocket", "REST API", "Tailwind CSS"].map((t, i) => (
                     <span
                       key={t}
                       className="digi-stack-tag"
@@ -487,39 +426,25 @@ const DigistateProject = () => {
 
               <div className="col-lg-6" data-sal="zoom-in" data-sal-duration="800">
                 <div className="digi-app-visual">
-
-                  {/* Ambient glow */}
                   <div className="digi-app-visual-glow" aria-hidden="true"></div>
-
-                  {/* Desktop browser mockup */}
                   <div className="digi-app-browser">
                     <div className="digi-app-browser-chrome">
                       <span></span><span></span><span></span>
-                      <div className="digi-app-browser-url">digistate.io/investor</div>
+                      <div className="digi-app-browser-url">flatshare.app/dashboard</div>
                     </div>
-                    <img src={webImg("investor dashboard")} alt="Digistate investor dashboard" loading="lazy" />
+                    <img src={flatImg("dashboard")} alt="Flatshare dashboard" loading="lazy" />
                   </div>
-
-                  {/* Mobile phone mockup overlapping */}
                   <div className="digi-app-phone">
                     <div className="digi-app-phone-speaker"></div>
-                    <img src={appImg("invest screen")} alt="Digistate mobile invest screen" loading="lazy" />
+                    <img src={flatImg("profile")} alt="Flatshare profile" loading="lazy" />
                     <div className="digi-app-phone-home"></div>
                   </div>
-
                 </div>
               </div>
 
             </div>
           </div>
         </section>
-
-
-
-
-
-
-
 
 
 
@@ -531,12 +456,12 @@ const DigistateProject = () => {
               <div className="col-lg-8" data-sal="slide-up" data-sal-duration="700">
                 <span className="digi-kicker">The Challenge</span>
                 <h2 className="digi-challenge-heading">
-                  Building a compliant, multi-role Web3 exchange from the ground up.
+                  Turning the most personal of searches into a scalable platform.
                 </h2>
                 <p className="digi-challenge-lead">
-                  Digistate combined real estate regulation, blockchain engineering, exchange mechanics,
-                  five-role access design, and a central bank digital currency into one coherent product.
-                  These were the six hardest problems we solved.
+                  Building a social flatmate platform means solving trust, speed, privacy, and
+                  real-time communication simultaneously — for users making one of life&apos;s most
+                  personal decisions. These were the six hardest problems we solved.
                 </p>
               </div>
             </div>
@@ -561,14 +486,6 @@ const DigistateProject = () => {
 
 
 
-
-
-
-
-
-
-
-
         {/* ── USER ENGAGEMENT — Marquee ─────────────────────────────── */}
         <section className="rbt-section-gap digi-engage-section">
           <div className="container">
@@ -577,27 +494,28 @@ const DigistateProject = () => {
                 User Engagement
               </span>
               <h2 className="digi-engage-heading">
-                Designed for every user, built for every screen.
+                Crafted for how people actually search for home.
               </h2>
               <p className="digi-engage-desc">
-                From homeowner onboarding to live exchange trading, every screen was crafted
-                for clarity, speed, and trust — across web and mobile.
+                From onboarding and interest profiling to live search and real-time messaging —
+                every screen was built to reduce friction and build trust at each step of the
+                flatmate discovery journey.
               </p>
             </div>
           </div>
 
           <div className="digi-marquee-wrap">
             <div className="digi-marquee-track">
-              {[...webScreens, ...webScreens].map((s, i) => (
+              {[...screens, ...screens].map((s, i) => (
                 <div
                   className="digi-web-card"
                   key={`w-${i}`}
-                  onClick={() => openLightbox(i % webScreens.length)}
+                  onClick={() => openLightbox(i % screens.length)}
                 >
                   <div className="digi-browser-chrome">
                     <span></span><span></span><span></span>
                   </div>
-                  <img src={webImg(s.file)} alt={s.label} loading="lazy" />
+                  <img src={flatImg(s.file)} alt={s.label} loading="lazy" />
                 </div>
               ))}
             </div>
@@ -605,25 +523,21 @@ const DigistateProject = () => {
 
           <div className="digi-marquee-wrap">
             <div className="digi-marquee-track digi-marquee-track-rev">
-              {[...mobileScreens, ...mobileScreens].map((s, i) => (
+              {[...screens.slice(5), ...screens.slice(0, 5), ...screens.slice(5), ...screens.slice(0, 5)].map((s, i) => (
                 <div
-                  className="digi-mob-card"
-                  key={`m-${i}`}
-                  onClick={() => openLightbox(webScreens.length + (i % mobileScreens.length))}
+                  className="digi-web-card"
+                  key={`r-${i}`}
+                  onClick={() => openLightbox(i % screens.length)}
                 >
-                  <img src={appImg(s.file)} alt={s.label} loading="lazy" />
+                  <div className="digi-browser-chrome">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <img src={flatImg(s.file)} alt={s.label} loading="lazy" />
                 </div>
               ))}
             </div>
           </div>
         </section>
-
-
-
-
-
-
-
 
 
 
@@ -635,13 +549,14 @@ const DigistateProject = () => {
               <div className="col-lg-7" data-sal="slide-right" data-sal-duration="700">
                 <span className="digi-kicker">The Process</span>
                 <h2 className="digi-process-heading">
-                  How we turned a complex idea into a live product.
+                  How we turned a complex idea into a live platform.
                 </h2>
               </div>
               <div className="col-lg-5" data-sal="slide-left" data-sal-duration="700">
                 <p className="digi-process-lead mt_md--20 mt_sm--20">
-                  Six structured phases took Digistate from concept to production-ready exchange —
-                  each stage building on the last with zero shortcuts in compliance, design, or engineering.
+                  Six structured phases took Flatshare from a research insight to a
+                  production-ready social platform — design-first, research-led, and built
+                  with no shortcuts in performance, security, or user experience.
                 </p>
               </div>
             </div>
@@ -666,14 +581,6 @@ const DigistateProject = () => {
 
 
 
-
-
-
-
-
-
-
-
         {/* ── ENHANCING EXPERIENCE ─────────────────────────────────── */}
         <section className="rbt-section-gap digi-craft-section">
           <div className="container">
@@ -682,19 +589,20 @@ const DigistateProject = () => {
               <div className="col-lg-6" data-sal="slide-right" data-sal-duration="700">
                 <span className="digi-kicker">Enhancing Experience</span>
                 <h2 className="digi-craft-heading">
-                  World-class UI craft for a world-first product.
+                  UI craft that makes finding home feel effortless.
                 </h2>
                 <div className="digi-craft-body">
                   <p>
-                    Digistate operates in a domain where trust is everything. Every pixel,
-                    interaction, and information flow was designed to make complex financial
-                    and blockchain operations feel simple, reliable, and professional — removing
-                    the intimidation that typically keeps everyday users away from Web3.
+                    Flatshare operates in one of the most personal decision spaces a product
+                    can occupy — choosing who you share your home with. Every UI decision was
+                    made knowing that trust, clarity, and warmth are not optional extras,
+                    they are the product itself.
                   </p>
                   <p>
-                    SmartTech Solutions applied the same level of UI precision to Digistate that
-                    you expect from the world&apos;s leading fintech and crypto trading platforms —
-                    calibrated for the Nigerian market and its users&apos; real behaviour.
+                    SmartTech Solutions brought world-class UI precision to Flatshare — the
+                    same level you expect from the best consumer social platforms — with
+                    profile-forward layouts, frictionless search flows, and a visual language
+                    that communicates safety and community from the very first screen.
                   </p>
                 </div>
                 <ul className="digi-craft-list">
@@ -718,25 +626,25 @@ const DigistateProject = () => {
               <div className="col-lg-6" data-sal="zoom-in" data-sal-duration="800">
                 <div className="digi-craft-visual">
                   <div className="digi-float-card fc-tl">
-                    <strong>5 Dashboards</strong>
-                    <span>Role-Specific UX</span>
-                    <small>+ Exchange Engine</small>
+                    <strong>Smart Matching</strong>
+                    <span>15+ Filter Dimensions</span>
+                    <small>+ Interest Compatibility</small>
                   </div>
                   <div className="digi-craft-mockup">
                     <div className="digi-browser-chrome">
                       <span></span><span></span><span></span>
                     </div>
                     <Image
-                      src={webImg("investor dashboard")}
+                      src={flatImg("dashboard")}
                       width={1782}
                       height={1242}
-                      alt="Digistate investor dashboard UI"
+                      alt="Flatshare dashboard UI"
                     />
                   </div>
                   <div className="digi-float-card fc-br">
-                    <strong>Cross-Platform</strong>
-                    <span>Web + iOS + Android</span>
-                    <small>One design system</small>
+                    <strong>Real-Time Chat</strong>
+                    <span>WebSocket Powered</span>
+                    <small>Instant messaging</small>
                   </div>
                 </div>
               </div>
@@ -744,15 +652,6 @@ const DigistateProject = () => {
             </div>
           </div>
         </section>
-
-
-
-
-
-
-
-
-
 
 
 
@@ -765,18 +664,19 @@ const DigistateProject = () => {
               <div className="col-lg-5" data-sal="slide-right" data-sal-duration="700">
                 <span className="digi-kicker">Solution &amp; Results</span>
                 <h2 className="digi-solution-heading">
-                  A launch-ready foundation for tokenized property trading.
+                  A complete flatmate-matching platform, live and trusted.
                 </h2>
                 <div className="digi-solution-body">
                   <p>
-                    SmartTech Solutions architected, designed, and shipped the complete Digistate
-                    platform — from the blockchain layer and exchange engine to the five dashboard
-                    interfaces and cross-platform mobile application.
+                    SmartTech Solutions designed, architected, and shipped the full Flatshare
+                    platform — from the Laravel API and Redis-backed search engine to the
+                    Next.js frontend, WebSocket real-time messaging system, and host management
+                    dashboards.
                   </p>
                   <p>
-                    The result is a serious, production-grade product that makes real estate
-                    tokenization, IPO mechanics, broker operations, and stock-style trading
-                    feel like a native, trustworthy experience for every stakeholder.
+                    The result is a social platform that makes the traditionally stressful,
+                    opaque process of finding a flatmate feel modern, safe, and genuinely
+                    human — with the engineering depth to scale alongside its growing community.
                   </p>
                 </div>
                 <div className="mt--36">
@@ -817,18 +717,6 @@ const DigistateProject = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
         {/* ── CTA ──────────────────────────────────────────────────── */}
         <section className="rbt-call-to-action-area rbt-section-gap bg-color-secondary-alt">
           <div className="container">
@@ -848,11 +736,6 @@ const DigistateProject = () => {
             </div>
           </div>
         </section>
-
-
-
-
-
 
 
 
@@ -877,17 +760,7 @@ const DigistateProject = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-        {/* ── BLOG ────────────────────────────────────────────────────────── */}
+        {/* ── BLOG ────────────────────────────────────────────────────── */}
         <section className="rbt-rbt-blog-area rbt-section-gapBottom">
           <div className="container">
             <div className="row g-5 align-items-center mb--30">
@@ -916,16 +789,7 @@ const DigistateProject = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-        {/* ── BLOG ─────────────────────────────────────────────────── */}
+        {/* ── BLOG (gradient) ──────────────────────────────────────── */}
         <section className="rbt-rbt-blog-area rbt-section-gapTop bg-gradient-8 rbt-round-bottom-shape">
           <div className="wrapper pb--50 rbt-index-upper">
             <div className="container">
@@ -934,7 +798,7 @@ const DigistateProject = () => {
                   <div className="section-title text-start">
                     <h2 className="title color-white">Latest News</h2>
                     <p className="description color-white-off mt--20">
-                      Notes from our team on product design, software development, AI, blockchain, and launch strategy.
+                      Notes from our team on product design, software development, AI, and launch strategy.
                     </p>
                   </div>
                 </div>
@@ -955,12 +819,6 @@ const DigistateProject = () => {
 
 
 
-
-
-
-
-
-
         {/* ── NEWSLETTER ───────────────────────────────────────────── */}
         <section className="rbt-newsletter-area bg-color-white rbt-section-gapBottom pt--60">
           <div className="container">
@@ -971,20 +829,9 @@ const DigistateProject = () => {
             </div>
           </div>
         </section>
-        
+
 
       </main>
-
-
-
-
-
-
-
-
-
-
-
 
 
       {/* ── LIGHTBOX ─────────────────────────────────────────────── */}
@@ -1028,11 +875,10 @@ const DigistateProject = () => {
       )}
 
 
-
     </div>
 
   );
 
 };
 
-export default DigistateProject;
+export default FlatshareProject;

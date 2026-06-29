@@ -29,6 +29,8 @@ export const ROUTE = {
 
   project: "/projects",
   digistate_project: "/projects/digistate",
+  jpgc_app_project: "/projects/jpgc-app",
+  flatshare_project: "/projects/flatshare",
 
   our_process: "/our-process",
   course_details: "/courses/details/",
