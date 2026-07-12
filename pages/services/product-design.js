@@ -24,7 +24,12 @@ const ProductDesign = () => {
 
         <>
 
-            <PageHead title="Product Design Services | SmartTech Solutions" />
+            <PageHead
+                title="Product Design Services | SmartTech Solutions"
+                description="SmartTech Solutions turns ideas into visually striking, user-centric products — UX research, interface design, prototypes, and design systems that build brand loyalty."
+                image="/app_images/services/service_images/smarttech_uiux.png"
+                path="/services/product-design"
+            />
 
             <Provider store={Store}>
                 <Context>

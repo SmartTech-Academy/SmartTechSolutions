@@ -24,7 +24,12 @@ const Three_Dimension_Modeling = () => {
 
         <>
 
-            <PageHead title="3D Modeling Services | SmartTech Solutions" />
+            <PageHead
+                title="3D Modeling Services | SmartTech Solutions"
+                description="SmartTech Solutions turns real products into detailed low-poly and high-poly 3D models for marketing research, rapid prototyping, and standout product promotion."
+                image="/app_images/services/service_images/smarttech_3d_modeling.png"
+                path="/services/3D-modeling"
+            />
 
             <Provider store={Store}>
                 <Context>

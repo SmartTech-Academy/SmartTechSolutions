@@ -16,9 +16,13 @@ import ProcessProcedures from "./sections/ProcessProcedures";
 import dynamic from "next/dynamic";
 
 import Industries from "../_Services/InnerPages/sections/Industries";
+import IndustriesBackdrop from "../_Services/InnerPages/sections/IndustriesBackdrop";
 
 // LOAD DATAS
 import IndustriesData from "@/my_data/services/industries.json";
+
+import whySmartTechImg from "@/public/app_images/services/why_smarttech_team.webp";
+import visionCtaBg from "@/public/app_images/bg/vision_life_cta_bg.webp";
 
 // Dynamically import Odometer with SSR disabled
 const Odometer = dynamic(() => import("react-odometerjs"), {
@@ -79,59 +83,62 @@ const SmartTechProcess = () => {
 
 
 
-                <div className="rbt-rbt-blog-area rbt-section-gapTop bg-gradient-8 rbt-round-bottom-shape" style={{ height: '650px', position: 'relative' }}>
-                    <div className="wrapper pb--50 rbt-index-upper">
-                        <div className="container">
-                            <div className="row g-5 align-items-end mb--60">
-                                <div className="col-lg-6 col-md-12 col-12">
+                <section className="process-hero">
+                    <div className="container">
+                        <div className="row g-5 align-items-end">
+                            <div className="col-lg-7">
+                                <div className="section-title text-start">
+                                    <span className="subtitle bg-primary-opacity">HOW WE WORK</span>
+                                    <h2 className="title color-white">Our product development process.</h2>
+                                    <p className="description color-white-off mt--20">
+                                        From concept to completion, our approach is shaped by
+                                        discovery, precision, testing, and launch support.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="col-lg-5">
+                                <div className="process-note">
+                                    <i className="feather-compass"></i>
+                                    <span>Clear strategy before code. Clean execution before launch.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <ProcessProcedures compact />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div className="rbt-course-area">
+                        <IndustriesBackdrop>
+                            <div className="row mb--60">
+                                <div className="col-lg-12">
                                     <div className="section-title text-start">
-                                        <br /><br />
-                                        <h2 className="title color-white">{"Our product development process"}</h2>
-                                        <p className="description color-white-off mt--20">
-                                            {"Our approach, From concept to completion is driven by an unwavering commitment to precision and care"}
+                                        <h2 className="title">{"Industries "}<span className="theme-gradient">{"we serve"}</span></h2>
+                                        <p className="description has-medium-font-size mt--20">
+                                            {"With deep expertise across diverse industries and a comprehensive suite of services, we understand your unique challenges and deliver tailored solutions that create measurable impact."}
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <ProcessProcedures />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <div className="rbt-course-area rbt-sec-cir-shadow-1 bg-color-extra2 rbt-section-gap">
-                    <div className="gradient-shape-top"></div>
-                    <div className="gradient-shape-bottom"></div>
-                    <div className="container">
-                        <div className="row mb--60">
-                            <div className="col-lg-12">
-                                <div className="section-title text-start">
-                                    <h2 className="title">{"Industries "}<span class="theme-gradient">{"we serve"}</span></h2>
-                                    <p className="description has-medium-font-size mt--20">
-                                        {"With deep expertise across diverse industries and a comprehensive suite of services, we understand your unique challenges and deliver tailored solutions that create measurable impact."}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <Industries data={IndustriesData.industries_served_2} />
-                    </div>
+                            <Industries data={IndustriesData.industries_served_2} variant="dark-glass" />
+                        </IndustriesBackdrop>
                 </div>
 
 
@@ -160,8 +167,8 @@ const SmartTechProcess = () => {
                                 <div className="row row--30 gy-5 align-items-center">
 
                                     <div className="col-lg-6 col-xl-5">
-                                        <div className="thumbnail rbt-shadow-box">
-                                            <Image className="w-100 radius-10" src={image_url("/app_images/services/services.webp")} width={357} height={500} alt="Card image" />
+                                        <div className="thumbnail rbt-shadow-box rbt-why-smarttech-img">
+                                            <Image className="w-100 radius-10" src={whySmartTechImg} width={700} height={860} alt="SmartTech Solutions team collaborating on a client engagement" />
                                         </div>
                                     </div>
 
@@ -226,7 +233,9 @@ const SmartTechProcess = () => {
 
 
 
-                <div className="rbt-call-to-action-area rbt-section-gap bg-color-secondary-alt">
+                <div className="rbt-call-to-action-area rbt-section-gap rbt-vision-cta">
+                    <Image src={visionCtaBg} alt="" fill sizes="100vw" className="rbt-vision-cta__img" aria-hidden="true" />
+                    <span className="rbt-vision-cta__overlay" aria-hidden="true" />
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">

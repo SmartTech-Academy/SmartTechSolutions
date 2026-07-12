@@ -1,0 +1,332 @@
+/* ════════════════════════════════════════════════════════════════════════
+   "OUR CORE SERVICES" — rbt-service-pro
+   Paired with my_components/_HomePage/Home-Sections/HomepageServices.js
+   ════════════════════════════════════════════════════════════════════════ */
+.rbt-service-pro__inner {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+}
+
+.rbt-service-pro__inner:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 48px -18px var(--primary-opacity, rgba(47, 87, 239, 0.35));
+}
+
+.rbt-service-pro__inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s ease;
+  z-index: 3;
+}
+
+.rbt-service-pro__inner:hover::before {
+  transform: scaleX(1);
+}
+
+.rbt-service-pro__img {
+  position: relative;
+  overflow: hidden;
+}
+
+.rbt-service-pro__img img {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rbt-service-pro__inner:hover .rbt-service-pro__img img {
+  transform: scale(1.08);
+}
+
+.rbt-service-pro__glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(17, 20, 33, 0.55) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.rbt-service-pro__inner:hover .rbt-service-pro__glow {
+  opacity: 1;
+}
+
+.rbt-service-pro__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: gap 0.3s ease;
+}
+
+.rbt-service-pro__cta-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--primary-opacity, rgba(47, 87, 239, 0.1));
+  color: var(--color-primary);
+  transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.rbt-service-pro__cta:hover {
+  gap: 14px;
+}
+
+.rbt-service-pro__cta:hover .rbt-service-pro__cta-icon {
+  background: var(--color-primary);
+  color: var(--color-white);
+  transform: translateX(3px);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   "OUR JOURNEY TOWARD LASTING SUCCESS" — rbt-counter-bg-wrap
+   Paired with my_components/Counters/CounterSection.js. Reused on the
+   homepage and the services page from a single shared background asset.
+   ════════════════════════════════════════════════════════════════════════ */
+.rbt-counter-bg-wrap {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  width: 100%;
+  padding: clamp(56px, 8vw, 100px) 0;
+}
+
+.rbt-counter-bg-wrap__img {
+  object-fit: cover;
+  z-index: -2;
+}
+
+.rbt-counter-bg-wrap__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(120deg, rgba(17, 20, 33, 0.92) 0%, rgba(25, 35, 53, 0.82) 45%, rgba(47, 87, 239, 0.55) 100%);
+}
+
+.rbt-counter-bg-wrap__content .section-title .title,
+.rbt-counter-bg-wrap__content .section-title .description,
+.rbt-counter-bg-wrap__content .rbt-counterup .content .counter,
+.rbt-counter-bg-wrap__content .rbt-counterup .content .counter .odometer,
+.rbt-counter-bg-wrap__content .rbt-counterup .content .subtitle {
+  color: var(--color-white);
+}
+
+.rbt-counter-bg-wrap__content .section-title .description {
+  opacity: 0.82;
+}
+
+.rbt-counter-bg-wrap__content .rbt-counterup .content .subtitle {
+  opacity: 0.85;
+}
+
+.rbt-counter-bg-wrap__content .single-counter + .single-counter::before {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   "OUR PRODUCT DEVELOPMENT PROCESS" — scroll-pinned auto-advancing tabs
+   Paired with my_components/AdvanceTab/OurProcess.js.
+   ════════════════════════════════════════════════════════════════════════ */
+.rbt-process-scrolly {
+  position: relative;
+  height: 230vh;
+}
+
+.rbt-process-scrolly__sticky {
+  position: sticky;
+  top: 110px;
+}
+
+.advance-tab-button .nav-link.tab-button {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  background: transparent;
+}
+
+/* Make the active process-tab unmistakable — the template's default active
+   state is just a white card + shadow on an already-white section
+   background, which barely reads as "selected". Layer on a colored left
+   accent bar, a tinted background, and a colored title/index dot instead. */
+.advance-tab-button-1 .tab-button-list .tab-button.active::before {
+  background: var(--primary-opacity, rgba(47, 87, 239, 0.08));
+  box-shadow: var(--shadow-1), inset 4px 0 0 var(--color-primary);
+}
+
+.advance-tab-button-1 .tab-button-list .tab-button.active .title {
+  color: var(--color-primary);
+}
+
+.advance-tab-button-1 .tab-button-list .tab-button {
+  transition: transform 0.3s ease;
+}
+
+.advance-tab-button-1 .tab-button-list .tab-button.active {
+  transform: translateX(6px);
+}
+
+.tab-button .title span.theme-gradient {
+  display: inline;
+}
+
+/* Stacked, cross-fading process images — replaces the Bootstrap
+   .tab-pane/.fade pair, which needs two separate paints to animate and so
+   never transitioned cleanly under scroll-driven state updates. */
+.rbt-process-image-stack {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1080 / 780;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 30px 70px -24px rgba(23, 32, 51, 0.28);
+}
+
+.rbt-process-image-stack__item {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(1.035);
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.rbt-process-image-stack__item.is-active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+
+.rbt-process-image-stack__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rbt-process-image-stack__item {
+    transition: opacity 0.3s ease;
+    transform: none;
+  }
+}
+
+/* Below desktop (lg breakpoint, 992px), the scroll-driven pin/switch
+   effect is turned off entirely (see OurProcess.js — the scroll listener
+   itself isn't even attached below this width) — revert to fully normal,
+   un-pinned document flow so tablet/mobile just scroll past the section
+   like any other, tabs still work by tapping them. */
+@media (max-width: 991px) {
+  .rbt-process-scrolly {
+    height: auto;
+  }
+
+  .rbt-process-scrolly__sticky {
+    position: static;
+    top: auto;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   "TOP PROJECTS" CARDS — rbt-project-card
+   Paired with my_components/Cards/ProjectsCards.js.
+   ════════════════════════════════════════════════════════════════════════ */
+.rbt-project-card {
+  border: 1.5px solid rgba(23, 32, 51, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px -22px rgba(23, 32, 51, 0.22);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.rbt-project-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(47, 87, 239, 0.35);
+  box-shadow: 0 34px 76px -18px rgba(47, 87, 239, 0.3);
+}
+
+/* Fixed-ratio, always-cropped-to-fill image box — the previous fixed
+   width/height props reserved a box whose ratio didn't match every
+   source image's real ratio, leaving uneven empty space above/below the
+   image within the card. `fill` + `object-fit: cover` guarantees a full,
+   even fit no matter the source image's native dimensions.
+   NOTE: `.card-list-2 .rbt-card-img` (scss, selector `.card-list-2
+   .rbt-card-img` — 2 classes) beats a bare `.rbt-project-card__img` (1
+   class) on specificity, so its `height: 100%` still wins here even
+   though this file loads later. A `fill` image needs its positioned
+   ancestor to have a *definite* height; `height: 100%` inside an
+   auto-height flex row never resolves to one, so the image silently
+   rendered at 0×0 (confirmed via the browser's own "fill and a height
+   value of 0" warning). `height: auto !important` + `aspect-ratio`
+   sidesteps the whole flex height-percentage chain and gives the image
+   its own definite box regardless of layout context. `flex-basis: 40%`
+   from scss is left untouched — it already sizes the column correctly. */
+.rbt-project-card__img {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  height: auto !important;
+}
+
+.rbt-project-card__img a {
+  display: block;
+  position: absolute;
+  inset: 0;
+}
+
+.rbt-project-card__img img {
+  object-fit: cover;
+}
+
+/* Reversible scroll-in for each card (ScrollRevealSection), staggered via
+   the --reveal-delay custom property set inline per card. */
+.rbt-project-reveal .rbt-project-card {
+  opacity: 0;
+  transform: translateY(44px) scale(0.97);
+  transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1), transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease, border-color 0.4s ease;
+  transition-delay: var(--reveal-delay, 0s);
+}
+
+.rbt-project-reveal.is-in-view .rbt-project-card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.rbt-project-reveal.is-in-view .rbt-project-card:hover {
+  transform: translateY(-6px) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rbt-project-reveal .rbt-project-card {
+    opacity: 1;
+    transform: none;
+    transition: box-shadow 0.4s ease, border-color 0.4s ease;
+  }
+}
+
+/* Spacing between "Top Projects" and the counter section that follows —
+   .rbt-event-area's own bottom padding ends right where the counter
+   panel's dark photo background begins, with no neutral gap in between,
+   so the two visually read as touching. Add real breathing room before
+   the photo panel starts. */
+.rbt-counterup-area.counterup-section-02 {
+  margin-top: 70px;
+}
+
+@media (max-width: 767px) {
+  .rbt-counterup-area.counterup-section-02 {
+    margin-top: 48px;
+  }
+}

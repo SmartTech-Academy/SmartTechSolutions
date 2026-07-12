@@ -1,0 +1,402 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   XabiProject — Deep Rose / FinTech Real Estate Theme
+   All rules are scoped to .xabi-theme so they never bleed into other
+   project pages. Import via pages/_app.js.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── CSS variable overrides ───────────────────────────────────────────── */
+.xabi-theme {
+  --digi-orange: #be123c;
+  --digi-green:  #9f1239;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   HERO
+   ════════════════════════════════════════════════════════════════════════ */
+
+.xabi-theme .digi-hero {
+  background:
+    radial-gradient(ellipse at 72% 14%, rgba(190, 18, 60, 0.38) 0%, transparent 42%),
+    radial-gradient(ellipse at 18% 82%, rgba(159, 18, 57, 0.22) 0%, transparent 32%),
+    radial-gradient(ellipse at 45% 55%, rgba(136, 14, 49, 0.14) 0%, transparent 50%),
+    linear-gradient(155deg, #1a0208 0%, #2d0511 55%, #150106 100%);
+}
+
+/* Aurora blobs — crimson + rose */
+.xabi-theme .digi-aurora span:nth-child(1) {
+  background: radial-gradient(circle, rgba(190, 18, 60, 0.52) 0%, transparent 70%);
+  animation-duration: 18s;
+}
+.xabi-theme .digi-aurora span:nth-child(2) {
+  background: radial-gradient(circle, rgba(244, 63, 94, 0.36) 0%, transparent 70%);
+  animation-duration: 24s;
+  animation-delay: -7s;
+}
+.xabi-theme .digi-aurora span:nth-child(3) {
+  background: radial-gradient(circle, rgba(253, 164, 175, 0.24) 0%, transparent 70%);
+  animation-duration: 30s;
+  animation-delay: -14s;
+}
+
+/* Gradient text — rose shimmer (background-size must be explicit to keep digi-shimmer working) */
+.xabi-theme .digi-hero-title .digi-gradient {
+  background: linear-gradient(90deg,
+    #9f1239 0%,
+    #be123c 25%,
+    #fecdd3 50%,
+    #be123c 75%,
+    #9f1239 100%
+  );
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero tags */
+.xabi-theme .digi-hero-tag.tag-primary {
+  background:   rgba(190, 18, 60, 0.18);
+  border-color: rgba(190, 18, 60, 0.45);
+  color: #f43f5e;
+}
+.xabi-theme .digi-hero-tag.tag-accent {
+  background:   rgba(159, 18, 57, 0.14);
+  border-color: rgba(159, 18, 57, 0.35);
+  color: #fda4af;
+}
+
+/* Scroll cue */
+.xabi-theme .digi-scroll-mouse {
+  border-color: rgba(190, 18, 60, 0.5);
+}
+.xabi-theme .digi-scroll-mouse::after {
+  background: #f43f5e;
+}
+
+/* HV glow */
+.xabi-theme .digi-hv-glow {
+  background: radial-gradient(ellipse at center, rgba(190, 18, 60, 0.32) 0%, transparent 70%);
+}
+
+/* Browser chrome — first dot rose */
+.xabi-theme .digi-hv-db-chrome span:nth-child(1) { background: #be123c; }
+
+/* Glass stats */
+.xabi-theme .digi-glass-stat strong { color: #f43f5e; }
+.xabi-theme .digi-glass-stat strong em { color: #fda4af; }
+
+/* ════════════════════════════════════════════════════════════════════════
+   KICKER & HEADING SHIMMER
+   ════════════════════════════════════════════════════════════════════════ */
+
+.xabi-theme .digi-kicker::before {
+  background: #be123c;
+}
+
+.xabi-theme .digi-client-heading::before,
+.xabi-theme .digi-app-heading::before,
+.xabi-theme .digi-process-heading::before,
+.xabi-theme .digi-craft-heading::before,
+.xabi-theme .digi-engage-heading::before {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(190, 18, 60, 0.36) 50%,
+    transparent 100%
+  );
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   FACTS TABLE
+   ════════════════════════════════════════════════════════════════════════ */
+
+.xabi-theme .digi-facts-header {
+  background: linear-gradient(135deg, #881337 0%, #9f1239 50%, #be123c 100%);
+}
+.xabi-theme .digi-fact-row:hover { background: #fff1f2; }
+.xabi-theme .digi-fact-row--highlight span { color: #be123c; }
+.xabi-theme .digi-fact-row--highlight { background: linear-gradient(90deg, #ffe4e6 0%, #ffffff 100%); }
+
+/* Client badge icon */
+.xabi-theme .digi-cb-icon {
+  background: rgba(190, 18, 60, 0.10);
+  color: #be123c;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   ABOUT THE APP
+   ════════════════════════════════════════════════════════════════════════ */
+
+.xabi-theme .digi-app-visual-glow {
+  background: radial-gradient(ellipse at 80% 50%, rgba(190, 18, 60, 0.20) 0%, transparent 65%);
+}
+
+.xabi-theme .xabi-app-visual .digi-app-browser {
+  width: 100%;
+  position: relative;
+  bottom: auto;
+  right: auto;
+  transform: none;
+  animation: digi-app-float-browser 6s ease-in-out infinite;
+}
+
+.xabi-data-card {
+  position: absolute;
+  bottom: -18px;
+  right: -18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(190, 18, 60, 0.22);
+  border-radius: 14px;
+  padding: 14px 18px;
+  box-shadow: 0 12px 40px rgba(190, 18, 60, 0.15), 0 2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 3;
+  animation: digi-float-c 4.5s ease-in-out infinite;
+}
+.xabi-data-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(190, 18, 60, 0.10);
+  color: #be123c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.xabi-data-card strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.2;
+}
+.xabi-data-card span {
+  font-size: 11px;
+  color: #be123c;
+  font-weight: 500;
+}
+
+.xabi-theme .digi-app-browser-chrome span:nth-child(1) { background: #be123c; }
+
+/* Browser chrome standard dots */
+.xabi-theme .digi-browser-chrome span:nth-child(1) { background: #fc5f5a; }
+.xabi-theme .digi-browser-chrome span:nth-child(2) { background: #fdbc40; }
+.xabi-theme .digi-browser-chrome span:nth-child(3) { background: #35cd4b; }
+
+/* Stack tags */
+.xabi-theme .digi-stack-tag {
+  background:   rgba(190, 18, 60, 0.07);
+  border-color: rgba(190, 18, 60, 0.25);
+  color: #be123c;
+}
+.xabi-theme .digi-stack-tag:hover {
+  background:   rgba(190, 18, 60, 0.14);
+  border-color: rgba(190, 18, 60, 0.45);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   CHALLENGE
+   ════════════════════════════════════════════════════════════════════════ */
+
+.xabi-theme .digi-challenge-section {
+  background:
+    radial-gradient(ellipse at 80% 12%, rgba(190, 18, 60, 0.22) 0%, transparent 40%),
+    radial-gradient(ellipse at 10% 88%, rgba(159, 18, 57, 0.15) 0%, transparent 36%),
+    linear-gradient(160deg, #1a0208 0%, #2d0511 60%, #150106 100%);
+}
+
+.xabi-theme .digi-challenge-num {
+  background: rgba(190, 18, 60, 0.18);
+  color: #f43f5e;
+}
+.xabi-theme .digi-challenge-card:hover {
+  border-color: rgba(190, 18, 60, 0.52);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(190, 18, 60, 0.18);
+}
+.xabi-theme .digi-challenge-card:hover h4         { color: #fda4af; }
+.xabi-theme .digi-challenge-card:hover .digi-challenge-num {
+  background: rgba(190, 18, 60, 0.30);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   MARQUEE (USER ENGAGEMENT)
+   ════════════════════════════════════════════════════════════════════════ */
+
+.xabi-theme .digi-engage-section {
+  background: linear-gradient(180deg, #fff1f2 0%, #ffe4e6 55%, #fff5f5 100%);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   PROCESS
+   ════════════════════════════════════════════════════════════════════════ */
+
+.xabi-theme .digi-process-section {
+  background:
+    radial-gradient(ellipse at 88% 10%, rgba(244, 63, 94, 0.18) 0%, transparent 42%),
+    radial-gradient(ellipse at 8%  90%, rgba(190, 18, 60, 0.14) 0%, transparent 38%),
+    radial-gradient(ellipse at 50% 50%, rgba(136, 14, 49, 0.10) 0%, transparent 65%),
+    linear-gradient(150deg, #200308 0%, #370510 45%, #1a0206 100%);
+}
+
+/* Section text — white on dark */
+.xabi-theme .digi-process-section .digi-kicker { color: rgba(255, 255, 255, 0.65); }
+.xabi-theme .digi-process-heading { color: #ffffff; }
+.xabi-theme .digi-process-lead    { color: rgba(255, 255, 255, 0.62); }
+
+/* Cards */
+.xabi-theme .digi-process-card {
+  background:   rgba(255, 255, 255, 0.06);
+  border-color: rgba(190, 18, 60, 0.28);
+}
+.xabi-theme .digi-process-card h4 { color: #ffffff; }
+.xabi-theme .digi-process-card p  { color: rgba(255, 255, 255, 0.60); }
+
+/* Rose-to-blush top-bar accent */
+.xabi-theme .digi-process-card::before {
+  background: linear-gradient(90deg, #be123c, #fda4af);
+}
+
+/* Process number ghost */
+.xabi-theme .digi-process-num {
+  color: rgba(190, 18, 60, 0.24);
+}
+
+/* Card hover */
+.xabi-theme .digi-process-card:hover {
+  background:   rgba(190, 18, 60, 0.12);
+  border-color: rgba(190, 18, 60, 0.55);
+  box-shadow:   0 28px 68px rgba(30, 2, 8, 0.62);
+}
+.xabi-theme .digi-process-card:hover .digi-process-num {
+  color:       rgba(190, 18, 60, 0.42);
+  text-shadow: 0 0 40px rgba(190, 18, 60, 0.50);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   ENHANCING EXPERIENCE (CRAFT)
+   ════════════════════════════════════════════════════════════════════════ */
+
+.xabi-theme .digi-craft-section {
+  background:
+    radial-gradient(ellipse at 70% 30%, rgba(190, 18, 60, 0.06) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 75%, rgba(159, 18, 57, 0.04) 0%, transparent 45%),
+    linear-gradient(150deg, #fff1f2 0%, #ffe4e6 45%, #fff5f5 100%);
+}
+
+.xabi-theme .digi-li-icon {
+  background: rgba(190, 18, 60, 0.09);
+  color: #be123c;
+}
+.xabi-theme .digi-craft-list li:hover .digi-li-icon {
+  background: rgba(190, 18, 60, 0.18);
+}
+.xabi-theme .digi-craft-list li:hover {
+  box-shadow:   0 8px 30px rgba(190, 18, 60, 0.10);
+  border-color: rgba(190, 18, 60, 0.28);
+}
+
+/* Float cards */
+.xabi-theme .digi-float-card {
+  border-color: rgba(190, 18, 60, 0.20);
+}
+.xabi-theme .digi-float-card strong { color: #be123c; }
+
+/* ════════════════════════════════════════════════════════════════════════
+   SOLUTION & RESULTS
+   ════════════════════════════════════════════════════════════════════════ */
+
+.xabi-theme .digi-solution-section {
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(190, 18, 60, 0.18) 0%, transparent 40%),
+    radial-gradient(ellipse at 80% 20%, rgba(159, 18, 57, 0.12) 0%, transparent 38%),
+    linear-gradient(155deg, #1a0208 0%, #2d0511 60%, #150106 100%);
+}
+
+.xabi-theme .digi-result-icon {
+  background: rgba(190, 18, 60, 0.16);
+  color: #f43f5e;
+}
+.xabi-theme .digi-result-card:hover {
+  border-color: rgba(190, 18, 60, 0.42);
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.42), 0 0 0 1px rgba(190, 18, 60, 0.16);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   METRICS STRIP
+   ════════════════════════════════════════════════════════════════════════ */
+
+.xabi-theme .digi-metrics-strip {
+  background: linear-gradient(135deg, #1a0208 0%, #2d0511 60%, #150106 100%);
+  border-top:    1px solid rgba(190, 18, 60, 0.16);
+  border-bottom: 1px solid rgba(190, 18, 60, 0.16);
+}
+.xabi-theme .digi-info-icon  { color: #f43f5e; }
+.xabi-theme .digi-info-num   { color: #fda4af; }
+.xabi-theme .digi-info-label { color: rgba(255, 255, 255, 0.50); }
+.xabi-theme .digi-info-item  { border-right-color: rgba(190, 18, 60, 0.16); }
+.xabi-theme .digi-info-item:hover { background: rgba(190, 18, 60, 0.08); }
+
+/* ════════════════════════════════════════════════════════════════════════
+   ENHANCED HOVER & TRANSITION OVERRIDES (rose variants)
+   ════════════════════════════════════════════════════════════════════════ */
+
+.xabi-theme .digi-client-badge:hover {
+  border-color: rgba(190, 18, 60, 0.32);
+  box-shadow: 0 8px 32px rgba(190, 18, 60, 0.12);
+}
+.xabi-theme .digi-client-badge:hover .digi-cb-icon {
+  background: rgba(190, 18, 60, 0.18);
+}
+
+.xabi-theme .digi-stack-tag:hover {
+  box-shadow: 0 6px 18px rgba(190, 18, 60, 0.20);
+}
+
+.xabi-theme .digi-web-card:hover {
+  box-shadow: 0 32px 80px rgba(40, 2, 10, 0.20),
+              0 0 0 2px rgba(190, 18, 60, 0.22);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   DARK MODE OVERRIDES
+   ════════════════════════════════════════════════════════════════════════ */
+
+.active-dark-mode .xabi-theme .digi-engage-section {
+  background: linear-gradient(180deg, #1a0208 0%, #220308 100%);
+}
+.active-dark-mode .xabi-theme .digi-process-section {
+  background:
+    radial-gradient(ellipse at 88% 10%, rgba(190, 18, 60, 0.14) 0%, transparent 42%),
+    linear-gradient(150deg, #180206 0%, #250409 45%, #120104 100%);
+}
+.active-dark-mode .xabi-theme .digi-process-card {
+  background:   rgba(255, 255, 255, 0.05);
+  border-color: rgba(190, 18, 60, 0.22);
+}
+.active-dark-mode .xabi-theme .digi-craft-section {
+  background: linear-gradient(150deg, #1a0208 0%, #200308 100%);
+}
+.active-dark-mode .xabi-theme .digi-fact-row:hover {
+  background: rgba(190, 18, 60, 0.07);
+}
+.active-dark-mode .xabi-theme .digi-float-card {
+  border-color: rgba(190, 18, 60, 0.18);
+  background: rgba(190, 18, 60, 0.04);
+}
+.active-dark-mode .xabi-theme .digi-stack-tag {
+  background:   rgba(190, 18, 60, 0.07);
+  border-color: rgba(190, 18, 60, 0.22);
+  color: #fda4af;
+}
+.active-dark-mode .xabi-theme .digi-result-card:hover {
+  box-shadow: 0 8px 32px rgba(190, 18, 60, 0.12);
+}
+.active-dark-mode .xabi-theme .xabi-data-card {
+  background: #1a0208;
+  border-color: rgba(190, 18, 60, 0.30);
+}
+.active-dark-mode .xabi-theme .xabi-data-card strong { color: #fecdd3; }

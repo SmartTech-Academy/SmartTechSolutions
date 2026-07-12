@@ -9,6 +9,7 @@ import BlogGridMinimal from "@/my_components/Blogs/Components/BlogGridMinimal";
 import Newsletter_2 from "@/my_components/Newsletters/Newsletter_2";
 import Testimonial_2 from "@/my_components/Testimonials/Testimonial_2";
 import HomePageCounter from "@/my_components/Counters/HomePageCounter";
+import CounterSection from "@/my_components/Counters/CounterSection";
 import BlogWidget from "@/my_components/Blogs/Widgets/BlogWidget";
 import Brands2 from "../TrustedByBrands/Brands2";
 // At the top of your file
@@ -38,14 +39,14 @@ import cap from "../../public/images/shape/o-icon-2.png";
 import coach from "../../public/app_images/about/about_us.webp";
 import signature from "../../public/app_images/about/signatures.webp";
 import dots from "../../public/images/shape/a-dot-01.png";
-import lineArrow from "@/public/app_images/shape/o-line-arrow.png";
+import journeyBg from "@/public/app_images/bg/agile_office_journey_bg.webp";
+import whySmartTechAboutImg from "@/public/app_images/about/why_smarttech_about.webp";
+import visionCtaBg from "@/public/app_images/bg/vision_life_cta_bg.webp";
 
 
 // RADUX STORE
 import { useAppContext } from "@/context/Context";
 
-
-import { image_url } from "../../helper/Utilities";
 
 
 
@@ -131,12 +132,10 @@ const SmartTechAcademy = () => {
 
 
 
-                <div className="rbt-counterup-area counterup-section-02 rbt-section-gap">
-                    <div className="shape-1">
-                        <Image src={lineArrow} width={86} height={50} alt="Shape" />
-                    </div>
-
-                    <HomePageCounter />
+                <div className="rbt-counterup-area counterup-section-02">
+                    <CounterSection image={journeyBg}>
+                        <HomePageCounter />
+                    </CounterSection>
                 </div>
 
 
@@ -163,8 +162,8 @@ const SmartTechAcademy = () => {
                                 <div className="row row--30 gy-5 align-items-center">
 
                                     <div className="col-lg-6 col-xl-5">
-                                        <div className="thumbnail rbt-shadow-box">
-                                            <Image className="w-100 radius-10" src={image_url("/app_images/services/services.webp")} width={357} height={500} alt="Card image" />
+                                        <div className="thumbnail rbt-shadow-box rbt-why-smarttech-img">
+                                            <Image className="w-100 radius-10" src={whySmartTechAboutImg} width={700} height={860} alt="SmartTech Solutions team member reviewing product progress on a laptop" />
                                         </div>
                                     </div>
 
@@ -236,7 +235,9 @@ const SmartTechAcademy = () => {
 
 
 
-                <div className="rbt-call-to-action-area rbt-section-gap bg-color-secondary-alt">
+                <div className="rbt-call-to-action-area rbt-section-gap rbt-vision-cta">
+                    <Image src={visionCtaBg} alt="" fill sizes="100vw" className="rbt-vision-cta__img" aria-hidden="true" />
+                    <span className="rbt-vision-cta__overlay" aria-hidden="true" />
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">

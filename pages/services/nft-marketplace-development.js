@@ -24,7 +24,12 @@ const NftMarketplaceDevelopment = () => {
 
         <>
 
-            <PageHead title="NFT Marketplace Development Services | SmartTech Solutions" />
+            <PageHead
+                title="NFT Marketplace Development Services | SmartTech Solutions"
+                description="SmartTech Solutions designs bespoke NFT marketplaces and gaming ecosystems that turn ideas into high-value digital assets and drive sustainable community growth."
+                image="/app_images/services/service_images/smarttech_nft_marketplace.png"
+                path="/services/nft-marketplace-development"
+            />
 
             <Provider store={Store}>
                 <Context>

@@ -50,7 +50,7 @@ const HomePageCounter = ({ head }) => {
 
             <div className="row g-5">
 
-                <div className="col-lg-4 col-md-6 col-sm-6 col-12" key={"1"}>
+                <div className="col-lg-4 col-md-6 col-sm-6 col-12" key="completed-projects">
                   <div className="rbt-counterup style-3">
                     <div className="inner">
                       <div className="content">
@@ -65,7 +65,7 @@ const HomePageCounter = ({ head }) => {
                   </div>
                 </div>
 
-                <div className="col-lg-4 col-md-6 col-sm-6 col-12" key={"1"}>
+                <div className="col-lg-4 col-md-6 col-sm-6 col-12" key="designers-and-developers">
                   <div className="rbt-counterup style-3">
                     <div className="inner">
                       <div className="content">
@@ -80,7 +80,7 @@ const HomePageCounter = ({ head }) => {
                   </div>
                 </div>
 
-                <div className="col-lg-4 col-md-6 col-sm-6 col-12" key={"1"}>
+                <div className="col-lg-4 col-md-6 col-sm-6 col-12" key="satisfied-clients">
                   <div className="rbt-counterup style-3">
                     <div className="inner">
                       <div className="content">

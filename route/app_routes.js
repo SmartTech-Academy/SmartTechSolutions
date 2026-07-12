@@ -31,6 +31,12 @@ export const ROUTE = {
   digistate_project: "/projects/digistate",
   jpgc_app_project: "/projects/jpgc-app",
   flatshare_project: "/projects/flatshare",
+  dts_project: "/projects/dts",
+  geoplox_project: "/projects/geoplox",
+  xabi_project: "/projects/xabi",
+  lodapoint_project: "/projects/lodapoint",
+  mfm_project: "/projects/mfm",
+  jpgc_project: "/projects/jpgc",
 
   our_process: "/our-process",
   course_details: "/courses/details/",

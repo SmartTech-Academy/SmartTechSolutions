@@ -1,0 +1,641 @@
+/* ════════════════════════════════════════════════════════════════════════
+   SERVICES PAGE  (my_components/_Services/Services.js)
+   ════════════════════════════════════════════════════════════════════════ */
+.services-page {
+  --service-dark: #07111f;
+  --service-ink: #172033;
+  --service-muted: #6d7688;
+  --service-orange: #f97316;
+  --service-teal: #14b8a6;
+  --service-lime: #76b82a;
+  --service-line: rgba(23, 32, 51, 0.1);
+  overflow-x: hidden;
+}
+
+/* ── Hero ── */
+.services-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 112px 0 70px;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px) 0 0/74px 74px,
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px) 0 0/74px 74px,
+    radial-gradient(circle at 86% 18%, rgba(249, 115, 22, 0.28), transparent 26%),
+    linear-gradient(135deg, #06101e 0%, #111b2d 62%, #07111f 100%);
+}
+
+.services-hero:after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 180px;
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.1));
+  pointer-events: none;
+}
+
+.hero-copy,
+.hero-command {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-copy .subtitle {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.hero-copy h1 {
+  max-width: 820px;
+  margin: 24px 0;
+  color: #ffffff;
+  font-size: clamp(32px, 3.6vw, 52px);
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.hero-copy p {
+  max-width: 680px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 19px;
+  line-height: 1.75;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.hero-actions .rbt-btn.btn-border {
+  border-color: rgba(255, 255, 255, 0.42);
+  color: #ffffff;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  max-width: 620px;
+  margin-top: 38px;
+}
+
+.hero-stat {
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(14px);
+}
+
+.hero-stat strong,
+.hero-stat span {
+  display: block;
+}
+
+.hero-stat strong {
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.hero-stat span {
+  margin-top: 7px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hero-command {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(18px);
+}
+
+.command-image {
+  position: relative;
+  height: 270px;
+  overflow: hidden;
+}
+
+.command-image:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 20%, rgba(7, 17, 31, 0.72));
+}
+
+.command-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.command-card {
+  padding: 24px;
+  background: #ffffff;
+}
+
+.command-card > span {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--service-orange);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.command-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.command-grid div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 88px;
+  padding: 16px;
+  border: 1px solid var(--service-line);
+  border-radius: 10px;
+  background: #f7f9fc;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.command-grid div:hover {
+  transform: translateY(-4px);
+  border-color: transparent;
+  background: #ffffff;
+  box-shadow: 0 18px 40px -12px rgba(249, 115, 22, 0.35);
+}
+
+.command-grid small {
+  display: block;
+  color: var(--service-ink);
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.3;
+}
+
+.command-footer {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 20px 24px;
+  border-top: 1px solid rgba(23, 32, 51, 0.1);
+  background: #ffffff;
+  color: var(--service-muted);
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.command-footer i {
+  flex: 0 0 auto;
+  color: var(--service-teal);
+  font-size: 24px;
+}
+
+/* ── What we build / delivery pillars ── */
+.service-intro {
+  position: relative;
+}
+
+.delivery-pillars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.delivery-pillars span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 10px 15px;
+  border: 1px solid var(--service-line);
+  border-radius: 999px;
+  background: #f7f9fc;
+  color: var(--service-ink);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.delivery-pillars i {
+  color: var(--service-lime);
+  font-size: 17px;
+}
+
+/* ── Services catalog ── */
+.services-catalog {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
+}
+
+/* Richer scroll-in for the catalog cards than sal.js's default slide-up —
+   layers a scale + longer travel distance on top of sal's own opacity
+   transition (Services.css loads after sal.css, so this wins the cascade). */
+.services-catalog [data-sal="slide-up"] {
+  transform: translateY(48px) scale(0.96);
+  transition-property: opacity, transform, filter;
+}
+
+.services-catalog [data-sal="slide-up"].sal-animate {
+  transform: translateY(0) scale(1);
+}
+
+.catalog-panel {
+  position: sticky;
+  top: 120px;
+  padding: 34px;
+  border: 1px solid var(--service-line);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 18px 60px rgba(23, 32, 51, 0.08);
+}
+
+.catalog-panel span {
+  color: var(--service-orange);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.catalog-panel h2 {
+  margin: 18px 0;
+  color: var(--service-ink);
+  font-size: clamp(34px, 4vw, 54px);
+  line-height: 1.08;
+}
+
+.catalog-panel p {
+  margin: 0;
+  color: var(--service-muted);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.catalog-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.preview-tile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 98px;
+  padding: 22px;
+  border: 1px solid var(--service-line);
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--service-ink);
+  box-shadow: 0 14px 42px rgba(23, 32, 51, 0.06);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.preview-tile:hover {
+  transform: translateY(-5px);
+  background: #fff8ef;
+  color: var(--service-ink);
+}
+
+.preview-tile i {
+  display: inline-flex;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: rgba(249, 115, 22, 0.16);
+  color: var(--service-orange);
+  font-size: 22px;
+}
+
+.preview-tile strong {
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.services-catalog .modern-course-features-box {
+  position: relative;
+  overflow: hidden;
+  border: 1.5px solid rgba(23, 32, 51, 0.14);
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 22px 70px rgba(23, 32, 51, 0.1);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.services-catalog .modern-course-features-box:hover {
+  border-color: rgba(249, 115, 22, 0.4);
+}
+
+.services-catalog .modern-course-features-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(120deg, var(--service-orange), var(--service-teal));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.services-catalog .modern-course-features-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 34px 90px -10px rgba(249, 115, 22, 0.28);
+}
+
+.services-catalog .modern-course-features-box:hover::before {
+  opacity: 1;
+}
+
+.services-catalog .modern-course-features-box .inner {
+  align-items: center;
+  gap: 26px;
+}
+
+.services-catalog .modern-course-features-box .thumbnail {
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f7f9fc;
+}
+
+.services-catalog .modern-course-features-box .thumbnail img {
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.services-catalog .modern-course-features-box:hover .thumbnail img {
+  transform: scale(1.04);
+}
+
+.services-catalog .modern-course-features-box .title {
+  color: var(--service-ink);
+}
+
+.services-catalog .modern-course-features-box p,
+.services-catalog .modern-course-features-box li {
+  color: var(--service-muted);
+  line-height: 1.7;
+}
+
+.services-catalog .modern-course-features-box .btn-border.color-white-off,
+.services-catalog .modern-course-features-box .btn-border {
+  border-color: rgba(23, 32, 51, 0.18);
+  /* .color-white-off is a global !important utility (public/scss/default/_extend.scss)
+     meant for dark hero backgrounds — these cards are white, so it must be beaten here too. */
+  color: var(--service-ink) !important;
+}
+
+.services-counter {
+  position: relative;
+}
+
+.services-cta {
+  background: #f7f9fc;
+}
+
+.cta-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 46px;
+  border-radius: 10px;
+  background:
+    radial-gradient(circle at 92% 12%, rgba(249, 115, 22, 0.25), transparent 24%),
+    linear-gradient(135deg, #07111f, #162033);
+  box-shadow: 0 26px 80px rgba(23, 32, 51, 0.18);
+}
+
+.cta-panel span {
+  color: var(--service-orange);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.cta-panel h2 {
+  margin: 12px 0;
+  color: #ffffff;
+  font-size: clamp(34px, 4vw, 54px);
+  line-height: 1.08;
+}
+
+.cta-panel p {
+  max-width: 660px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 17px;
+  line-height: 1.72;
+}
+
+.cta-panel .rbt-button-group {
+  flex: 0 0 auto;
+  justify-content: flex-end;
+}
+
+.cta-panel .btn-border {
+  border-color: rgba(255, 255, 255, 0.34);
+  color: #ffffff;
+}
+
+@media (max-width: 1199px) {
+  .command-image {
+    height: 240px;
+  }
+}
+
+@media (max-width: 991px) {
+  .services-hero {
+    padding: 100px 0 60px;
+  }
+
+  .catalog-panel {
+    position: relative;
+    top: auto;
+  }
+
+  .cta-panel {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .cta-panel .rbt-button-group {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 767px) {
+  .services-hero .container,
+  .services-hero .row,
+  .services-hero [class*="col-"] {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .hero-copy,
+  .hero-copy p,
+  .hero-actions {
+    width: calc(100vw - 30px);
+    max-width: calc(100vw - 30px);
+    min-width: 0;
+  }
+
+  .hero-copy h1 {
+    width: 100%;
+    max-width: 100%;
+    font-size: 38px;
+    overflow-wrap: break-word;
+  }
+
+  .hero-copy p {
+    font-size: 17px;
+    overflow-wrap: break-word;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hero-actions .rbt-btn {
+    justify-content: center;
+    width: 100%;
+    max-width: calc(100vw - 30px);
+  }
+
+  .hero-stats,
+  .catalog-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .command-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .command-image {
+    height: 220px;
+  }
+
+  .catalog-panel,
+  .cta-panel {
+    padding: 28px;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   DARK MODE  (active-dark-mode on <body>)
+   ════════════════════════════════════════════════════════════════════════ */
+.active-dark-mode .command-card {
+  background: #1e293b;
+}
+
+.active-dark-mode .command-card > span {
+  color: var(--service-orange);
+}
+
+.active-dark-mode .command-grid div {
+  background: #273041;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.active-dark-mode .command-grid small {
+  color: #e2e8f0;
+}
+
+.active-dark-mode .command-footer {
+  background: #1e293b;
+  border-top-color: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.active-dark-mode .delivery-pillars span {
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+}
+
+.active-dark-mode .services-catalog {
+  background: linear-gradient(180deg, #07111f 0%, #0d1b2e 100%);
+}
+
+.active-dark-mode .catalog-panel {
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+}
+
+.active-dark-mode .catalog-panel h2 {
+  color: #ffffff;
+}
+
+.active-dark-mode .catalog-panel p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.active-dark-mode .preview-tile {
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+}
+
+.active-dark-mode .preview-tile:hover {
+  background: #273041;
+  color: #ffffff;
+}
+
+.active-dark-mode .preview-tile strong {
+  color: #ffffff;
+}
+
+.active-dark-mode .services-catalog .modern-course-features-box {
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.35);
+}
+
+.active-dark-mode .services-catalog .modern-course-features-box .thumbnail {
+  background: #273041;
+}
+
+.active-dark-mode .services-catalog .modern-course-features-box .title {
+  color: #ffffff;
+}
+
+.active-dark-mode .services-catalog .modern-course-features-box p,
+.active-dark-mode .services-catalog .modern-course-features-box li {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.active-dark-mode .services-catalog .modern-course-features-box .btn-border {
+  border-color: rgba(255, 255, 255, 0.24);
+  color: #ffffff !important;
+}
+
+.active-dark-mode .services-cta {
+  background: #0d1b2e;
+}

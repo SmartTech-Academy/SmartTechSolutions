@@ -17,7 +17,11 @@ const index = () => {
 
     <>
 
-        <PageHead title="Privacy Policy | SmartTech Solutions" />
+        <PageHead
+          title="Privacy Policy | SmartTech Solutions"
+          description="Read how SmartTech Solutions collects, uses, and protects your personal data when you use our website, book an appointment, or work with us on a project."
+          path="/privacy-policy"
+        />
 
         <Provider store={Store}>
             <Context>

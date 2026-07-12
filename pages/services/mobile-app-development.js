@@ -24,7 +24,12 @@ const MobileAppDevelopment = () => {
 
         <>
 
-            <PageHead title="Mobile Application Development Services | SmartTech Solutions" />
+            <PageHead
+                title="Mobile App Development Services | SmartTech Solutions"
+                description="SmartTech Solutions crafts tailor-made Android and iOS apps that solve real-world problems, drive revenue, and keep millions of users coming back."
+                image="/app_images/services/service_images/smarttech_mobile_app_development.png"
+                path="/services/mobile-app-development"
+            />
 
             <Provider store={Store}>
                 <Context>

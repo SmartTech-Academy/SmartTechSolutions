@@ -24,9 +24,11 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import ProjectsCards from "../Cards/ProjectsCards";
 
 import Industries from "../_Services/InnerPages/sections/Industries";
+import IndustriesBackdrop from "../_Services/InnerPages/sections/IndustriesBackdrop";
 import BlogGridMinimal from "@/my_components/Blogs/Components/BlogGridMinimal";
 import Newsletter_2 from "@/my_components/Newsletters/Newsletter_2";
 import HomepageServices from "./Home-Sections/HomepageServices";
+import CounterSection from "@/my_components/Counters/CounterSection";
 
 
 // LOAD DATAS
@@ -46,6 +48,7 @@ import { image_url } from "../../helper/Utilities";
 
 
 import lineArrow from "@/public/app_images/shape/o-line-arrow.png";
+import journeyBg from "@/public/app_images/bg/agile_office_journey_bg.webp";
 
 
 
@@ -121,12 +124,13 @@ const HomePageContents = () => {
 
 
 
-        <div className="rbt-course-area bg-color-extra2 rbt-section-gap">
+        <div className="rbt-course-area bg-color-extra2 rbt-section-gap rbt-core-services">
             <div className="container">
 
               <div className="row mb--60">
                 <div className="col-lg-12">
-                  <div className="section-title text-center">
+                  <div className="section-title text-center" data-sal="slide-up" data-sal-delay="50" data-sal-duration="700">
+                    <span className="subtitle bg-primary-opacity">What We Do</span>
                     <h2 className="title">Our Core Services</h2>
                     <p className="description">
                       We engineer scalable digital products for visionaries and organizations across industries, transforming ideas into impactful solutions.
@@ -134,7 +138,7 @@ const HomePageContents = () => {
                   </div>
                 </div>
               </div>
-                
+
               <HomepageServices services={homepageServices} />
 
               <div className="row">
@@ -237,12 +241,10 @@ const HomePageContents = () => {
 
 
 
-        <div className="rbt-counterup-area counterup-section-02 rbt-section-gap">
-          <div className="shape-1">
-            <Image src={lineArrow} width={86} height={50} alt="Shape" />
-          </div>
-
-          <HomePageCounter />
+        <div className="rbt-counterup-area counterup-section-02">
+          <CounterSection image={journeyBg}>
+            <HomePageCounter />
+          </CounterSection>
         </div>
 
 
@@ -313,22 +315,20 @@ const HomePageContents = () => {
 
 
 
-        <div className="rbt-course-area rbt-sec-cir-shadow-1 bg-color-extra2 rbt-section-gap">
-          <div className="gradient-shape-top"></div>
-          <div className="gradient-shape-bottom"></div>
-          <div className="container">
+        <div className="rbt-course-area">
+          <IndustriesBackdrop>
             <div className="row mb--60">
               <div className="col-lg-12">
                 <div className="section-title text-start">
-                  <h2 className="title">{"Industries "}<span class="theme-gradient">{"we serve"}</span></h2>
+                  <h2 className="title">{"Industries "}<span className="theme-gradient">{"we serve"}</span></h2>
                   <p className="description has-medium-font-size mt--20">
                     {"With deep expertise across diverse industries and a comprehensive suite of services, we understand your unique challenges and deliver tailored solutions that create measurable impact."}
                   </p>
                 </div>
               </div>
             </div>
-            <Industries data={IndustriesData.industries_served_2} />
-          </div>
+            <Industries data={IndustriesData.industries_served_2} variant="dark-glass" />
+          </IndustriesBackdrop>
         </div>
 
 

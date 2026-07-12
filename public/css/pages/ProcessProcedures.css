@@ -1,0 +1,227 @@
+/* ════════════════════════════════════════════════════════════════════════
+   Shared "how we work" 6-step card grid (my_components/_OurProcess/sections/ProcessProcedures.js)
+   The top row pulls up over the hero section rendered before it — the
+   negative margin and the caller's hero bottom padding must be tuned
+   together, which is why both variants taper to 0 on mobile instead of
+   clipping the hero copy.
+   ════════════════════════════════════════════════════════════════════════ */
+.rbt-process-cards-top {
+  position: relative;
+  z-index: 2;
+  margin-top: -220px;
+}
+
+.rbt-process-cards-top--compact {
+  margin-top: -130px;
+}
+
+.rbt-process-cards-bottom {
+  position: relative;
+  z-index: 1;
+  margin-top: 50px;
+}
+
+@media (max-width: 991px) {
+  .rbt-process-cards-top { margin-top: -150px; }
+  .rbt-process-cards-top--compact { margin-top: -90px; }
+}
+
+@media (max-width: 767px) {
+  .rbt-process-cards-top,
+  .rbt-process-cards-top--compact {
+    margin-top: 30px;
+  }
+}
+
+/* ── "How we work" hero that precedes the card grid ── */
+.process-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 95px 0 230px;
+  background:
+    radial-gradient(circle at 78% 20%, rgba(20, 184, 166, 0.18), transparent 28%),
+    linear-gradient(135deg, #050b14, #172033);
+}
+
+.process-note {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.process-note i {
+  color: #f97316;
+  font-size: 28px;
+}
+
+@media (max-width: 991px) {
+  .process-hero {
+    padding: 80px 0 170px;
+  }
+}
+
+@media (max-width: 767px) {
+  .process-hero {
+    padding: 70px 0 60px;
+  }
+}
+
+/* ── "How we work" 6-card grid — premium treatment ── */
+.rbt-process-card-pro {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.rbt-process-card-pro:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px -16px var(--primary-opacity, rgba(47, 87, 239, 0.4));
+}
+
+.rbt-process-card-pro::after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  bottom: -40px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--primary-opacity, rgba(47, 87, 239, 0.16)) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.rbt-process-card-pro:hover::after {
+  opacity: 1;
+}
+
+.rbt-process-card-pro__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.rbt-process-card-pro__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--primary-opacity, rgba(47, 87, 239, 0.1));
+  color: var(--color-primary);
+  font-size: 22px;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), background 0.4s ease, color 0.4s ease;
+}
+
+.rbt-process-card-pro:hover .rbt-process-card-pro__icon {
+  transform: rotate(-8deg) scale(1.08);
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.rbt-process-card-pro__number {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  opacity: 0.85;
+}
+
+/* ── "Industries we serve" backdrop cards — scroll jank fix ──
+   Up to 9 .rbt-industries-card--dark cards render at once, each with a
+   `backdrop-filter: blur(14px)` (expensive to composite, especially many
+   at once) plus a shared global-effects.css transition list that includes
+   box-shadow/background/border-color alongside transform/opacity. Those
+   non-GPU-composited properties don't actually change value when the
+   `.is-in-view` class toggles (only :hover changes them), but keeping them
+   in the always-on transition-property list still makes the browser set up
+   paint-watching machinery for every card during the ~1.2s staggered
+   reveal window, which is what makes the scroll feel heavy. This override
+   trims the reveal-time transition to just the compositable
+   transform/opacity, restoring box-shadow/background/border-color to the
+   transition list only while :hover is active (single element at a time,
+   so cheap). `contain: paint` isolates each card's paint/backdrop-filter
+   work so it isn't recomputed by unrelated scroll repaints elsewhere on
+   the page. No visual change — box-shadow/background/backdrop-filter
+   values themselves are untouched, only what's listed as "animated". */
+.rbt-industries-backdrop .service-card-6,
+.rbt-industries-backdrop .rbt-industries-card--dark {
+  transition-property: transform, opacity;
+  contain: paint;
+}
+
+.rbt-industries-backdrop .service-card-6:hover,
+.rbt-industries-backdrop .rbt-industries-card--dark:hover {
+  transition-property: transform, opacity, box-shadow, background, border-color;
+}
+
+/* ── "Why SmartTech Solutions" image ── */
+.rbt-why-smarttech-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.rbt-why-smarttech-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: inset 0 -80px 90px -40px rgba(9, 12, 22, 0.45);
+  pointer-events: none;
+}
+
+.rbt-why-smarttech-img img {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rbt-why-smarttech-img:hover img {
+  transform: scale(1.035);
+}
+
+/* ── "Let's bring your vision to life" CTA background ── */
+.rbt-vision-cta {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.rbt-vision-cta__img {
+  object-fit: cover;
+  z-index: -2;
+}
+
+.rbt-vision-cta__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(120deg, rgba(9, 12, 22, 0.92) 0%, rgba(47, 87, 239, 0.55) 100%);
+}
+
+.rbt-vision-cta .rbt-cta-6 .title,
+.rbt-vision-cta .rbt-cta-6 p {
+  color: var(--color-white);
+}
+
+/* Button sits on a dark photo background here — needs to be legible by
+   default, not just on hover. Scoped to this CTA so the bare .btn-border
+   class (used on light backgrounds elsewhere in the site) is untouched. */
+.rbt-vision-cta .btn-border {
+  color: var(--color-white);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.rbt-vision-cta .btn-border:hover {
+  color: var(--color-white);
+}

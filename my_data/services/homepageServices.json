@@ -18,7 +18,7 @@
       "id": 3,
       "service": "Blockchain Development",
       "description": "Our expertise in blockchain development empowers businesses to harness the transformative potential of decentralized technology, whether you want to build your own blockchain, cryptocurrency, token, NFT, crypto wallet, exchange, NFT marketplace, or tokenize real-world and digital assets with a dedicated marketplace for trading and sales, we deliver secure, transparent, and scalable solutions that foster trust, streamline operations, and drive innovation across your industry.",
-      "image": "/app_images/services/service_images/smarttech_blockchain_development.png",
+      "image": "/app_images/services/service_images/smarttech_blockchain_development.webp",
       "routeKey": "blockchain_dev_service"
     },
     {

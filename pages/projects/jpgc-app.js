@@ -23,7 +23,12 @@ const JpgcApp = () => {
 
         <>
 
-            <PageHead title="JPGC App Project | SmartTech Solutions" />
+            <PageHead
+                title="JPGC App: Dual-Chain Token & NFT Marketplace | SmartTech Solutions"
+                description="Inside the JPGC app — SmartTech Solutions' dual-chain wallet, token purchase, staking, and NFT marketplace experience spanning Solana, Ethereum, web, and mobile."
+                image="/app_images/projects/jpgc_app/jpgc_display_picture.png"
+                path="/projects/jpgc-app"
+            />
 
             <Provider store={Store}>
                 <Context>

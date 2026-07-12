@@ -42,13 +42,13 @@ const AboutTwo = () => {
 
                 <div className="thumbnail-wrapper">
                   <div className={`thumbnail image-1`} ref={ref1} style={style1}>
-                    <Image src={aboutImg1} width={366} height={490} alt="Education Images" />
+                    <Image src={aboutImg1} width={366} height={490} alt="Senior team member pointing out priorities on a whiteboard during a strategy planning session" />
                   </div>
                   <div className={`thumbnail image-2`} ref={ref2} style={style2}>
-                    <Image src={aboutImg2} width={308} height={250} alt="Education Images" />
+                    <Image src={aboutImg2} width={308} height={250} alt="Team member mapping out a marketing plan with sticky notes during a product design session" />
                   </div>
                   <div className={`thumbnail image-3`} ref={ref3} style={style3}>
-                    <Image src={aboutImg3} width={405} height={490} alt="Education Images" />
+                    <Image src={aboutImg3} width={405} height={490} alt="Team members reviewing project notes on a laptop during a confident office discussion" />
                   </div>
                 </div>
 

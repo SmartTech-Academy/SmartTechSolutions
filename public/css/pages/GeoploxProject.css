@@ -1,0 +1,404 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   GeoploxProject — Deep Teal / PropTech Intelligence Theme
+   All rules are scoped to .geoplox-theme so they never bleed into other
+   project pages. Import via pages/_app.js.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── CSS variable overrides ───────────────────────────────────────────── */
+.geoplox-theme {
+  --digi-orange: #0891b2;
+  --digi-green:  #0e7490;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   HERO
+   ════════════════════════════════════════════════════════════════════════ */
+
+.geoplox-theme .digi-hero {
+  background:
+    radial-gradient(ellipse at 72% 14%, rgba(8, 145, 178, 0.36) 0%, transparent 42%),
+    radial-gradient(ellipse at 18% 82%, rgba(14, 116, 144, 0.20) 0%, transparent 32%),
+    radial-gradient(ellipse at 45% 55%, rgba(6, 95, 118, 0.14) 0%, transparent 50%),
+    linear-gradient(155deg, #020d14 0%, #061a24 55%, #040f1a 100%);
+}
+
+/* Aurora blobs — teal + cyan */
+.geoplox-theme .digi-aurora span:nth-child(1) {
+  background: radial-gradient(circle, rgba(8, 145, 178, 0.50) 0%, transparent 70%);
+  animation-duration: 19s;
+}
+.geoplox-theme .digi-aurora span:nth-child(2) {
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.36) 0%, transparent 70%);
+  animation-duration: 25s;
+  animation-delay: -8s;
+}
+.geoplox-theme .digi-aurora span:nth-child(3) {
+  background: radial-gradient(circle, rgba(103, 232, 249, 0.24) 0%, transparent 70%);
+  animation-duration: 31s;
+  animation-delay: -14s;
+}
+
+/* Gradient text — teal shimmer (background-size must be explicit to keep digi-shimmer working) */
+.geoplox-theme .digi-hero-title .digi-gradient {
+  background: linear-gradient(90deg,
+    #0e7490 0%,
+    #0891b2 25%,
+    #a5f3fc 50%,
+    #0891b2 75%,
+    #0e7490 100%
+  );
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero tags */
+.geoplox-theme .digi-hero-tag.tag-primary {
+  background:   rgba(8, 145, 178, 0.18);
+  border-color: rgba(8, 145, 178, 0.45);
+  color: #22d3ee;
+}
+.geoplox-theme .digi-hero-tag.tag-accent {
+  background:   rgba(14, 116, 144, 0.14);
+  border-color: rgba(14, 116, 144, 0.35);
+  color: #67e8f9;
+}
+
+/* Scroll cue */
+.geoplox-theme .digi-scroll-mouse {
+  border-color: rgba(8, 145, 178, 0.5);
+}
+.geoplox-theme .digi-scroll-mouse::after {
+  background: #22d3ee;
+}
+
+/* HV glow */
+.geoplox-theme .digi-hv-glow {
+  background: radial-gradient(ellipse at center, rgba(8, 145, 178, 0.30) 0%, transparent 70%);
+}
+
+/* Browser chrome — first dot teal */
+.geoplox-theme .digi-hv-db-chrome span:nth-child(1) { background: #0891b2; }
+
+/* Glass stats */
+.geoplox-theme .digi-glass-stat strong { color: #22d3ee; }
+.geoplox-theme .digi-glass-stat strong em { color: #67e8f9; }
+
+/* ════════════════════════════════════════════════════════════════════════
+   KICKER & HEADING SHIMMER
+   ════════════════════════════════════════════════════════════════════════ */
+
+.geoplox-theme .digi-kicker::before {
+  background: #0891b2;
+}
+
+.geoplox-theme .digi-client-heading::before,
+.geoplox-theme .digi-app-heading::before,
+.geoplox-theme .digi-process-heading::before,
+.geoplox-theme .digi-craft-heading::before,
+.geoplox-theme .digi-engage-heading::before {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(8, 145, 178, 0.35) 50%,
+    transparent 100%
+  );
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   FACTS TABLE
+   ════════════════════════════════════════════════════════════════════════ */
+
+.geoplox-theme .digi-facts-header {
+  background: linear-gradient(135deg, #064e63 0%, #0e7490 50%, #155e75 100%);
+}
+.geoplox-theme .digi-fact-row:hover { background: #ecfeff; }
+.geoplox-theme .digi-fact-row--highlight span { color: #0891b2; }
+.geoplox-theme .digi-fact-row--highlight { background: linear-gradient(90deg, #cffafe 0%, #ffffff 100%); }
+
+/* Client badge icon */
+.geoplox-theme .digi-cb-icon {
+  background: rgba(8, 145, 178, 0.12);
+  color: #0891b2;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   ABOUT THE APP — custom data card replacing phone mockup
+   ════════════════════════════════════════════════════════════════════════ */
+
+.geoplox-theme .digi-app-visual-glow {
+  background: radial-gradient(ellipse at 80% 50%, rgba(8, 145, 178, 0.20) 0%, transparent 65%);
+}
+
+.geoplox-theme .digi-app-browser-chrome span:nth-child(1) { background: #0891b2; }
+
+/* Browser chrome standard dots */
+.geoplox-theme .digi-browser-chrome span:nth-child(1) { background: #fc5f5a; }
+.geoplox-theme .digi-browser-chrome span:nth-child(2) { background: #fdbc40; }
+.geoplox-theme .digi-browser-chrome span:nth-child(3) { background: #35cd4b; }
+
+/* Geoplox no-phone visual — browser takes full height */
+.geoplox-theme .geoplox-app-visual .digi-app-browser {
+  width: 100%;
+  position: relative;
+  bottom: auto;
+  right: auto;
+  transform: none;
+  animation: digi-app-float-browser 6s ease-in-out infinite;
+}
+
+/* Data intelligence floating card (replaces phone) */
+.geoplox-data-card {
+  position: absolute;
+  bottom: -18px;
+  right: -18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(8, 145, 178, 0.22);
+  border-radius: 14px;
+  padding: 14px 18px;
+  box-shadow: 0 12px 40px rgba(8, 145, 178, 0.15), 0 2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 3;
+  animation: digi-float-c 4.5s ease-in-out infinite;
+}
+.geoplox-data-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(8, 145, 178, 0.10);
+  color: #0891b2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.geoplox-data-card strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.2;
+}
+.geoplox-data-card span {
+  font-size: 11px;
+  color: #0891b2;
+  font-weight: 500;
+}
+
+/* Stack tags */
+.geoplox-theme .digi-stack-tag {
+  background:   rgba(8, 145, 178, 0.08);
+  border-color: rgba(8, 145, 178, 0.28);
+  color: #0891b2;
+}
+.geoplox-theme .digi-stack-tag:hover {
+  background:   rgba(8, 145, 178, 0.16);
+  border-color: rgba(8, 145, 178, 0.50);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   CHALLENGE
+   ════════════════════════════════════════════════════════════════════════ */
+
+.geoplox-theme .digi-challenge-section {
+  background:
+    radial-gradient(ellipse at 80% 12%, rgba(8, 145, 178, 0.20) 0%, transparent 40%),
+    radial-gradient(ellipse at 10% 88%, rgba(14, 116, 144, 0.14) 0%, transparent 36%),
+    linear-gradient(160deg, #020d14 0%, #061a24 60%, #040f1a 100%);
+}
+
+.geoplox-theme .digi-challenge-num {
+  background: rgba(8, 145, 178, 0.16);
+  color: #22d3ee;
+}
+.geoplox-theme .digi-challenge-card:hover {
+  border-color: rgba(8, 145, 178, 0.50);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(8, 145, 178, 0.18);
+}
+.geoplox-theme .digi-challenge-card:hover h4         { color: #67e8f9; }
+.geoplox-theme .digi-challenge-card:hover .digi-challenge-num {
+  background: rgba(8, 145, 178, 0.28);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   MARQUEE (USER ENGAGEMENT)
+   ════════════════════════════════════════════════════════════════════════ */
+
+.geoplox-theme .digi-engage-section {
+  background: linear-gradient(180deg, #ecfeff 0%, #cffafe 55%, #e0f9ff 100%);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   PROCESS
+   ════════════════════════════════════════════════════════════════════════ */
+
+.geoplox-theme .digi-process-section {
+  background:
+    radial-gradient(ellipse at 88% 10%, rgba(8, 145, 178, 0.20) 0%, transparent 42%),
+    radial-gradient(ellipse at 8%  90%, rgba(14, 116, 144, 0.14) 0%, transparent 38%),
+    radial-gradient(ellipse at 50% 50%, rgba(6, 95, 118, 0.10) 0%, transparent 65%),
+    linear-gradient(150deg, #021014 0%, #041e28 45%, #011019 100%);
+}
+
+/* Section text — white on dark */
+.geoplox-theme .digi-process-section .digi-kicker { color: rgba(255, 255, 255, 0.65); }
+.geoplox-theme .digi-process-heading { color: #ffffff; }
+.geoplox-theme .digi-process-lead    { color: rgba(255, 255, 255, 0.62); }
+
+/* Cards */
+.geoplox-theme .digi-process-card {
+  background:   rgba(255, 255, 255, 0.06);
+  border-color: rgba(8, 145, 178, 0.28);
+}
+.geoplox-theme .digi-process-card h4 { color: #ffffff; }
+.geoplox-theme .digi-process-card p  { color: rgba(255, 255, 255, 0.60); }
+
+/* Teal-to-cyan top-bar accent */
+.geoplox-theme .digi-process-card::before {
+  background: linear-gradient(90deg, #0891b2, #67e8f9);
+}
+
+/* Process number ghost */
+.geoplox-theme .digi-process-num {
+  color: rgba(8, 145, 178, 0.22);
+}
+
+/* Card hover */
+.geoplox-theme .digi-process-card:hover {
+  background:   rgba(8, 145, 178, 0.10);
+  border-color: rgba(8, 145, 178, 0.52);
+  box-shadow:   0 28px 68px rgba(2, 20, 30, 0.60);
+}
+.geoplox-theme .digi-process-card:hover .digi-process-num {
+  color:       rgba(8, 145, 178, 0.40);
+  text-shadow: 0 0 40px rgba(8, 145, 178, 0.48);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   ENHANCING EXPERIENCE (CRAFT)
+   ════════════════════════════════════════════════════════════════════════ */
+
+.geoplox-theme .digi-craft-section {
+  background:
+    radial-gradient(ellipse at 70% 30%, rgba(8, 145, 178, 0.07) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 75%, rgba(14, 116, 144, 0.05) 0%, transparent 45%),
+    linear-gradient(150deg, #ecfeff 0%, #cffafe 45%, #e8fffe 100%);
+}
+
+.geoplox-theme .digi-li-icon {
+  background: rgba(8, 145, 178, 0.10);
+  color: #0891b2;
+}
+.geoplox-theme .digi-craft-list li:hover .digi-li-icon {
+  background: rgba(8, 145, 178, 0.20);
+}
+.geoplox-theme .digi-craft-list li:hover {
+  box-shadow:   0 8px 30px rgba(8, 145, 178, 0.10);
+  border-color: rgba(8, 145, 178, 0.30);
+}
+
+/* Float cards */
+.geoplox-theme .digi-float-card {
+  border-color: rgba(8, 145, 178, 0.22);
+}
+.geoplox-theme .digi-float-card strong { color: #0891b2; }
+
+/* ════════════════════════════════════════════════════════════════════════
+   SOLUTION & RESULTS
+   ════════════════════════════════════════════════════════════════════════ */
+
+.geoplox-theme .digi-solution-section {
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(8, 145, 178, 0.16) 0%, transparent 40%),
+    radial-gradient(ellipse at 80% 20%, rgba(14, 116, 144, 0.12) 0%, transparent 38%),
+    linear-gradient(155deg, #020d14 0%, #061a24 60%, #040f1a 100%);
+}
+
+.geoplox-theme .digi-result-icon {
+  background: rgba(8, 145, 178, 0.16);
+  color: #22d3ee;
+}
+.geoplox-theme .digi-result-card:hover {
+  border-color: rgba(8, 145, 178, 0.40);
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.40), 0 0 0 1px rgba(8, 145, 178, 0.16);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   METRICS STRIP
+   ════════════════════════════════════════════════════════════════════════ */
+
+.geoplox-theme .digi-metrics-strip {
+  background: linear-gradient(135deg, #020d14 0%, #061a24 60%, #040f1a 100%);
+  border-top:    1px solid rgba(8, 145, 178, 0.14);
+  border-bottom: 1px solid rgba(8, 145, 178, 0.14);
+}
+.geoplox-theme .digi-info-icon  { color: #22d3ee; }
+.geoplox-theme .digi-info-num   { color: #67e8f9; }
+.geoplox-theme .digi-info-label { color: rgba(255, 255, 255, 0.50); }
+.geoplox-theme .digi-info-item  { border-right-color: rgba(8, 145, 178, 0.14); }
+.geoplox-theme .digi-info-item:hover { background: rgba(8, 145, 178, 0.08); }
+
+/* ════════════════════════════════════════════════════════════════════════
+   ENHANCED HOVER & TRANSITION OVERRIDES (teal variants)
+   ════════════════════════════════════════════════════════════════════════ */
+
+.geoplox-theme .digi-client-badge:hover {
+  border-color: rgba(8, 145, 178, 0.35);
+  box-shadow: 0 8px 32px rgba(8, 145, 178, 0.12);
+}
+.geoplox-theme .digi-client-badge:hover .digi-cb-icon {
+  background: rgba(8, 145, 178, 0.20);
+}
+
+.geoplox-theme .digi-stack-tag:hover {
+  box-shadow: 0 6px 18px rgba(8, 145, 178, 0.22);
+}
+
+.geoplox-theme .digi-web-card:hover {
+  box-shadow: 0 32px 80px rgba(2, 20, 40, 0.22),
+              0 0 0 2px rgba(8, 145, 178, 0.24);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   DARK MODE OVERRIDES
+   ════════════════════════════════════════════════════════════════════════ */
+
+.active-dark-mode .geoplox-theme .digi-engage-section {
+  background: linear-gradient(180deg, #020d14 0%, #051018 100%);
+}
+.active-dark-mode .geoplox-theme .digi-process-section {
+  background:
+    radial-gradient(ellipse at 88% 10%, rgba(8, 145, 178, 0.14) 0%, transparent 42%),
+    linear-gradient(150deg, #011018 0%, #021a26 45%, #010c14 100%);
+}
+.active-dark-mode .geoplox-theme .digi-process-card {
+  background:   rgba(255, 255, 255, 0.05);
+  border-color: rgba(8, 145, 178, 0.22);
+}
+.active-dark-mode .geoplox-theme .digi-craft-section {
+  background: linear-gradient(150deg, #020d14 0%, #051018 100%);
+}
+.active-dark-mode .geoplox-theme .digi-fact-row:hover {
+  background: rgba(8, 145, 178, 0.07);
+}
+.active-dark-mode .geoplox-theme .digi-float-card {
+  border-color: rgba(8, 145, 178, 0.18);
+  background: rgba(8, 145, 178, 0.05);
+}
+.active-dark-mode .geoplox-theme .digi-stack-tag {
+  background:   rgba(8, 145, 178, 0.07);
+  border-color: rgba(8, 145, 178, 0.24);
+  color: #67e8f9;
+}
+.active-dark-mode .geoplox-theme .digi-result-card:hover {
+  box-shadow: 0 8px 32px rgba(8, 145, 178, 0.12);
+}
+.active-dark-mode .geoplox-theme .geoplox-data-card {
+  background:   rgba(8, 145, 178, 0.08);
+  border-color: rgba(8, 145, 178, 0.24);
+}
+.active-dark-mode .geoplox-theme .geoplox-data-card strong { color: #e2f8fe; }

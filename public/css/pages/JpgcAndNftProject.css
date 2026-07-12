@@ -1,0 +1,563 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   JpgcAndNftProject — Gold / Obsidian Web3 Token Theme
+   All rules are scoped to .jpgcnft-theme so they never bleed into other
+   project pages. Import via pages/_app.js.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── CSS variable overrides ───────────────────────────────────────────── */
+.jpgcnft-theme {
+  --digi-orange: #d97706;
+  --digi-green:  #b45309;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   HERO — TWO OVERLAPPING GOLD COINS
+   ════════════════════════════════════════════════════════════════════════ */
+
+.jpgcnft-coin-fan {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.jpgcnft-coin-fan-glow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 640px;
+  height: 640px;
+  background: radial-gradient(circle, rgba(217, 119, 6, 0.34) 0%, transparent 68%);
+  filter: blur(10px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.jpgcnft-coin {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 30px 50px rgba(0, 0, 0, 0.55));
+  animation: jpgcnft-float-coin 6s ease-in-out infinite;
+}
+
+@keyframes jpgcnft-float-coin {
+  0%, 100% { transform: translateY(0) rotate(var(--coin-rot, 0deg)); }
+  50%      { transform: translateY(-14px) rotate(var(--coin-rot, 0deg)); }
+}
+
+.jpgcnft-coin--back {
+  --coin-rot: 10deg;
+  top: 20px;
+  right: 20px;
+  width: 380px;
+  z-index: 1;
+  transform: rotate(var(--coin-rot));
+  animation-delay: 0.5s;
+}
+
+.jpgcnft-coin--front {
+  --coin-rot: -6deg;
+  top: 200px;
+  left: 30px;
+  width: 520px;
+  z-index: 2;
+  transform: rotate(var(--coin-rot));
+  animation-delay: 0s;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   ABOUT THE APP — COIN + REAL PLATFORM SCREENSHOT
+   ════════════════════════════════════════════════════════════════════════ */
+
+.jpgcnft-app-visual {
+  position: relative;
+  height: 480px;
+  margin-top: 10px;
+}
+
+.jpgcnft-app-glow {
+  position: absolute;
+  top: 10%;
+  right: -5%;
+  width: 65%;
+  height: 65%;
+  pointer-events: none;
+}
+
+.jpgcnft-app-coin {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 30px 55px rgba(0, 0, 0, 0.50));
+  animation: jpgcnft-float-coin 7s ease-in-out infinite;
+}
+
+.jpgcnft-app-coin--back {
+  --coin-rot: 10deg;
+  top: 20px;
+  right: 10px;
+  z-index: 1;
+  transform: rotate(var(--coin-rot));
+  animation-delay: 0.5s;
+}
+
+.jpgcnft-app-coin--front {
+  --coin-rot: -6deg;
+  top: 170px;
+  left: 0;
+  width: 380px;
+  z-index: 2;
+  transform: rotate(var(--coin-rot));
+  animation-delay: 0s;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   ENHANCING EXPERIENCE — HORIZONTAL GOLD BAR
+   ════════════════════════════════════════════════════════════════════════ */
+
+.jpgcnft-goldbar-wrap {
+  position: relative;
+  max-width: 420px;
+  margin: 30px auto 10px;
+}
+
+.jpgcnft-goldbar {
+  position: relative;
+  width: 100%;
+  animation: jpgcnft-goldbar-float 5s ease-in-out infinite;
+}
+
+@keyframes jpgcnft-goldbar-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+.jpgcnft-goldbar-top {
+  height: 26px;
+  background: linear-gradient(180deg, #fef3c7 0%, #fbbf24 100%);
+  clip-path: polygon(8% 0, 92% 0, 100% 100%, 0% 100%);
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.6);
+}
+
+.jpgcnft-goldbar-front {
+  position: relative;
+  height: 150px;
+  background: linear-gradient(180deg, #fbbf24 0%, #d97706 55%, #92400e 100%);
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    inset 0 -18px 30px rgba(0, 0, 0, 0.35),
+    inset 0 6px 10px rgba(255, 255, 255, 0.25),
+    0 40px 70px rgba(0, 0, 0, 0.45);
+}
+
+.jpgcnft-goldbar-shine {
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 35%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  transform: skewX(-18deg);
+  animation: jpgcnft-goldbar-shine 3.2s ease-in-out infinite;
+}
+
+@keyframes jpgcnft-goldbar-shine {
+  0%       { left: -40%; }
+  55%, 100% { left: 130%; }
+}
+
+.jpgcnft-goldbar-stamp {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: rgba(87, 43, 14, 0.55);
+}
+
+.jpgcnft-goldbar-stamp span {
+  display: block;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+}
+
+.jpgcnft-goldbar-stamp small {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  margin-top: 2px;
+}
+
+.jpgcnft-goldbar-reflection {
+  width: 80%;
+  height: 30px;
+  margin: 14px auto 0;
+  background: radial-gradient(ellipse, rgba(217, 119, 6, 0.35) 0%, transparent 70%);
+  filter: blur(4px);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   HERO
+   ════════════════════════════════════════════════════════════════════════ */
+
+.jpgcnft-theme .digi-hero {
+  background:
+    radial-gradient(ellipse at 72% 14%, rgba(217, 119, 6, 0.34) 0%, transparent 42%),
+    radial-gradient(ellipse at 18% 82%, rgba(180, 83, 9, 0.20) 0%, transparent 32%),
+    radial-gradient(ellipse at 45% 55%, rgba(120, 53, 15, 0.14) 0%, transparent 50%),
+    linear-gradient(155deg, #0d0a06 0%, #1a1208 55%, #060504 100%);
+}
+
+/* Aurora blobs — gold + amber */
+.jpgcnft-theme .digi-aurora span:nth-child(1) {
+  background: radial-gradient(circle, rgba(217, 119, 6, 0.50) 0%, transparent 70%);
+  animation-duration: 20s;
+}
+.jpgcnft-theme .digi-aurora span:nth-child(2) {
+  background: radial-gradient(circle, rgba(180, 83, 9, 0.36) 0%, transparent 70%);
+  animation-duration: 26s;
+  animation-delay: -9s;
+}
+.jpgcnft-theme .digi-aurora span:nth-child(3) {
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.26) 0%, transparent 70%);
+  animation-duration: 30s;
+  animation-delay: -16s;
+}
+
+/* Gradient text — gold shimmer */
+.jpgcnft-theme .digi-hero-title .digi-gradient {
+  background: linear-gradient(90deg,
+    #92400e 0%,
+    #d97706 25%,
+    #fde68a 50%,
+    #d97706 75%,
+    #92400e 100%
+  );
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero tags */
+.jpgcnft-theme .digi-hero-tag.tag-primary {
+  background:   rgba(217, 119, 6, 0.18);
+  border-color: rgba(217, 119, 6, 0.45);
+  color: #fbbf24;
+}
+.jpgcnft-theme .digi-hero-tag.tag-accent {
+  background:   rgba(180, 83, 9, 0.14);
+  border-color: rgba(180, 83, 9, 0.35);
+  color: #fde68a;
+}
+
+/* Scroll cue */
+.jpgcnft-theme .digi-scroll-mouse {
+  border-color: rgba(217, 119, 6, 0.5);
+}
+.jpgcnft-theme .digi-scroll-mouse::after {
+  background: #fbbf24;
+}
+
+/* Glass stats */
+.jpgcnft-theme .digi-glass-stat strong { color: #fbbf24; }
+.jpgcnft-theme .digi-glass-stat strong em { color: #fde68a; }
+
+/* ════════════════════════════════════════════════════════════════════════
+   KICKER & HEADING SHIMMER
+   ════════════════════════════════════════════════════════════════════════ */
+
+.jpgcnft-theme .digi-kicker::before {
+  background: #d97706;
+}
+
+.jpgcnft-theme .digi-client-heading::before,
+.jpgcnft-theme .digi-app-heading::before,
+.jpgcnft-theme .digi-process-heading::before,
+.jpgcnft-theme .digi-craft-heading::before,
+.jpgcnft-theme .digi-engage-heading::before {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(217, 119, 6, 0.38) 50%,
+    transparent 100%
+  );
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   FACTS TABLE
+   ════════════════════════════════════════════════════════════════════════ */
+
+.jpgcnft-theme .digi-facts-header {
+  background: linear-gradient(135deg, #1a1208 0%, #92400e 50%, #1f1607 100%);
+}
+.jpgcnft-theme .digi-fact-row:hover { background: #fffbeb; }
+.jpgcnft-theme .digi-fact-row--highlight span { color: #d97706; }
+.jpgcnft-theme .digi-fact-row--highlight { background: linear-gradient(90deg, #fef3c7 0%, #ffffff 100%); }
+
+/* Client badge icon */
+.jpgcnft-theme .digi-cb-icon {
+  background: rgba(217, 119, 6, 0.12);
+  color: #d97706;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   ABOUT THE APP
+   ════════════════════════════════════════════════════════════════════════ */
+
+.jpgcnft-theme .digi-app-visual-glow {
+  background: radial-gradient(ellipse at 80% 50%, rgba(217, 119, 6, 0.22) 0%, transparent 65%);
+}
+
+/* Stack tags */
+.jpgcnft-theme .digi-stack-tag {
+  background:   rgba(217, 119, 6, 0.08);
+  border-color: rgba(217, 119, 6, 0.28);
+  color: #b45309;
+}
+.jpgcnft-theme .digi-stack-tag:hover {
+  background:   rgba(217, 119, 6, 0.16);
+  border-color: rgba(217, 119, 6, 0.50);
+  box-shadow: 0 6px 18px rgba(217, 119, 6, 0.22);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   CHALLENGE
+   ════════════════════════════════════════════════════════════════════════ */
+
+.jpgcnft-theme .digi-challenge-section {
+  background:
+    radial-gradient(ellipse at 80% 12%, rgba(217, 119, 6, 0.22) 0%, transparent 40%),
+    radial-gradient(ellipse at 10% 88%, rgba(180, 83, 9, 0.15) 0%, transparent 36%),
+    linear-gradient(160deg, #0d0a06 0%, #1a1208 60%, #060504 100%);
+}
+
+.jpgcnft-theme .digi-challenge-num {
+  background: rgba(217, 119, 6, 0.18);
+  color: #fbbf24;
+}
+.jpgcnft-theme .digi-challenge-card:hover {
+  border-color: rgba(217, 119, 6, 0.50);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(217, 119, 6, 0.18);
+}
+.jpgcnft-theme .digi-challenge-card:hover h4         { color: #fde68a; }
+.jpgcnft-theme .digi-challenge-card:hover .digi-challenge-num {
+  background: rgba(217, 119, 6, 0.28);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   USER ENGAGEMENT
+   ════════════════════════════════════════════════════════════════════════ */
+
+.jpgcnft-theme .digi-engage-section {
+  background: linear-gradient(180deg, #fffbeb 0%, #fef3c7 55%, #fffbeb 100%);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   PROCESS
+   ════════════════════════════════════════════════════════════════════════ */
+
+.jpgcnft-theme .digi-process-section {
+  background:
+    radial-gradient(ellipse at 88% 10%, rgba(253, 230, 138, 0.18) 0%, transparent 42%),
+    radial-gradient(ellipse at 8%  90%, rgba(217, 119, 6, 0.14) 0%, transparent 38%),
+    radial-gradient(ellipse at 50% 50%, rgba(120, 53, 15, 0.12) 0%, transparent 65%),
+    linear-gradient(150deg, #120d05 0%, #2b1a06 45%, #0a0704 100%);
+}
+
+/* Section text — white on dark */
+.jpgcnft-theme .digi-process-section .digi-kicker { color: rgba(255, 255, 255, 0.65); }
+.jpgcnft-theme .digi-process-heading { color: #ffffff; }
+.jpgcnft-theme .digi-process-lead    { color: rgba(255, 255, 255, 0.62); }
+
+/* Cards */
+.jpgcnft-theme .digi-process-card {
+  background:   rgba(255, 255, 255, 0.06);
+  border-color: rgba(217, 119, 6, 0.28);
+}
+.jpgcnft-theme .digi-process-card h4 { color: #ffffff; }
+.jpgcnft-theme .digi-process-card p  { color: rgba(255, 255, 255, 0.60); }
+.jpgcnft-theme .digi-process-card p a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.jpgcnft-theme .digi-process-card p a:hover {
+  color: inherit;
+  text-decoration-thickness: 2px;
+}
+
+/* Gold top-bar accent */
+.jpgcnft-theme .digi-process-card::before {
+  background: linear-gradient(90deg, #d97706, #fde68a);
+}
+
+/* Process number ghost */
+.jpgcnft-theme .digi-process-num {
+  color: rgba(217, 119, 6, 0.24);
+}
+
+/* Card hover */
+.jpgcnft-theme .digi-process-card:hover {
+  background:   rgba(217, 119, 6, 0.12);
+  border-color: rgba(217, 119, 6, 0.52);
+  box-shadow:   0 28px 68px rgba(10, 7, 4, 0.60);
+}
+.jpgcnft-theme .digi-process-card:hover .digi-process-num {
+  color:       rgba(217, 119, 6, 0.40);
+  text-shadow: 0 0 40px rgba(217, 119, 6, 0.50);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   ENHANCING EXPERIENCE (CRAFT)
+   ════════════════════════════════════════════════════════════════════════ */
+
+.jpgcnft-theme .digi-craft-section {
+  background:
+    radial-gradient(ellipse at 70% 30%, rgba(217, 119, 6, 0.07) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 75%, rgba(180, 83, 9, 0.05) 0%, transparent 45%),
+    linear-gradient(150deg, #fffbeb 0%, #fef3c7 45%, #fef9c3 100%);
+}
+
+.jpgcnft-theme .digi-li-icon {
+  background: rgba(217, 119, 6, 0.10);
+  color: #d97706;
+}
+.jpgcnft-theme .digi-craft-list li:hover .digi-li-icon {
+  background: rgba(217, 119, 6, 0.20);
+}
+.jpgcnft-theme .digi-craft-list li:hover {
+  box-shadow:   0 8px 30px rgba(217, 119, 6, 0.10);
+  border-color: rgba(217, 119, 6, 0.30);
+}
+
+/* Float cards */
+.jpgcnft-theme .digi-float-card {
+  border-color: rgba(217, 119, 6, 0.22);
+}
+.jpgcnft-theme .digi-float-card strong { color: #b45309; }
+
+/* ════════════════════════════════════════════════════════════════════════
+   SOLUTION & RESULTS
+   ════════════════════════════════════════════════════════════════════════ */
+
+.jpgcnft-theme .digi-solution-section {
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(217, 119, 6, 0.16) 0%, transparent 40%),
+    radial-gradient(ellipse at 80% 20%, rgba(180, 83, 9, 0.12) 0%, transparent 38%),
+    linear-gradient(155deg, #0d0a06 0%, #1a1208 60%, #060504 100%);
+}
+
+.jpgcnft-theme .digi-result-icon {
+  background: rgba(217, 119, 6, 0.16);
+  color: #fbbf24;
+}
+.jpgcnft-theme .digi-result-card:hover {
+  border-color: rgba(217, 119, 6, 0.40);
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.40), 0 0 0 1px rgba(217, 119, 6, 0.16);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   METRICS STRIP
+   ════════════════════════════════════════════════════════════════════════ */
+
+.jpgcnft-theme .digi-metrics-strip {
+  background: linear-gradient(135deg, #0d0a06 0%, #1a1208 60%, #060504 100%);
+  border-top:    1px solid rgba(217, 119, 6, 0.14);
+  border-bottom: 1px solid rgba(217, 119, 6, 0.14);
+}
+.jpgcnft-theme .digi-info-icon  { color: #fbbf24; }
+.jpgcnft-theme .digi-info-num   { color: #fde68a; }
+.jpgcnft-theme .digi-info-label { color: rgba(255, 255, 255, 0.50); }
+.jpgcnft-theme .digi-info-item  { border-right-color: rgba(217, 119, 6, 0.14); }
+.jpgcnft-theme .digi-info-item:hover { background: rgba(217, 119, 6, 0.08); }
+
+/* ════════════════════════════════════════════════════════════════════════
+   HOVER & TRANSITION OVERRIDES
+   ════════════════════════════════════════════════════════════════════════ */
+
+.jpgcnft-theme .digi-client-badge:hover {
+  border-color: rgba(217, 119, 6, 0.35);
+  box-shadow: 0 8px 32px rgba(217, 119, 6, 0.12);
+}
+.jpgcnft-theme .digi-client-badge:hover .digi-cb-icon {
+  background: rgba(217, 119, 6, 0.20);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   DARK MODE OVERRIDES
+   ════════════════════════════════════════════════════════════════════════ */
+
+.active-dark-mode .jpgcnft-theme .digi-engage-section {
+  background: linear-gradient(180deg, #0d0a06 0%, #120d05 100%);
+}
+.active-dark-mode .jpgcnft-theme .digi-process-section {
+  background:
+    radial-gradient(ellipse at 88% 10%, rgba(217, 119, 6, 0.14) 0%, transparent 42%),
+    linear-gradient(150deg, #140f06 0%, #2b1a06 45%, #0a0704 100%);
+}
+.active-dark-mode .jpgcnft-theme .digi-process-card {
+  background:   rgba(255, 255, 255, 0.05);
+  border-color: rgba(217, 119, 6, 0.22);
+}
+.active-dark-mode .jpgcnft-theme .digi-craft-section {
+  background: linear-gradient(150deg, #0d0a06 0%, #120d05 100%);
+}
+.active-dark-mode .jpgcnft-theme .digi-fact-row:hover {
+  background: rgba(217, 119, 6, 0.07);
+}
+.active-dark-mode .jpgcnft-theme .digi-float-card {
+  border-color: rgba(217, 119, 6, 0.18);
+  background: rgba(217, 119, 6, 0.05);
+}
+.active-dark-mode .jpgcnft-theme .digi-stack-tag {
+  background:   rgba(217, 119, 6, 0.07);
+  border-color: rgba(217, 119, 6, 0.24);
+  color: #fde68a;
+}
+.active-dark-mode .jpgcnft-theme .digi-result-card:hover {
+  box-shadow: 0 8px 32px rgba(217, 119, 6, 0.12);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   IMAGE SKELETON LOADERS
+   Placed last so the shimmer animation wins the cascade over the coin
+   float animation (equal specificity, later rule wins).
+   ════════════════════════════════════════════════════════════════════════ */
+
+.jpgc-skeleton {
+  display: block;
+  aspect-ratio: 1090 / 830;
+  border-radius: 50%;
+  background: linear-gradient(
+    100deg,
+    rgba(217, 119, 6, 0.10) 30%,
+    rgba(251, 191, 36, 0.28) 50%,
+    rgba(217, 119, 6, 0.10) 70%
+  );
+  background-size: 200% 100%;
+  filter: none;
+  animation: jpgc-skeleton-shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes jpgc-skeleton-shimmer {
+  0%   { background-position: 160% 0; }
+  100% { background-position: -60% 0; }
+}
+
+.jpgc-skel-img {
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.jpgc-skel-img.is-loaded {
+  opacity: 1;
+}

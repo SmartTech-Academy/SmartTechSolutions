@@ -1,0 +1,276 @@
+/* ════════════════════════════════════════════════════════════════════════
+   BOOK APPOINTMENT PAGE  (my_components/_BookAppointment/BookAppointment.js)
+   ════════════════════════════════════════════════════════════════════════ */
+
+/* ── Hero ── */
+.rbt-appointment-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 170px 0 110px;
+}
+
+.rbt-appointment-hero__img {
+  object-fit: cover;
+  z-index: -2;
+}
+
+.rbt-appointment-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(9, 12, 22, 0.68) 0%, rgba(9, 12, 22, 0.82) 60%, rgba(9, 12, 22, 0.93) 100%),
+    linear-gradient(100deg, rgba(47, 87, 239, 0.4) 0%, rgba(185, 102, 231, 0.22) 60%, transparent 100%);
+}
+
+.rbt-appointment-hero__inner {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.rbt-appointment-hero .title {
+  margin: 22px 0 18px;
+  color: var(--color-white);
+  font-size: clamp(34px, 4.6vw, 58px);
+  line-height: 1.12;
+}
+
+.rbt-appointment-hero .description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  line-height: 1.75;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.rbt-appointment-trust {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.rbt-appointment-trust__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.rbt-appointment-trust__pill i {
+  color: #4ade80;
+  font-size: 15px;
+}
+
+/* ── Form card ── */
+.rbt-appointment-form-card {
+  padding: clamp(28px, 4vw, 48px);
+  border-radius: 18px;
+  background: var(--color-white);
+  box-shadow: 0 30px 80px -24px rgba(23, 32, 51, 0.16);
+}
+
+.rbt-appointment-form-card .title {
+  margin: 12px 0 10px;
+  font-size: clamp(26px, 3vw, 34px);
+}
+
+.form-lede {
+  color: var(--color-body);
+  margin-bottom: 30px;
+}
+
+.rbt-appointment-form .form-group {
+  position: relative;
+  margin-bottom: 0;
+}
+
+.rbt-appointment-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color-heading);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.rbt-appointment-form input,
+.rbt-appointment-form select,
+.rbt-appointment-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1.5px solid var(--color-border, #e6e3f1);
+  border-radius: 10px;
+  background: var(--color-light, #f5f7fa);
+  color: var(--color-heading);
+  font-size: 15px;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.rbt-appointment-form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236b7385' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.rbt-appointment-form textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.rbt-appointment-form input:focus,
+.rbt-appointment-form select:focus,
+.rbt-appointment-form textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: var(--color-white);
+  box-shadow: 0 0 0 4px var(--primary-opacity, rgba(47, 87, 239, 0.12));
+}
+
+.rbt-appointment-form .focus-border {
+  display: none;
+}
+
+.form-submit-group {
+  margin-top: 30px;
+}
+
+.form-fineprint {
+  margin: 14px 0 0;
+  color: var(--color-body);
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ── Side panel ── */
+.rbt-appointment-side {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.rbt-appointment-side__img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 24px 60px -20px rgba(23, 32, 51, 0.25);
+}
+
+.rbt-appointment-side__img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.rbt-appointment-steps {
+  padding: 26px;
+  border-radius: 16px;
+  background: var(--color-light, #f5f7fa);
+}
+
+.rbt-appointment-steps h4 {
+  margin-bottom: 20px;
+  color: var(--color-heading);
+}
+
+.rbt-appointment-steps__item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.rbt-appointment-steps__item + .rbt-appointment-steps__item {
+  margin-top: 18px;
+}
+
+.rbt-appointment-steps__index {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.rbt-appointment-steps__item strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--color-heading);
+}
+
+.rbt-appointment-steps__item p {
+  margin: 0;
+  color: var(--color-body);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+.rbt-appointment-direct {
+  padding: 24px;
+  border-radius: 16px;
+  border: 1.5px dashed var(--color-border, #e6e3f1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rbt-appointment-direct span {
+  color: var(--color-body);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.rbt-appointment-direct a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-heading);
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.rbt-appointment-direct a:hover {
+  color: var(--color-primary);
+}
+
+.rbt-appointment-direct a i {
+  color: var(--color-primary);
+}
+
+/* ── FAQ ── */
+.rbt-appointment-faq .accordion-button {
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.rbt-appointment-faq .accordion-button:not(.collapsed) {
+  color: var(--color-primary);
+}
+
+@media (max-width: 767px) {
+  .rbt-appointment-hero {
+    padding: 130px 0 80px;
+  }
+
+  .rbt-appointment-form-card {
+    padding: 24px;
+  }
+}

@@ -6,17 +6,12 @@ import Image from "next/image";
 
 import Contact from "../Contacts/Contact";
 import ContactForm from "../Contacts/Contact-Form";
-import TrustedBrands from "../Brand/Brands";
 import Instagram from "../Instagram/Instagram";
+import Brands2 from "../TrustedByBrands/Brands2";
 
-
-// HOME PAGE SECTIONS
-import Brands from "../TrustedByBrands/Brands";
 
 // CONFIGS AND ROUTE
 import { ROUTE } from "@/route/app_routes.js";
-import { CONFIG } from "@/app_config.js";
-import shapeImg from "../../public/images/icons/three-shape.png";
 import { image_url } from "../../helper/Utilities";
 
 
@@ -26,28 +21,46 @@ import { image_url } from "../../helper/Utilities";
 
 const ContactUs = () => {
 
+  useEffect(() => {
+    sal({
+      threshold: 0.01,
+      once: true,
+    });
+  }, []);
+
 
   return (
-    
+
     <>
 
-        <main className="rbt-main-wrapper">
+        <main className="rbt-main-wrapper contact-page">
 
 
-            <div className="rbt-conatct-area bg-gradient-11 rbt-section-gapTop">
-                <div className="container">
+            <div className="rbt-conatct-area contact-hero-premium">
+                <div className="contact-hero-bg">
+                    <Image
+                        src={image_url("/app_images/contact_and_office_img/contact_hero_bg.webp", true)}
+                        alt="SmartTech Solutions modern office and consulting workspace"
+                        fill
+                        priority
+                        sizes="100vw"
+                        style={{ objectFit: "cover" }}
+                    />
+                </div>
+                <span className="contact-hero-overlay" aria-hidden="true"></span>
+                <div className="container position-relative">
                     <div className="row">
                         <div className="col-lg-12">
-                            <div className="section-title text-center mb--60">
+                            <div className="section-title text-center mb--60" data-sal="slide-up" data-sal-duration="700">
                                 <span className="subtitle bg-secondary-opacity"> Contact Us </span>
                                 <h2 className="title"> Got an Idea for  <br /> your Project? </h2>
-                                <p className="description has-medium-font-size mt--10"> 
-                                    {"We're keen to understand your needs, and we'd love to discuss how we can collaboratively design and create innovative solutions that bring your vision to life."} 
+                                <p className="description has-medium-font-size mt--10">
+                                    {"We're keen to understand your needs, and we'd love to discuss how we can collaboratively design and create innovative solutions that bring your vision to life."}
                                 </p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <Contact />
                 </div>
             </div>
@@ -100,7 +113,7 @@ const ContactUs = () => {
             <div className="rbt-google-map bg-color-white mb--3 mt--10">
                 <iframe
                 className="w-100"
-                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319"
+                src="https://www.google.com/maps?q=No%209%20Church%20Street%2C%20Shomolu%2C%20Lagos%2C%20Nigeria&output=embed"
                 height="600"
                 style={{ border: "0" }}
                 ></iframe>
@@ -148,7 +161,7 @@ const ContactUs = () => {
                 <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-10 offset-lg-1">
-                    <TrustedBrands />
+                    <Brands2 hide_text="false" title="Trusted by ambitious teams and brands" />
                     </div>
                 </div>
                 </div>
@@ -160,7 +173,7 @@ const ContactUs = () => {
 
     </>
   );
-  
+
 };
 
 

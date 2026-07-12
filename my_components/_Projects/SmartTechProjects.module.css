@@ -197,12 +197,14 @@
   width: 170px; height: 370px;
   transform: rotate(-6deg);
   animation: phoneFloatA 7s ease-in-out infinite;
+  will-change: transform;
 }
 .featPhoneRight {
   right: -20px; bottom: -20px;
   width: 140px; height: 300px;
   transform: rotate(6deg);
   animation: phoneFloatB 8s ease-in-out infinite;
+  will-change: transform;
 }
 .featLabel {
   position: absolute;

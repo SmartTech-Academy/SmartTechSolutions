@@ -15,194 +15,7 @@ import styles from "./SmartTechProjects.module.css";
 
 // ─── DATA ─────────────────────────────────────────────────────────────────────
 
-const projects = [
-  {
-    id: 1,
-    number: "01",
-    label: "Featured Project",
-    name: "Digistate",
-    tagline: "Real Estate, Tokenized and Tradable.",
-    description:
-      "Digistate transforms real estate ownership with a blockchain-powered tokenization, that opens the door to fractional investments, supports asset value growth through market demand, and provides real-time secondary market trading through a custom exchange.",
-    industry: "Real Estate · Blockchain · FinTech",
-    platform: "Web App · Mobile App · Admin Suite",
-    team: "10 Developers · 8 QA Engineers",
-    cover: image_url("/app_images/projects/project_1.webp", true),
-    heroWeb: image_url("/app_images/projects/digistate/website/exchange page.png", true),
-    heroPhone: image_url("/app_images/projects/digistate/mobile app/invest screen.png", true),
-    phoneTwo: image_url("/app_images/projects/digistate/mobile app/buy and sell stock.png", true),
-    href: ROUTE.digistate_project,
-    cta: "View Case Study",
-    stack: ["NextJS", "NestJS", "React Native", "Tailwind CSS", "Solidity", "ERC-721", "Java", "Redis", "Android Native", "iOS Native"],
-    stats: [
-      { value: "5", label: "Dashboards" },
-      { value: "3", label: "Platforms" },
-      { value: "4", label: "IPO Stages" },
-    ],
-  },
-  {
-    id: 2,
-    number: "02",
-    label: "Web3 · Digital Asset",
-    name: "Japaul Gold Coin & NFT",
-    tagline: "Gold Backed Crypto & NFT",
-    description:
-      "JPGold Coin envisions a borderless token that serves as a universal medium for exchange, investment, goods, and services, empowering global commerce without limits. JPGC is listed on leading global exchanges like BitMart, making it easily accessible for trading worldwide.",
-    industry: "Web3 · Digital Asset",
-    platform: "Solana · Ethereum",
-    team: "3 Developers · 5 QA Engineers",
-    cover: image_url("/app_images/projects/JPGC/SmartTechProject_japaul_gold_coin.png", true),
-    href: "#",
-    cta: "View Case Study",
-    stack: ["Rust", "Solidity", "NestJS", "WarmHole"],
-  },
-  {
-    id: 3,
-    number: "03",
-    label: "Haulage · Logitech",
-    name: "Lodapoint App",
-    tagline: "Connecting Cargo, Empowering Journeys.",
-    description:
-      "Lodapoint is a digital logistics and ride-hailing platform that connects cargo owners and passengers with a network of verified drivers to seamlessly book, track, and manage on-demand rides and heavy-duty freight shipments.",
-    industry: "Logitech",
-    platform: "Mobile Application",
-    team: "5 Developers & Designers · 7 QA Engineers",
-    cover: image_url("/app_images/projects/lodapoint/SmartTechProject_lodapoint_app.png", true),
-    href: "#",
-    cta: "View Case Study",
-    stack: ["React Native", "NestJS", "React Native Maps", "Android Native", "iOS Native"],
-  },
-  {
-    id: 4,
-    number: "04",
-    label: "Game",
-    name: "Vudoo Game",
-    tagline: "Kill or be Killed",
-    description:
-      "Vudoo is an immersive 3D adventure game where players explore mysterious worlds, solve challenges, and battle powerful enemies in a visually stunning environment.",
-    industry: "Game",
-    platform: "Android · iOS",
-    team: "14 Developers & Designers · 9 QA Engineers",
-    cover: image_url("/app_images/projects/project_3.webp", true),
-    youtubeId: "NrPPx2vn7ak",
-    href: "#",
-    cta: "View Case Study",
-    stack: ["Unity", "c++", "Blender", "Photoshop"],
-  },
-  {
-    id: 5,
-    number: "05",
-    label: "Web3 · Blockchain",
-    name: "JPGC App",
-    tagline: "Digital Gold Investments.",
-    description:
-      "JP GoldCoin Platform, is the official application for the JPGC project. Where investors can buy, manage, and sell their JPGC tokens and JPG-NFT's.",
-    industry: "Web3 · Blockchain",
-    platform: "Web App · Mobile App · Admin Suite",
-    team: "7 Developers & Designers · 12 QA Engineers",
-    cover: image_url("/app_images/projects/jpgc app/jpgc_display_picture.png", true),
-    href: ROUTE.jpgc_app_project,
-    cta: "View Case Study",
-    stack: ["NextJS", "NestJS", "ReactJS", "React Native", "Tailwind CSS", "Vite", "Android Native", "iOS Native"],
-  },
-  {
-    id: 6,
-    number: "06",
-    label: "PropTech · Social",
-    name: "Flatshare",
-    tagline: "Find Your Perfect Flatmate.",
-    description:
-      "A social flatmate-matching web platform that connects people looking to share property, with profiles, messaging, listing filters, and location-based search built for speed and trust.",
-    industry: "PropTech · Social Platform",
-    platform: "Web Application",
-    team: "5 Developers & Designers · 5 QA Engineers",
-    cover: image_url("/app_images/projects/flatshare/flatshare_display_picture.png", true),
-    href: ROUTE.flatshare_project,
-    cta: "View Case Study",
-    stack: ["NextJS", "ReactJS", "Laravel", "Tailwind CSS", "Vite"],
-  },
-  {
-    id: 7,
-    number: "07",
-    label: "FaithTech · RelTech",
-    name: "Disciple Training School (DTS)",
-    tagline: "Discipleship Made Simple, Engaging, Transformational.",
-    description:
-      "The DTS App is a self-paced discipleship platform designed to inspire spiritual growth. Whether you're a student seeking a deeper relationship with God or a tutor passionate about mentoring others, the app provides an engaging learning experience that nurtures faith and transforms lives.",
-    industry: "FaithTech · RelTech",
-    platform: "Web App · Mobile App · Admin Suite",
-    team: "9 Developers & Designers · 16 QA Engineers",
-    cover: image_url("/app_images/projects/dts/dts_display_picture.png", true),
-    href: "#",
-    cta: "View Case Study",
-    stack: ["NextJS", "NestJS", "ReactJS", "React Native", "Tailwind CSS", "Vite", "Android Native", "iOS Native"],
-  },
-  {
-    id: 8,
-    number: "08",
-    label: "Real Estate · PropTech",
-    name: "Geoplox",
-    tagline: "Find Your Perfect Flatmate.",
-    description:
-      "Geoplox is a platform that transforms real estate data into clear, actionable intelligence. Hereby creating a single trusted source of truth that helps stakeholders move with confidence and clarity.",
-    industry: "Real Estate · PropTech",
-    platform: "Web App · Admin Suite",
-    team: "6 Developers & Designers · 8 QA Engineers",
-    cover: image_url("/app_images/projects/geoplox/geoplox_display_picture.png", true),
-    href: "#",
-    cta: "View Case Study",
-    stack: ["NextJS", "Laravel", "ReactJS", "React Native", "Tailwind CSS", "Vite"],
-  },
-  {
-    id: 9,
-    number: "09",
-    label: "Advert Video",
-    name: "Dano Milk Video",
-    tagline: "Sublim 3D Animation & Motion Graphics.",
-    description:
-      "Milk animation and motion graphics video for Dano, a leading brand in the Nigerian market, showcasing their products and services in a visually captivating and engaging manner.",
-    industry: "Advert Video",
-    platform: "",
-    team: "7 Designers · 5 QA Engineers",
-    cover: image_url("/app_images/projects/project_2.webp", true),
-    youtubeId: "NrPPx2vn7ak",
-    href: "#",
-    cta: "View Case Study",
-    stack: ["Autodesk Maya", "Blender", "Photoshop", "After Effects", "Premiere Pro"],
-  },
-  {
-    id: 10,
-    number: "10",
-    label: "FaithTech · RelTech",
-    name: "MFM eBooks",
-    tagline: "Growing Believers. Transforming Lives.",
-    description:
-      "Milk animation and motion graphics video for Xabi, a leading brand in the Nigerian market, showcasing their products and services in a visually captivating and engaging manner.",
-    industry: "FaithTech · RelTech",
-    platform: "Mobile Application",
-    team: "4 Designer & Developers · 6 QA Engineers",
-    cover: image_url("/app_images/projects/project_2.webp", true),
-    href: "#",
-    cta: "View Case Study",
-    stack: ["React Native", "NestJS", "Android Native", "iOS Native", "Android Native"],
-  },
-  {
-    id: 11,
-    number: "11",
-    label: "Real Estate · PropTech",
-    name: "Xabi",
-    tagline: "Modern Real Estate, Reimagined.",
-    description:
-      "Xabi is an all in one real estate solution, with features like, Wallets, Transactions, Rental Loans, Rental Savings, and property marketplace platform with smart search, listing management, and a mobile-first design built for fast property discovery and transaction flow.",
-    industry: "Real Estate · PropTech",
-    platform: "Web App · Admin Suite",
-    team: "7 Designers &Developers · 11 QA Engineers",
-    cover: image_url("/app_images/projects/xabi/xabi_display_picture.png", true),
-    href: "#",
-    cta: "View Case Study",
-    stack: ["NextJS", "Laravel", "ReactJS", "React Native", "Tailwind CSS", "Vite"],
-  },
-];
+import { projects } from "@/my_data/projects/projects.js";
 
 
 
@@ -372,13 +185,31 @@ const SmartTechProjects = () => {
                   <span></span><span></span><span></span>
                   {/* <div className={styles.featUrl}>digistate.io</div> */}
                 </div>
-                <Image src={featured.heroWeb} width={1800} height={1314} alt="Digistate homepage" />
+                <Image
+                  src={featured.heroWeb}
+                  width={1800}
+                  height={1314}
+                  alt="Digistate homepage"
+                  sizes="(max-width: 991px) 100vw, 60vw"
+                />
               </div>
               <div className={`${styles.featPhone} ${styles.featPhoneLeft}`}>
-                <Image src={featured.heroPhone} width={610} height={1440} alt="Digistate invest screen" />
+                <Image
+                  src={featured.heroPhone}
+                  width={610}
+                  height={1440}
+                  alt="Digistate invest screen"
+                  sizes="(max-width: 767px) 45vw, 300px"
+                />
               </div>
               <div className={`${styles.featPhone} ${styles.featPhoneRight}`}>
-                <Image src={featured.phoneTwo} width={610} height={1440} alt="Digistate buy and sell" />
+                <Image
+                  src={featured.phoneTwo}
+                  width={610}
+                  height={1440}
+                  alt="Digistate buy and sell"
+                  sizes="(max-width: 767px) 45vw, 300px"
+                />
               </div>
               <div className={styles.featLabel}>
                 <i className="feather-zap"></i>
@@ -473,7 +304,13 @@ const SmartTechProjects = () => {
                       </div>
                     </a>
                   ) : (
-                    <Image src={project.cover} width={800} height={520} alt={`${project.name} cover`} />
+                    <Image
+                      src={project.cover}
+                      width={800}
+                      height={520}
+                      alt={`${project.name} cover`}
+                      sizes="(max-width: 767px) 100vw, 50vw"
+                    />
                   )}
                   <div className={styles.projectCardOverlay}>
                     <span className={styles.projectNumber}>{project.number}</span>
@@ -491,10 +328,8 @@ const SmartTechProjects = () => {
                     <span><i className="feather-monitor"></i>{project.platform}</span>
                     <span><i className="feather-users"></i>{project.team.split("·")[0].trim()}</span>
                   </div>
-                  <Link
-                    className={`rbt-btn ${project.href === "#" ? "btn-border" : "btn-gradient"} hover-icon-reverse`}
-                    href={project.href}
-                  >
+                  {/* <Link className={`rbt-btn ${project.href === "#" ? "btn-border" : "btn-gradient"} hover-icon-reverse`} href={project.href}> */}
+                  <Link className={`rbt-btn btn-border hover-icon-reverse`} href={project.href}>
                     <span className="icon-reverse-wrapper">
                       <span className="btn-text">{project.cta}</span>
                       <span className="btn-icon"><i className="feather-arrow-right"></i></span>

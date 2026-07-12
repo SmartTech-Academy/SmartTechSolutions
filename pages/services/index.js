@@ -17,12 +17,17 @@ const index = () => {
 
     <>
 
-        <PageHead title="Services | SmartTech Solutions" />
+        <PageHead
+          title="Our Services | SmartTech Solutions"
+          description="Explore SmartTech Solutions' 12 service tracks — web, mobile, AI, blockchain, product design, and game development — delivered through 5 structured phases from strategy to launch."
+          image="/app_images/services/services_hero_visual.webp"
+          path="/services"
+        />
 
         <Provider store={Store}>
             <Context>
                 <MobileMenu />
-                <HeaderContainer headerSticky="rbt-sticky" headerType="" />
+                <HeaderContainer headerSticky="rbt-sticky" headerType="" blendWithHero />
                 <Cart />
                 
                 <Services />

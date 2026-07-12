@@ -14,6 +14,13 @@ const flatImg = (name) => `/app_images/projects/flatshare/${name}.png`;
 
 
 
+
+
+
+
+
+
+
 const screens = [
   { file: "homepage",           label: "Marketing Homepage"   },
   { file: "dashboard",          label: "User Dashboard"       },
@@ -28,7 +35,13 @@ const screens = [
   { file: "request_management", label: "Request Management"   },
 ];
 
+
+
+
 const galleryImages = screens.map((s) => ({ src: flatImg(s.file), label: s.label }));
+
+
+
 
 
 
@@ -39,15 +52,15 @@ const challenges = [
   },
   {
     title: "Real-Time Messaging at Scale",
-    body: "Engineering a low-latency WebSocket chat system that handles concurrent conversations, read receipts, typing indicators, and notification delivery without lag — across a distributed server environment.",
+    body: "Engineering a low-latency WebSocket chat system that handles concurrent conversations, read receipts, typing indicators, and notification delivery without lag, across a distributed server environment.",
   },
   {
     title: "Complex Multi-Dimensional Search",
-    body: "Location-based filtering had to account for radius, budget range, move-in date, lifestyle, pet tolerance, gender preference, and shared interests — all composited in real time with sub-100ms query responses.",
+    body: "Location-based filtering had to account for radius, budget range, move-in date, lifestyle, pet tolerance, gender preference, and shared interests, all composited in real time with sub-100ms query responses.",
   },
   {
     title: "Privacy & Data Compliance",
-    body: "Handling sensitive personal data — home addresses, income ranges, lifestyle preferences, and identity documents — while maintaining GDPR-aligned policies, granular privacy controls, and secure storage patterns.",
+    body: "Handling sensitive personal data, home addresses, income ranges, lifestyle preferences, and identity documents, while maintaining GDPR-aligned policies, granular privacy controls, and secure storage patterns.",
   },
   {
     title: "Proxy Architecture & Session Management",
@@ -61,11 +74,13 @@ const challenges = [
 
 
 
+
+
 const processSteps = [
   {
     num: "01",
     title: "Discovery & User Research",
-    body: "In-depth interviews with prospective flatmates and property hosts mapped the exact pain points of traditional flatmate search — trust anxiety, search friction, and communication failures. Output: full product spec and user journey maps.",
+    body: "In-depth interviews with prospective flatmates and property hosts mapped the exact pain points of traditional flatmate search, trust anxiety, search friction, and communication failures. Output: full product spec and user journey maps.",
   },
   {
     num: "02",
@@ -75,7 +90,7 @@ const processSteps = [
   {
     num: "03",
     title: "UI/UX Design & Prototyping",
-    body: "From onboarding to profile creation, listing browsing, and live messaging — every flow was wireframed, iterated, and validated in high-fidelity Figma prototypes before a single line of code was written.",
+    body: "From onboarding to profile creation, listing browsing, and live messaging, every flow was wireframed, iterated, and validated in high-fidelity Figma prototypes before a single line of code was written.",
   },
   {
     num: "04",
@@ -90,9 +105,11 @@ const processSteps = [
   {
     num: "06",
     title: "QA, Security Audit & Launch",
-    body: "End-to-end testing across all user flows — search, match, message, apply, list, manage. Penetration testing of auth and messaging layers. Staged rollout with live monitoring before full public launch.",
+    body: "End-to-end testing across all user flows, search, match, message, apply, list, manage. Penetration testing of auth and messaging layers. Staged rollout with live monitoring before full public launch can take place.",
   },
 ];
+
+
 
 
 
@@ -118,6 +135,9 @@ const craftFeatures = [
     body: "The full product experience — browsing, messaging, managing listings — works flawlessly on desktop and mobile without feature compromise or layout degradation.",
   },
 ];
+
+
+
 
 
 
@@ -156,7 +176,30 @@ const results = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const FlatshareProject = () => {
+
+
+
 
   useEffect(() => {
     sal({ threshold: 0.01, once: true });
@@ -187,10 +230,20 @@ const FlatshareProject = () => {
 
 
 
+
+
+
+
+
+
   return (
+
 
     <div className="digi-case-page flat-theme">
       <main className="rbt-main-wrapper">
+
+
+
 
 
         {/* ── HERO ─────────────────────────────────────────────────── */}
@@ -218,7 +271,7 @@ const FlatshareProject = () => {
 
                   <p className="digi-hero-lead" data-sal="slide-up" data-sal-duration="700" data-sal-delay="160">
                     A social flatmate-matching web platform that connects people looking to share
-                    property — with rich profiles, real-time messaging, smart listing filters, and
+                    property, with good profiles, real-time messaging, smart listing filters, and
                     location-based search built for speed, safety, and genuine human connection.
                   </p>
 
@@ -232,7 +285,7 @@ const FlatshareProject = () => {
                     </Link>
                     <Link className="rbt-btn btn-border hover-icon-reverse" href={ROUTE.project}>
                       <span className="icon-reverse-wrapper">
-                        <span className="btn-text">View More Work</span>
+                        <span className="btn-text">Our Service</span>
                         <span className="btn-icon"><i className="feather-arrow-right"></i></span>
                         <span className="btn-icon"><i className="feather-arrow-right"></i></span>
                       </span>
@@ -241,10 +294,10 @@ const FlatshareProject = () => {
 
                   <div className="digi-hero-glass-stats" data-sal="slide-up" data-sal-duration="700" data-sal-delay="240">
                     {[
-                      { val: "5+",    suffix: "", label: "Core Modules"    },
-                      { val: "11",    suffix: "", label: "App Screens"     },
-                      { val: "8+",    suffix: "", label: "Engineers"       },
-                      { val: "15+",   suffix: "", label: "Smart Filters"   },
+                      { val: "5",    suffix: "", label: "Core Modules"    },
+                      { val: "4",    suffix: "", label: "QA Engineers"     },
+                      { val: "5",    suffix: "", label: "designer & Developers"       },
+                      { val: "13",   suffix: "+", label: "Smart Filters"   },
                     ].map(({ val, suffix, label }) => (
                       <div className="digi-glass-stat" key={label}>
                         <strong>{val}<em>{suffix}</em></strong>
@@ -283,15 +336,36 @@ const FlatshareProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── METRICS STRIP ────────────────────────────────────────── */}
         <div className="digi-metrics-strip">
           <div className="container">
             <div className="digi-info-row">
               {[
-                { icon: "feather-home",           num: "5+",       label: "Core Modules"    },
+                { icon: "feather-layers",           num: "30+",       label: "Screens"    },
                 { icon: "feather-message-circle", num: "Real-Time",label: "WebSocket Chat"  },
-                { icon: "feather-filter",         num: "15+",      label: "Smart Filters"   },
-                { icon: "feather-users",          num: "8+",       label: "Engineers"       },
+                { icon: "feather-monitor",         num: "2",      label: "Platforms"   },
+                { icon: "feather-users",          num: "8+",       label: "Total Engineers"       },
                 { icon: "feather-map-pin",        num: "Location", label: "Based Search"    },
               ].map(({ icon, num, label }) => (
                 <div className="digi-info-item" key={label}>
@@ -307,6 +381,24 @@ const FlatshareProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── ABOUT THE CLIENT ─────────────────────────────────────── */}
         <section className="rbt-section-gap bg-color-white">
           <div className="container">
@@ -314,27 +406,25 @@ const FlatshareProject = () => {
 
               <div className="col-lg-6" data-sal="slide-right" data-sal-duration="700">
                 <span className="digi-kicker">About the Client</span>
-                <h2 className="digi-client-heading">Scalabu Digitals</h2>
+                <h2 className="digi-client-heading">Scalabu Digital</h2>
                 <div className="digi-client-body">
                   <p>
-                    Scalabu Digitals is a digital product company specialising in building
-                    consumer-facing technology that solves real-world social and housing challenges.
-                    With a sharp focus on PropTech and community-driven platforms, Scalabu designs
-                    and ships products that make everyday experiences — like finding a home and
-                    choosing who to share it with — safer, smarter, and significantly less stressful.
+                    Scalabu Digital is a Lagos-based digital marketing and web development agency 
+                    that helps businesses grow their online presence through services such as SEO, 
+                    social media marketing, pay-per-click (PPC) advertising, content marketing, 
+                    web development, and e-commerce solutions.
                   </p>
                   <p>
-                    Recognising the broken, trust-deficient process of flatmate search — dominated
-                    by unverified listings, anonymous classifieds, and uncomfortable cold outreach —
-                    Scalabu commissioned Flatshare as their flagship platform: a purpose-built
-                    social network for people who need to find the right person to live with.
+                    Founded in 2017, the company focuses on delivering data-driven marketing strategies 
+                    and customized digital solutions that improve brand visibility, website traffic, 
+                    and business growth.
                   </p>
                 </div>
                 <div className="digi-client-badge">
                   <div className="digi-cb-icon"><i className="feather-briefcase"></i></div>
                   <div>
-                    <strong>Scalabu Digitals</strong>
-                    <small>Product Owner · PropTech</small>
+                    <strong>Scalabu Digital</strong>
+                    <small>Product Owner</small>
                   </div>
                 </div>
               </div>
@@ -351,9 +441,9 @@ const FlatshareProject = () => {
                     { icon: "feather-briefcase", label: "Industry",     value: "PropTech & Social Networking" },
                     { icon: "feather-home",       label: "Product",      value: "Flatmate Matching & Property Sharing Platform" },
                     { icon: "feather-monitor",    label: "Platforms",    value: "Web Application, Admin Dashboard" },
-                    { icon: "feather-code",       label: "Tech Stack",   value: "NextJS · Laravel · Vite · Proxy Pattern · MySQL · Redis · WebSocket" },
+                    { icon: "feather-code",       label: "Tech Stack",   value: "NextJS · Laravel · Vite · Proxy Pattern · MySQL · Redis · Tailwind CSS · WebSocket" },
                     { icon: "feather-layout",     label: "Core Modules", value: "Search · Listings · Profiles · Messaging · Request Management" },
-                    { icon: "feather-users",      label: "Team",         value: "6 Engineers, 2 UI/UX Designers, 2 QA Specialists" },
+                    { icon: "feather-users",      label: "Team",         value: "4 Engineers, 1 UI/UX Designers, 4 QA Specialists" },
                     { icon: "feather-award",      label: "Delivered By", value: "SmartTech Solutions", highlight: true },
                   ].map(({ icon, label, value, highlight }, i) => (
                     <div
@@ -380,6 +470,31 @@ const FlatshareProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── ABOUT THE APP ────────────────────────────────────────── */}
         <section className="rbt-section-gap digi-app-section">
           <div className="container">
@@ -395,24 +510,21 @@ const FlatshareProject = () => {
                     Flatshare is a social property-sharing web platform built to replace the
                     broken, trust-deficient process of finding a flatmate. Users create rich
                     lifestyle profiles, signal their preferences and deal-breakers, and discover
-                    compatible people through an intelligent, filter-driven discovery engine —
+                    compatible people through an intelligent, filter-driven discovery engine, 
                     not random listings from strangers.
                   </p>
                   <p>
                     Hosts who already have a property can list their spare room with full control
                     over pricing, move-in dates, and applicant criteria. Seekers looking to live
                     in expensive areas can find and connect with potential co-renters to split
-                    costs intelligently — with in-app messaging, structured applications, and
-                    request management tools keeping the entire process organised and transparent.
-                  </p>
-                  <p>
-                    Built on a Next.js and Laravel proxy architecture with Redis caching and
-                    WebSocket real-time messaging, Flatshare is engineered for speed, security,
-                    and the kind of social trust that turns a platform visit into a signed tenancy.
+                    costs intelligently, with in-app messaging, structured applications, and
+                    request management tools keeping the entire process organised and transparent. 
+                    Flatshare is engineered for speed, security, and the kind of social trust that 
+                    turns a platform visit into a signed tenancy.
                   </p>
                 </div>
                 <div className="digi-stack">
-                  {["NextJS", "Laravel", "Vite", "Proxy Pattern", "MySQL", "Redis", "WebSocket", "REST API", "Tailwind CSS"].map((t, i) => (
+                  {["NextJS", "Laravel", "ReactJS", "Tailwind CSS", "Vite", "MySQL", "Redis", "WebSocket"].map((t, i) => (
                     <span
                       key={t}
                       className="digi-stack-tag"
@@ -425,7 +537,7 @@ const FlatshareProject = () => {
               </div>
 
               <div className="col-lg-6" data-sal="zoom-in" data-sal-duration="800">
-                <div className="digi-app-visual">
+                <div className="digi-app-visual flat-app-visual">
                   <div className="digi-app-visual-glow" aria-hidden="true"></div>
                   <div className="digi-app-browser">
                     <div className="digi-app-browser-chrome">
@@ -434,10 +546,12 @@ const FlatshareProject = () => {
                     </div>
                     <img src={flatImg("dashboard")} alt="Flatshare dashboard" loading="lazy" />
                   </div>
-                  <div className="digi-app-phone">
-                    <div className="digi-app-phone-speaker"></div>
-                    <img src={flatImg("profile")} alt="Flatshare profile" loading="lazy" />
-                    <div className="digi-app-phone-home"></div>
+                  <div className="flat-data-card">
+                    <div className="flat-data-card-icon"><i className="feather-home"></i></div>
+                    <div>
+                      <strong>Find Your Flatmate</strong>
+                      <span>Match · Connect · Move In</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -445,6 +559,31 @@ const FlatshareProject = () => {
             </div>
           </div>
         </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -460,7 +599,7 @@ const FlatshareProject = () => {
                 </h2>
                 <p className="digi-challenge-lead">
                   Building a social flatmate platform means solving trust, speed, privacy, and
-                  real-time communication simultaneously — for users making one of life&apos;s most
+                  real-time communication simultaneously; for users making one of life&apos;s most
                   personal decisions. These were the six hardest problems we solved.
                 </p>
               </div>
@@ -486,6 +625,27 @@ const FlatshareProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── USER ENGAGEMENT — Marquee ─────────────────────────────── */}
         <section className="rbt-section-gap digi-engage-section">
           <div className="container">
@@ -497,7 +657,7 @@ const FlatshareProject = () => {
                 Crafted for how people actually search for home.
               </h2>
               <p className="digi-engage-desc">
-                From onboarding and interest profiling to live search and real-time messaging —
+                From onboarding and interest profiling to live search and real-time messaging; 
                 every screen was built to reduce friction and build trust at each step of the
                 flatmate discovery journey.
               </p>
@@ -542,6 +702,31 @@ const FlatshareProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── THE PROCESS ──────────────────────────────────────────── */}
         <section className="rbt-section-gap digi-process-section">
           <div className="container">
@@ -555,7 +740,7 @@ const FlatshareProject = () => {
               <div className="col-lg-5" data-sal="slide-left" data-sal-duration="700">
                 <p className="digi-process-lead mt_md--20 mt_sm--20">
                   Six structured phases took Flatshare from a research insight to a
-                  production-ready social platform — design-first, research-led, and built
+                  production-ready social platform design-first, research-led, and built
                   with no shortcuts in performance, security, or user experience.
                 </p>
               </div>
@@ -581,6 +766,31 @@ const FlatshareProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── ENHANCING EXPERIENCE ─────────────────────────────────── */}
         <section className="rbt-section-gap digi-craft-section">
           <div className="container">
@@ -594,7 +804,7 @@ const FlatshareProject = () => {
                 <div className="digi-craft-body">
                   <p>
                     Flatshare operates in one of the most personal decision spaces a product
-                    can occupy — choosing who you share your home with. Every UI decision was
+                    can occupy, choosing who you share your home with. Every UI decision was
                     made knowing that trust, clarity, and warmth are not optional extras,
                     they are the product itself.
                   </p>

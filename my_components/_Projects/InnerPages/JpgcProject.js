@@ -12,6 +12,18 @@ import { ROUTE } from "@/route/app_routes.js";
 
 const jpgcImg = (name) => `/app_images/projects/jpgc_app/${name}.png`;
 
+
+
+
+
+
+
+
+
+
+
+
+
 const webScreens = [
   { file: "jpgc_home",             label: "Marketing Homepage" },
   { file: "jpgc_dashboard",        label: "Investor Dashboard" },
@@ -24,6 +36,10 @@ const webScreens = [
   { file: "jpgc_display_picture",  label: "Profile Settings" },
 ];
 
+
+
+
+
 const mobileScreens = [
   { file: "mobile_homepage",               label: "Splash / Home" },
   { file: "mobile_dashboard",              label: "Dashboard" },
@@ -35,32 +51,41 @@ const mobileScreens = [
   { file: "mobile_wallet_connect",         label: "Wallet Connect" },
 ];
 
+
+
+
+
 const challenges = [
   {
     title: "Dual-Chain Architecture",
-    body: "Engineering a token that lives simultaneously on Solana (SPL standard) and Ethereum (ERC-20 bridge) required building a robust cross-chain bridge with atomic swap mechanics, security guards, and consistent state reconciliation across both networks.",
+    body: "Engineering a token that lives simultaneously on Solana (SPL standard) and Ethereum (ERC-20 standard) required building a robust cross-chain bridge with atomic swap mechanics, security guards, and consistent state reconciliation across both networks.",
   },
   {
     title: "Gold-Peg Compliance & Valuation",
-    body: "Maintaining a credible 1g-gold-to-1-JPGC peg demanded legal frameworks, real-time oracle integration for gold spot prices, reserve proof mechanisms, and regulatory positioning within Nigeria's SEC and CBN digital asset guidelines.",
+    body: "Maintaining a credible 1g-gold-to-1-JPGC peg demanded legal frameworks, real-time oracle integration for gold spot prices, reserve proof mechanisms, and regulatory positioning within Nigeria's SEC digital asset guidelines.",
   },
   {
     title: "NFT Fractionalization Mechanics",
-    body: "Implementing on-chain NFT fractionalization required designing custom smart contracts that split ownership rights into tradable micro-positions, manage redemption windows, and enforce provenance — all while preserving the NFT's underlying gold backing.",
+    body: "Implementing on-chain NFT fractionalization required designing custom smart contracts that split ownership rights into tradable micro-positions, manage redemption windows, and enforce provenance, all while preserving the NFT's underlying gold backing.",
   },
   {
     title: "Multi-Gateway Payment Integration",
-    body: "Supporting Stripe (fiat), a crypto gateway (multi-coin), and native SOL as purchase paths meant engineering a unified checkout engine that handles currency conversion, settlement delays, partial failures, and cross-gateway reconciliation in real time.",
+    body: "Supporting Stripe (fiat), a crypto gateway (multi-coin), and native SOL as purchase paths meant engineering a unified checkout engine that handles currency conversion, based on visitors location, settlement delays, partial failures, and cross-gateway reconciliation in real time.",
   },
   {
     title: "Staking Engine & Smart Contract Security",
-    body: "Building a staking mechanism for both JPGC tokens and NFTs on Solana demanded time-locked escrow contracts, reward distribution logic, and a rigorous security audit process — including proxy-upgrade patterns to allow future improvements without breaking staked positions.",
+    body: "Building a staking mechanism for both JPGC tokens and NFTs on Solana and ethereum bloackchains, demanded time-locked escrow contracts, reward distribution logic, and a rigorous security audit process, including proxy-upgrade patterns to allow future improvements without breaking staked positions.",
   },
   {
     title: "Real-Time Cross-Chain Data Sync",
     body: "Surfacing live token balances, NFT ownership, staking status, and transaction feeds consistently across both blockchain networks required a custom middleware layer using WebSockets, Redis caching, and event-driven reconciliation to eliminate state drift.",
   },
 ];
+
+
+
+
+
 
 const processSteps = [
   {
@@ -76,7 +101,7 @@ const processSteps = [
   {
     num: "03",
     title: "UI/UX Design & Prototyping",
-    body: "All screens — token purchase, NFT marketplace, staking interface, dashboard, bridge, and checkout — were designed for web and mobile. Every flow was validated in high-fidelity prototype before a single line of code was written.",
+    body: "All screens, token purchase, NFT marketplace, staking interface, dashboard, bridge, and checkout; were designed for web and mobile. Every flow was validated in high-fidelity prototype before a single line of code was written.",
   },
   {
     num: "04",
@@ -86,25 +111,31 @@ const processSteps = [
   {
     num: "05",
     title: "Full-Stack Development",
-    body: "Next.js web app, React Native mobile, NestJS API, and PostgreSQL/Redis data layer built in parallel sprints — with WebSocket feeds, Stripe integration, crypto gateway, and live blockchain connectivity tested at every milestone.",
+    body: "Next.js web app, React Native mobile, NestJS API, and PostgreSQL/Redis data layer built in parallel sprints, with WebSocket feeds, Stripe integration, crypto gateway, and live blockchain connectivity tested at every milestone.",
   },
   {
     num: "06",
     title: "Security Audit, QA & Launch",
-    body: "End-to-end smart contract audits, payment gateway stress tests, cross-chain state validation, and full user-flow QA across web and mobile — followed by a staged rollout with live monitoring and on-call engineering support.",
+    body: "End-to-end smart contract audits, payment gateway stress tests, cross-chain state validation, and full user-flow QA across web and mobile, followed by a staged rollout with live monitoring and on-call engineering support.",
   },
 ];
+
+
+
+
+
+
 
 const craftFeatures = [
   {
     icon: "feather-layers",
     title: "Web3 Made Approachable",
-    body: "Connecting wallets, buying gold-backed tokens, staking NFTs, and bridging chains — all made as intuitive as online banking. No blockchain expertise required to invest with confidence.",
+    body: "Connecting wallets, buying gold-backed tokens, staking NFTs, and bridging chains; all made as intuitive as online banking. Little or no blockchain expertise required to invest with confidence.",
   },
   {
     icon: "feather-shield",
     title: "Trust-First Design Language",
-    body: "Every interface decision — from colour selection to micro-copy — was made to signal security, legitimacy, and reliability. Gold-backed investing demands a premium that investors can feel.",
+    body: "Every interface decision, from colour selection to micro-copy, was made to signal security, legitimacy, and reliability. Gold-backed investing demands a premium that investors can feel.",
   },
   {
     icon: "feather-smartphone",
@@ -114,15 +145,20 @@ const craftFeatures = [
   {
     icon: "feather-zap",
     title: "Speed-Optimised User Journeys",
-    body: "Purchase-to-confirmation flows engineered to minimise friction. The right information at the right moment — maximising investor confidence at every high-stakes decision point.",
+    body: "Purchase-to-confirmation flows engineered to minimise friction. The right information at the right moment, maximising investor confidence at every high-stakes decision point.",
   },
 ];
+
+
+
+
+
 
 const results = [
   {
     icon: "feather-cpu",
     title: "Dual-Chain JPGC Token",
-    body: "A gold-backed digital asset live on both Solana and Ethereum — bridgeable between chains in one click, giving investors maximum liquidity and network flexibility.",
+    body: "A gold-backed digital asset live on both Solana and Ethereum. Bridgeable between chains in one click, giving investors maximum liquidity and network flexibility.",
   },
   {
     icon: "feather-grid",
@@ -132,36 +168,63 @@ const results = [
   {
     icon: "feather-percent",
     title: "NFT Fractionalization System",
-    body: "Custom smart contracts that split NFT ownership into tradable micro-positions — making high-value gold NFTs accessible to smaller investors without sacrificing on-chain integrity.",
+    body: "Custom smart contracts that split NFT ownership into tradable micro-positions, making high-value gold NFTs accessible to smaller investors without sacrificing on-chain integrity.",
   },
   {
     icon: "feather-lock",
     title: "Integrated Staking Engine",
-    body: "Time-locked staking vaults for both JPGC tokens and NFTs — offering investors structured yield on their gold-backed digital assets with transparent on-chain reward mechanics.",
+    body: "Time-locked staking vaults for both JPGC tokens and NFTs, offering investors structured yield on their gold-backed digital assets with transparent on-chain reward mechanics.",
   },
   {
     icon: "feather-credit-card",
     title: "Multi-Gateway Purchase System",
-    body: "Investors purchase JPGC and NFTs via Stripe (fiat), a crypto gateway (multi-coin), or native SOL — all unified in a single, seamless checkout experience.",
+    body: "Investors purchase JPGC and NFTs via Stripe (fiat), a crypto gateway (multi-coin), or native SOL; all unified in a single, seamless checkout experience.",
   },
   {
     icon: "feather-bar-chart-2",
     title: "BitMart Exchange Listing",
-    body: "JPGC is listed and actively traded on BitMart — one of the world's leading centralized exchanges — giving the token global market visibility, real-time price discovery, and 24/7 liquidity for investors worldwide.",
+    body: "JPGC is listed and actively traded on BitMart; one of the world's leading centralized exchanges, giving the token global market visibility, real-time price discovery, and 24/7 liquidity for investors worldwide.",
   },
   {
     icon: "feather-shield",
     title: "Secure Smart Contract Middleware",
-    body: "A proprietary software layer between the web app and blockchain contracts — handling signature validation, replay protection, and secure state relay without exposing raw contract calls.",
+    body: "A proprietary software layer between the web app and blockchain contracts; handling signature validation, replay protection, and secure state relay without exposing raw contract calls.",
   },
 ];
+
+
+
+
+
+
 
 const galleryImages = [
   ...webScreens.map((s)    => ({ src: jpgcImg(s.file), label: s.label })),
   ...mobileScreens.map((s) => ({ src: jpgcImg(s.file), label: s.label })),
 ];
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const JpgcProject = () => {
+
+
+
   useEffect(() => {
     sal({ threshold: 0.01, once: true });
   }, []);
@@ -189,9 +252,14 @@ const JpgcProject = () => {
     };
   }, [lbOpen]);
 
+
+
+
   return (
     <div className="digi-case-page jpgc-theme">
       <main className="rbt-main-wrapper">
+
+
 
 
         {/* ── HERO ─────────────────────────────────────────────────── */}
@@ -209,20 +277,9 @@ const JpgcProject = () => {
 
                 <div className="digi-hero-content">
 
-                  <div data-sal="fade" data-sal-duration="500">
-                    <div className="digi-trust-badge">
-                      <div className="digi-tb-dot"></div>
-                      <span>Gold-Backed · Dual-Chain · Listed on BitMart Exchange</span>
-                    </div>
-                  </div>
-
                   <div className="digi-hero-tags" data-sal="fade" data-sal-duration="600" data-sal-delay="60">
                     <span className="digi-hero-tag tag-primary">Case Study</span>
-                    <span className="digi-hero-tag">DeFi</span>
-                    <span className="digi-hero-tag">Blockchain</span>
-                    <span className="digi-hero-tag">Gold-backed</span>
-                    <span className="digi-hero-tag">BitMart Listed</span>
-                    <span className="digi-hero-tag">Web · Mobile</span>
+                    <span className="digi-hero-tag">Digital Asset · Web3</span>
                   </div>
 
                   <h1 className="digi-hero-title" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
@@ -230,7 +287,7 @@ const JpgcProject = () => {
                   </h1>
 
                   <p className="digi-hero-lead" data-sal="slide-up" data-sal-duration="700" data-sal-delay="160">
-                    The official platform of the Japaul Gold Coin — a gold-backed digital asset live on
+                    The official platform of the Japaul Gold Coin, a gold-backed digital asset live on
                     Solana and Ethereum, and actively traded on BitMart Exchange. Buy tokens, trade NFTs,
                     stake assets, bridge chains, and manage gold-backed investments from one world-class
                     web and mobile app.
@@ -244,9 +301,9 @@ const JpgcProject = () => {
                         <span className="btn-icon"><i className="feather-arrow-right"></i></span>
                       </span>
                     </Link>
-                    <Link className="rbt-btn btn-border hover-icon-reverse" href={ROUTE.project}>
+                    <Link className="rbt-btn btn-border hover-icon-reverse" href={ROUTE.service}>
                       <span className="icon-reverse-wrapper">
-                        <span className="btn-text">View More Work</span>
+                        <span className="btn-text">Our Services</span>
                         <span className="btn-icon"><i className="feather-arrow-right"></i></span>
                         <span className="btn-icon"><i className="feather-arrow-right"></i></span>
                       </span>
@@ -256,8 +313,8 @@ const JpgcProject = () => {
                   <div className="digi-hero-glass-stats" data-sal="slide-up" data-sal-duration="700" data-sal-delay="240">
                     {[
                       { val: "2",  suffix: "",  label: "Blockchains"      },
-                      { val: "5",  suffix: "+", label: "Core Modules"    },
-                      { val: "12", suffix: "+", label: "Engineers"        },
+                      { val: "5",  suffix: "+", label: "Developers"    },
+                      { val: "7", suffix: "+", label: "QA Engineers"        },
                       { val: "1",  suffix: "",  label: "CEX — BitMart"   },
                     ].map(({ val, suffix, label }) => (
                       <div className="digi-glass-stat" key={label}>
@@ -296,15 +353,32 @@ const JpgcProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
         {/* ── METRICS STRIP ────────────────────────────────────────── */}
         <div className="digi-metrics-strip">
           <div className="container">
             <div className="digi-info-row">
               {[
-                { icon: "feather-cpu",          num: "2",        label: "Blockchains"         },
+                { icon: "feather-cpu",          num: "Token bridge",        label: "WarmHole"         },
                 { icon: "feather-trending-up",  num: "BitMart",  label: "Exchange Listed"     },
                 { icon: "feather-layers",       num: "5+",       label: "Core Modules"        },
-                { icon: "feather-users",        num: "12+",      label: "Engineers"           },
+                { icon: "feather-users",        num: "14+",      label: "Engineers"           },
                 { icon: "feather-shield",       num: "1g Gold",  label: "Per 1 JPGC Token"    },
               ].map(({ icon, num, label }) => (
                 <div className="digi-info-item" key={label}>
@@ -318,6 +392,26 @@ const JpgcProject = () => {
         </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── ABOUT THE CLIENT ─────────────────────────────────────── */}
         <section className="rbt-section-gap bg-color-white">
           <div className="container">
@@ -328,24 +422,26 @@ const JpgcProject = () => {
                 <h2 className="digi-client-heading">Japaul Digital Solutions Limited</h2>
                 <div className="digi-client-body">
                   <p>
-                    Japaul Digital Solutions Limited is the blockchain and digital assets arm of Japaul
-                    Gold and Ventures Limited — a publicly listed Nigerian conglomerate on the Nigerian
-                    Exchange Group (NGX), with decades of operational history spanning gold mining,
-                    marine services, and real estate.
+                    Japaul Digital Solutions Limited is an associate company of Japaul Gold 
+                    and Ventures Plc, a Nigerian gold mining company that owns, mines, and
+                    produces gold behind every JPGC token. The company
+                    was created to lead the Group&apos;s expansion into the rapidly evolving
+                    digital assets ecosystem.
                   </p>
                   <p>
-                    Leveraging Japaul&apos;s proven gold mining heritage, Japaul Digital was established to
-                    bridge the physical gold market with blockchain technology — creating the Japaul Gold
-                    Coin (JPGC) as a fully gold-backed digital asset. JPGC is now listed and actively
-                    traded on BitMart Exchange, one of the world&apos;s leading centralized crypto exchanges,
-                    giving the token global market exposure and real-time liquidity for investors worldwide.
+                    By leveraging federally-issued gold mining leases and independently
+                    audited reserves, Japaul Digital Solutions collateralises every token
+                    it issues with real, verifiable value, commissioning JPGold Coin
+                    (JPGC) and its companion JPG-NFT certificates as its flagship venture
+                    into tokenized real-world assets.
                   </p>
                 </div>
                 <div className="digi-client-badge">
                   <div className="digi-cb-icon"><i className="feather-briefcase"></i></div>
                   <div>
                     <strong>Japaul Digital Solutions Limited</strong>
-                    <small>Product Owner · Nigeria · NGX Listed</small>
+                    <small>Product Owner · Lagos, Nigeria</small>
+                    {/* <small>Product Owner · Nigeria · NGX Listed</small> */}
                   </div>
                 </div>
               </div>
@@ -362,10 +458,10 @@ const JpgcProject = () => {
                     { icon: "feather-briefcase", label: "Industry",     value: "Digital Assets, Blockchain & Gold-Backed Finance" },
                     { icon: "feather-box",        label: "Product",      value: "JPGC Token Web App & NFT Investment Platform" },
                     { icon: "feather-monitor",    label: "Platforms",    value: "Web Application, Mobile App (iOS & Android)" },
-                    { icon: "feather-link",       label: "Blockchain",   value: "Solana (SPL), Ethereum Bridge (ERC-20), Proxy Pattern" },
+                    { icon: "feather-link",       label: "Blockchain",   value: "Solana (SPL) and Ethereum (ERC-20)" },
                     { icon: "feather-trending-up",label: "Exchange",     value: "Listed & Actively Traded on BitMart Exchange (CEX)" },
-                    { icon: "feather-package",    label: "Core Modules", value: "Token Trading · NFT Marketplace · Staking · Bridge · Fractionalization" },
-                    { icon: "feather-users",      label: "Team",         value: "8 Developers, 5 QA Engineers, 4 Blockchain Specialists" },
+                    { icon: "feather-package",    label: "Core Modules", value: "Token & NFT Purchase · NFT Marketplace · Staking · Bridge · Fractionalization" },
+                    { icon: "feather-users",      label: "Team",         value: "7 Developers, 8 QA Engineers, 1 Blockchain Specialists" },
                     { icon: "feather-award",      label: "Delivered By", value: "SmartTech Solutions", highlight: true },
                   ].map(({ icon, label, value, highlight }, i) => (
                     <div
@@ -392,6 +488,26 @@ const JpgcProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── ABOUT THE APP ────────────────────────────────────────── */}
         <section className="rbt-section-gap digi-app-section">
           <div className="container">
@@ -404,29 +520,28 @@ const JpgcProject = () => {
                 </h2>
                 <div className="digi-app-body">
                   <p>
-                    JPGC App is the official web and mobile platform of the Japaul Gold Coin — a digital
+                    JPGC App is the official web and mobile platform of Japaul Gold Coin (JPGC), a digital
                     asset pegged at 1 gram of physical gold per 1 JPGC, live on both the Solana and
                     Ethereum networks, and listed for trading on BitMart Exchange. The platform gives
                     investors a single destination to buy, manage, and grow gold-backed digital wealth
-                    without needing any blockchain expertise.
+                    without needing much blockchain expertise.
                   </p>
                   <p>
                     Investors can purchase JPGC tokens using fiat currency through Stripe, or with other
                     cryptocurrencies via an integrated crypto gateway. A built-in chain bridge allows
-                    seamless movement of assets between Solana and Ethereum. For NFT investors, the
-                    platform features a peer-to-peer marketplace, fractionalization tools, gifting
-                    capabilities, and direct listing management.
+                    seamless movement of assets between Solana and Ethereum blockchain respectively. 
+                    For NFT investors, the platform features a peer-to-peer marketplace, fractionalization 
+                    tools, gifting capabilities, and direct listing management.
                   </p>
                   <p>
                     A fully integrated staking engine lets investors stake both JPGC tokens and NFTs for
-                    structured returns — all secured through a proprietary smart contract middleware layer
+                    structured returns, all secured through a proprietary smart contract middleware layer
                     that protects every on-chain interaction with enterprise-grade validation and replay
                     protection.
                   </p>
                 </div>
                 <div className="digi-stack">
-                  {["NextJS", "NestJS", "React Native", "Solidity", "SPL", "Proxy Pattern",
-                    "Java", "PostgreSQL", "Redis", "WebSocket", "Stripe", "Crypto Gateway"].map((t, i) => (
+                  {["NextJS", "NestJS", "React Native", "Solidity", "ReactJS", "Tailwind CSS", "SPL", "Proxy Pattern", "Vite", "PostgreSQL", "Redis", "WebSocket", "Android Native", "iOS Native"].map((t, i) => (
                     <span
                       key={t}
                       className="digi-stack-tag"
@@ -459,6 +574,27 @@ const JpgcProject = () => {
             </div>
           </div>
         </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -500,6 +636,26 @@ const JpgcProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── USER ENGAGEMENT — Marquee ─────────────────────────────── */}
         <section className="rbt-section-gap digi-engage-section">
           <div className="container">
@@ -512,7 +668,7 @@ const JpgcProject = () => {
               </h2>
               <p className="digi-engage-desc">
                 From wallet connection to gold-backed NFT checkout, every screen was crafted
-                for clarity, confidence, and conversion — across web and mobile.
+                for clarity, confidence, and conversion across web and mobile.
               </p>
             </div>
           </div>
@@ -552,6 +708,29 @@ const JpgcProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── THE PROCESS ──────────────────────────────────────────── */}
         <section className="rbt-section-gap digi-process-section">
           <div className="container">
@@ -565,7 +744,7 @@ const JpgcProject = () => {
               <div className="col-lg-5" data-sal="slide-left" data-sal-duration="700">
                 <p className="digi-process-lead mt_md--20 mt_sm--20">
                   Six structured phases took JPGC App from tokenomics strategy to production-ready
-                  platform — no shortcuts on compliance, smart contract security, or user experience.
+                  platform; no shortcuts on compliance, smart contract security, or user experience.
                 </p>
               </div>
             </div>
@@ -590,6 +769,26 @@ const JpgcProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── ENHANCING EXPERIENCE ─────────────────────────────────── */}
         <section className="rbt-section-gap digi-craft-section">
           <div className="container">
@@ -605,12 +804,12 @@ const JpgcProject = () => {
                     JPGC App serves investors who are putting real wealth on-chain. SmartTech Solutions
                     built every interface to communicate one thing above all else: trust. Clean layouts,
                     zero visual noise, and precision-designed user journeys remove the complexity from
-                    blockchain investing — leaving only confidence.
+                    blockchain investing, leaving only confidence.
                   </p>
                   <p>
                     From token purchase flows to NFT fractionalization to staking dashboards, SmartTech
                     applied the same design precision you expect from the world&apos;s leading fintech
-                    platforms — engineered specifically for the JPGC investor&apos;s journey.
+                    platforms, engineered specifically for the JPGC investor&apos;s journey.
                   </p>
                 </div>
                 <ul className="digi-craft-list">
@@ -665,6 +864,29 @@ const JpgcProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── SOLUTION & RESULTS ───────────────────────────────────── */}
         <section className="rbt-section-gap digi-solution-section">
           <div className="container">
@@ -677,14 +899,14 @@ const JpgcProject = () => {
                 </h2>
                 <div className="digi-solution-body">
                   <p>
-                    SmartTech Solutions designed, engineered, and shipped the complete JPGC App platform —
-                    from dual-chain smart contracts and secure middleware to a world-class web and mobile
+                    SmartTech Solutions designed, engineered, and shipped the complete JPGC App platform.
+                    From dual-chain smart contracts and secure middleware to a world-class web and mobile
                     investment experience.
                   </p>
                   <p>
                     The result is a first-of-its-kind gold-backed Web3 platform that makes token trading,
                     NFT investing, staking, and cross-chain bridging feel like a native, premium financial
-                    product — not a blockchain experiment.
+                    product, not a blockchain experiment.
                   </p>
                 </div>
                 <div className="mt--36">
@@ -725,6 +947,22 @@ const JpgcProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── CTA ──────────────────────────────────────────────────── */}
         <section className="rbt-call-to-action-area rbt-section-gap bg-color-secondary-alt">
           <div className="container">
@@ -748,6 +986,24 @@ const JpgcProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── TESTIMONIALS ─────────────────────────────────────────── */}
         <section className="rbt-testimonial-area bg-color-white rbt-section-gap overflow-hidden">
           <div className="wrapper">
@@ -764,6 +1020,27 @@ const JpgcProject = () => {
           </div>
           <Testimonial_2 />
         </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -793,6 +1070,28 @@ const JpgcProject = () => {
             <BlogWidget />
           </div>
         </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -827,6 +1126,27 @@ const JpgcProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── NEWSLETTER ───────────────────────────────────────────── */}
         <section className="rbt-newsletter-area bg-color-white rbt-section-gapBottom pt--60">
           <div className="container">
@@ -839,7 +1159,31 @@ const JpgcProject = () => {
         </section>
 
 
+
+
+
       </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
       {/* ── LIGHTBOX ─────────────────────────────────────────────── */}
@@ -884,7 +1228,11 @@ const JpgcProject = () => {
 
 
     </div>
+
+
   );
+
+  
 };
 
 export default JpgcProject;

@@ -407,6 +407,12 @@
   color: #f97316;
 }
 
+.digi-hero-tag.tag-accent {
+  background:   rgba(245, 158, 11, 0.14);
+  border-color: rgba(245, 158, 11, 0.35);
+  color: #fcd34d;
+}
+
 .digi-hero-title {
   font-size: clamp(72px, 9vw, 130px);
   font-weight: 900;
@@ -568,16 +574,16 @@
   flex-wrap: wrap;
 }
 
-.digi-info-item {
+.digi-info-strip .digi-info-item {
   flex: 1;
   min-width: 170px;
   padding: 26px 32px;
   border-right: 1px solid var(--digi-line);
 }
 
-.digi-info-item:last-child { border-right: 0; }
+.digi-info-strip .digi-info-item:last-child { border-right: 0; }
 
-.digi-info-item label {
+.digi-info-strip .digi-info-item label {
   display: block;
   font-size: 11px;
   font-weight: 800;
@@ -587,7 +593,7 @@
   margin-bottom: 7px;
 }
 
-.digi-info-item span {
+.digi-info-strip .digi-info-item span {
   display: block;
   font-size: 15px;
   font-weight: 700;
@@ -963,6 +969,11 @@
   50%       { transform: translateY(12px); }
 }
 
+/* Thinner bezel, scoped to the Digistate "About the App" mockup only */
+.digi-app-phone--thin-border {
+  border-width: 4px;
+}
+
 .digi-app-phone-speaker {
   width: 34px;
   height: 4px;
@@ -1130,7 +1141,7 @@
   display: flex;
   width: max-content;
   gap: 20px;
-  padding: 8px 20px 18px;
+  padding: 24px 20px 24px;
   animation: digi-scroll-left 55s linear infinite;
 }
 
@@ -1143,7 +1154,7 @@
 
 .digi-web-card {
   flex: 0 0 auto;
-  width: min(540px, calc(100vw - 60px));
+  width: min(720px, calc(100vw - 40px));
   overflow: hidden;
   border: 1px solid rgba(23, 32, 51, 0.12);
   border-radius: 8px;
@@ -1162,9 +1173,8 @@
 .digi-web-card img {
   display: block;
   width: 100%;
-  height: 380px;
-  object-fit: cover;
-  object-position: top;
+  height: 460px;
+  object-fit: fill;
   cursor: pointer;
 }
 
@@ -1172,7 +1182,7 @@
   flex: 0 0 auto;
   width: 220px;
   overflow: hidden;
-  border: 9px solid #0b1220;
+  border: 4px solid #0b1220;
   border-radius: 28px;
   background: #0b1220;
   box-shadow: 0 22px 58px rgba(0, 0, 0, 0.24);
@@ -1496,6 +1506,8 @@
 }
 
 .digi-craft-mockup {
+  position: relative;
+  z-index: 1;
   overflow: hidden;
   border: 1px solid var(--digi-line);
   border-radius: 12px;
@@ -1513,6 +1525,7 @@
 
 .digi-float-card {
   position: absolute;
+  z-index: 2;
   padding: 18px 22px;
   border: 1px solid var(--digi-line);
   border-radius: 10px;
@@ -1742,8 +1755,8 @@
 /* ── Metrics strip ── */
 .digi-metrics-strip {
   background: var(--digi-dark-2);
-  border-top: 1px solid var(--digi-line);
-  border-bottom: 1px solid var(--digi-line);
+  border-top: 1px solid rgba(249, 115, 22, 0.14);
+  border-bottom: 1px solid rgba(249, 115, 22, 0.14);
   padding: 28px 0;
   overflow: hidden;
 }
@@ -1763,7 +1776,7 @@
   text-align: center;
   gap: 4px;
   padding: 14px 24px;
-  border-right: 1px solid var(--digi-line);
+  border-right: 1px solid rgba(249, 115, 22, 0.12);
   opacity: 0;
   transform: translateY(18px);
   animation: digi-info-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
@@ -1796,7 +1809,7 @@
 .digi-info-num {
   font-size: 26px;
   font-weight: 800;
-  color: var(--digi-ink);
+  color: #fdba74;
   line-height: 1.1;
   letter-spacing: -0.5px;
 }
@@ -1805,7 +1818,7 @@
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.6px;
-  color: var(--digi-muted);
+  color: rgba(255, 255, 255, 0.50);
 }
 
 @media (max-width: 767px) {

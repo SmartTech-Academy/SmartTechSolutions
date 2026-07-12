@@ -17,12 +17,29 @@ import "swiper/css/free-mode";
 import "swiper/css/thumbs";
 // ========= Plugins CSS END =========
 
+// ========= Global Effects CSS =========
+import "../public/css/global-effects.css";
+// ========= Global Effects CSS END =========
+
 import "../public/scss/styles.scss";
 
 // ========= Page-level CSS START =========
+import "../public/css/pages/Hero.css";
+import "../public/css/pages/HomepageSections.css";
+import "../public/css/pages/Services.css";
+import "../public/css/pages/BookAppointment.css";
+import "../public/css/pages/Contact.css";
+import "../public/css/pages/Blog.css";
+import "../public/css/pages/ProcessProcedures.css";
 import "../public/css/pages/DigistateProject.css";
 import "../public/css/pages/JpgcProject.css";
 import "../public/css/pages/FlatshareProject.css";
+import "../public/css/pages/DtsProject.css";
+import "../public/css/pages/GeoploxProject.css";
+import "../public/css/pages/XabiProject.css";
+import "../public/css/pages/LodapointProject.css";
+import "../public/css/pages/MfmEbookProject.css";
+import "../public/css/pages/JpgcAndNftProject.css";
 // ========= Page-level CSS END =========
 
 import Context from "@/context/Context";
@@ -31,6 +48,10 @@ import Store from "@/redux/store";
 
 import { ROUTE } from "@/route/app_routes";
 import { CONFIG } from "@/app_config.js";
+
+import GlobalImageLoadingEffect from "@/my_components/_Global/GlobalImageLoadingEffect";
+import RouteTransition from "@/my_components/_Global/RouteTransition";
+import RouteProgressBar from "@/my_components/_Global/RouteProgressBar";
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
@@ -43,7 +64,11 @@ export default function App({ Component, pageProps }) {
   return (
     <Provider store={Store}>
       <Context>
-        <Component {...pageProps} />
+        <RouteProgressBar />
+        <GlobalImageLoadingEffect />
+        <RouteTransition>
+          <Component {...pageProps} />
+        </RouteTransition>
       </Context>
     </Provider>
   );

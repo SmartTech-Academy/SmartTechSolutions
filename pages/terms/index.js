@@ -17,7 +17,11 @@ const index = () => {
 
     <>
 
-        <PageHead title="Terms of Service | SmartTech Solutions" />
+        <PageHead
+          title="Terms of Service | SmartTech Solutions"
+          description="Review the terms and conditions governing your use of the SmartTech Solutions website and the products and services we deliver to clients."
+          path="/terms"
+        />
 
         <Provider store={Store}>
             <Context>

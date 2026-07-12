@@ -24,7 +24,12 @@ const AIDevelopment = () => {
 
         <>
 
-            <PageHead title="Artificial Intelligence Development Services | SmartTech Solutions" />
+            <PageHead
+                title="AI Development Services | SmartTech Solutions"
+                description="SmartTech Solutions builds applied AI features, automation, and intelligent workflows that turn your data into actionable insights and a decisive market edge."
+                image="/app_images/services/service_images/smarttech_ai_development.png"
+                path="/services/ai-development"
+            />
 
             <Provider store={Store}>
                 <Context>

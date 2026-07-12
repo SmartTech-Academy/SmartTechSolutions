@@ -17,7 +17,11 @@ const index = () => {
 
     <>
 
-        <PageHead title="Projects | SmartTech Solutions" />
+        <PageHead
+          title="Our Projects | SmartTech Solutions"
+          description="Browse case studies from SmartTech Solutions — tokenized real estate, gold-backed crypto, ride-hailing apps, fintech platforms, and more, built for real clients."
+          path="/projects"
+        />
 
         <Provider store={Store}>
             <Context>

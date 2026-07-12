@@ -8,7 +8,7 @@ import { useAppContext } from "@/context/Context";
 
 
 
-const HeaderContainer = ({ headerSticky, headerType="", topBarToggle="on", topBarType="type 2" }) => {
+const HeaderContainer = ({ headerSticky, headerType="", topBarToggle="on", topBarType="type 2", blendWithHero=false }) => {
 
   const { isLightTheme, toggleTheme } = useAppContext();
 
@@ -45,6 +45,7 @@ const HeaderContainer = ({ headerSticky, headerType="", topBarToggle="on", topBa
           container="container-fluid"
           gapSpaceBetween="header-space-betwween"
           navigationEnd="rbt-navigation-start"
+          blendWithHero={blendWithHero}
         />
 
       </header>

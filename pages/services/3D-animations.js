@@ -24,7 +24,12 @@ const Three_Dimension_Animations = () => {
 
         <>
 
-            <PageHead title="3D Animation Services | SmartTech Solutions" />
+            <PageHead
+                title="3D Animation Services | SmartTech Solutions"
+                description="SmartTech Solutions produces cinematic 3D animation — game trailers, product renders, architectural walkthroughs, and medical explainers with striking, immersive visuals."
+                image="/app_images/services/service_images/smarttech_3d_animation.png"
+                path="/services/3D-animations"
+            />
 
             <Provider store={Store}>
                 <Context>

@@ -21,24 +21,29 @@ import { ROUTE } from "@/route/app_routes.js";
 
 
 
-const HeaderNavigations = ({ headerType, gapSpaceBetween, sticky, headerSticky, navigationEnd, container }) => {
+const HeaderNavigations = ({ headerType, gapSpaceBetween, sticky, headerSticky, navigationEnd, container, blendWithHero = false }) => {
 
 
-  const [isSticky, setIsSticky] = useState(false);
+  // The header is always pinned to the top (see .rbt-header-wrapper.rbt-sticky
+  // being applied unconditionally below). This scroll listener drives two
+  // things: (1) a lightweight "scrolled" polish class for extra shadow once
+  // the page has moved, and (2) on pages with `blendWithHero`, whether the
+  // header should still be blended (transparent, light text/logo) into the
+  // hero behind it or has flipped to its normal solid white state.
+  const [isScrolled, setIsScrolled] = useState(false);
   const { isLightTheme } = useAppContext();
+
+  const isBlended = blendWithHero && !isScrolled;
+  const useLightLogo = !isLightTheme || isBlended;
 
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrolled = window.scrollY;
-      if (scrolled > 0) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
+      setIsScrolled(window.scrollY > 12);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -52,7 +57,9 @@ const HeaderNavigations = ({ headerType, gapSpaceBetween, sticky, headerSticky, 
 
   return (
     <>
-      <div className={`rbt-header-wrapper ${gapSpaceBetween} ${sticky}  ${!headerType && isSticky ? `${headerSticky}` : ""}`}>
+      <div
+        className={`rbt-header-wrapper ${gapSpaceBetween} ${sticky} ${!headerType ? `${headerSticky}` : ""} ${isScrolled ? "rbt-header-wrapper--scrolled" : ""} ${blendWithHero ? "rbt-header-blend" : ""} ${isBlended ? "rbt-header-blend--active" : ""}`}
+      >
         <div className={`${container}`}>
           <div className={`mainbar-row ${navigationEnd} align-items-center`}>
 
@@ -61,9 +68,9 @@ const HeaderNavigations = ({ headerType, gapSpaceBetween, sticky, headerSticky, 
               <div className="header-info">
                 <div className="logo">
                   <Link href={ROUTE.home}>
-                    {isLightTheme ? (
+                    {useLightLogo ? (
                       <Image
-                        src={logo}
+                        src={logoLight}
                         width={152}
                         height={50}
                         priority={true}
@@ -71,7 +78,7 @@ const HeaderNavigations = ({ headerType, gapSpaceBetween, sticky, headerSticky, 
                       />
                     ) : (
                       <Image
-                        src={logoLight}
+                        src={logo}
                         width={152}
                         height={50}
                         priority={true}

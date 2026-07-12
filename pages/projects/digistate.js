@@ -24,7 +24,12 @@ const Digistate = () => {
 
         <>
 
-            <PageHead title="Digistate Project | SmartTech Solutions" />
+            <PageHead
+                title="Digistate: Tokenized Real Estate Platform | SmartTech Solutions"
+                description="How SmartTech Solutions built Digistate — a blockchain platform tokenizing real estate for fractional investment, with a live exchange and 5 role-based dashboards."
+                image="/app_images/projects/digistate/website/exchange page.png"
+                path="/projects/digistate"
+            />
 
             <Provider store={Store}>
                 <Context>

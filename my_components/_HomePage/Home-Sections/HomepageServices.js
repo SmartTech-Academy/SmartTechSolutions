@@ -22,18 +22,24 @@ const HomepageServices = ({ services }) => {
       <div className="rbt-course-grid-column">
         {/* <div className={`rbt-course-grid-column list-column-half ${ toggle ? "active-list-view" : "" }`}> */}
         
-        {services.map((data) => {
+        {services.map((data, index) => {
 
           const serviceRoute = ROUTE[data.routeKey] ?? "#";
 
           return (
-            <div className="course-grid-3" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800" key={data.id}>
-              <div className={`rbt-card variation-01 rbt-hover`}>
-                {/* <div className={`rbt-card variation-01 rbt-hover ${ toggle ? "card-list-2" : "" }`}> */}
-                <div className="rbt-card-img">
+            <div
+              className="course-grid-3 rbt-service-pro"
+              data-sal-delay={150 + index * 80}
+              data-sal="slide-up"
+              data-sal-duration="800"
+              key={data.id}
+            >
+              <div className="rbt-card variation-01 rbt-hover rbt-service-pro__inner">
+                <div className="rbt-card-img rbt-service-pro__img">
                   <Link href={serviceRoute}>
                     <Image src={data.image} width={600} height={400} alt={data.service} />
                   </Link>
+                  <span className="rbt-service-pro__glow" aria-hidden="true" />
                 </div>
                 <div className="rbt-card-body">
                   <h4 className="rbt-card-title">
@@ -45,9 +51,11 @@ const HomepageServices = ({ services }) => {
                     {data.description}
                   </p>
                   <div className="rbt-card-bottom">
-                    <Link className="transparent-button" href={serviceRoute}>
-                      Learn More
-                      <i className="feather-arrow-right"></i>
+                    <Link className="rbt-service-pro__cta" href={serviceRoute}>
+                      <span>Learn More</span>
+                      <span className="rbt-service-pro__cta-icon">
+                        <i className="feather-arrow-right"></i>
+                      </span>
                     </Link>
                   </div>
                 </div>

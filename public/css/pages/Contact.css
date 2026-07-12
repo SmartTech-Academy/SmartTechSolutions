@@ -1,0 +1,474 @@
+/* ════════════════════════════════════════════════════════════════════════
+   CONTACT PAGE  (my_components/_Contact/ContactUs.js + Contacts/*, Instagram)
+   ════════════════════════════════════════════════════════════════════════ */
+.contact-page {
+  overflow-x: hidden;
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   1. HERO — image background + overlay
+   ──────────────────────────────────────────────────────────────────────── */
+.contact-hero-premium {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding-top: 160px;
+  padding-bottom: 90px;
+}
+
+.contact-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.contact-hero-bg img {
+  object-fit: cover;
+}
+
+.contact-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(6, 9, 18, 0.94) 0%, rgba(9, 12, 24, 0.92) 45%, rgba(6, 9, 18, 0.98) 100%),
+    linear-gradient(120deg, rgba(47, 87, 239, 0.3) 0%, rgba(185, 102, 231, 0.18) 100%);
+}
+
+.contact-hero-premium .section-title .subtitle {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(6px);
+}
+
+.contact-hero-premium .section-title .title {
+  color: var(--color-white);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.contact-hero-premium .section-title .description {
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+}
+
+@media (max-width: 991px) {
+  .contact-hero-premium {
+    padding-top: 130px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-hero-premium {
+    padding-top: 110px;
+    padding-bottom: 50px;
+  }
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   2. CONTACT CARDS — premium glass cards with strong load-in
+   ──────────────────────────────────────────────────────────────────────── */
+.rbt-contact-card {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  padding: 44px 40px;
+  border-radius: var(--radius-big);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 24px 60px rgba(6, 10, 24, 0.35);
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.4s ease, border-color 0.4s ease, background 0.4s ease;
+}
+
+.rbt-contact-card:hover {
+  transform: translateY(-10px) scale(1.015);
+  border-color: rgba(255, 255, 255, 0.34);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 32px 80px rgba(6, 10, 24, 0.45);
+}
+
+.rbt-contact-card__glow {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--color-primary) 0%, transparent 70%);
+  opacity: 0.5;
+  filter: blur(10px);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.rbt-contact-card--email .rbt-contact-card__glow {
+  background: radial-gradient(circle, var(--color-secondary) 0%, transparent 70%);
+}
+
+.rbt-contact-card:hover .rbt-contact-card__glow {
+  transform: scale(1.25);
+  opacity: 0.75;
+}
+
+.rbt-contact-card__icon {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 74px;
+  height: 74px;
+  border-radius: 20px;
+  margin-bottom: 26px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  box-shadow: 0 14px 30px rgba(47, 87, 239, 0.35);
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.rbt-contact-card:hover .rbt-contact-card__icon {
+  transform: rotate(-6deg) scale(1.08);
+}
+
+.rbt-contact-card__icon i {
+  font-size: 32px;
+  color: var(--color-white);
+  stroke-width: 1.8;
+}
+
+.rbt-contact-card__body {
+  position: relative;
+  z-index: 1;
+}
+
+.rbt-contact-card__eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  opacity: 0.6;
+  margin-bottom: 8px;
+}
+
+.rbt-contact-card__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 14px;
+}
+
+.rbt-contact-card__line {
+  margin: 0 0 4px;
+}
+
+.rbt-contact-card__line a {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.rbt-contact-card__line a:hover {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .rbt-contact-card {
+    padding: 32px 26px;
+  }
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   3. "GET IN TOUCH" FORM SECTION — image right, restyled form left
+   ──────────────────────────────────────────────────────────────────────── */
+.rbt-contact-address-premium {
+  position: relative;
+}
+
+.thumbnail-premium {
+  position: relative;
+  border-radius: var(--radius-big);
+  overflow: hidden;
+}
+
+.thumbnail-premium img {
+  border-radius: var(--radius-big);
+  box-shadow: 0 30px 70px rgba(23, 32, 51, 0.18);
+}
+
+.thumbnail-glow {
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--primary-opacity) 0%, transparent 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.contact-form-premium {
+  position: relative;
+  padding: 56px;
+  border-radius: var(--radius-big);
+  background: var(--color-white);
+  box-shadow: 0 26px 70px rgba(23, 32, 51, 0.1);
+  border: 1px solid rgba(23, 32, 51, 0.06);
+}
+
+.rbt-contact-form-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: var(--primary-opacity);
+  color: var(--color-primary);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.contact-form-premium .title {
+  margin-bottom: 12px;
+}
+
+.rbt-contact-form-subtitle {
+  color: var(--color-body);
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.form-group-premium {
+  margin-bottom: 26px;
+}
+
+/* Higher specificity (two classes) than the legacy `.form-group label`
+   floating-label rule in public/scss/elements/_contact.scss, which would
+   otherwise absolutely-position and hide (z-index: -1) this label. */
+.form-group-premium label.form-label-premium {
+  position: static;
+  top: auto;
+  left: auto;
+  width: auto;
+  z-index: 1;
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-heading);
+  opacity: 0.65;
+  margin-bottom: 10px;
+  transition: none;
+}
+
+.form-group-premium .input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: var(--radius-small);
+  background: var(--color-primary-light);
+  border: 1.5px solid transparent;
+  transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group-premium .input-icon {
+  flex: 0 0 auto;
+  margin-left: 18px;
+  font-size: 18px;
+  color: var(--color-body);
+  transition: color 0.3s ease;
+}
+
+.form-group-premium .input-wrap-textarea {
+  align-items: flex-start;
+}
+
+.form-group-premium .input-icon-textarea {
+  margin-top: 18px;
+}
+
+.form-group-premium input,
+.form-group-premium textarea {
+  flex: 1 1 auto;
+  width: 100%;
+  border: none !important;
+  background: transparent !important;
+  padding: 16px 18px !important;
+  font-size: 16px;
+  color: var(--color-heading);
+  border-radius: var(--radius-small) !important;
+}
+
+.form-group-premium textarea {
+  min-height: 140px !important;
+  resize: none;
+  padding-top: 16px !important;
+}
+
+.form-group-premium input::placeholder,
+.form-group-premium textarea::placeholder {
+  color: var(--color-body);
+  opacity: 0.65;
+}
+
+.form-group-premium input:focus,
+.form-group-premium textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.form-group-premium .input-wrap:focus-within {
+  border-color: var(--color-primary);
+  background: var(--color-white);
+  box-shadow: 0 8px 26px rgba(47, 87, 239, 0.14);
+}
+
+.form-group-premium .input-wrap:focus-within .input-icon {
+  color: var(--color-primary);
+}
+
+.form-group-premium .focus-border {
+  display: none;
+}
+
+.contact-form-premium .form-submit-group {
+  margin-top: 8px;
+}
+
+.contact-form-premium .rbt-btn {
+  border-radius: var(--radius-small);
+  padding: 18px 32px;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 991px) {
+  .contact-form-premium {
+    padding: 38px 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-form-premium {
+    padding: 30px 22px;
+  }
+
+  .thumbnail-glow {
+    display: none;
+  }
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   4. INDUSTRY GRID (replaces Instagram grid) — 6 industry tiles
+   ──────────────────────────────────────────────────────────────────────── */
+.industry-tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-big);
+  aspect-ratio: 1 / 1;
+  cursor: default;
+  box-shadow: 0 18px 40px rgba(23, 32, 51, 0.14);
+}
+
+.industry-tile__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.industry-tile__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(9, 14, 28, 0.15) 0%, rgba(9, 14, 28, 0.78) 100%);
+  transition: background 0.4s ease;
+}
+
+.industry-tile__content {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transform: translateY(6px);
+  transition: transform 0.4s ease;
+}
+
+.industry-tile__label {
+  color: var(--color-white);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.industry-tile__desc {
+  max-height: 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 13px;
+  line-height: 1.5;
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+.industry-tile:hover .industry-tile__img {
+  transform: scale(1.12);
+}
+
+.industry-tile:hover .industry-tile__overlay {
+  background: linear-gradient(180deg, rgba(47, 87, 239, 0.25) 0%, rgba(9, 14, 28, 0.88) 100%);
+}
+
+.industry-tile:hover .industry-tile__content {
+  transform: translateY(0);
+}
+
+.industry-tile:hover .industry-tile__desc {
+  max-height: 70px;
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .industry-tile__content {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    transform: translateY(0);
+  }
+
+  .industry-tile__label {
+    font-size: 16px;
+  }
+
+  /* Hover can't be relied on for touch input — show the description
+     by default so the "how we serve this industry" copy is always reachable. */
+  .industry-tile__desc {
+    max-height: 60px;
+    opacity: 1;
+  }
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   5. GOOGLE MAP
+   ──────────────────────────────────────────────────────────────────────── */
+.rbt-google-map iframe {
+  display: block;
+}

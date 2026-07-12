@@ -21,6 +21,10 @@ const appImg = (name) => `/app_images/projects/digistate/mobile app/${name}.png`
 
 
 
+
+
+
+
 const webScreens = [
   { file: "homepage",                  label: "Marketing Homepage" },
   { file: "exchange page",             label: "Exchange Marketplace" },
@@ -31,6 +35,11 @@ const webScreens = [
   { file: "transactions page",         label: "Transaction Monitoring" },
   { file: "Digistate admin dashboard", label: "Admin Overview" },
 ];
+
+
+
+
+
 
 
 
@@ -49,18 +58,22 @@ const mobileScreens = [
 
 
 
+
+
+
+
+
+
+
+
 const challenges = [
-  {
-    title: "Regulatory Compliance",
-    body: "Navigating Nigeria's SEC framework for digital asset trading required extensive legal mapping and a compliance architecture that could tokenize and list real estate assets within regulatory boundaries.",
-  },
   {
     title: "Blockchain Architecture Complexity",
     body: "Implementing ERC-721 NFTs with proxy-upgradeable smart contract patterns, DAO governance, and dynamic on-chain pricing demanded advanced Solidity engineering and rigorous audit planning.",
   },
   {
     title: "Five-Role Access System",
-    body: "Engineering five distinct dashboards — Homeowner, Investor, Broker, Verification Team, and Exchange Admin — each with isolated permissions, approval workflows, and unique data visibility rules.",
+    body: "Engineering five distinct dashboards, each with isolated permissions, approval workflows, and unique data visibility rules.",
   },
   {
     title: "Real-Time Exchange Engine",
@@ -68,13 +81,19 @@ const challenges = [
   },
   {
     title: "Multi-Level Verification Pipelines",
-    body: "Designing a four-stage property approval process — legal, valuation, operational, and exchange reviews — while keeping the experience clear and trustworthy for all user types involved.",
+    body: "Designing a four-stage property approval process, legal, valuation, operational, and exchange reviews, while keeping the experience clear and trustworthy for all user types involved.",
   },
   {
-    title: "eNaira CBDC Integration",
-    body: "Integrating Nigeria's Central Bank Digital Currency as the platform's in-wallet currency required custom token minting, real-time fiat conversion flows, and compliance with CBN's digital currency guidelines.",
+    title: "eNaira",
+    body: "Integrating Digital Currency as the platform's in-wallet currency required custom token minting, real-time fiat conversion flows.",
   },
 ];
+
+
+
+
+
+
 
 
 
@@ -92,7 +111,7 @@ const processSteps = [
   {
     num: "03",
     title: "UI/UX Design & Prototyping",
-    body: "All five dashboards were designed for web and mobile — clarity for non-technical homeowners, familiarity for financial investors. Every flow validated in high-fidelity prototype before code.",
+    body: "All five dashboards were designed for web and mobile, clarity for non-technical homeowners, familiarity for financial investors. Every flow validated in high-fidelity prototype before code.",
   },
   {
     num: "04",
@@ -107,9 +126,15 @@ const processSteps = [
   {
     num: "06",
     title: "QA, Testing & Launch",
-    body: "End-to-end testing of all approval workflows, smart contract interactions, exchange order states, wallet flows, and broker permissions — followed by staged access rollout and live monitoring.",
+    body: "End-to-end testing of all approval workflows, smart contract interactions, exchange order states, wallet flows, and broker permissions, followed by staged access rollout and live monitoring.",
   },
 ];
+
+
+
+
+
+
 
 
 
@@ -117,24 +142,29 @@ const craftFeatures = [
   {
     icon: "feather-eye",
     title: "Clarity First Design",
-    body: "Complex flows — IPO bidding, fractional ownership, escrow — distilled into step-by-step guided actions any user can follow without a blockchain background.",
+    body: "Complex flows, IPO bidding, fractional ownership, escrow, distilled into step-by-step guided actions any user can follow without a blockchain background.",
   },
   {
     icon: "feather-shield",
     title: "Trust-Driven Visual Language",
-    body: "Every UI decision — colour, spacing, hierarchy — was made to communicate reliability and reduce anxiety at high-stakes investment moments.",
+    body: "Every UI decision, colour, spacing, hierarchy, was made to communicate reliability and reduce anxiety at high-stakes investment moments.",
   },
   {
     icon: "feather-smartphone",
     title: "Cross-Platform Consistency",
-    body: "Web and mobile share the same design system. Investors get an identical experience on browser or phone — no learning curve between platforms.",
+    body: "Web and mobile share the same design system. Investors get an identical experience on browser or phone, no learning curve between platforms.",
   },
   {
     icon: "feather-zap",
     title: "Optimised for Speed & Flow",
-    body: "User journeys engineered to reduce clicks, eliminate dead-ends, and surface the right information at the right moment — maximising conversion and confidence.",
+    body: "User journeys engineered to reduce clicks, eliminate dead-ends, and surface the right information at the right moment, hereby maximising conversion and confidence.",
   },
 ];
+
+
+
+
+
 
 
 
@@ -147,7 +177,7 @@ const results = [
   {
     icon: "feather-grid",
     title: "Five Production-Ready Dashboards",
-    body: "Homeowner, Investor, Broker, Verification Team, and Exchange Admin — each built for the specific job with isolated workflows.",
+    body: "From homeowner dashboard to App Administrative dashboard, each built for the specific job with isolated workflows.",
   },
   {
     icon: "feather-repeat",
@@ -157,12 +187,12 @@ const results = [
   {
     icon: "feather-credit-card",
     title: "eNaira Wallet Funding System",
-    body: "First-of-its-kind eNaira integration enabling users to fund investment wallets with Nigeria's Central Bank Digital Currency.",
+    body: "Custom-made eNaira Token integration. A tokem pegged to the nigerian naira, hereby enabling users to fund their investment wallets with the platforms token in exchange for their FIAT.",
   },
   {
     icon: "feather-trending-up",
     title: "Dynamic Pricing Engine",
-    body: "Asset prices update in real time based on exchange supply and demand — genuine market behaviour, not fixed valuations.",
+    body: "Asset prices update in real time based on exchange supply and demand, genuine market behaviour, not fixed valuations.",
   },
   {
     icon: "feather-shield",
@@ -234,11 +264,28 @@ const DigistateProject = () => {
 
 
 
+
+
+
+
+
   return (
 
 
     <div className="digi-case-page">
       <main className="rbt-main-wrapper">
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         {/* ── HERO ─────────────────────────────────────────────────── */}
@@ -261,6 +308,7 @@ const DigistateProject = () => {
                   {/* Category tags */}
                   <div className="digi-hero-tags" data-sal="fade" data-sal-duration="600" data-sal-delay="60">
                     <span className="digi-hero-tag tag-primary">Case Study</span>
+                    <span className="digi-hero-tag tag-accent">Blockchain · Real Estate</span>
                   </div>
 
                   <h1 className="digi-hero-title" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
@@ -269,7 +317,7 @@ const DigistateProject = () => {
 
                   <p className="digi-hero-lead" data-sal="slide-up" data-sal-duration="700" data-sal-delay="160">
                     Real estate, tokenized and tradable. Digistate converts verified properties into
-                    exchange-ready blockchain assets — giving homeowners liquidity and investors
+                    exchange-ready blockchain assets, giving home-owners liquidity and investors
                     fractional ownership in the Nigerian property market.
                   </p>
 
@@ -281,9 +329,9 @@ const DigistateProject = () => {
                         <span className="btn-icon"><i className="feather-arrow-right"></i></span>
                       </span>
                     </Link>
-                    <Link className="rbt-btn btn-border hover-icon-reverse" href={ROUTE.project}>
+                    <Link className="rbt-btn btn-border hover-icon-reverse" href={ROUTE.service}>
                       <span className="icon-reverse-wrapper">
-                        <span className="btn-text">View More Work</span>
+                        <span className="btn-text">Our Services</span>
                         <span className="btn-icon"><i className="feather-arrow-right"></i></span>
                         <span className="btn-icon"><i className="feather-arrow-right"></i></span>
                       </span>
@@ -295,8 +343,8 @@ const DigistateProject = () => {
                     {[
                       { val: "5",  suffix: "", label: "Dashboards" },
                       { val: "3",  suffix: "",  label: "Platforms"  },
-                      { val: "10", suffix: "+", label: "Developers & Designers"  },
-                      { val: "5",  suffix: "+",  label: "QA Engineers" },
+                      { val: "12", suffix: "+", label: "Developers & Designers"  },
+                      { val: "7",  suffix: "+",  label: "QA Engineers" },
                     ].map(({ val, suffix, label }) => (
                       <div className="digi-glass-stat" key={label}>
                         <strong>{val}<em>{suffix}</em></strong>
@@ -340,16 +388,27 @@ const DigistateProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
         {/* ── METRICS STRIP ────────────────────────────────────────── */}
         <div className="digi-metrics-strip">
           <div className="container">
             <div className="digi-info-row">
               {[
-                { icon: "feather-layout",       num: "5",   label: "Dashboards"          },
-                { icon: "feather-monitor",       num: "3",   label: "Platforms"           },
+                { icon: "feather-layout",       num: "Trading",   label: "Exchange"          },
+                { icon: "feather-monitor",       num: "Platforms",   label: "iOS · Android · Web"           },
                 { icon: "feather-link",          num: "ERC-721", label: "NFT Standard"    },
-                { icon: "feather-users",         num: "18+", label: "Engineers"           },
-                { icon: "feather-credit-card",   num: "eNaira", label: "CBDC Integrated" },
+                { icon: "feather-users",         num: "DAO", label: "System"           },
+                { icon: "feather-credit-card",   num: "eNaira", label: "Token" },
               ].map(({ icon, num, label }) => (
                 <div className="digi-info-item" key={label}>
                   <i className={`digi-info-icon ${icon}`}></i>
@@ -360,6 +419,25 @@ const DigistateProject = () => {
             </div>
           </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         {/* ── ABOUT THE CLIENT ─────────────────────────────────────── */}
@@ -374,13 +452,13 @@ const DigistateProject = () => {
                   <p>
                     Ribiax Engineering Limited is a technology-driven engineering and innovation
                     company headquartered in Nigeria. The firm specialises in building transformative
-                    digital platforms that address deep inefficiencies in high-value sectors — with a
+                    digital platforms that address deep inefficiencies in high-value sectors, with a
                     particular focus on real estate, financial technology, and blockchain-powered asset
                     management.
                   </p>
                   <p>
                     With a mission to unlock the economic value trapped in Nigeria&apos;s property market,
-                    Ribiax commissioned Digistate as its flagship product — a regulated, multi-role
+                    Ribiax commissioned Digistate as its flagship product, a multi-role
                     exchange where tokenized property assets can be discovered, bid on, fractionalized,
                     and actively traded by verified investors and brokers.
                   </p>
@@ -407,7 +485,7 @@ const DigistateProject = () => {
                     { icon: "feather-box",         label: "Product",      value: "Real Estate Tokenization & Trading Exchange" },
                     { icon: "feather-monitor",     label: "Platforms",    value: "Web Application, Mobile App (iOS & Android), Admin Dashboards" },
                     { icon: "feather-link",        label: "Blockchain",   value: "ERC-721 NFTs, eNaira Token, DAO Governance, Proxy Upgradeable" },
-                    { icon: "feather-layout",      label: "Dashboards",   value: "Homeowner · Investor · Broker · Verification · Exchange Admin" },
+                    { icon: "feather-layout",      label: "Dashboards",   value: "5 Dashboards for Different User Classes" },
                     { icon: "feather-users",       label: "Team",         value: "10 Developers, 8 QA Engineers, 3 Blockchain Specialists" },
                     { icon: "feather-award",       label: "Delivered By", value: "SmartTech Solutions", highlight: true },
                   ].map(({ icon, label, value, highlight }, i) => (
@@ -454,20 +532,19 @@ const DigistateProject = () => {
                 <div className="digi-app-body">
                   <p>
                     Digistate is a blockchain-powered real estate tokenization platform that converts
-                    verified properties into tradable digital assets — making an inherently illiquid
+                    verified properties into tradable digital assets, making an inherently illiquid
                     market liquid. Property owners onboard assets through a structured multi-stage
                     verification and IPO pipeline. Once listed, investors trade fractional positions
                     on a fully functioning secondary market exchange.
                   </p>
                   <p>
-                    The platform operates across five distinct dashboards serving Homeowners, Investors,
-                    Brokers, Verification Teams, and Exchange Administrators. A custom eNaira wallet
+                    The platform operates across five distinct dashboards and a custom eNaira wallet
                     system bridges fiat currency to blockchain-backed investments, while ERC-721 NFTs
                     ensure each property has a unique, tamper-proof digital identity on-chain.
                   </p>
                   <p>
                     Dynamic pricing driven by supply, demand, and bidding activity means the exchange
-                    behaves like a genuine securities market — with DAO governance providing transparency
+                    behaves like a genuine securities market, with DAO governance providing transparency
                     and community-led decision-making on top of every listed asset.
                   </p>
                 </div>
@@ -501,7 +578,7 @@ const DigistateProject = () => {
                   </div>
 
                   {/* Mobile phone mockup overlapping */}
-                  <div className="digi-app-phone">
+                  <div className="digi-app-phone digi-app-phone--thin-border">
                     <div className="digi-app-phone-speaker"></div>
                     <img src={appImg("invest screen")} alt="Digistate mobile invest screen" loading="lazy" />
                     <div className="digi-app-phone-home"></div>
@@ -524,6 +601,9 @@ const DigistateProject = () => {
 
 
 
+
+
+
         {/* ── THE CHALLENGE ────────────────────────────────────────── */}
         <section className="rbt-section-gap digi-challenge-section">
           <div className="container">
@@ -531,11 +611,11 @@ const DigistateProject = () => {
               <div className="col-lg-8" data-sal="slide-up" data-sal-duration="700">
                 <span className="digi-kicker">The Challenge</span>
                 <h2 className="digi-challenge-heading">
-                  Building a compliant, multi-role Web3 exchange from the ground up.
+                  Building a compliant, multi-role Exchange from the ground up.
                 </h2>
                 <p className="digi-challenge-lead">
-                  Digistate combined real estate regulation, blockchain engineering, exchange mechanics,
-                  five-role access design, and a central bank digital currency into one coherent product.
+                  Digistate combined real estate system, blockchain engineering, exchange mechanics,
+                  five-role access design, and a digital currency into one coherent product.
                   These were the six hardest problems we solved.
                 </p>
               </div>
@@ -569,6 +649,12 @@ const DigistateProject = () => {
 
 
 
+
+
+
+
+
+
         {/* ── USER ENGAGEMENT — Marquee ─────────────────────────────── */}
         <section className="rbt-section-gap digi-engage-section">
           <div className="container">
@@ -581,7 +667,7 @@ const DigistateProject = () => {
               </h2>
               <p className="digi-engage-desc">
                 From homeowner onboarding to live exchange trading, every screen was crafted
-                for clarity, speed, and trust — across web and mobile.
+                for clarity, speed, and trust across web and mobile.
               </p>
             </div>
           </div>
@@ -628,6 +714,10 @@ const DigistateProject = () => {
 
 
 
+
+
+
+
         {/* ── THE PROCESS ──────────────────────────────────────────── */}
         <section className="rbt-section-gap digi-process-section">
           <div className="container">
@@ -635,13 +725,12 @@ const DigistateProject = () => {
               <div className="col-lg-7" data-sal="slide-right" data-sal-duration="700">
                 <span className="digi-kicker">The Process</span>
                 <h2 className="digi-process-heading">
-                  How we turned a complex idea into a live product.
+                  How we turned a complex idea into a ready product.
                 </h2>
               </div>
               <div className="col-lg-5" data-sal="slide-left" data-sal-duration="700">
                 <p className="digi-process-lead mt_md--20 mt_sm--20">
-                  Six structured phases took Digistate from concept to production-ready exchange —
-                  each stage building on the last with zero shortcuts in compliance, design, or engineering.
+                  Six structured phases took Digistate from concept to production-ready product, each stage building on the last with zero shortcuts in design or engineering.
                 </p>
               </div>
             </div>
@@ -682,18 +771,18 @@ const DigistateProject = () => {
               <div className="col-lg-6" data-sal="slide-right" data-sal-duration="700">
                 <span className="digi-kicker">Enhancing Experience</span>
                 <h2 className="digi-craft-heading">
-                  World-class UI craft for a world-first product.
+                  World-class UI craft for a fantastic product.
                 </h2>
                 <div className="digi-craft-body">
                   <p>
                     Digistate operates in a domain where trust is everything. Every pixel,
                     interaction, and information flow was designed to make complex financial
-                    and blockchain operations feel simple, reliable, and professional — removing
+                    and blockchain operations feel simple, reliable, and professional, removing
                     the intimidation that typically keeps everyday users away from Web3.
                   </p>
                   <p>
                     SmartTech Solutions applied the same level of UI precision to Digistate that
-                    you expect from the world&apos;s leading fintech and crypto trading platforms —
+                    you expect from the world&apos;s leading fintech and crypto trading platforms,
                     calibrated for the Nigerian market and its users&apos; real behaviour.
                   </p>
                 </div>
@@ -770,7 +859,7 @@ const DigistateProject = () => {
                 <div className="digi-solution-body">
                   <p>
                     SmartTech Solutions architected, designed, and shipped the complete Digistate
-                    platform — from the blockchain layer and exchange engine to the five dashboard
+                    platform, from the blockchain layer and exchange engine to the five dashboard
                     interfaces and cross-platform mobile application.
                   </p>
                   <p>
@@ -840,7 +929,7 @@ const DigistateProject = () => {
                     <h2 className="title">Let&apos;s bring your<br /> vision to life.</h2>
                     <div className="rbt-button-group justify-content-center">
                       <Link className="rbt-btn btn-gradient" href={ROUTE.appointment}>Hire Us</Link>
-                      <Link className="rbt-btn btn-border" href={ROUTE.project}>Explore our Projects</Link>
+                      <Link className="rbt-btn btn-border" href={ROUTE.service}>Explore our Services</Link>
                     </div>
                   </div>
                 </div>

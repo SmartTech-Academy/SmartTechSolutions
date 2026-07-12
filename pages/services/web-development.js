@@ -24,7 +24,12 @@ const WebDevelopment = () => {
 
         <>
 
-            <PageHead title="Web Application Development Services | SmartTech Solutions" />
+            <PageHead
+                title="Web Application Development Services | SmartTech Solutions"
+                description="SmartTech Solutions builds reliable, user-friendly web applications, portals, and dashboards engineered for flawless performance and a seamless experience on every platform."
+                image="/app_images/services/service_images/smarttech_web_development.png"
+                path="/services/web-development"
+            />
 
             <Provider store={Store}>
                 <Context>

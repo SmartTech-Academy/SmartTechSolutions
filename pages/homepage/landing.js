@@ -13,12 +13,16 @@ import Footer from "@/my_components/Footer/Footer";
 const Home = () => {
   return (
     <>
-      <PageHead title="Home | SmartTech Solutions" />
+      <PageHead
+        title="SmartTech Solutions | Web, Mobile, AI & Blockchain Development Studio"
+        description="SmartTech Solutions builds web platforms, mobile apps, AI systems, blockchain products, and games for ambitious teams — 200+ projects delivered, 410+ satisfied clients."
+        path="/"
+      />
 
       <Provider store={Store}>
         <Context>
           <MobileMenu />
-          <HeaderContainer headerSticky="rbt-sticky" headerType="" topBarToggle="on" />
+          <HeaderContainer headerSticky="rbt-sticky" headerType="" topBarToggle="on" blendWithHero />
           <Cart />
           <HomePageContents />
 

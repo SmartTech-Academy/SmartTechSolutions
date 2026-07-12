@@ -23,12 +23,16 @@ const index = () => {
 
     <>
 
-        <PageHead title="Our Process | SmartTech Solutions" />
+        <PageHead
+          title="Our Process | SmartTech Solutions"
+          description="From discovery to launch support, see how SmartTech Solutions plans, designs, builds, and ships web, mobile, AI, and blockchain products with precision at every phase."
+          path="/our-process"
+        />
 
         <Provider store={Store}>
             <Context>
                 <MobileMenu />
-                <HeaderContainer headerSticky="rbt-sticky" headerType="" />
+                <HeaderContainer headerSticky="rbt-sticky" headerType="" blendWithHero />
                 <Cart />
 
                 <SmartTechProcess />

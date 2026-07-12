@@ -1,0 +1,354 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   DtsProject — Deep Violet / Faith EdTech Theme
+   All rules are scoped to .dts-theme so they never bleed into other
+   project pages. Import via pages/_app.js.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── CSS variable overrides ───────────────────────────────────────────── */
+.dts-theme {
+  --digi-orange: #7c3aed;
+  --digi-green:  #6d28d9;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   HERO
+   ════════════════════════════════════════════════════════════════════════ */
+
+.dts-theme .digi-hero {
+  background:
+    radial-gradient(ellipse at 72% 14%, rgba(124, 58, 237, 0.38) 0%, transparent 42%),
+    radial-gradient(ellipse at 18% 82%, rgba(109, 40, 217, 0.22) 0%, transparent 32%),
+    radial-gradient(ellipse at 45% 55%, rgba(91, 33, 182, 0.14) 0%, transparent 50%),
+    linear-gradient(155deg, #0c0618 0%, #180a30 55%, #0a0414 100%);
+}
+
+/* Aurora blobs — violet + indigo-purple */
+.dts-theme .digi-aurora span:nth-child(1) {
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.52) 0%, transparent 70%);
+  animation-duration: 20s;
+}
+.dts-theme .digi-aurora span:nth-child(2) {
+  background: radial-gradient(circle, rgba(109, 40, 217, 0.38) 0%, transparent 70%);
+  animation-duration: 26s;
+  animation-delay: -9s;
+}
+.dts-theme .digi-aurora span:nth-child(3) {
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.28) 0%, transparent 70%);
+  animation-duration: 30s;
+  animation-delay: -16s;
+}
+
+/* "Training School" shrunk so full title fits on one line */
+.dts-theme .dts-title-small {
+  font-size: 0.65em;
+  vertical-align: baseline;
+}
+
+/* Gradient text — violet shimmer (background-size must be explicit to keep digi-shimmer working) */
+.dts-theme .digi-hero-title .digi-gradient {
+  background: linear-gradient(90deg,
+    #5b21b6 0%,
+    #7c3aed 25%,
+    #ddd6fe 50%,
+    #7c3aed 75%,
+    #5b21b6 100%
+  );
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero tags */
+.dts-theme .digi-hero-tag.tag-primary {
+  background:   rgba(124, 58, 237, 0.18);
+  border-color: rgba(124, 58, 237, 0.45);
+  color: #a78bfa;
+}
+.dts-theme .digi-hero-tag.tag-accent {
+  background:   rgba(109, 40, 217, 0.14);
+  border-color: rgba(109, 40, 217, 0.35);
+  color: #c4b5fd;
+}
+
+/* Scroll cue */
+.dts-theme .digi-scroll-mouse {
+  border-color: rgba(124, 58, 237, 0.5);
+}
+.dts-theme .digi-scroll-mouse::after {
+  background: #a78bfa;
+}
+
+/* HV glow */
+.dts-theme .digi-hv-glow {
+  background: radial-gradient(ellipse at center, rgba(124, 58, 237, 0.32) 0%, transparent 70%);
+}
+
+/* Browser chrome — first dot violet */
+.dts-theme .digi-hv-db-chrome span:nth-child(1) { background: #7c3aed; }
+
+/* Glass stats */
+.dts-theme .digi-glass-stat strong { color: #a78bfa; }
+.dts-theme .digi-glass-stat strong em { color: #c4b5fd; }
+
+/* ════════════════════════════════════════════════════════════════════════
+   KICKER & HEADING SHIMMER
+   ════════════════════════════════════════════════════════════════════════ */
+
+.dts-theme .digi-kicker::before {
+  background: #7c3aed;
+}
+
+.dts-theme .digi-client-heading::before,
+.dts-theme .digi-app-heading::before,
+.dts-theme .digi-process-heading::before,
+.dts-theme .digi-craft-heading::before,
+.dts-theme .digi-engage-heading::before {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(124, 58, 237, 0.38) 50%,
+    transparent 100%
+  );
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   FACTS TABLE
+   ════════════════════════════════════════════════════════════════════════ */
+
+.dts-theme .digi-facts-header {
+  background: linear-gradient(135deg, #2e1065 0%, #4c1d95 50%, #3b0764 100%);
+}
+.dts-theme .digi-fact-row:hover { background: #f5f3ff; }
+.dts-theme .digi-fact-row--highlight span { color: #7c3aed; }
+.dts-theme .digi-fact-row--highlight { background: linear-gradient(90deg, #ede9fe 0%, #ffffff 100%); }
+
+/* Client badge icon */
+.dts-theme .digi-cb-icon {
+  background: rgba(124, 58, 237, 0.12);
+  color: #7c3aed;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   ABOUT THE APP
+   ════════════════════════════════════════════════════════════════════════ */
+
+.dts-theme .digi-app-visual-glow {
+  background: radial-gradient(ellipse at 80% 50%, rgba(124, 58, 237, 0.22) 0%, transparent 65%);
+}
+
+.dts-theme .digi-app-browser-chrome span:nth-child(1) { background: #7c3aed; }
+
+/* Browser chrome standard dots */
+.dts-theme .digi-browser-chrome span:nth-child(1) { background: #fc5f5a; }
+.dts-theme .digi-browser-chrome span:nth-child(2) { background: #fdbc40; }
+.dts-theme .digi-browser-chrome span:nth-child(3) { background: #35cd4b; }
+
+/* Stack tags */
+.dts-theme .digi-stack-tag {
+  background:   rgba(124, 58, 237, 0.08);
+  border-color: rgba(124, 58, 237, 0.28);
+  color: #7c3aed;
+}
+.dts-theme .digi-stack-tag:hover {
+  background:   rgba(124, 58, 237, 0.16);
+  border-color: rgba(124, 58, 237, 0.50);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   CHALLENGE
+   ════════════════════════════════════════════════════════════════════════ */
+
+.dts-theme .digi-challenge-section {
+  background:
+    radial-gradient(ellipse at 80% 12%, rgba(124, 58, 237, 0.22) 0%, transparent 40%),
+    radial-gradient(ellipse at 10% 88%, rgba(109, 40, 217, 0.15) 0%, transparent 36%),
+    linear-gradient(160deg, #0c0618 0%, #180a30 60%, #0a0414 100%);
+}
+
+.dts-theme .digi-challenge-num {
+  background: rgba(124, 58, 237, 0.18);
+  color: #a78bfa;
+}
+.dts-theme .digi-challenge-card:hover {
+  border-color: rgba(124, 58, 237, 0.50);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(124, 58, 237, 0.18);
+}
+.dts-theme .digi-challenge-card:hover h4         { color: #c4b5fd; }
+.dts-theme .digi-challenge-card:hover .digi-challenge-num {
+  background: rgba(124, 58, 237, 0.28);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   MARQUEE (USER ENGAGEMENT)
+   ════════════════════════════════════════════════════════════════════════ */
+
+.dts-theme .digi-engage-section {
+  background: linear-gradient(180deg, #f5f3ff 0%, #ede9fe 55%, #f3f0ff 100%);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   PROCESS
+   ════════════════════════════════════════════════════════════════════════ */
+
+.dts-theme .digi-process-section {
+  background:
+    radial-gradient(ellipse at 88% 10%, rgba(167, 139, 250, 0.18) 0%, transparent 42%),
+    radial-gradient(ellipse at 8%  90%, rgba(124, 58, 237, 0.14) 0%, transparent 38%),
+    radial-gradient(ellipse at 50% 50%, rgba(91, 33, 182, 0.12) 0%, transparent 65%),
+    linear-gradient(150deg, #1a0f2e 0%, #2d1045 45%, #180830 100%);
+}
+
+/* Section text — white on dark */
+.dts-theme .digi-process-section .digi-kicker { color: rgba(255, 255, 255, 0.65); }
+.dts-theme .digi-process-heading { color: #ffffff; }
+.dts-theme .digi-process-lead    { color: rgba(255, 255, 255, 0.62); }
+
+/* Cards */
+.dts-theme .digi-process-card {
+  background:   rgba(255, 255, 255, 0.06);
+  border-color: rgba(124, 58, 237, 0.28);
+}
+.dts-theme .digi-process-card h4 { color: #ffffff; }
+.dts-theme .digi-process-card p  { color: rgba(255, 255, 255, 0.60); }
+
+/* Violet-to-lavender top-bar accent */
+.dts-theme .digi-process-card::before {
+  background: linear-gradient(90deg, #7c3aed, #c4b5fd);
+}
+
+/* Process number ghost */
+.dts-theme .digi-process-num {
+  color: rgba(124, 58, 237, 0.24);
+}
+
+/* Card hover */
+.dts-theme .digi-process-card:hover {
+  background:   rgba(124, 58, 237, 0.12);
+  border-color: rgba(124, 58, 237, 0.52);
+  box-shadow:   0 28px 68px rgba(18, 6, 44, 0.60);
+}
+.dts-theme .digi-process-card:hover .digi-process-num {
+  color:       rgba(124, 58, 237, 0.40);
+  text-shadow: 0 0 40px rgba(124, 58, 237, 0.50);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   ENHANCING EXPERIENCE (CRAFT)
+   ════════════════════════════════════════════════════════════════════════ */
+
+.dts-theme .digi-craft-section {
+  background:
+    radial-gradient(ellipse at 70% 30%, rgba(124, 58, 237, 0.07) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 75%, rgba(109, 40, 217, 0.05) 0%, transparent 45%),
+    linear-gradient(150deg, #f5f3ff 0%, #ede9fe 45%, #f3f0ff 100%);
+}
+
+.dts-theme .digi-li-icon {
+  background: rgba(124, 58, 237, 0.10);
+  color: #7c3aed;
+}
+.dts-theme .digi-craft-list li:hover .digi-li-icon {
+  background: rgba(124, 58, 237, 0.20);
+}
+.dts-theme .digi-craft-list li:hover {
+  box-shadow:   0 8px 30px rgba(124, 58, 237, 0.10);
+  border-color: rgba(124, 58, 237, 0.30);
+}
+
+/* Float cards */
+.dts-theme .digi-float-card {
+  border-color: rgba(124, 58, 237, 0.22);
+}
+.dts-theme .digi-float-card strong { color: #7c3aed; }
+
+/* ════════════════════════════════════════════════════════════════════════
+   SOLUTION & RESULTS
+   ════════════════════════════════════════════════════════════════════════ */
+
+.dts-theme .digi-solution-section {
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(124, 58, 237, 0.16) 0%, transparent 40%),
+    radial-gradient(ellipse at 80% 20%, rgba(109, 40, 217, 0.12) 0%, transparent 38%),
+    linear-gradient(155deg, #0c0618 0%, #180a30 60%, #0a0414 100%);
+}
+
+.dts-theme .digi-result-icon {
+  background: rgba(124, 58, 237, 0.16);
+  color: #a78bfa;
+}
+.dts-theme .digi-result-card:hover {
+  border-color: rgba(124, 58, 237, 0.40);
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.40), 0 0 0 1px rgba(124, 58, 237, 0.16);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   METRICS STRIP
+   ════════════════════════════════════════════════════════════════════════ */
+
+.dts-theme .digi-metrics-strip {
+  background: linear-gradient(135deg, #0c0618 0%, #180a30 60%, #0a0414 100%);
+  border-top:    1px solid rgba(124, 58, 237, 0.14);
+  border-bottom: 1px solid rgba(124, 58, 237, 0.14);
+}
+.dts-theme .digi-info-icon  { color: #a78bfa; }
+.dts-theme .digi-info-num   { color: #c4b5fd; }
+.dts-theme .digi-info-label { color: rgba(255, 255, 255, 0.50); }
+.dts-theme .digi-info-item  { border-right-color: rgba(124, 58, 237, 0.14); }
+.dts-theme .digi-info-item:hover { background: rgba(124, 58, 237, 0.08); }
+
+/* ════════════════════════════════════════════════════════════════════════
+   ENHANCED HOVER & TRANSITION OVERRIDES (violet variants)
+   ════════════════════════════════════════════════════════════════════════ */
+
+.dts-theme .digi-client-badge:hover {
+  border-color: rgba(124, 58, 237, 0.35);
+  box-shadow: 0 8px 32px rgba(124, 58, 237, 0.12);
+}
+.dts-theme .digi-client-badge:hover .digi-cb-icon {
+  background: rgba(124, 58, 237, 0.20);
+}
+
+.dts-theme .digi-stack-tag:hover {
+  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.22);
+}
+
+.dts-theme .digi-web-card:hover {
+  box-shadow: 0 32px 80px rgba(20, 8, 48, 0.22),
+              0 0 0 2px rgba(124, 58, 237, 0.24);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   DARK MODE OVERRIDES
+   ════════════════════════════════════════════════════════════════════════ */
+
+.active-dark-mode .dts-theme .digi-engage-section {
+  background: linear-gradient(180deg, #0c0618 0%, #120820 100%);
+}
+.active-dark-mode .dts-theme .digi-process-section {
+  background:
+    radial-gradient(ellipse at 88% 10%, rgba(124, 58, 237, 0.14) 0%, transparent 42%),
+    linear-gradient(150deg, #130c22 0%, #1a0f2e 45%, #0e0818 100%);
+}
+.active-dark-mode .dts-theme .digi-process-card {
+  background:   rgba(255, 255, 255, 0.05);
+  border-color: rgba(124, 58, 237, 0.22);
+}
+.active-dark-mode .dts-theme .digi-craft-section {
+  background: linear-gradient(150deg, #0c0618 0%, #100718 100%);
+}
+.active-dark-mode .dts-theme .digi-fact-row:hover {
+  background: rgba(124, 58, 237, 0.07);
+}
+.active-dark-mode .dts-theme .digi-float-card {
+  border-color: rgba(124, 58, 237, 0.18);
+  background: rgba(124, 58, 237, 0.05);
+}
+.active-dark-mode .dts-theme .digi-stack-tag {
+  background:   rgba(124, 58, 237, 0.07);
+  border-color: rgba(124, 58, 237, 0.24);
+  color: #c4b5fd;
+}
+.active-dark-mode .dts-theme .digi-result-card:hover {
+  box-shadow: 0 8px 32px rgba(124, 58, 237, 0.12);
+}

@@ -15,11 +15,12 @@ export const CONFIG = {
     // GENERAL APP INFO's
     APP_NAME: "SmartTech Solutions",
     NICK_NAME: "SmartTech",
+    SITE_URL: "https://smarttechacademy.org",
     PHONE_1: "+234 803 443 6977",
     PHONE_2: "+234 802 326 6696",
     EMAIL_1: "hello@smarttechacademy.org",
     EMAIL_2: "support@smarttechacademy.org",
-    ADDRESS: "North America, USA",
+    ADDRESS: "No 9 Church Street, Shomolu, Lagos, Nigeria",
   
     // IN-APP FRONTEND CONFIGURATION
     module3: "/dashboard/module3",
@@ -43,8 +44,6 @@ export const CONFIG = {
 
     TRUSTED_BY_BRANDS: TRUSTED_BY_BRANDS_DATAS.BRANDS,
 
-    // fuck: this.APP_NAME,
-
     // TEMP APIS
     EVENTS: EVENTS.TRENDING_EVENTS,
     COURSES: COURSES.TRENDING_COURSES,
@@ -53,12 +52,6 @@ export const CONFIG = {
 };
 
 // E X T E N D    T H E      C O N F I G        D A T A S         H E R E
-
-// Dynamically add the `fuck` property
-CONFIG.fuck = CONFIG.APP_NAME;
-
-
-
 
 
 // className={`icon ${ item.isPrimary ? "bg-primary-opacity" : "bg-pink-opacity" }`}

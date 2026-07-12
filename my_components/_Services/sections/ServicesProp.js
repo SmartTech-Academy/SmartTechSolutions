@@ -13,7 +13,7 @@ export default function ServicesProp({ courseData, image }) {
 
   return (
     <>
-      <div className="col-lg-12">
+      <div className="col-lg-12" data-sal="slide-up" data-sal-delay="0" data-sal-duration="700">
           <div className="modern-course-features-box h-100">
               <div className="inner">
                 <div className="thumbnail">
@@ -39,7 +39,7 @@ export default function ServicesProp({ courseData, image }) {
       </div>
 
 
-      <div className="col-lg-12">
+      <div className="col-lg-12" data-sal="slide-up" data-sal-delay="100" data-sal-duration="700">
           <div className="modern-course-features-box h-100">
               <div className="inner">
                 <div className="thumbnail">
@@ -79,13 +79,13 @@ export default function ServicesProp({ courseData, image }) {
 
 
 
-      <div className="col-lg-6">
+      <div className="col-lg-6" data-sal="slide-up" data-sal-delay="200" data-sal-duration="700">
         {courseData.map((data, index) => (
           <div className="modern-course-features-box one-colume-grid h-100" key={`blockchain-service-${index}`}>
             {data.certificateTwo.map((innerData, innerIndex) => (
               <div className="inner" key={`blockchain-service-inner-${innerIndex}`}>
                 <div className="thumbnail">
-                  <Image src={image_url("/app_images/services/service_images/smarttech_blockchain_development.png", true)} width={558} height={397} alt="Image" />
+                  <Image src={image_url("/app_images/services/service_images/smarttech_blockchain_development.webp", true)} width={558} height={397} alt="Glowing blockchain network visualization" />
                 </div>
                 <div className="content">
                   <h2 className="title">{"Blockchain Development Services"}</h2>
@@ -107,7 +107,7 @@ export default function ServicesProp({ courseData, image }) {
 
 
 
-      <div className="col-lg-6">
+      <div className="col-lg-6" data-sal="slide-up" data-sal-delay="0" data-sal-duration="700">
         <div className="modern-course-features-box grid-content-reverse h-100">
           <div className="inner">
 
@@ -140,7 +140,7 @@ export default function ServicesProp({ courseData, image }) {
       </div>
 
 
-      <div className="col-lg-12">
+      <div className="col-lg-12" data-sal="slide-up" data-sal-delay="100" data-sal-duration="700">
         <div className="modern-course-features-box h-100">
           <div className="inner">
             <div className="thumbnail">
@@ -165,7 +165,7 @@ export default function ServicesProp({ courseData, image }) {
       </div>
 
 
-      <div className="col-lg-12">
+      <div className="col-lg-12" data-sal="slide-up" data-sal-delay="200" data-sal-duration="700">
         <div className="modern-course-features-box h-100">
           <div className="inner">
             <div className="thumbnail">
@@ -191,7 +191,7 @@ export default function ServicesProp({ courseData, image }) {
       </div>
 
 
-      <div className="col-lg-12">
+      <div className="col-lg-12" data-sal="slide-up" data-sal-delay="0" data-sal-duration="700">
         <div className="modern-course-features-box h-100">
             <div className="inner">
               <div className="thumbnail">
@@ -217,7 +217,7 @@ export default function ServicesProp({ courseData, image }) {
       </div>
 
 
-      <div className="col-lg-12">
+      <div className="col-lg-12" data-sal="slide-up" data-sal-delay="100" data-sal-duration="700">
         <div className="modern-course-features-box h-100">
             <div className="inner">
               <div className="thumbnail">
@@ -243,7 +243,7 @@ export default function ServicesProp({ courseData, image }) {
       </div>
 
 
-      <div className="col-lg-12">
+      <div className="col-lg-12" data-sal="slide-up" data-sal-delay="200" data-sal-duration="700">
         <div className="modern-course-features-box h-100">
           <div className="inner">
             <div className="thumbnail">
@@ -268,7 +268,7 @@ export default function ServicesProp({ courseData, image }) {
       </div>
 
 
-      <div className="col-lg-12">
+      <div className="col-lg-12" data-sal="slide-up" data-sal-delay="0" data-sal-duration="700">
         <div className="modern-course-features-box h-100">
             <div className="inner">
               <div className="thumbnail">
@@ -294,7 +294,7 @@ export default function ServicesProp({ courseData, image }) {
       </div>
 
 
-      <div className="col-lg-12">
+      <div className="col-lg-12" data-sal="slide-up" data-sal-delay="100" data-sal-duration="700">
         <div className="modern-course-features-box h-100">
           <div className="inner">
             <div className="thumbnail">
@@ -320,7 +320,7 @@ export default function ServicesProp({ courseData, image }) {
       </div>
 
 
-      <div className="col-lg-12">
+      <div className="col-lg-12" data-sal="slide-up" data-sal-delay="200" data-sal-duration="700">
         <div className="modern-course-features-box h-100">
             <div className="inner">
               <div className="thumbnail">
@@ -344,7 +344,7 @@ export default function ServicesProp({ courseData, image }) {
       </div>
 
 
-      <div className="col-lg-12">
+      <div className="col-lg-12" data-sal="slide-up" data-sal-delay="0" data-sal-duration="700">
         <div className="modern-course-features-box h-100">
           <div className="inner">
             <div className="thumbnail">
@@ -377,7 +377,7 @@ export default function ServicesProp({ courseData, image }) {
       </div>
 
 
-      <div className="col-lg-12">
+      <div className="col-lg-12" data-sal="slide-up" data-sal-delay="100" data-sal-duration="700">
           <div className="modern-course-features-box h-100">
               <div className="inner">
                 <div className="thumbnail">

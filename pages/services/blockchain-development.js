@@ -24,7 +24,12 @@ const BlockchainDevelopment = () => {
 
         <>
 
-            <PageHead title="Blockchain Development Services | SmartTech Solutions" />
+            <PageHead
+                title="Blockchain Development Services | SmartTech Solutions"
+                description="SmartTech Solutions builds secure, scalable blockchain products — tokens, smart contracts, NFT marketplaces, and crypto wallets — for businesses ready to go on-chain."
+                image="/app_images/services/service_images/smarttech_blockchain_development.webp"
+                path="/services/blockchain-development"
+            />
 
             <Provider store={Store}>
                 <Context>

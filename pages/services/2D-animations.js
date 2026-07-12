@@ -24,7 +24,12 @@ const Two_Dimension_Animations = () => {
 
         <>
 
-            <PageHead title="2D Animation Services | SmartTech Solutions" />
+            <PageHead
+                title="2D Animation Services | SmartTech Solutions"
+                description="SmartTech Solutions creates captivating 2D animations and visual effects that help startups and brands stand out, leave a lasting impression, and outshine competitors."
+                image="/app_images/services/service_images/smarttech_2d_animations.png"
+                path="/services/2D-animations"
+            />
 
             <Provider store={Store}>
                 <Context>

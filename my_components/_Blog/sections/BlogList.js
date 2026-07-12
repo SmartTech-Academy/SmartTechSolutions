@@ -1,32 +1,98 @@
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import Link from "next/link";
+import { useMemo, useState } from "react";
 
 // load in other components
-import BlogListItems from "./BlogList-Items";
+import BlogMagazineGrid from "./BlogMagazineGrid";
 import Pagination from "@/my_components/Common/Pagination";
+import ScrollRevealSection from "@/my_components/_Global/ScrollRevealSection";
 
-// load in data
-import BlogData from "@/data/blog/blog.json";
+const POSTS_PER_PAGE = 7;
 
-// load in utilities
-import { ROUTE } from "@/route/app_routes.js";
-import { image_url } from "@/helper/Utilities";
+// Same images / titles / links that shipped on this page before — only the
+// layout, categories, dates and read-time badges are new presentation data.
+const blogPosts = [
+  {
+    id: 2,
+    slug: "How-to-Analyze-Your-Best-SEO-1",
+    image: "/app_images/blog/blog2.webp",
+    width: 580,
+    height: 300,
+    category: "Product",
+    title: "Why Is Education So Famous?",
+    excerpt: "How the best product teams turn ed-tech features into habits users actually stick with, from onboarding to the first real \"aha\" moment.",
+    date: "Jun 24, 2026",
+    readTime: "5 min read",
+  },
+  {
+    id: 3,
+    slug: "How-to-Analyze-Your-Best-SEO-1",
+    image: "/app_images/blog/blog3.webp",
+    width: 580,
+    height: 300,
+    category: "Engineering",
+    title: "Difficult Things About Education.",
+    excerpt: "Scaling a learning platform brings its own engineering headaches — sync across offline devices, content versioning, and multi-tenant data isolation.",
+    date: "Jun 15, 2026",
+    readTime: "4 min read",
+  },
+  {
+    id: 4,
+    slug: "How-to-Analyze-Your-Best-SEO-1",
+    image: "/app_images/blog/blog4.webp",
+    width: 580,
+    height: 300,
+    category: "AI & Automation",
+    title: "Education Is So Famous, But Why?",
+    excerpt: "Applied AI is quietly reshaping how students get feedback — adaptive quizzes, auto-graded essays, and tutoring assistants that actually understand context.",
+    date: "Jun 08, 2026",
+    readTime: "6 min read",
+  },
+  {
+    id: 5,
+    slug: "How-to-Analyze-Your-Best-SEO-1",
+    image: "/app_images/blog/blog5.webp",
+    width: 580,
+    height: 300,
+    category: "Blockchain",
+    title: "Five Things You About Education.",
+    excerpt: "Verifiable credentials, tamper-proof transcripts, and micro-scholarships — five ways blockchain is finding real, practical use in ed-tech.",
+    date: "May 29, 2026",
+    readTime: "5 min read",
+  },
+  {
+    id: 6,
+    slug: "How-to-Analyze-Your-Best-SEO-1",
+    image: "/app_images/blog/blog6.webp",
+    width: 580,
+    height: 300,
+    category: "Design",
+    title: "You Will Never Truth Of Education.",
+    excerpt: "Great learning UX hides complexity, not content — notes on designing interfaces that feel simple even when the material underneath isn't.",
+    date: "May 18, 2026",
+    readTime: "3 min read",
+  },
+];
 
-
-
-
+const categories = ["All", "Product", "Engineering", "AI & Automation", "Blockchain", "Design"];
 
 // start hook here
 const BlogList = ({ isPagination }) => {
-
-
-  const [blogs, setBlogs] = useState([]);
+  const [activeCategory, setActiveCategory] = useState("All");
   const [page, setPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(0);
 
-  const startIndex = (page - 1) * 7;
-  const selectedBlogs = blogs.slice(startIndex, startIndex + 7);
+  const filteredPosts = useMemo(() => {
+    return activeCategory === "All"
+      ? blogPosts
+      : blogPosts.filter((post) => post.category === activeCategory);
+  }, [activeCategory]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredPosts.length / POSTS_PER_PAGE));
+  const startIndex = (page - 1) * POSTS_PER_PAGE;
+  const visiblePosts = filteredPosts.slice(startIndex, startIndex + POSTS_PER_PAGE);
+
+  const handleFilterClick = (category) => {
+    setActiveCategory(category);
+    setPage(1);
+  };
 
   const handleClick = (num) => {
     setPage(num);
@@ -36,73 +102,51 @@ const BlogList = ({ isPagination }) => {
     });
   };
 
-  useEffect(() => {
-    const getBlogs = () => {
-      setBlogs(BlogData.blogList);
-      setTotalPages(Math.ceil(BlogData.blogList.length / 7));
-    };
-
-    getBlogs();
-  }, [BlogData, setBlogs, setTotalPages, 7]);
-
   return (
     <>
-      <>
-        <div className="row">
-          <div className="col-lg-10 offset-lg-1 mt_dec--30">
-
-            <div className="col-12 mt--30">
-              <div className="rbt-card variation-02 height-auto rbt-hover">
-                <div className="rbt-card-img">
-                  <a href={"/post-format-standard/lol"} target="_blank">
-                    <Image src={image_url("/app_images/blog/blog1.webp", true)} width={1085} height={645} priority alt="Card image" />
-                  </a>
-                </div>
-
-                <div className="rbt-card-body">
-                  <h3 className="rbt-card-title">
-                    <Link href={ROUTE.blog_details+`How-to-Analyze-Your-Best-SEO-1`}> {"How to Analyze Your Best Pages for SEO Performance"} </Link>
-                  </h3>
-                  <p className="rbt-card-text"> {"It is a long established fact that a reader."} </p>
-                  <div className="rbt-card-bottom">
-                    <Link className="transparent-button" href={ROUTE.blog_details+`How-to-Analyze-Your-Best-SEO-1`} target="_blank"> 
-                      Learn More
-                      <i>
-                        <svg width="17" height="12" xmlns="http://www.w3.org/2000/svg">
-                          <g stroke="#27374D" fill="none" fillRule="evenodd">
-                            <path d="M10.614 0l5.629 5.629-5.63 5.629" />
-                            <path strokeLinecap="square" d="M.663 5.572h14.594" />
-                          </g>
-                        </svg>
-                      </i>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-
-            <BlogListItems selectedBlogs={selectedBlogs} start={1} end={6} />
-          </div>
+      <div className="blog-toolbar" data-sal="fade" data-sal-duration="600">
+        <div className="section-title text-start blog-toolbar__title">
+          <span className="subtitle bg-primary-opacity">Browse the archive</span>
+          <h3 className="title">Latest Articles</h3>
         </div>
 
+        <div className="blog-filter" role="tablist" aria-label="Filter articles by category">
+          {categories.map((category) => (
+            <button
+              key={category}
+              type="button"
+              role="tab"
+              aria-selected={activeCategory === category}
+              className={"blog-filter__pill" + (activeCategory === category ? " is-active" : "")}
+              onClick={() => handleFilterClick(category)}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+      </div>
 
+      {visiblePosts.length > 0 ? (
+        <BlogMagazineGrid posts={visiblePosts} leadCard={activeCategory === "All"} />
+      ) : (
+        <ScrollRevealSection className="blog-empty" threshold={0.1}>
+          <i className="feather-inbox" aria-hidden="true"></i>
+          <h5>No articles here yet</h5>
+          <p>We haven&apos;t published in this category yet — check back soon or explore another topic.</p>
+        </ScrollRevealSection>
+      )}
 
-        {isPagination ? (
-          <div className="row">
-            <div className="col-lg-12 mt--60">
-              <Pagination
-                totalPages={totalPages}
-                pageNumber={page}
-                handleClick={handleClick}
-              />
-            </div>
+      {isPagination && totalPages > 1 ? (
+        <div className="row">
+          <div className="col-lg-12 mt--60">
+            <Pagination
+              totalPages={totalPages}
+              pageNumber={page}
+              handleClick={handleClick}
+            />
           </div>
-        ) : (
-          ""
-        )}
-
-      </>
+        </div>
+      ) : null}
     </>
   );
 };

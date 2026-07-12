@@ -23,7 +23,12 @@ const Flatshare = () => {
 
         <>
 
-            <PageHead title="Flatshare Project | SmartTech Solutions" />
+            <PageHead
+                title="Flatshare: Flatmate-Matching App | SmartTech Solutions"
+                description="A case study on Flatshare — SmartTech Solutions' real-time messaging and smart search platform that helps people find trustworthy flatmates and shared housing."
+                image="/app_images/projects/flatshare/flatshare_display_picture.png"
+                path="/projects/flatshare"
+            />
 
             <Provider store={Store}>
                 <Context>

@@ -1,0 +1,243 @@
+/* ════════════════════════════════════════════════════════════════════════
+   HOMEPAGE HERO — rbt-hero-editorial
+   Paired with my_components/_HomePage/Home-Sections/Banner.js
+   ════════════════════════════════════════════════════════════════════════ */
+
+.rbt-hero-editorial {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  animation: rbt-hero-kenburns 22s ease-in-out infinite alternate;
+}
+
+.rbt-hero-editorial.height-800 {
+  height: 880px;
+}
+
+@media (max-width: 991px) {
+  .rbt-hero-editorial.height-800 {
+    height: auto;
+    min-height: 760px;
+  }
+}
+
+@keyframes rbt-hero-kenburns {
+  0% { background-size: 104%; background-position: 50% 40%; }
+  100% { background-size: 116%; background-position: 50% 50%; }
+}
+
+.rbt-hero-editorial__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(60% 66% at 50% 40%, rgba(4, 6, 13, 0.8) 0%, rgba(4, 6, 13, 0.32) 78%, transparent 100%),
+    linear-gradient(180deg, rgba(9, 11, 20, 0.5) 0%, rgba(9, 11, 20, 0.6) 55%, rgba(9, 11, 20, 0.8) 100%),
+    linear-gradient(100deg, rgba(47, 87, 239, 0.3) 0%, rgba(185, 102, 231, 0.16) 55%, rgba(9, 11, 20, 0.14) 100%);
+}
+
+.rbt-hero-editorial .container {
+  position: relative;
+  z-index: 2;
+}
+
+.rbt-hero-editorial .title {
+  color: #d6e9ff;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.95), 0 1px 2px rgba(0, 0, 0, 0.9), 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* The title contains a background-clip:text gradient (the typed word) —
+   animating `filter: blur()` on an ancestor of a background-clip:text
+   element is unreliable across engines (the clipped layer can repaint
+   looking permanently soft/hazy even after the animation finishes), so
+   the title gets its own blur-free variant of the mount reveal instead
+   of the standard .rbt-hero-wonder/.rbt-reveal-in blur treatment. */
+@keyframes rbt-hero-title-in {
+  0% {
+    opacity: 0;
+    transform: translateY(64px) scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.rbt-hero-editorial .title.rbt-hero-wonder {
+  animation-name: rbt-hero-title-in;
+}
+
+.rbt-hero-editorial .description {
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  font-size: clamp(18px, 1.7vw, 22px);
+  opacity: 1;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+}
+
+@media (max-width: 991px) {
+  .rbt-hero-editorial .description {
+    max-width: 480px;
+  }
+}
+
+/* Homepage hero reuses the site-wide .rbt-reveal-in mount animation
+   (see public/css/global-effects.css) via the "rbt-hero-wonder" alias
+   class name kept in the JSX for readability. */
+.rbt-hero-wonder {
+  opacity: 0;
+  animation: rbt-reveal-in 1.1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: var(--wonder-delay, 0s);
+}
+
+.rbt-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  margin-bottom: 24px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.rbt-hero-badge__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+  animation: rbt-hero-pulse 2s ease-out infinite;
+}
+
+@keyframes rbt-hero-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.55); }
+  70% { box-shadow: 0 0 0 8px rgba(74, 222, 128, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+}
+
+/* Plain solid color, not a background-clip:text gradient — a gradient-clip
+   on the typed word was hard to fully rule out as a contributor to the
+   text looking soft/hazy against the busy hero photo in testing, so this
+   drops that technique entirely in favor of a flat, unambiguously crisp
+   white plus a tight contrast shadow — set apart from the light-blue
+   static title text on either side of it. */
+.rbt-hero-typed-wrap {
+  display: inline-block;
+  min-width: 1ch;
+  border-right: none;
+  /* Override the .theme-gradient base class (also applied on this span)
+     — it sets a gradient background clipped to text via a transparent
+     fill, which would otherwise hide the plain color below entirely. */
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: currentColor;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9), 0 0 22px rgba(255, 255, 255, 0.5), 0 0 44px rgba(255, 255, 255, 0.22);
+}
+
+.rbt-hero-typed-wrap .typed-cursor {
+  color: var(--color-white);
+  opacity: 0.85;
+}
+
+.rbt-hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(24px, 5vw, 56px);
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.rbt-hero-stats__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+}
+
+.rbt-hero-stats__value {
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.2;
+}
+
+.rbt-hero-stats__label {
+  margin-top: 4px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.72);
+  letter-spacing: 0.2px;
+}
+
+.rbt-hero-scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  z-index: 2;
+  transform: translateX(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.rbt-hero-scroll-cue__mouse {
+  display: block;
+  width: 26px;
+  height: 42px;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  border-radius: 14px;
+  position: relative;
+}
+
+.rbt-hero-scroll-cue__wheel {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  width: 4px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--color-white);
+  transform: translateX(-50%);
+  animation: rbt-hero-scroll-wheel 1.6s ease-in-out infinite;
+}
+
+@keyframes rbt-hero-scroll-wheel {
+  0% { opacity: 1; top: 6px; }
+  70% { opacity: 0; top: 20px; }
+  100% { opacity: 0; top: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rbt-hero-editorial {
+    animation: none;
+  }
+
+  .rbt-hero-scroll-cue__wheel {
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .rbt-hero-stats {
+    gap: 20px;
+  }
+
+  .rbt-hero-scroll-cue {
+    display: none;
+  }
+}
