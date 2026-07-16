@@ -34,8 +34,8 @@ const Testimonial_1 = () => {
                           <div className="thumb">
                             <Image
                               src={item.client}
-                              width={494}
-                              height={494}
+                              width={160}
+                              height={160}
                               alt="Clint Images"
                             />
                           </div>
@@ -81,8 +81,8 @@ const Testimonial_1 = () => {
                           <div className="thumb">
                             <Image
                               src={item.client}
-                              width={494}
-                              height={494}
+                              width={160}
+                              height={160}
                               alt="Clint Images"
                             />
                           </div>

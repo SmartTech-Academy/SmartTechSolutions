@@ -211,7 +211,7 @@ const Register = () => {
                             <span className="subtitle bg-primary-opacity"> Ready to start? </span>
                             <h2 className="title w-600">Self Development Course</h2>
                             <p className="mt--10 description"> We believe that we have the power to shape the <br />{" "} future, for the better lifelong </p>
-                            <Link className="rbt-btn btn-gradient hover-icon-reverse" href={ROUTE.course}>
+                            <Link className="rbt-btn btn-gradient hover-icon-reverse" href={ROUTE.dashboardBrowseCourses}>
                                 <span className="icon-reverse-wrapper">
                                     <span className="btn-text">Browse Courses</span>
                                     <span className="btn-icon">

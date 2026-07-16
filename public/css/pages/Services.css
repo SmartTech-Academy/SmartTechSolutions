@@ -411,6 +411,15 @@
   color: var(--service-ink) !important;
 }
 
+/* On hover the base .btn-border rule (public/scss/elements/_button.scss)
+   fills the button with the solid primary color — the !important override
+   above was also winning against that hover state, leaving dark text on a
+   dark-filled button. Restore white text specifically on hover. */
+.services-catalog .modern-course-features-box .btn-border.color-white-off:hover,
+.services-catalog .modern-course-features-box .btn-border:hover {
+  color: var(--color-white) !important;
+}
+
 .services-counter {
   position: relative;
 }

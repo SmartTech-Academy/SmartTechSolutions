@@ -14,7 +14,7 @@ const BlogWidget = ({extra_class}) => {
 
 
                 <div className={"col-lg-6 col-md-12 col-sm-12 col-12"+extra_class} data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div className="rbt-card variation-02 height-330 rbt-hover" key="1">
+                    <div className="rbt-card variation-02 height-330 rbt-hover" key="blog-widget-1">
                         <div className="rbt-card-img">
                         <Link href={ROUTE.blog_details+`How-to-Analyze-Your-Best-SEO-1`}>
                             <Image src={image_url("/app_images/blog_images/blog-image-1.webp")} width={580} height={300} priority alt="Card image" />{" "}
@@ -39,10 +39,10 @@ const BlogWidget = ({extra_class}) => {
 
 
                 <div className={"col-lg-6 col-md-12 col-sm-12 col-12"+extra_class} data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div className={`rbt-card card-list variation-02 rbt-hover`} key="1">
+                    <div className={`rbt-card card-list variation-02 rbt-hover`} key="blog-widget-2">
                         <div className="rbt-card-img">
                             <Link href={ROUTE.blog_details+`How-to-Analyze-Your-Best-SEO-1`}>
-                                <Image src={image_url("/app_images/blog_images/blog-image-2.webp")} width={580} height={300} priorityalt="Card image" /> {" "}
+                                <Image src={image_url("/app_images/blog_images/blog-image-2.webp")} width={580} height={300} priority alt="Card image" /> {" "}
                             </Link>
                         </div>
 
@@ -56,10 +56,10 @@ const BlogWidget = ({extra_class}) => {
                         </div>
                     </div>
 
-                    <div className={`rbt-card card-list variation-02 rbt-hover mt--30`} key="1">
+                    <div className={`rbt-card card-list variation-02 rbt-hover mt--30`} key="blog-widget-3">
                         <div className="rbt-card-img">
                             <Link href={ROUTE.blog_details+`How-to-Analyze-Your-Best-SEO-1`}>
-                                <Image src={image_url("/app_images/blog_images/blog-image-3.webp")} width={580} height={300} priorityalt="Card image" /> {" "}
+                                <Image src={image_url("/app_images/blog_images/blog-image-3.webp")} width={580} height={300} priority alt="Card image" /> {" "}
                             </Link>
                         </div>
 
@@ -73,10 +73,10 @@ const BlogWidget = ({extra_class}) => {
                         </div>
                     </div>
 
-                    <div className={`rbt-card card-list variation-02 rbt-hover mt--30`} key="1">
+                    <div className={`rbt-card card-list variation-02 rbt-hover mt--30`} key="blog-widget-4">
                         <div className="rbt-card-img">
                             <Link href={ROUTE.blog_details+`How-to-Analyze-Your-Best-SEO-1`}>
-                                <Image src={image_url("/app_images/blog_images/blog-image-4.webp")} width={580} height={300} priorityalt="Card image" /> {" "}
+                                <Image src={image_url("/app_images/blog_images/blog-image-4.webp")} width={580} height={300} priority alt="Card image" /> {" "}
                             </Link>
                         </div>
 

@@ -117,12 +117,12 @@ const craftFeatures = [
   {
     icon: "feather-heart",
     title: "Human-Centered by Design",
-    body: "Every interaction — profile creation, interest tagging, browsing — was designed around real human behaviour and the emotional weight of choosing a person to share your home with.",
+    body: "Every interaction, profile creation, interest tagging, browsing, was designed around real human behaviour and the emotional weight of choosing a person to share your home with.",
   },
   {
     icon: "feather-shield",
     title: "Trust-First Visual Language",
-    body: "Verification badges, transparent profiles, and review systems are woven into the visual hierarchy so users feel safe and informed at every decision point — not as afterthoughts.",
+    body: "Verification badges, transparent profiles, and review systems are woven into the visual hierarchy so users feel safe and informed at every decision point, not as afterthoughts.",
   },
   {
     icon: "feather-zap",
@@ -132,7 +132,7 @@ const craftFeatures = [
   {
     icon: "feather-monitor",
     title: "Responsive & Screen-Adaptive",
-    body: "The full product experience — browsing, messaging, managing listings — works flawlessly on desktop and mobile without feature compromise or layout degradation.",
+    body: "The full product experience, browsing, messaging, managing listings, works flawlessly on desktop and mobile without feature compromise or layout degradation.",
   },
 ];
 
@@ -145,12 +145,12 @@ const results = [
   {
     icon: "feather-search",
     title: "Advanced Flatmate Matching Engine",
-    body: "Multi-dimensional search combining location radius, budget, move-in date, lifestyle preferences, and shared interests — surfacing genuinely compatible flatmates, not just nearby ones.",
+    body: "Multi-dimensional search combining location radius, budget, move-in date, lifestyle preferences, and shared interests, surfacing genuinely compatible flatmates, not just nearby ones.",
   },
   {
     icon: "feather-message-circle",
     title: "Real-Time Messaging System",
-    body: "WebSocket-powered chat with typing indicators, read receipts, and push notifications — enabling fluid, in-context communication between hosts and prospective flatmates.",
+    body: "WebSocket-powered chat with typing indicators, read receipts, and push notifications, enabling fluid, in-context communication between hosts and prospective flatmates.",
   },
   {
     icon: "feather-home",
@@ -160,17 +160,17 @@ const results = [
   {
     icon: "feather-users",
     title: "Interest & Lifestyle Profiling",
-    body: "Deep preference mapping lets users signal who they are and how they live — enabling matches that go far beyond geography and budget to genuine lifestyle compatibility.",
+    body: "Deep preference mapping lets users signal who they are and how they live, enabling matches that go far beyond geography and budget to genuine lifestyle compatibility.",
   },
   {
     icon: "feather-inbox",
     title: "Request Management Dashboard",
-    body: "Hosts receive, review, and respond to flatmate applications in one organised space — with status tracking, shortlisting tools, and full communication history preserved.",
+    body: "Hosts receive, review, and respond to flatmate applications in one organised space, with status tracking, shortlisting tools, and full communication history preserved.",
   },
   {
     icon: "feather-trending-up",
     title: "Scalable PropTech Infrastructure",
-    body: "Built on a proxy-pattern architecture with Redis caching and a Laravel API — a foundation engineered to handle growth without performance degradation as the community scales.",
+    body: "Built on a proxy-pattern architecture with Redis caching and a Laravel API, a foundation engineered to handle growth without performance degradation as the community scales.",
   },
 ];
 
@@ -809,8 +809,8 @@ const FlatshareProject = () => {
                     they are the product itself.
                   </p>
                   <p>
-                    SmartTech Solutions brought world-class UI precision to Flatshare — the
-                    same level you expect from the best consumer social platforms — with
+                    SmartTech Solutions brought world-class UI precision to Flatshare, the
+                    same level you expect from the best consumer social platforms, with
                     profile-forward layouts, frictionless search flows, and a visual language
                     that communicates safety and community from the very first screen.
                   </p>
@@ -837,7 +837,7 @@ const FlatshareProject = () => {
                 <div className="digi-craft-visual">
                   <div className="digi-float-card fc-tl">
                     <strong>Smart Matching</strong>
-                    <span>15+ Filter Dimensions</span>
+                    <span>12+ Filter Dimensions</span>
                     <small>+ Interest Compatibility</small>
                   </div>
                   <div className="digi-craft-mockup">
@@ -866,6 +866,26 @@ const FlatshareProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── SOLUTION & RESULTS ───────────────────────────────────── */}
         <section className="rbt-section-gap digi-solution-section">
           <div className="container">
@@ -879,14 +899,14 @@ const FlatshareProject = () => {
                 <div className="digi-solution-body">
                   <p>
                     SmartTech Solutions designed, architected, and shipped the full Flatshare
-                    platform — from the Laravel API and Redis-backed search engine to the
+                    platform, from the Laravel API and Redis-backed search engine to the
                     Next.js frontend, WebSocket real-time messaging system, and host management
                     dashboards.
                   </p>
                   <p>
                     The result is a social platform that makes the traditionally stressful,
                     opaque process of finding a flatmate feel modern, safe, and genuinely
-                    human — with the engineering depth to scale alongside its growing community.
+                    human, with the engineering depth to scale alongside its growing community.
                   </p>
                 </div>
                 <div className="mt--36">
@@ -927,6 +947,25 @@ const FlatshareProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── CTA ──────────────────────────────────────────────────── */}
         <section className="rbt-call-to-action-area rbt-section-gap bg-color-secondary-alt">
           <div className="container">
@@ -950,6 +989,21 @@ const FlatshareProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── TESTIMONIALS ─────────────────────────────────────────── */}
         <section className="rbt-testimonial-area bg-color-white rbt-section-gap overflow-hidden">
           <div className="wrapper">
@@ -966,6 +1020,20 @@ const FlatshareProject = () => {
           </div>
           <Testimonial_2 />
         </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -995,6 +1063,20 @@ const FlatshareProject = () => {
             <BlogWidget />
           </div>
         </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1029,6 +1111,19 @@ const FlatshareProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── NEWSLETTER ───────────────────────────────────────────── */}
         <section className="rbt-newsletter-area bg-color-white rbt-section-gapBottom pt--60">
           <div className="container">
@@ -1041,7 +1136,31 @@ const FlatshareProject = () => {
         </section>
 
 
+
+
+
       </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
       {/* ── LIGHTBOX ─────────────────────────────────────────────── */}

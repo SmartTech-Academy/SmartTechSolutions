@@ -14,7 +14,7 @@ const CourseBreadcrumb = ({ getMatchCourse }) => {
         <div className="content text-start">
           <ul className="page-list">
             <li className="rbt-breadcrumb-item">
-              <Link href={ROUTE.course}>Course Room</Link>
+              <Link href={ROUTE.dashboardBrowseCourses}>Course Room</Link>
             </li>
             <li>
               <div className="icon-right">

@@ -1,0 +1,456 @@
+/* ════════════════════════════════════════════════════════════════════════
+   CYBERSECURITY SERVICE PAGE  (cysec- namespace)
+   Paired with my_components/_Services/InnerPages/CybersecurityServices.js
+   ════════════════════════════════════════════════════════════════════════ */
+
+/* ────────────────────────────────────────────────────────────────────────
+   HERO
+   ──────────────────────────────────────────────────────────────────────── */
+.cysec-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 168px 0 96px;
+}
+
+.cysec-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.cysec-hero__bg-img {
+  object-fit: cover;
+}
+
+.cysec-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(5, 8, 14, 0.9) 0%, rgba(6, 10, 18, 0.85) 55%, rgba(4, 6, 11, 0.95) 100%),
+    linear-gradient(115deg, rgba(220, 38, 38, 0.22) 0%, rgba(47, 87, 239, 0.28) 60%, transparent 100%);
+}
+
+.cysec-hero__content {
+  max-width: 760px;
+}
+
+/* The base .rbt-button-group utility centers its buttons — this hero's
+   copy is left-aligned, so the CTAs need to match rather than floating
+   centered under left-aligned text. */
+.cysec-hero__content .rbt-button-group {
+  justify-content: flex-start;
+}
+
+.cysec-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  margin-bottom: 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  color: var(--color-white);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.cysec-hero__eyebrow i {
+  color: #ff5c5c;
+  font-size: 15px;
+}
+
+.cysec-hero__title {
+  margin: 0 0 18px;
+  color: var(--color-white);
+  font-size: clamp(30px, 4vw, 50px);
+  line-height: 1.16;
+  font-weight: 700;
+  text-shadow: 0 4px 22px rgba(0, 0, 0, 0.55);
+}
+
+.cysec-hero__desc {
+  max-width: 640px;
+  margin: 0 0 30px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: clamp(16px, 1.5vw, 19px);
+  line-height: 1.7;
+}
+
+.cysec-hero__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(24px, 5vw, 56px);
+  margin-top: 56px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.cysec-hero__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cysec-hero__stat-value {
+  font-size: clamp(24px, 2.6vw, 32px);
+  font-weight: 800;
+  color: var(--color-white);
+}
+
+.cysec-hero__stat-label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+@media (max-width: 767px) {
+  .cysec-hero { padding: 128px 0 64px; }
+}
+
+/* Trusted-by strip — tightened from the generic .ptb--60 utility, which
+   left too much dead air between the Why-SmartTech section above and the
+   FAQ below for a single row of logos. */
+.cysec-trusted-brands {
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.cysec-section {
+  padding-bottom: clamp(48px, 6vw, 72px);
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   RISK-DRIVER CARDS — problem-first framing ahead of the capability catalog
+   ──────────────────────────────────────────────────────────────────────── */
+.cysec-risk-card {
+  height: 100%;
+  padding: 28px 24px;
+  border-radius: 18px;
+  background: var(--color-white);
+  border: 1px solid rgba(23, 32, 51, 0.08);
+  box-shadow: 0 18px 44px -28px rgba(23, 32, 51, 0.26);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.cysec-risk-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(220, 38, 38, 0.3);
+  box-shadow: 0 30px 60px -24px rgba(220, 38, 38, 0.22);
+}
+
+.cysec-risk-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 16px;
+  border-radius: 13px;
+  background: rgba(220, 38, 38, 0.1);
+  color: #dc2626;
+  font-size: 20px;
+}
+
+.cysec-risk-card h4 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.cysec-risk-card p {
+  margin: 0;
+  color: var(--color-body);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   FAQ VISUAL — bespoke inline-SVG security graphic (CysecFaqVisual.js)
+   ──────────────────────────────────────────────────────────────────────── */
+.cysec-faq-visual {
+  display: block;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 26px 60px -20px rgba(9, 12, 22, 0.35);
+}
+
+.cysec-faq-visual svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   SHARED SECTION HEAD
+   ──────────────────────────────────────────────────────────────────────── */
+.cysec-section__head {
+  max-width: 640px;
+  margin: 0 auto 44px;
+  text-align: center;
+}
+
+.cysec-section__head .subtitle {
+  margin-bottom: 14px;
+}
+
+.cysec-section__head .description {
+  color: rgba(255, 255, 255, 0.68);
+  margin-top: 12px;
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   CAPABILITIES — dark animated backdrop
+   ──────────────────────────────────────────────────────────────────────── */
+.cysec-caps {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(64px, 8vw, 104px) 0;
+  background: linear-gradient(160deg, #090c13 0%, #12151f 50%, #16121a 100%);
+}
+
+/* Static, not animated — sits behind backdrop-filter cards (.cysec-cap-card
+   below); see the matching note on .rbt-industries-backdrop__grid in
+   global-effects.css for why a drifting layer there was expensive. */
+.cysec-caps__grid-bg {
+  position: absolute;
+  inset: -20px;
+  z-index: -2;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+.cysec-caps__glow {
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.45;
+}
+
+.cysec-caps__glow--one {
+  top: -14%;
+  left: -8%;
+  width: 480px;
+  height: 480px;
+  background: rgba(220, 38, 38, 0.35);
+}
+
+.cysec-caps__glow--two {
+  bottom: -16%;
+  right: -8%;
+  width: 480px;
+  height: 480px;
+  background: rgba(47, 87, 239, 0.4);
+}
+
+.cysec-cap-card {
+  height: 100%;
+  padding: 26px 24px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.4s ease, background 0.4s ease;
+}
+
+.cysec-cap-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(220, 38, 38, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.cysec-cap-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  background: rgba(220, 38, 38, 0.16);
+  color: #ff5c5c;
+  font-size: 19px;
+}
+
+.cysec-cap-card h4 {
+  margin: 0 0 8px;
+  color: var(--color-white);
+  font-size: 16.5px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.cysec-cap-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   WHY SMARTTECH — image polish
+   ──────────────────────────────────────────────────────────────────────── */
+.cysec-why-img {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.cysec-why-img .rbt-lazy-img__el {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease;
+}
+
+.cysec-why-img:hover .rbt-lazy-img__el {
+  transform: scale(1.03);
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   CTA
+   ──────────────────────────────────────────────────────────────────────── */
+.cysec-cta {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(64px, 8vw, 104px) 0;
+  background: linear-gradient(135deg, #05070d 0%, #0c1120 55%, #0a0e1a 100%);
+}
+
+.cysec-cta__grid-bg {
+  position: absolute;
+  inset: -1px;
+  z-index: -2;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 85%);
+}
+
+.cysec-cta__glow {
+  position: absolute;
+  z-index: -1;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 620px;
+  height: 620px;
+  border-radius: 50%;
+  background: rgba(220, 38, 38, 0.28);
+  filter: blur(90px);
+}
+
+.cysec-cta__inner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cysec-cta__inner .title {
+  color: var(--color-white);
+  font-size: clamp(28px, 3.6vw, 42px);
+  margin-bottom: 16px;
+}
+
+.cysec-cta__inner p {
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 30px;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   HOMEPAGE CYBERSECURITY SPOTLIGHT — Home.js, right after Top Projects
+   ════════════════════════════════════════════════════════════════════════ */
+.home-cysec {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(72px, 9vw, 120px) 0;
+}
+
+.home-cysec__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.home-cysec__bg-img {
+  object-fit: cover;
+}
+
+.home-cysec__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(100deg, rgba(4, 6, 11, 0.95) 0%, rgba(6, 9, 16, 0.82) 45%, rgba(6, 9, 16, 0.6) 100%);
+}
+
+.home-cysec__inner {
+  max-width: 620px;
+}
+
+.home-cysec__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  margin-bottom: 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  color: var(--color-white);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.home-cysec__eyebrow i {
+  color: #ff5c5c;
+}
+
+.home-cysec__title {
+  margin: 0 0 18px;
+  color: var(--color-white);
+  font-size: clamp(28px, 3.6vw, 44px);
+  line-height: 1.18;
+  font-weight: 700;
+}
+
+.home-cysec__desc {
+  margin: 0 0 28px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.home-cysec__points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  margin: 0 0 32px;
+  padding: 0;
+  list-style: none;
+}
+
+.home-cysec__points li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14.5px;
+  font-weight: 600;
+}
+
+.home-cysec__points i {
+  color: #4ade80;
+}
+
+@media (max-width: 767px) {
+  .home-cysec { padding: 64px 0; }
+}

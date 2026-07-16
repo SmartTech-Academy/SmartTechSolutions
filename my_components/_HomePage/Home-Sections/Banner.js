@@ -19,7 +19,7 @@ export const Banner = () => {
       strings: [
         "Web Platforms.",
         "Mobile Apps.",
-        "AI Systems.",
+        "AI Automations.",
         "Blockchain Products.",
         "Immersive Games.",
       ],
@@ -60,10 +60,12 @@ export const Banner = () => {
   };
 
   return (
-    <div
-      className="rbt-hero-editorial height-800 bg_image"
-      style={{ backgroundImage: "url(/app_images/banner/smarttech_hero_bg.webp)" }}
-    >
+    <div className="rbt-hero-editorial height-800">
+      <span
+        className="rbt-hero-editorial__bg"
+        style={{ backgroundImage: "url(/app_images/banner/smarttech_hero_bg.webp)" }}
+        aria-hidden="true"
+      />
       <span className="rbt-hero-editorial__scrim" aria-hidden="true" />
 
       <div className="container">
@@ -75,7 +77,7 @@ export const Banner = () => {
                 style={{ "--wonder-delay": "0.05s" }}
                 onAnimationEnd={clearAnimation}
               >
-                <span className="rbt-hero-badge__dot" /> Full-Stack Software &amp; Web3 Studio
+                <span className="rbt-hero-badge__dot" /> Technology &amp; Digital Solutions Agency
               </span>
 
               <h1

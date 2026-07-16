@@ -64,16 +64,17 @@ const Footer = ({bg="white"}) => {
 
 
 
-                  <SingleFooter classOne="offset-lg-1 col-lg-2 col-md-6 col-sm-6 col-12 mt--30" title="Our Company" data={[ { text: "Home", link: ROUTE.home }, 
-                    { text: "About Us", link: ROUTE.about }, { text: "Our Process", link: ROUTE.our_process }, { text: "Services", link: ROUTE.service }, { text: "Projects", link: ROUTE.project }, 
-                    { text: "Blog", link: ROUTE.blog }, { text: "Contact Us", link: ROUTE.contact }, { text: "Appointment", link: ROUTE.appointment } ]} />
+                  <SingleFooter classOne="offset-lg-1 col-lg-2 col-md-6 col-sm-6 col-12 mt--30" title="Our Company" data={[ { text: "Home", link: ROUTE.home },
+                    { text: "About Us", link: ROUTE.about }, { text: "Our Process", link: ROUTE.our_process }, { text: "Services", link: ROUTE.service }, { text: "Projects", link: ROUTE.project },
+                    { text: "Industries", link: ROUTE.industries }, { text: "Blog", link: ROUTE.blog }, { text: "Careers", link: ROUTE.careers }, { text: "Contact Us", link: ROUTE.contact }, { text: "Appointment", link: ROUTE.appointment } ]} />
 
 
 
 
-                  <SingleFooter classOne="col-lg-2 col-md-6 col-sm-6 col-12 mt--30" title="Our Services" data={[ { text: "Web Development", link: ROUTE.web_dev_service }, 
-                    { text: "Mobile App Development", link: ROUTE.mobile_dev_service }, { text: "Blockchain Development", link: ROUTE.blockchain_dev_service }, 
-                    { text: "Game Development", link: ROUTE.game_dev_service }, { text: "Product design", link: ROUTE.product_design_service }, 
+                  <SingleFooter classOne="col-lg-2 col-md-6 col-sm-6 col-12 mt--30" title="Our Services" data={[ { text: "Web Development", link: ROUTE.web_dev_service },
+                    { text: "Mobile App Development", link: ROUTE.mobile_dev_service }, { text: "Blockchain Development", link: ROUTE.blockchain_dev_service },
+                    { text: "Cybersecurity Services", link: ROUTE.cybersecurity_service },
+                    { text: "Game Development", link: ROUTE.game_dev_service }, { text: "Product design", link: ROUTE.product_design_service },
                     { text: "MVP Development", link: ROUTE.mvp_development_service }, { text: "3D Modeling", link: ROUTE.three_D_modeling_service }, 
                     { text: "3D Animations", link: ROUTE.three_dimension_animation_service }, { text: "2D Art", link: ROUTE.two_D_art_service }, 
                     { text: "2D Animations", link: ROUTE.two_dimension_animation_service }, { text: "AI Development", link: ROUTE.ai_development_service }, 

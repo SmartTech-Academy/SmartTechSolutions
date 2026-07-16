@@ -1,11 +1,9 @@
-import Image from "next/image";
-
-import CourseData from "@/data/elements/accordion.json";
+import LazyImage from "@/my_components/_Global/LazyImage";
 
 import { image_url, dangerouslySetInnerHTML } from "@/helper/Utilities";
 
 
-const ServiceFaq = ({ data }) => {
+const ServiceFaq = ({ data, visual }) => {
 
   return (
 
@@ -48,7 +46,9 @@ const ServiceFaq = ({ data }) => {
 
               <div className="col-lg-5 order-1 order-lg-2">
                 <div className="thumbnail">
-                  <Image className="radius-6" src={image_url(data.img)} width={526} height={644} alt="SmartTech Solutions Web Development image" />
+                  {visual ? visual : (
+                    <LazyImage wrapperClassName="radius-6" src={image_url(data.img)} width={526} height={644} alt={data.title || "SmartTech Solutions"} />
+                  )}
                 </div>
               </div>
             </div>

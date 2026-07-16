@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import sal from "sal.js";
@@ -10,16 +10,28 @@ import { CONFIG } from "@/app_config.js";
 import heroBg from "@/public/app_images/banner/book_appointment_hero_bg.webp";
 import supportVisual from "@/public/app_images/services/book_appointment_visual.webp";
 
+
+
+
+
+
+
+
+
+
 const TRUST_PILLS = [
-  { icon: "feather-calendar", text: "Free 30-minute discovery call" },
+  { icon: "feather-calendar", text: "30-minute discovery call" },
   { icon: "feather-shield", text: "No-obligation project quote" },
   { icon: "feather-clock", text: "We reply within 24 hours" },
 ];
 
+
+
+
 const NEXT_STEPS = [
   {
     title: "Book your call",
-    text: "Tell us about your project using the form — takes under two minutes.",
+    text: "Tell us about your project using the form, takes under two minutes.",
   },
   {
     title: "We review your goals",
@@ -31,33 +43,56 @@ const NEXT_STEPS = [
   },
 ];
 
+
+
+
 const SERVICE_OPTIONS = [
   "Web Application Development",
   "Mobile Application Development",
-  "AI Development",
+  "AI Development and Automations",
   "Blockchain Development",
   "Product Design (UI/UX)",
   "Game Development",
   "MVP Development",
+  "Cybersecurity Services",
+  "ERP / CRM Solution Implementation",
+  "Audit & Consultancy",
+  "Support & Maintenance",
   "Something else",
 ];
 
-const BUDGET_OPTIONS = ["Under $5,000", "$5,000 – $15,000", "$15,000 – $50,000", "$50,000+", "Not sure yet"];
 
-const TIMELINE_OPTIONS = ["As soon as possible", "1 – 3 months", "3 – 6 months", "Just exploring"];
+
+
+// Only relevant when "ERP / CRM Solution Implementation" is picked above —
+// mirrors my_data/solutions/solutions.js, the 5 platforms under the
+// Solutions menu.
+const SOLUTION_OPTIONS = [
+  "Odoo ERP",
+  "Zoho CRM",
+  "Oracle NetSuite",
+  "SAP Business One",
+  "Microsoft Dynamics 365 Business Central",
+  "Not sure which platform yet",
+];
+
+
+
+
+const BUDGET_OPTIONS = ["Under $5,000", "$5,000 - $15,000", "$15,000 - $50,000", "$50,000+", "Not sure yet"];
+
+
+
+const TIMELINE_OPTIONS = ["As soon as possible", "1 - 3 months", "3 - 6 months", "Just exploring"];
+
+
 
 const FAQS = [
-  {
-    id: "faq-free-call",
-    question: "Is the discovery call really free?",
-    answer:
-      "Yes. The first 30-minute call is completely free with no obligation to move forward. It's a chance for us to understand your goals and for you to see how we work.",
-  },
   {
     id: "faq-prepare",
     question: "What should I prepare before the call?",
     answer:
-      "A short description of your idea or problem, any existing materials (designs, decks, or a live product if it exists), and a rough sense of your timeline and budget range — the form below covers all of this.",
+      "A short description of your idea or problem, any existing materials (designs, decks, or a live product if it exists), and a rough sense of your timeline and budget range, the form below covers all of this.",
   },
   {
     id: "faq-reply-time",
@@ -73,13 +108,41 @@ const FAQS = [
   },
 ];
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const BookAppointment = () => {
+
+  const [service, setService] = useState("");
+  const showSolutionField = service === "ERP / CRM Solution Implementation";
+
   useEffect(() => {
     sal({ threshold: 0.01, once: true });
   }, []);
 
+
   return (
+
     <main className="rbt-main-wrapper rbt-appointment-page">
+
+
       <section className="rbt-appointment-hero">
         <Image
           src={heroBg}
@@ -104,7 +167,7 @@ const BookAppointment = () => {
 
             <p className="description" data-sal="slide-up" data-sal-delay="320" data-sal-duration="800">
               Tell us about your idea and we&apos;ll set up a call with the right people on our
-              team — product, engineering, and design — to map out how to build it.
+              team, product, engineering, and design to map out how to build it.
             </p>
 
             <div className="rbt-appointment-trust" data-sal="slide-up" data-sal-delay="420" data-sal-duration="800">
@@ -119,6 +182,20 @@ const BookAppointment = () => {
         </div>
       </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <section className="rbt-appointment-main rbt-section-gap">
         <div className="container">
           <div className="row g-5 align-items-start">
@@ -127,7 +204,7 @@ const BookAppointment = () => {
                 <span className="subtitle bg-primary-opacity">Tell Us About Your Project</span>
                 <h2 className="title">Request your appointment</h2>
                 <p className="form-lede">
-                  Fill in as much detail as you can — it helps us bring the right specialists to
+                  Fill in as much detail as you can, it helps us bring the right specialists to
                   your call.
                 </p>
 
@@ -173,7 +250,12 @@ const BookAppointment = () => {
                     <div className="col-md-6">
                       <div className="form-group">
                         <label htmlFor="appointment-service">Service you need</label>
-                        <select id="appointment-service" name="appointment-service" defaultValue="">
+                        <select
+                          id="appointment-service"
+                          name="appointment-service"
+                          value={service}
+                          onChange={(event) => setService(event.target.value)}
+                        >
                           <option value="" disabled>Choose a service</option>
                           {SERVICE_OPTIONS.map((option) => (
                             <option value={option} key={option}>{option}</option>
@@ -182,6 +264,21 @@ const BookAppointment = () => {
                         <span className="focus-border"></span>
                       </div>
                     </div>
+
+                    {showSolutionField ? (
+                      <div className="col-md-6">
+                        <div className="form-group">
+                          <label htmlFor="appointment-solution">Which platform?</label>
+                          <select id="appointment-solution" name="appointment-solution" defaultValue="">
+                            <option value="" disabled>Choose a solution</option>
+                            {SOLUTION_OPTIONS.map((option) => (
+                              <option value={option} key={option}>{option}</option>
+                            ))}
+                          </select>
+                          <span className="focus-border"></span>
+                        </div>
+                      </div>
+                    ) : null}
 
                     <div className="col-md-6">
                       <div className="form-group">
@@ -279,6 +376,20 @@ const BookAppointment = () => {
         </div>
       </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <section className="rbt-appointment-faq rbt-section-gap bg-color-extra2">
         <div className="container">
           <div className="row mb--50">
@@ -323,6 +434,20 @@ const BookAppointment = () => {
         </div>
       </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <section className="rbt-brand-area bg-color-white rbt-section-gapBottom">
         <div className="container">
           <div className="row align-items-center">
@@ -332,8 +457,12 @@ const BookAppointment = () => {
           </div>
         </div>
       </section>
+
+
     </main>
+
   );
+
 };
 
 export default BookAppointment;

@@ -13,7 +13,11 @@ const ErrorPage = () => {
   return (
     <Provider store={Store}>
       <Context>
-        <PageHead title="Page not found | SmartTech Solutions" />
+        <PageHead
+          title="Page not found | SmartTech Solutions"
+          description="The page you're looking for doesn't exist or has moved. Head back to SmartTech Solutions to explore our services, projects, and industries."
+          noIndex
+        />
         <HeaderContainer headerSticky="rbt-sticky" headerType="" />
 
         <NotFound />

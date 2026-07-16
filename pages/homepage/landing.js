@@ -16,6 +16,7 @@ const Home = () => {
       <PageHead
         title="SmartTech Solutions | Web, Mobile, AI & Blockchain Development Studio"
         description="SmartTech Solutions builds web platforms, mobile apps, AI systems, blockchain products, and games for ambitious teams — 200+ projects delivered, 410+ satisfied clients."
+        image="/app_images/banner/smarttech_hero_bg.webp"
         path="/"
       />
 

@@ -140,6 +140,32 @@ export default function ServicesProp({ courseData, image }) {
       </div>
 
 
+      <div className="col-lg-12" data-sal="slide-up" data-sal-delay="50" data-sal-duration="700">
+        <div className="modern-course-features-box h-100">
+          <div className="inner">
+            <div className="thumbnail">
+              <Image src={image_url("/app_images/services/service_images/smarttech_cybersecurity.webp", true)} width={604} height={408} alt="Cybersecurity Services" />
+            </div>
+
+            <div className="content">
+              <h2 className="title mt--10">{"Cybersecurity Services"}</h2>
+              <p>{"From identity and access management to 24/7 managed detection and incident response, we design and run the security layer serious software deserves. Spanning DLP, "
+              +"SIEM/SOAR, vulnerability management, threat intelligence, and DFIR, so a breach never becomes the story of your business."}</p>
+
+              <Link className="rbt-btn hover-icon-reverse btn-border color-white-off" href={ROUTE.cybersecurity_service}>
+                <span className="icon-reverse-wrapper">
+                  <span className="btn-text">Learn More</span>
+                  <span className="btn-icon"> <i className="feather-arrow-right"></i> </span>
+                  <span className="btn-icon"> <i className="feather-arrow-right"></i> </span>
+                </span>
+              </Link>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <div className="col-lg-12" data-sal="slide-up" data-sal-delay="100" data-sal-duration="700">
         <div className="modern-course-features-box h-100">
           <div className="inner">

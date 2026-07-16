@@ -29,6 +29,8 @@ import BlogGridMinimal from "@/my_components/Blogs/Components/BlogGridMinimal";
 import Newsletter_2 from "@/my_components/Newsletters/Newsletter_2";
 import HomepageServices from "./Home-Sections/HomepageServices";
 import CounterSection from "@/my_components/Counters/CounterSection";
+import ScrollRevealSection from "@/my_components/_Global/ScrollRevealSection";
+import LazyImage from "@/my_components/_Global/LazyImage";
 
 
 // LOAD DATAS
@@ -240,11 +242,80 @@ const HomePageContents = () => {
 
 
 
+        {/* ══════════════ CYBERSECURITY SPOTLIGHT ══════════════ */}
+        <section className="home-cysec rbt-section-gapTop mt--120 mb--30">
+          <LazyImage
+            wrapperClassName="home-cysec__bg"
+            src={image_url("/app_images/bg/cybersecurity_cta_bg.webp", true)}
+            alt="SmartTech Solutions security operations"
+            fill
+            sizes="100vw"
+            className="home-cysec__bg-img"
+          />
+          <span className="home-cysec__overlay" aria-hidden="true" />
 
-        <div className="rbt-counterup-area counterup-section-02">
-          <CounterSection image={journeyBg}>
-            <HomePageCounter />
-          </CounterSection>
+          <div className="container">
+            <ScrollRevealSection className="home-cysec__inner">
+              <span className="home-cysec__eyebrow">
+                <i className="feather-shield"></i> Cybersecurity Services
+              </span>
+              <h2 className="home-cysec__title">
+                We don&apos;t just build your systems, we defend them.
+              </h2>
+              <p className="home-cysec__desc">
+                From identity and access management to 24/7 managed detection and incident response,
+                SmartTech runs the full security layer behind serious software, systems and networks; engineered 
+                by the same team that builds it, not a disconnected vendor bolted on after launch.
+              </p>
+              <ul className="home-cysec__points">
+                <li><i className="feather-check-circle"></i> 24/7 MDR/XDR monitoring</li>
+                <li><i className="feather-check-circle"></i> SIEM/SOAR & threat intelligence</li>
+                <li><i className="feather-check-circle"></i> Incident response & DFIR</li>
+              </ul>
+              <div className="rbt-button-group">
+                <Link className="rbt-btn btn-gradient hover-icon-reverse" href={ROUTE.cybersecurity_service}>
+                  <span className="icon-reverse-wrapper">
+                    <span className="btn-text">Explore Cybersecurity Services</span>
+                    <span className="btn-icon"><i className="feather-arrow-right"></i></span>
+                    <span className="btn-icon"><i className="feather-arrow-right"></i></span>
+                  </span>
+                </Link>
+              </div>
+            </ScrollRevealSection>
+          </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div className="rbt-testimonial-area bg-color-white rbt-section-gapTop overflow-hidden">
+          <div className="wrapper">
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-12">
+                  <div className="section-title text-center mb--10">
+                    <h2 className="title">
+                    {"Our clients simply love what we do"} <br/> <span className="theme-gradient">{"No joking - here's the proof!"}</span>
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <Testimonial_1 />
         </div>
 
 
@@ -263,21 +334,16 @@ const HomePageContents = () => {
 
 
 
-        <div className="rbt-testimonial-area bg-color-white rbt-section-gap overflow-hidden">
-          <div className="wrapper">
-            <div className="container">
-              <div className="row">
-                <div className="col-lg-12">
-                  <div className="section-title text-center mb--10">
-                    <h2 className="title">
-                    {"Our clients simply love what we do"} <br/> <span className="theme-gradient">{"No joking - here's the proof!"}</span>
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <Testimonial_1 />
+
+
+
+
+
+
+        <div className="rbt-counterup-area counterup-section-02 rbt-section-gapBottom">
+          <CounterSection image={journeyBg}>
+            <HomePageCounter />
+          </CounterSection>
         </div>
 
 

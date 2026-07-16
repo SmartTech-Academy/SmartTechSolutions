@@ -1,4 +1,67 @@
 {
+  "cybersecurity_faqs": [
+    {
+      "tag": false,
+      "title": "Faq about Cybersecurity Services",
+      "img": "/app_images/faq/faq.webp",
+      "faqBody": [
+        {
+          "collapse": "cysecCollapseOne",
+          "heading": "cysecHeadingOne",
+          "expanded": true,
+          "collapsed": true,
+          "show": true,
+          "subTitle": "Do you offer 24/7 monitoring, or just a one-time security audit?",
+          "text": "Both. We run one-time security assessments for teams that need a clear picture of their exposure, and ongoing 24/7 managed detection and response (MDR/XDR) for teams that want continuous coverage — most clients start with an assessment and move into ongoing monitoring."
+        },
+        {
+          "collapse": "cysecCollapseTwo",
+          "heading": "cysecHeadingTwo",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "We're a small team — is enterprise-grade security overkill for us?",
+          "text": "No — attackers don't check company size before targeting a business. We scale the same security principles (identity management, monitoring, awareness training) to fit a small team's budget and risk profile, without the enterprise price tag or complexity."
+        },
+        {
+          "collapse": "cysecCollapseThree",
+          "heading": "cysecHeadingThree",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "Can you help if we've already had a security incident?",
+          "text": "Yes — our DFIR (Digital Forensics & Incident Response) service is built exactly for this: rapid containment, root-cause investigation, and a recovery plan, followed by the hardening work to stop it from happening again."
+        },
+        {
+          "collapse": "cysecCollapseFour",
+          "heading": "cysecHeadingFour",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "Do you work with our existing security tools, or replace them?",
+          "text": "Both approaches work with us. We can integrate and consolidate your current tools into a unified security platform, or design a new stack from scratch if what you have isn't serving you well."
+        },
+        {
+          "collapse": "cysecCollapseFive",
+          "heading": "cysecHeadingFive",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "How is your security work different from a generic IT support company?",
+          "text": "We're the same team that architects and builds the software your security has to protect — so our security decisions come from understanding how the underlying systems actually work, not from a generic checklist applied to unfamiliar infrastructure."
+        },
+        {
+          "collapse": "cysecCollapseSix",
+          "heading": "cysecHeadingSix",
+          "expanded": false,
+          "collapsed": false,
+          "show": false,
+          "subTitle": "How do we get started?",
+          "text": "Reach out at info@smarttechacademy.org or book a call — we start with a short discovery conversation and a security posture review before recommending a scope of work."
+        }
+      ]
+    }
+  ],
   "web_dev_faqs": [
     {
       "tag": false,
@@ -75,7 +138,7 @@
     {
       "tag": false,
       "title": "Faq about Mobile App development",
-      "img": "/app_images/faq/faq.webp",
+      "img": "/app_images/faq/faq_mobile_app_dev.webp",
       "faqBody": [
         {
           "collapse": "tutioncollapseOne",

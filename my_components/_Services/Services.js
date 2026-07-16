@@ -17,59 +17,21 @@ import servicesHeroVisual from "@/public/app_images/services/services_hero_visua
 import { ROUTE } from "@/route/app_routes.js";
 import { image_url } from "@/helper/Utilities";
 
-const serviceImage = (name) =>
-  image_url(`/app_images/services/service_images/${name}`, true);
+
+
+
+
+const serviceImage = (name) => image_url(`/app_images/services/service_images/${name}`, true);
+
+
 
 const heroStats = [
-  { value: "12+", label: "service tracks" },
+  { value: "13+", label: "service stacks" },
   { value: "5", label: "delivery phases" },
-  { value: "Web3", label: "AI, apps, games" },
+  { value: "10+", label: "Case Studies" },
 ];
 
-const serviceHighlights = [
-  {
-    title: "Web Applications",
-    text: "Fast, scalable platforms, portals, marketplaces, dashboards, and business systems.",
-    image: "smarttech_web_development.png",
-    route: ROUTE.web_dev_service,
-    icon: "feather-monitor",
-  },
-  {
-    title: "Mobile Apps",
-    text: "Beautiful iOS and Android products with smooth UX and reliable engineering.",
-    image: "smarttech_mobile_app_development.png",
-    route: ROUTE.mobile_dev_service,
-    icon: "feather-smartphone",
-  },
-  {
-    title: "AI Development",
-    text: "Applied AI features, automation, assistants, and smart product workflows.",
-    image: "smarttech_ai_development.png",
-    route: ROUTE.ai_development_service,
-    icon: "feather-cpu",
-  },
-  {
-    title: "Blockchain",
-    text: "Tokens, exchanges, smart contracts, NFT platforms, wallets, and asset rails.",
-    image: "smarttech_blockchain_development.webp",
-    route: ROUTE.blockchain_dev_service,
-    icon: "feather-link",
-  },
-  {
-    title: "Product Design",
-    text: "Research, UX architecture, interface design, prototypes, and design systems.",
-    image: "smarttech_uiux.png",
-    route: ROUTE.product_design_service,
-    icon: "feather-edit-3",
-  },
-  {
-    title: "Game Development",
-    text: "2D, 3D, Web3, PC, mobile, VR, and console experiences built to engage.",
-    image: "smarttech_game_development.png",
-    route: ROUTE.game_dev_service,
-    icon: "feather-crosshair",
-  },
-];
+
 
 const deliveryPillars = [
   "Product strategy",
@@ -80,16 +42,39 @@ const deliveryPillars = [
   "Launch support",
 ];
 
+
+
 const heroServiceStack = [
   "Web Platforms",
   "Mobile Apps",
   "AI Systems",
   "Blockchain",
-  "Product Design",
+  "Cybersecurity",
   "Games & 3D",
 ];
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const Services = () => {
+
+
   useEffect(() => {
     sal({
       threshold: 0.01,
@@ -97,9 +82,14 @@ const Services = () => {
     });
   }, []);
 
+
   return (
+
     <>
+
       <main className="rbt-main-wrapper services-page">
+
+
         <section className="services-hero services-hero-editorial">
           <div className="container">
             <div className="row align-items-end g-5">
@@ -131,7 +121,7 @@ const Services = () => {
 
                     <Link className="rbt-btn hover-icon-reverse btn-border color-white-off" href={ROUTE.project}>
                       <span className="icon-reverse-wrapper">
-                        <span className="btn-text">Explore Projects</span>
+                        <span className="btn-text">Explore Our Projects</span>
                         <span className="btn-icon">
                           <i className="feather-arrow-right"></i>
                         </span>
@@ -201,7 +191,10 @@ const Services = () => {
 
 
 
-        <section className="service-intro rbt-section-gap bg-color-white">
+
+
+
+        <section className="service-intro rbt-section-gapTop bg-color-white">
           <div className="container">
             <div className="row g-5 align-items-end mb--50">
               <div className="col-lg-7">
@@ -248,36 +241,6 @@ const Services = () => {
 
         <section className="services-catalog rbt-section-gapBottom bg-color-white">
           <div className="container">
-            {/* <div className="row g-5 align-items-center mb--60">
-              <div className="col-lg-5">
-                <div className="catalog-panel" data-sal="slide-right" data-sal-duration="700">
-                  <span>OUR SERVICES</span>
-                  <h2>Choose the capability your product needs next.</h2>
-                  <p>
-                    From software engineering to creative production, each
-                    service is structured around measurable product outcomes,
-                    dependable delivery, and long-term maintainability.
-                  </p>
-                </div>
-              </div>
-              <div className="col-lg-7">
-                <div className="catalog-preview-grid">
-                  {serviceHighlights.slice(0, 4).map((service, index) => (
-                    <Link
-                      className="preview-tile"
-                      href={service.route}
-                      key={service.title}
-                      data-sal="slide-up"
-                      data-sal-delay={index * 70}
-                    >
-                      <i className={service.icon}></i>
-                      <strong>{service.title}</strong>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div> */}
-
             <div className="row g-5">
               <ServicesProp courseData={SingleCourseData.certificate} image={true} />
             </div>

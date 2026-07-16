@@ -31,7 +31,7 @@ const StudentDashboardHeader = () => {
 
           <div className="rbt-tutor-information-right">
             <div className="tutor-btn">
-              <Link className="rbt-btn btn-md hover-icon-reverse" href={ ROUTE.course }>
+              <Link className="rbt-btn btn-md hover-icon-reverse" href={ ROUTE.dashboardBrowseCourses }>
                 <span className="icon-reverse-wrapper">
                   <span className="btn-text">Browse Courses</span>
                   <span className="btn-icon"> <i className="feather-arrow-right" /> </span>

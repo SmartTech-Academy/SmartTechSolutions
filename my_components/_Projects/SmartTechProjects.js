@@ -243,8 +243,8 @@ const SmartTechProjects = () => {
               </div>
 
               <div className={styles.featStack}>
-                {featured.stack.map((t) => (
-                  <span key={t}>{t}</span>
+                {featured.stack.map((t, i) => (
+                  <span key={`${t}-${i}`}>{t}</span>
                 ))}
               </div>
 
@@ -322,7 +322,7 @@ const SmartTechProjects = () => {
                   <p className={styles.projectTagline}>{project.tagline}</p>
                   <p className={styles.projectDesc}>{project.description}</p>
                   <div className={styles.projectStack}>
-                    {project.stack.map((t) => <span key={t}>{t}</span>)}
+                    {project.stack.map((t, i) => <span key={`${t}-${i}`}>{t}</span>)}
                   </div>
                   <div className={styles.projectMetaRow}>
                     <span><i className="feather-monitor"></i>{project.platform}</span>

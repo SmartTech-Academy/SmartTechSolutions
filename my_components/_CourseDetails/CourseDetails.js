@@ -38,7 +38,7 @@ const CourseDetails = () => {
     useEffect(() => {
       if (postId && checkMatch === undefined) {
         // router.push("/course-filter-one-toggle");
-        router.push(ROUTE.course);
+        router.push(ROUTE.dashboardBrowseCourses);
       }
   
       sal({

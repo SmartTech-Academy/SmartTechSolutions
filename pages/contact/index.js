@@ -20,6 +20,7 @@ const index = () => {
         <PageHead
           title="Contact Us | SmartTech Solutions"
           description="Got an idea for your project? Get in touch with SmartTech Solutions to discuss your web, mobile, AI, or blockchain build and get a response from our team."
+          image="/app_images/contact_and_office_img/contact_hero_bg.webp"
           path="/contact"
         />
 

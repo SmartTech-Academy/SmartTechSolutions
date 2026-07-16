@@ -1,15 +1,16 @@
+import { Fragment } from "react";
 
 const ServicesProcedures = ({ data }) => {
 
   return (
 
     <div className="rbt-section-gapBottom">
-    
+
       {data && data.map((data, index) => (
 
-        <>
+        <Fragment key={index}>
 
-          <div className="wrapper cards-section" style={{ marginTop: '-220px', position: 'relative', zIndex: 2 }} key={index}>
+          <div className="wrapper cards-section" style={{ marginTop: '-220px', position: 'relative', zIndex: 2 }}>
             <div className="container">
               <div className="row g-5">
                 <div className="col-lg-6 col-md-6 col-12">
@@ -63,7 +64,7 @@ const ServicesProcedures = ({ data }) => {
             </div>
           </div>
 
-        </>
+        </Fragment>
 
       ))}
 

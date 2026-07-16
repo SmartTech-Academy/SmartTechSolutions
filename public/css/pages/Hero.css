@@ -5,11 +5,7 @@
 
 .rbt-hero-editorial {
   position: relative;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   overflow: hidden;
-  animation: rbt-hero-kenburns 22s ease-in-out infinite alternate;
 }
 
 .rbt-hero-editorial.height-800 {
@@ -23,9 +19,35 @@
   }
 }
 
-@keyframes rbt-hero-kenburns {
-  0% { background-size: 104%; background-position: 50% 40%; }
-  100% { background-size: 116%; background-position: 50% 50%; }
+/* The Ken Burns zoom used to animate `background-size`/`background-position`
+   directly on this huge (880px) hero, forever, on an infinite loop. Those
+   properties are not compositor-friendly — the browser has to repaint the
+   entire hero on the main thread every frame, permanently. On real (GPU
+   compositing) devices, especially mobile Safari, stacking that continuous
+   full-hero repaint underneath the page's other effects while the user
+   scrolls is what was crashing the renderer to a white flash. This now runs
+   once on mount as a `transform: scale()` tween (GPU-composited, animates
+   for ~1.6s then simply stops moving — zero ongoing cost) instead. */
+.rbt-hero-editorial__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scale(1.06);
+  animation: rbt-hero-kenburns-in 1.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes rbt-hero-kenburns-in {
+  0% { transform: scale(1.16); }
+  100% { transform: scale(1.06); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rbt-hero-editorial__bg {
+    animation: none;
+  }
 }
 
 .rbt-hero-editorial__scrim {
@@ -223,10 +245,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .rbt-hero-editorial {
-    animation: none;
-  }
-
   .rbt-hero-scroll-cue__wheel {
     animation: none;
   }

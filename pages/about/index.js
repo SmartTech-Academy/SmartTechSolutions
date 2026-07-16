@@ -21,6 +21,7 @@ const index = () => {
         <PageHead
           title="About Us | SmartTech Solutions"
           description="Meet SmartTech Solutions — a Lagos-based team of visionary developers and designers who use agile methods to build software that creates lasting value for clients."
+          image="/app_images/banner/about_smarttech_solutions.webp"
           path="/about"
         />
 

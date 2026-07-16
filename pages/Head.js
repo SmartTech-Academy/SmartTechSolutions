@@ -18,6 +18,54 @@ const PageHead = ({
   const canonicalPath = path ?? router.asPath.split("?")[0].split("#")[0];
   const canonicalUrl = `${CONFIG.SITE_URL}${canonicalPath === "/" ? "" : canonicalPath}`;
   const absoluteImage = image.startsWith("http") ? image : `${CONFIG.SITE_URL}${image}`;
+  const isHome = canonicalPath === "/";
+  const toJsonLd = (data) => JSON.stringify(data).replace(/</g, "\\u003c");
+
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: CONFIG.APP_NAME,
+    alternateName: CONFIG.NICK_NAME,
+    url: CONFIG.SITE_URL,
+    logo: `${CONFIG.SITE_URL}/app_images/fav-logo-blue.png`,
+    image: absoluteImage,
+    description: DEFAULT_DESCRIPTION,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: CONFIG.ADDRESS,
+      addressCountry: "NG",
+    },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: CONFIG.PHONE_1,
+        contactType: "customer service",
+        email: CONFIG.EMAIL_1,
+        areaServed: "Worldwide",
+      },
+    ],
+    sameAs: [
+      "https://www.facebook.com/smarttechacademy",
+      "https://www.x.com/smarttechacademy",
+      "https://www.instagram.com/smarttechacademy",
+      "https://www.linkedin.com/company/smarttechacademy",
+      "https://www.youtube.com/smarttechacademy",
+    ],
+  };
+
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title,
+    description,
+    url: canonicalUrl,
+    inLanguage: "en",
+    isPartOf: {
+      "@type": "WebSite",
+      name: CONFIG.APP_NAME,
+      url: CONFIG.SITE_URL,
+    },
+  };
 
   return (
     <Head>
@@ -44,6 +92,20 @@ const PageHead = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={absoluteImage} />
+
+      {/* Structured Data */}
+      {!noIndex && isHome ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: toJsonLd(organizationSchema) }}
+        />
+      ) : null}
+      {!noIndex ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: toJsonLd(webPageSchema) }}
+        />
+      ) : null}
     </Head>
   );
 };

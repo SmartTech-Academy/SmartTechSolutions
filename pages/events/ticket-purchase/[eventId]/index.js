@@ -24,7 +24,11 @@ const index = () => {
 
     <>
 
-      <PageHead title="Ticket Purchase | SmartTech Solutions" />
+      <PageHead
+        title="Ticket Purchase | SmartTech Solutions"
+        description="Secure your spot at this SmartTech Solutions event — complete your ticket purchase in a few quick steps."
+        noIndex
+      />
 
       <Provider store={Store}>
         <Context>

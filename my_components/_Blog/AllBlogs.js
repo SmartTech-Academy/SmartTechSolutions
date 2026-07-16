@@ -18,7 +18,12 @@ import blogHeroBg from "@/public/app_images/blog/blog_hero_bg.webp";
 // further down the archive, just given the premium treatment up top.
 const featuredPosts = [
   {
-    slug: "How-to-Analyze-Your-Best-SEO-1",
+    // Trailing number must match this post's id in data/blog/blog.json —
+    // the detail page (pages/blog/post/[postId]/index.js) resolves which
+    // post to show by extracting the number at the end of this slug, so
+    // every post needs its OWN distinct trailing digit or they all
+    // resolve to the same article (the bug this fixes).
+    slug: "how-to-analyze-your-best-pages-for-seo-performance-1",
     image: "/app_images/blog/blog1.webp",
     width: 1085,
     height: 780,
@@ -29,7 +34,7 @@ const featuredPosts = [
     readTime: "7 min read",
   },
   {
-    slug: "How-to-Analyze-Your-Best-SEO-1",
+    slug: "why-is-education-so-famous-2",
     image: "/app_images/blog/blog2.webp",
     width: 1085,
     height: 780,

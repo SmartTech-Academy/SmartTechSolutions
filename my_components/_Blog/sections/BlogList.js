@@ -12,7 +12,9 @@ const POSTS_PER_PAGE = 7;
 const blogPosts = [
   {
     id: 2,
-    slug: "How-to-Analyze-Your-Best-SEO-1",
+    // Trailing number must match this post's id in data/blog/blog.json —
+    // see AllBlogs.js for why every post needs its own distinct digit.
+    slug: "why-is-education-so-famous-2",
     image: "/app_images/blog/blog2.webp",
     width: 580,
     height: 300,
@@ -24,7 +26,7 @@ const blogPosts = [
   },
   {
     id: 3,
-    slug: "How-to-Analyze-Your-Best-SEO-1",
+    slug: "difficult-things-about-education-3",
     image: "/app_images/blog/blog3.webp",
     width: 580,
     height: 300,
@@ -36,7 +38,7 @@ const blogPosts = [
   },
   {
     id: 4,
-    slug: "How-to-Analyze-Your-Best-SEO-1",
+    slug: "education-is-so-famous-but-why-4",
     image: "/app_images/blog/blog4.webp",
     width: 580,
     height: 300,
@@ -48,7 +50,7 @@ const blogPosts = [
   },
   {
     id: 5,
-    slug: "How-to-Analyze-Your-Best-SEO-1",
+    slug: "five-things-you-about-education-5",
     image: "/app_images/blog/blog5.webp",
     width: 580,
     height: 300,
@@ -60,7 +62,7 @@ const blogPosts = [
   },
   {
     id: 6,
-    slug: "How-to-Analyze-Your-Best-SEO-1",
+    slug: "you-will-never-truth-of-education-6",
     image: "/app_images/blog/blog6.webp",
     width: 580,
     height: 300,

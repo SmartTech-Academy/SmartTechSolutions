@@ -17,6 +17,7 @@ const BookAppointmentPage = () => {
       <PageHead
         title="Book an Appointment | SmartTech Solutions"
         description="Book a free 30-minute discovery call with SmartTech Solutions. Tell us about your web, mobile, AI, or blockchain project and get a tailored roadmap within 24 hours."
+        image="/app_images/banner/book_appointment_hero_bg.webp"
         path="/book-appointment"
       />
 

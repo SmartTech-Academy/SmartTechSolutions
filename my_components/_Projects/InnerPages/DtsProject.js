@@ -15,6 +15,12 @@ const dtsMob  = (name) => `/app_images/projects/dts/mobile_app_${name}.png`;
 
 
 
+
+
+
+
+
+
 const webScreens = [
   { file: "homepage",                     label: "Marketing Homepage"      },
   { file: "dashboard",                    label: "Learner Dashboard"       },
@@ -29,6 +35,10 @@ const webScreens = [
   { file: "admin_dashboard_user_manager",label: "User Management"         },
 ];
 
+
+
+
+
 const mobileScreens = [
   { file: "flash_screen",               label: "Splash Screen"           },
   { file: "auth",                       label: "Authentication"          },
@@ -42,6 +52,10 @@ const mobileScreens = [
   { file: "profile",                   label: "Profile"                 },
 ];
 
+
+
+
+
 const galleryImages = [
   ...webScreens.map((s) => ({ src: dtsImg(s.file),  label: s.label })),
   ...mobileScreens.map((s) => ({ src: dtsMob(s.file), label: s.label })),
@@ -52,7 +66,7 @@ const galleryImages = [
 const challenges = [
   {
     title: "Video Streaming Infrastructure at Scale",
-    body: "Building a reliable, low-latency video delivery system that supports self-paced playback, progress tracking, and adaptive-quality streaming across varying network conditions — for learners in bandwidth-constrained environments.",
+    body: "Building a reliable, low-latency video delivery system that supports self-paced playback, progress tracking, and adaptive-quality streaming across varying network conditions, for learners in bandwidth-constrained environments.",
   },
   {
     title: "Dual-Role Platform Architecture",
@@ -60,7 +74,7 @@ const challenges = [
   },
   {
     title: "Community Forum & Real-Time Engagement",
-    body: "Building a faith-community forum that supports threaded discussions, real-time notifications, and contextual moderation — without compromising the platform's spirit-led environment or creating friction in spiritual conversations.",
+    body: "Building a faith-community forum that supports threaded discussions, real-time notifications, and contextual moderation, without compromising the platform's spirit-led environment or creating friction in spiritual conversations.",
   },
   {
     title: "Quiz Engine & Progress Assessment",
@@ -68,11 +82,11 @@ const challenges = [
   },
   {
     title: "Spiritual Growth Quantification",
-    body: "Translating abstract discipleship milestones — scripture study, module completion, community participation, quiz mastery — into trackable, visualised spiritual growth metrics that motivate without feeling transactional.",
+    body: "Translating abstract discipleship milestones, scripture study, module completion, community participation, quiz mastery, into trackable, visualised spiritual growth metrics that motivate without feeling transactional.",
   },
   {
     title: "Cross-Platform Content Synchronisation",
-    body: "Ensuring video progress, quiz state, community interactions, and course enrolments remained perfectly synchronised between web and mobile in real time — via Redis pub/sub and a NestJS proxy architecture.",
+    body: "Ensuring video progress, quiz state, community interactions, and course enrolments remained perfectly synchronised between web and mobile in real time, via Redis pub/sub and a NestJS proxy architecture.",
   },
 ];
 
@@ -92,7 +106,7 @@ const processSteps = [
   {
     num: "03",
     title: "UI/UX Design for Faith Contexts",
-    body: "Visual design calibrated for warmth, reverence, and approachability — from onboarding to the classroom. Every flow validated with tutors and learners in high-fidelity prototypes before development began.",
+    body: "Visual design calibrated for warmth, reverence, and approachability, from onboarding to the classroom. Every flow validated with tutors and learners in high-fidelity prototypes before development began.",
   },
   {
     num: "04",
@@ -102,7 +116,7 @@ const processSteps = [
   {
     num: "05",
     title: "Video, Quiz & Community Systems",
-    body: "Video player with resume playback and progress sync, quiz engine with scoring and success states, community forum with real-time notifications, and the spiritual growth monitor — all integrated and cross-tested.",
+    body: "Video player with resume playback and progress sync, quiz engine with scoring and success states, community forum with real-time notifications, and the spiritual growth monitor, all integrated and cross-tested.",
   },
   {
     num: "06",
@@ -117,22 +131,22 @@ const craftFeatures = [
   {
     icon: "feather-sun",
     title: "Faith-Inspired Visual Language",
-    body: "Every design decision — colour, typography, spacing — was made to communicate warmth, reverence, and spiritual depth appropriate for a discipleship platform, not a generic LMS.",
+    body: "Every design decision, colour, typography, spacing, was made to communicate warmth, reverence, and spiritual depth appropriate for a discipleship platform, not a generic LMS.",
   },
   {
     icon: "feather-book-open",
     title: "Learner-First Journey Design",
-    body: "Course discovery, enrolment, and classroom flows were designed to remove all friction between a learner and their next spiritual lesson — from search to streamed video in as few steps as possible.",
+    body: "Course discovery, enrolment, and classroom flows were designed to remove all friction between a learner and their next spiritual lesson, from search to streamed video in as few steps as possible.",
   },
   {
     icon: "feather-users",
     title: "Community Spaces That Breathe",
-    body: "Forum and community sections were designed to feel alive and welcoming — encouraging tutors and learners to connect, share insights, and grow together outside the structured classroom.",
+    body: "Forum and community sections were designed to feel alive and welcoming, encouraging tutors and learners to connect, share insights, and grow together outside the structured classroom.",
   },
   {
     icon: "feather-monitor",
     title: "Cross-Platform Visual Consistency",
-    body: "Web and mobile share a single design language. Learners move between browser and phone with zero visual or functional learning curve — the experience is identical, the platform is everywhere.",
+    body: "Web and mobile share a single design language. Learners move between browser and phone with zero visual or functional learning curve, the experience is identical, the platform is everywhere.",
   },
 ];
 
@@ -142,12 +156,12 @@ const results = [
   {
     icon: "feather-play-circle",
     title: "Self-Paced Video Learning Platform",
-    body: "A complete video streaming classroom with progress tracking, bookmarking, and resume playback — enabling learners to grow in faith at their own rhythm, on any device.",
+    body: "A complete video streaming classroom with progress tracking, bookmarking, and resume playback, enabling learners to grow in faith at their own rhythm, on any device.",
   },
   {
     icon: "feather-message-square",
     title: "Community-Driven Forum",
-    body: "A moderated, threaded discussion platform where tutors and learners engage in meaningful discipleship conversations — extending the classroom into a vibrant faith community.",
+    body: "A moderated, threaded discussion platform where tutors and learners engage in meaningful discipleship conversations, extending the classroom into a vibrant faith community.",
   },
   {
     icon: "feather-check-circle",
@@ -157,19 +171,29 @@ const results = [
   {
     icon: "feather-trending-up",
     title: "Spiritual Growth Monitor",
-    body: "A first-of-its-kind spiritual growth tracker that visualises the learner's faith journey through measurable milestones — scripture engagement, module progress, and community participation.",
+    body: "A first-of-its-kind spiritual growth tracker that visualises the learner's faith journey through measurable milestones, scripture engagement, module progress, and community participation.",
   },
   {
     icon: "feather-layout",
     title: "Dual-Role Dashboard System",
-    body: "Separate purpose-built dashboards for tutors — course management, student tracking, community moderation — and learners — course discovery, progress, and community spaces.",
+    body: "Separate purpose-built dashboards for tutors, course management, student tracking, community moderation, and learners, course discovery, progress, and community spaces.",
   },
   {
     icon: "feather-shield",
     title: "Full Admin Management Suite",
-    body: "Comprehensive administrator control over users, courses, community content, and platform analytics — all in one organised, permission-layered dashboard.",
+    body: "Comprehensive administrator control over users, courses, community content, and platform analytics, all in one organised, permission-layered dashboard.",
   },
 ];
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -181,9 +205,11 @@ const results = [
 
 const DtsProject = () => {
 
+
   useEffect(() => {
     sal({ threshold: 0.01, once: true });
   }, []);
+
 
   const [lbIndex, setLbIndex] = useState(0);
   const [lbOpen,  setLbOpen]  = useState(false);
@@ -212,8 +238,12 @@ const DtsProject = () => {
 
   return (
 
+
     <div className="digi-case-page dts-theme">
+
       <main className="rbt-main-wrapper">
+
+
 
 
         {/* ── HERO ─────────────────────────────────────────────────── */}
@@ -242,7 +272,7 @@ const DtsProject = () => {
                   <p className="digi-hero-lead" data-sal="slide-up" data-sal-duration="700" data-sal-delay="160">
                     A self-paced discipleship platform where tutors mentor learners through video
                     streaming, structured courses, end-of-module quizzes, and a community-driven
-                    forum — all built to inspire spiritual growth and transform lives.
+                    forum, all built to inspire spiritual growth and transform lives.
                   </p>
 
                   <div className="digi-hero-actions" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">
@@ -266,8 +296,8 @@ const DtsProject = () => {
                     {[
                       { val: "2",    suffix: "",  label: "Platforms"        },
                       { val: "5+",   suffix: "",  label: "Core Modules"     },
-                      { val: "10+",  suffix: "",  label: "Engineers"        },
-                      { val: "21",   suffix: "",  label: "App Screens"      },
+                      { val: "6+",  suffix: "",  label: "Engineers"        },
+                      { val: "25+",   suffix: "",  label: "App Screens"      },
                     ].map(({ val, suffix, label }) => (
                       <div className="digi-glass-stat" key={label}>
                         <strong>{val}<em>{suffix}</em></strong>
@@ -306,6 +336,23 @@ const DtsProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── METRICS STRIP ────────────────────────────────────────── */}
         <div className="digi-metrics-strip">
           <div className="container">
@@ -330,6 +377,23 @@ const DtsProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── ABOUT THE CLIENT ─────────────────────────────────────── */}
         <section className="rbt-section-gap bg-color-white">
           <div className="container">
@@ -348,7 +412,7 @@ const DtsProject = () => {
                   </p>
                   <p>
                     Recognising that traditional discipleship is difficult to scale without compromising
-                    depth and personal connection, DTS commissioned a purpose-built digital platform —
+                    depth and personal connection, DTS commissioned a purpose-built digital platform, 
                     one that combines the warmth of mentorship with the reach of modern technology,
                     enabling tutors to teach across boundaries and learners to grow at their own pace.
                   </p>
@@ -357,7 +421,7 @@ const DtsProject = () => {
                   <div className="digi-cb-icon"><i className="feather-book-open"></i></div>
                   <div>
                     <strong>Disciple Training School</strong>
-                    <small>Product Owner · Faith EdTech</small>
+                    <small>Product Owner</small>
                   </div>
                 </div>
               </div>
@@ -374,9 +438,9 @@ const DtsProject = () => {
                     { icon: "feather-briefcase",    label: "Industry",     value: "EdTech, Religious Education & Faith Technology" },
                     { icon: "feather-book-open",    label: "Product",      value: "Self-Paced Discipleship & Video Learning Platform" },
                     { icon: "feather-monitor",      label: "Platforms",    value: "Web Application, Mobile App (iOS & Android)" },
-                    { icon: "feather-code",         label: "Tech Stack",   value: "NextJS · NestJS · Vite · Proxy Pattern · Redis" },
+                    { icon: "feather-code",         label: "Tech Stack",   value: "NextJS · NestJS  · ReactNative  · Web Socket · Vite · Proxy Pattern · Redis" },
                     { icon: "feather-layout",       label: "Core Modules", value: "Courses · Video Classroom · Quiz Engine · Community · Growth Monitor" },
-                    { icon: "feather-users",        label: "Team",         value: "8 Engineers, 2 UI/UX Designers, 2 QA Specialists" },
+                    { icon: "feather-users",        label: "Team",         value: "6 Engineers, 1 UI/UX Designers, 8 QA Engineers" },
                     { icon: "feather-award",        label: "Delivered By", value: "SmartTech Solutions", highlight: true },
                   ].map(({ icon, label, value, highlight }, i) => (
                     <div
@@ -403,6 +467,23 @@ const DtsProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── ABOUT THE APP ────────────────────────────────────────── */}
         <section className="rbt-section-gap digi-app-section">
           <div className="container">
@@ -418,11 +499,11 @@ const DtsProject = () => {
                     The DTS App is a self-paced discipleship platform designed to inspire spiritual
                     growth at scale. Tutors who are passionate about mentoring can sign up, create
                     structured courses, upload video content, and guide learners through a meaningful
-                    journey of faith — while monitoring their progress and engaging with them through
+                    journey of faith, while monitoring their progress and engaging with them through
                     a built-in community forum.
                   </p>
                   <p>
-                    Learners join and choose their own growth path — enrolling in courses, watching
+                    Learners join and choose their own growth path, enrolling in courses, watching
                     streamed video lessons, engaging in forum discussions with tutors and peers, and
                     taking end-of-module quizzes to validate their learning. A unique spiritual growth
                     monitor visualises their faith journey through measurable discipleship milestones.
@@ -430,11 +511,11 @@ const DtsProject = () => {
                   <p>
                     Built on a NextJS and NestJS proxy architecture with Redis-powered session caching,
                     the platform delivers a consistent, high-performance experience across web and
-                    mobile — one seamless product for every stage of the discipleship journey.
+                    mobile, one seamless product for every stage of the discipleship journey.
                   </p>
                 </div>
                 <div className="digi-stack">
-                  {["NextJS", "NestJS", "Vite", "Proxy Pattern", "Redis", "REST API", "WebSocket", "Mobile App"].map((t, i) => (
+                  {["NextJS", "NestJS", "React Native", "Vite", "Proxy Pattern", "REST API", "WebSocket"].map((t, i) => (
                     <span
                       key={t}
                       className="digi-stack-tag"
@@ -471,6 +552,30 @@ const DtsProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── THE CHALLENGE ────────────────────────────────────────── */}
         <section className="rbt-section-gap digi-challenge-section">
           <div className="container">
@@ -482,7 +587,7 @@ const DtsProject = () => {
                 </h2>
                 <p className="digi-challenge-lead">
                   Building a discipleship platform means solving video delivery, dual-role
-                  architecture, community trust, and spiritual growth quantification —
+                  architecture, community trust, and spiritual growth quantification, 
                   simultaneously, for users in the most personal of life journeys.
                   These were the six hardest problems we solved.
                 </p>
@@ -509,6 +614,24 @@ const DtsProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── USER ENGAGEMENT — Marquee ─────────────────────────────── */}
         <section className="rbt-section-gap digi-engage-section">
           <div className="container">
@@ -521,7 +644,7 @@ const DtsProject = () => {
               </h2>
               <p className="digi-engage-desc">
                 From onboarding and course discovery to live video classrooms, community
-                forums, and the spiritual growth monitor — every screen was crafted for
+                forums, and the spiritual growth monitor, every screen was crafted for
                 clarity, warmth, and a journey that transforms.
               </p>
             </div>
@@ -562,6 +685,25 @@ const DtsProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── THE PROCESS ──────────────────────────────────────────── */}
         <section className="rbt-section-gap digi-process-section">
           <div className="container">
@@ -575,7 +717,7 @@ const DtsProject = () => {
               <div className="col-lg-5" data-sal="slide-left" data-sal-duration="700">
                 <p className="digi-process-lead mt_md--20 mt_sm--20">
                   Six structured phases took DTS from a ministry brief to a production-ready
-                  discipleship platform — research-led, design-first, and built with no
+                  discipleship platform, research-led, design-first, and built with no
                   shortcuts in content delivery, spiritual UX, or cross-platform quality.
                 </p>
               </div>
@@ -601,6 +743,25 @@ const DtsProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── ENHANCING EXPERIENCE ─────────────────────────────────── */}
         <section className="rbt-section-gap digi-craft-section">
           <div className="container">
@@ -615,13 +776,13 @@ const DtsProject = () => {
                   <p>
                     Discipleship is one of the most personal journeys a person can take.
                     Every UI decision on the DTS platform was made knowing that the design
-                    itself must communicate safety, warmth, and reverence — not just
+                    itself must communicate safety, warmth, and reverence, not just
                     aesthetics. The product had to feel like a trusted guide, not a tool.
                   </p>
                   <p>
-                    SmartTech Solutions applied world-class UI precision to DTS — the same
+                    SmartTech Solutions applied world-class UI precision to DTS, the same
                     level of craft you expect from the best EdTech and consumer social
-                    platforms — calibrated for a faith context, for learners and tutors
+                    platforms, calibrated for a faith context, for learners and tutors
                     who deserve an experience that honours the gravity of what they&apos;re doing.
                   </p>
                 </div>
@@ -676,6 +837,26 @@ const DtsProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── SOLUTION & RESULTS ───────────────────────────────────── */}
         <section className="rbt-section-gap digi-solution-section">
           <div className="container">
@@ -689,14 +870,14 @@ const DtsProject = () => {
                 <div className="digi-solution-body">
                   <p>
                     SmartTech Solutions designed, architected, and shipped the complete DTS
-                    platform — from the NestJS API and Redis-cached video delivery to the
+                    platform, from the NestJS API and Redis-cached video delivery to the
                     NextJS web app, mobile application, quiz engine, community forum, and
                     spiritual growth tracking system.
                   </p>
                   <p>
                     The result is a modern, production-grade discipleship platform that
                     makes faith-based learning feel structured, connected, and genuinely
-                    meaningful — for tutors and learners, across web and mobile.
+                    meaningful, for tutors and learners, across web and mobile.
                   </p>
                 </div>
                 <div className="mt--36">
@@ -737,6 +918,25 @@ const DtsProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── CTA ──────────────────────────────────────────────────── */}
         <section className="rbt-call-to-action-area rbt-section-gap bg-color-secondary-alt">
           <div className="container">
@@ -760,6 +960,23 @@ const DtsProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── TESTIMONIALS ─────────────────────────────────────────── */}
         <section className="rbt-testimonial-area bg-color-white rbt-section-gap overflow-hidden">
           <div className="wrapper">
@@ -776,6 +993,21 @@ const DtsProject = () => {
           </div>
           <Testimonial_2 />
         </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -805,6 +1037,21 @@ const DtsProject = () => {
             <BlogWidget />
           </div>
         </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -839,6 +1086,19 @@ const DtsProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── NEWSLETTER ───────────────────────────────────────────── */}
         <section className="rbt-newsletter-area bg-color-white rbt-section-gapBottom pt--60">
           <div className="container">
@@ -851,7 +1111,21 @@ const DtsProject = () => {
         </section>
 
 
+
+
       </main>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
       {/* ── LIGHTBOX ─────────────────────────────────────────────── */}

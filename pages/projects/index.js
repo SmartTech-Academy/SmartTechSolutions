@@ -20,6 +20,7 @@ const index = () => {
         <PageHead
           title="Our Projects | SmartTech Solutions"
           description="Browse case studies from SmartTech Solutions — tokenized real estate, gold-backed crypto, ride-hailing apps, fintech platforms, and more, built for real clients."
+          image="/app_images/projects/digistate/website/exchange-page.png"
           path="/projects"
         />
 

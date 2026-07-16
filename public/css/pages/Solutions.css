@@ -1,0 +1,535 @@
+/* ════════════════════════════════════════════════════════════════════════
+   SOLUTIONS PAGES  (sol- namespace)
+   Paired with my_components/_Solutions/SolutionPageTemplate.js + SolutionsHub.js
+
+   Deliberately a different visual grammar than Industries.css: a light
+   editorial split hero with a product panel (not a full-bleed dark photo
+   hero), a horizontal engagement roadmap + bordered module checklist (not
+   a repeated dark glass card grid), so these read as software-implementation
+   partner pages rather than re-skinned Industries pages.
+   ════════════════════════════════════════════════════════════════════════ */
+
+/* ────────────────────────────────────────────────────────────────────────
+   HERO — light editorial split + product panel
+   ──────────────────────────────────────────────────────────────────────── */
+.sol-hero-v2 {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(150px, 14vw, 190px) 0 clamp(64px, 8vw, 96px);
+  background: linear-gradient(180deg, #f7f9fc 0%, #ffffff 60%);
+}
+
+.sol-hero-v2__blob {
+  position: absolute;
+  z-index: -1;
+  top: -22%;
+  right: -12%;
+  width: 640px;
+  height: 640px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(var(--sol-accent), 0.16), transparent 70%);
+}
+
+/* Static (not animated — see the note on .rbt-industries-backdrop__grid in
+   global-effects.css for why decorative grids on this site no longer
+   drift continuously) dot-grid texture across the whole hero, fading out
+   only right at the very edges so it reads as a real "clothed" background
+   pattern rather than a faint patch in one corner. */
+.sol-hero-v2__pattern {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: radial-gradient(rgba(23, 32, 51, 0.14) 1.6px, transparent 1.6px);
+  background-size: 24px 24px;
+  mask-image: radial-gradient(ellipse 100% 100% at 50% 30%, black 55%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 100% 100% at 50% 30%, black 55%, transparent 100%);
+}
+
+.sol-hero-v2__copy {
+  max-width: 560px;
+}
+
+.sol-hero-v2__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  margin-bottom: 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(var(--sol-accent), 0.28);
+  background: rgba(var(--sol-accent), 0.08);
+  color: rgb(var(--sol-accent));
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.sol-hero-v2__title {
+  margin: 0 0 18px;
+  color: var(--color-heading);
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.16;
+  font-weight: 700;
+}
+
+.sol-hero-v2__desc {
+  max-width: 520px;
+  margin: 0 0 30px;
+  color: var(--color-body);
+  font-size: clamp(16px, 1.5vw, 18px);
+  line-height: 1.7;
+}
+
+.sol-hero-v2__copy .rbt-button-group {
+  justify-content: flex-start;
+}
+
+.sol-hero-v2__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(24px, 5vw, 48px);
+  margin-top: 48px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(23, 32, 51, 0.1);
+}
+
+.sol-hero-v2__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sol-hero-v2__stat-value {
+  font-size: clamp(22px, 2.4vw, 28px);
+  font-weight: 800;
+  color: var(--color-heading);
+}
+
+.sol-hero-v2__stat-label {
+  font-size: 13px;
+  color: var(--color-body);
+}
+
+.sol-hero-v2__panel {
+  position: relative;
+  padding: 14px;
+  border-radius: 20px;
+  background: var(--color-white);
+  border: 1px solid rgba(23, 32, 51, 0.08);
+  box-shadow: 0 30px 70px -30px rgba(23, 32, 51, 0.25);
+}
+
+.sol-hero-v2__panel-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.sol-hero-v2__panel-img {
+  object-fit: cover;
+}
+
+.sol-hero-v2__panel-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 18px 6px 8px;
+}
+
+.sol-hero-v2__panel-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(var(--sol-accent), 0.08);
+  color: var(--color-heading);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.sol-hero-v2__panel-tag i {
+  color: rgb(var(--sol-accent));
+}
+
+@media (max-width: 767px) {
+  .sol-hero-v2 { padding-top: 132px; }
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   SHARED SECTION HEAD
+   ──────────────────────────────────────────────────────────────────────── */
+.sol-section { padding: clamp(56px, 7vw, 90px) 0; }
+
+.sol-section__head {
+  max-width: 640px;
+  margin: 0 auto 44px;
+  text-align: center;
+}
+
+.sol-section__head--left { margin: 0 0 24px; text-align: left; }
+.sol-section__head .subtitle { margin-bottom: 14px; }
+.sol-section__head .title.color-white { color: var(--color-white); }
+
+/* A flex row of exactly two items — an icon badge and one text span. The
+   previous version applied inline-flex directly to a <p> whose content
+   mixed plain text nodes with an inline <strong>; a flex container treats
+   each contiguous run of text as its own anonymous flex item, so the text
+   before, inside, and after the <strong> each became a separate wrapping
+   column instead of one flowing sentence. Wrapping the whole sentence in a
+   single <span> (one flex item) fixes that at the root. */
+.sol-partner-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 22px;
+  padding: 20px 24px;
+  border-radius: 14px;
+  background: var(--primary-opacity, rgba(47, 87, 239, 0.06));
+}
+
+.sol-partner-note__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--color-white);
+  color: var(--color-primary);
+  font-size: 16px;
+}
+
+.sol-partner-note__text {
+  color: var(--color-heading);
+  font-size: 15px;
+  line-height: 1.65;
+  text-align: left;
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   ENGAGEMENT ROADMAP — vertical connected timeline (replaces an earlier
+   5-column card grid with an absolutely-positioned dashed connector, which
+   read as cramped/misaligned at some viewport widths). A vertical line
+   with numbered nodes is a much more conventional, robust "process steps"
+   pattern — text and node never compete for the same space regardless of
+   viewport, zoom level, or description length.
+   ──────────────────────────────────────────────────────────────────────── */
+.sol-roadmap {
+  background: var(--color-white);
+}
+
+.sol-roadmap__track {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.sol-roadmap__step {
+  position: relative;
+  display: flex;
+  gap: 26px;
+  padding-bottom: 40px;
+}
+
+.sol-roadmap__step:last-child {
+  padding-bottom: 0;
+}
+
+.sol-roadmap__node {
+  position: relative;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(var(--sol-accent), 0.1);
+  border: 1px solid rgba(var(--sol-accent), 0.3);
+}
+
+/* Connecting line — a simple full-height border on the node's own column,
+   not a pseudo-element pinned to a fragile pixel offset. */
+.sol-roadmap__step:not(:last-child) .sol-roadmap__node:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 40px;
+  background: rgba(23, 32, 51, 0.14);
+}
+
+.sol-roadmap__num {
+  font-size: 16px;
+  font-weight: 800;
+  color: rgb(var(--sol-accent));
+}
+
+.sol-roadmap__body {
+  flex: 1;
+  padding-top: 8px;
+}
+
+.sol-roadmap__body h4 {
+  margin: 0 0 8px;
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.sol-roadmap__body p {
+  margin: 0;
+  max-width: 520px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--color-body);
+}
+
+@media (max-width: 575px) {
+  .sol-roadmap__step { gap: 18px; padding-bottom: 30px; }
+  .sol-roadmap__node { width: 42px; height: 42px; }
+  .sol-roadmap__step:not(:last-child) .sol-roadmap__node:after { height: 30px; }
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   MODULE CHECKLIST — bordered numbered rows (replaces the dark glass card
+   grid so this section doesn't visually double the roadmap above it).
+   ──────────────────────────────────────────────────────────────────────── */
+.sol-modules__list {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(23, 32, 51, 0.09);
+  background: var(--color-white);
+}
+
+.sol-modules__row {
+  display: flex;
+  gap: 20px;
+  padding: 22px 28px;
+}
+
+.sol-modules__row + .sol-modules__row {
+  border-top: 1px solid rgba(23, 32, 51, 0.08);
+}
+
+.sol-modules__row-num {
+  flex: 0 0 auto;
+  font-size: 15px;
+  font-weight: 800;
+  color: rgba(var(--sol-accent), 0.6);
+}
+
+.sol-modules__row-body h4 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.sol-modules__row-body p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-body);
+}
+
+@media (max-width: 575px) {
+  .sol-modules__row { padding: 18px 20px; gap: 14px; }
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   TRUST BADGE — replaces the repeated dark stat panel Industries uses
+   ──────────────────────────────────────────────────────────────────────── */
+.sol-trust-badge {
+  padding: 40px clamp(24px, 4vw, 40px);
+  border-radius: 20px;
+  text-align: center;
+  background: linear-gradient(155deg, rgba(var(--sol-accent), 0.07), rgba(var(--sol-accent), 0.02));
+  border: 1px solid rgba(var(--sol-accent), 0.18);
+}
+
+.sol-trust-badge__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: var(--color-white);
+  box-shadow: 0 14px 34px -16px rgba(var(--sol-accent), 0.55);
+  color: rgb(var(--sol-accent));
+  font-size: 24px;
+}
+
+.sol-trust-badge__avatar {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 14px 34px -16px rgba(var(--sol-accent), 0.55);
+}
+
+.sol-trust-badge h4 {
+  margin: 0 0 10px;
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.sol-trust-badge p {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--color-body);
+}
+
+/* Trusted-by strip — tightened from the generic .ptb--60 utility. */
+.sol-trusted-brands {
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   CTA
+   ──────────────────────────────────────────────────────────────────────── */
+.sol-cta {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(64px, 8vw, 104px) 0;
+  background: linear-gradient(135deg, #05070d 0%, #0c1120 55%, #0a0e1a 100%);
+}
+
+.sol-cta__grid-bg {
+  position: absolute;
+  inset: -1px;
+  z-index: -2;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 85%);
+}
+
+.sol-cta__glow {
+  position: absolute;
+  z-index: -1;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 620px;
+  height: 620px;
+  border-radius: 50%;
+  background: rgba(var(--sol-accent), 0.35);
+  filter: blur(90px);
+}
+
+.sol-cta__inner { max-width: 640px; margin: 0 auto; text-align: center; }
+.sol-cta__inner .title { color: var(--color-white); font-size: clamp(28px, 3.6vw, 42px); margin-bottom: 16px; }
+.sol-cta__inner p { color: rgba(255, 255, 255, 0.72); margin-bottom: 30px; }
+
+/* ────────────────────────────────────────────────────────────────────────
+   SOLUTIONS HUB PAGE  (/solutions) — light platform-picker, not a dark
+   grid-bg hero, so the hub doesn't echo the Industries hub either.
+   ──────────────────────────────────────────────────────────────────────── */
+.sol-hub__hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 176px 0 90px;
+  background: linear-gradient(180deg, #f7f9fc 0%, #ffffff 65%);
+}
+
+.sol-hub__hero-blob {
+  position: absolute;
+  z-index: -1;
+  top: -25%;
+  left: -10%;
+  width: 560px;
+  height: 560px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(47, 87, 239, 0.12), transparent 70%);
+}
+
+.sol-hub__hero-inner .subtitle { margin-bottom: 16px; }
+.sol-hub__hero-inner { max-width: 680px; }
+.sol-hub__hero-inner .title { font-size: clamp(32px, 4.4vw, 54px); margin-bottom: 18px; color: var(--color-heading); }
+.sol-hub__hero-inner .description { color: var(--color-body); font-size: 17px; line-height: 1.75; }
+
+@media (max-width: 767px) {
+  .sol-hub__hero { padding: 128px 0 64px; }
+}
+
+.sol-hub__grid-section { padding: clamp(60px, 8vw, 96px) 0; }
+
+.sol-hub-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 30px 26px;
+  border-radius: 18px;
+  background: var(--color-white);
+  border: 1px solid rgba(23, 32, 51, 0.08);
+  box-shadow: 0 18px 44px -28px rgba(23, 32, 51, 0.26);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.sol-hub-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(var(--card-accent), 0.4);
+  box-shadow: 0 30px 60px -24px rgba(var(--card-accent), 0.3);
+}
+
+.sol-hub-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 16px;
+  border-radius: 13px;
+  background: rgba(var(--card-accent), 0.12);
+  color: rgb(var(--card-accent));
+  font-size: 21px;
+}
+
+.sol-hub-card__partner-tag {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.sol-hub-card h4 { margin: 0 0 6px; font-size: 19px; font-weight: 700; color: var(--color-heading); }
+.sol-hub-card p { margin: 0; color: var(--color-body); font-size: 14px; line-height: 1.55; flex: 1; }
+
+.sol-hub-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  font-weight: 700;
+  font-size: 13.5px;
+  color: rgb(var(--card-accent));
+}

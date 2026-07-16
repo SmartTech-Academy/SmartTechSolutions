@@ -249,35 +249,31 @@ img:not([data-gil-loading]) {
   background: linear-gradient(155deg, #0a0d16 0%, #12172a 45%, #171d35 100%);
 }
 
-/* Faint drifting dot-grid, standing in for the old photo backdrop — cheap
-   to render (one repeating radial-gradient) and animated purely via
-   `transform: translate`, which stays on the compositor thread instead of
-   triggering repaints on every scroll frame (the exact class of jank
-   already fixed once on this section for the industry cards themselves). */
+/* Faint dot-grid, standing in for the old photo backdrop — cheap to render
+   (one repeating radial-gradient). Static rather than continuously
+   transform-animated: this section sits directly behind several
+   backdrop-filter glass cards (.service-card-6 / dark industry cards
+   further down this file), and a backdrop-filter has to resample whatever
+   is moving underneath it on every single frame it's on screen. An
+   infinite drift here, multiplied across a handful of blurred cards, was
+   sustained GPU/compositor load for as long as this section stayed in
+   view — the kind of load that has been known to crash the renderer on
+   real (non-headless) mobile GPUs mid-scroll. Static removes that cost
+   entirely while keeping the exact same visual pattern. */
 .rbt-industries-backdrop__grid {
   position: absolute;
   inset: -20px;
   z-index: -2;
   background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
   background-size: 26px 26px;
-  animation: rbt-industries-grid-drift 30s linear infinite;
-  will-change: transform;
 }
 
-@keyframes rbt-industries-grid-drift {
-  0% { transform: translate3d(0, 0, 0); }
-  100% { transform: translate3d(-26px, -26px, 0); }
-}
-
-/* Two slow-drifting brand-color glows for ambient depth — same
-   translate/scale-only animation approach, no filter/backdrop-filter. */
 .rbt-industries-backdrop__glow {
   position: absolute;
   z-index: -1;
   border-radius: 50%;
   filter: blur(70px);
   opacity: 0.55;
-  will-change: transform;
 }
 
 .rbt-industries-backdrop__glow--one {
@@ -286,7 +282,6 @@ img:not([data-gil-loading]) {
   width: 420px;
   height: 420px;
   background: rgba(47, 87, 239, 0.45);
-  animation: rbt-industries-glow-one 16s ease-in-out infinite alternate;
 }
 
 .rbt-industries-backdrop__glow--two {
@@ -295,24 +290,6 @@ img:not([data-gil-loading]) {
   width: 460px;
   height: 460px;
   background: rgba(185, 102, 231, 0.35);
-  animation: rbt-industries-glow-two 19s ease-in-out infinite alternate;
-}
-
-@keyframes rbt-industries-glow-one {
-  0% { transform: translate3d(0, 0, 0) scale(1); }
-  100% { transform: translate3d(60px, 40px, 0) scale(1.15); }
-}
-
-@keyframes rbt-industries-glow-two {
-  0% { transform: translate3d(0, 0, 0) scale(1); }
-  100% { transform: translate3d(-50px, -30px, 0) scale(1.1); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .rbt-industries-backdrop__grid,
-  .rbt-industries-backdrop__glow {
-    animation: none;
-  }
 }
 
 .rbt-industries-backdrop__content .section-title .title,
@@ -543,7 +520,14 @@ img:not([data-gil-loading]) {
    (hidden behind) the opaque header. Margin-top on the outer, image-free
    `.rbt-banner-19` wrapper is what actually moves the photo box itself
    below the header, with a bit of extra gap on top of that. */
-.rbt-banner-19 {
+/* Compound selector (not just `.rbt-banner-19`) deliberately — the About
+   page's markup also carries the generated `.mt--10` utility
+   (margin-top: 10px !important, from public/scss/default/_spacing.scss),
+   which loads AFTER this file in _app.js's import order. A single-class
+   selector here would lose to it despite both using !important, because
+   equal specificity falls back to source order. Two classes outranks
+   `.mt--10`'s one, regardless of load order. */
+.rbt-banner-area.rbt-banner-19 {
   margin-top: 108px !important;
 }
 
@@ -566,7 +550,7 @@ img:not([data-gil-loading]) {
 }
 
 @media (max-width: 767px) {
-  .rbt-banner-19 {
+  .rbt-banner-area.rbt-banner-19 {
     margin-top: 92px !important;
   }
 
@@ -589,12 +573,147 @@ img:not([data-gil-loading]) {
    renders both desktop and mobile, so the link set already matches).
    The template's mobile menu scss (_mobilemenu.scss) draws a "+"
    expand/accordion chevron on every `.has-menu-child-item` link, assuming
-   a dropdown submenu — a leftover from the template's mega-menu demo. Our
-   <Nav> items carry that class but have no submenu at all, so on mobile
-   they showed a chevron that expands nothing, while the same links on
-   desktop render as plain flat text — inconsistent between breakpoints.
+   a dropdown submenu — a leftover from the template's mega-menu demo. Most
+   of our <Nav> items carry that class but have no submenu at all, so on
+   mobile they showed a chevron that expands nothing, while the same links
+   on desktop render as plain flat text — inconsistent between breakpoints.
    Hiding the chevron here makes mobile match desktop's flat link style.
-   ════════════════════════════════════════════════════════════════════════ */
-.popup-mobile-menu .has-menu-child-item > a::after {
+   `:not(.rbt-has-real-dropdown)` excludes the Industries item, which DOES
+   have a real submenu and needs its chevron to signal that. */
+.popup-mobile-menu .has-menu-child-item:not(.rbt-has-real-dropdown) > a::after {
   display: none;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   INDUSTRIES MEGA-MENU
+   Paired with my_components/Header/Nav.js. The template's `.rbt-megamenu
+   .grid-item-4` (public/scss/header/_nav.scss) computes its width from
+   `left:0; right:0` on the nearest positioned ancestor, which here is the
+   narrow nav <li> itself, not the viewport — so left uncustomized it
+   renders far too narrow/off-position. Pinning an explicit centered width
+   here sidesteps that inherited sizing quirk.
+   ════════════════════════════════════════════════════════════════════════ */
+.rbt-industries-menu.grid-item-4 {
+  left: 50%;
+  right: auto;
+  width: 900px;
+  max-width: calc(100vw - 40px);
+  transform: translateX(-50%);
+}
+
+.rbt-industries-menu .wrapper {
+  padding: 28px 28px 18px;
+}
+
+.rbt-industries-menu .mega-menu-item li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rbt-industries-menu .mega-menu-item li a i {
+  width: 18px;
+  text-align: center;
+  color: var(--color-primary);
+  font-size: 15px;
+}
+
+.rbt-industries-menu__footer {
+  margin-top: 12px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(23, 32, 51, 0.08);
+  text-align: right;
+}
+
+.rbt-industries-menu__footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-primary);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   SOLUTIONS MENU — simple single-column dropdown (only 5 items, doesn't
+   need the 4-column mega-menu grid Industries uses).
+   ════════════════════════════════════════════════════════════════════════ */
+.rbt-solutions-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rbt-solutions-menu li a i {
+  width: 18px;
+  text-align: center;
+  color: var(--color-primary);
+  font-size: 15px;
+}
+
+@media (max-width: 1199px) {
+  .rbt-industries-menu.grid-item-4 .row > .single-mega-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   IMAGE SKELETON PRELOADER
+   Paired with my_components/_Global/LazyImage.js — a shimmering placeholder
+   shown while a lazy-loaded image is still downloading. `.digi-skel-loading`
+   is also styled here: it was already referenced by
+   my_components/_Projects/InnerPages/SkelImg.js and JpgcAndNftProject.js
+   but had no matching CSS anywhere in the codebase, so that shimmer never
+   actually rendered — same visual treatment, kept under its original name
+   so no JS changes were needed there to pick this up.
+   ════════════════════════════════════════════════════════════════════════ */
+.rbt-img-skeleton,
+.digi-skel-loading {
+  background: linear-gradient(
+    100deg,
+    rgba(17, 20, 33, 0.06) 30%,
+    rgba(17, 20, 33, 0.12) 45%,
+    rgba(17, 20, 33, 0.06) 60%
+  );
+  background-size: 200% 100%;
+  animation: rbt-img-skeleton-shimmer 1.6s ease-in-out infinite;
+}
+
+.active-dark-mode .rbt-img-skeleton,
+.active-dark-mode .digi-skel-loading {
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0.05) 30%,
+    rgba(255, 255, 255, 0.1) 45%,
+    rgba(255, 255, 255, 0.05) 60%
+  );
+  background-size: 200% 100%;
+}
+
+@keyframes rbt-img-skeleton-shimmer {
+  0% { background-position: 150% 0; }
+  100% { background-position: -50% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rbt-img-skeleton,
+  .digi-skel-loading {
+    animation: none;
+  }
+}
+
+.rbt-lazy-img {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.rbt-lazy-img__el {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.rbt-lazy-img__el.is-loaded {
+  opacity: 1;
 }

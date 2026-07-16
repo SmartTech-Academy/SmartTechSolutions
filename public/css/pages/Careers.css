@@ -1,0 +1,459 @@
+/* ════════════════════════════════════════════════════════════════════════
+   CAREERS PAGE  (career- namespace)
+   Paired with my_components/_Careers/CareersPage.js
+   ════════════════════════════════════════════════════════════════════════ */
+
+/* ────────────────────────────────────────────────────────────────────────
+   HERO
+   ──────────────────────────────────────────────────────────────────────── */
+.career-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 176px 0 110px;
+}
+
+.career-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.career-hero__bg-img {
+  object-fit: cover;
+}
+
+.career-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(6, 9, 18, 0.88) 0%, rgba(9, 12, 24, 0.8) 55%, rgba(6, 9, 18, 0.92) 100%),
+    linear-gradient(115deg, rgba(47, 87, 239, 0.38) 0%, transparent 60%);
+}
+
+.career-hero__content {
+  max-width: 720px;
+}
+
+/* The base .rbt-button-group utility centers its buttons — this hero's
+   copy is left-aligned, so the CTAs need to match rather than floating
+   centered under left-aligned text. */
+.career-hero__content .rbt-button-group {
+  justify-content: flex-start;
+}
+
+.career-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 18px;
+  margin-bottom: 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  color: var(--color-white);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.career-hero__title {
+  margin: 0 0 18px;
+  color: var(--color-white);
+  font-size: clamp(32px, 4.4vw, 54px);
+  line-height: 1.14;
+  font-weight: 700;
+  text-shadow: 0 4px 22px rgba(0, 0, 0, 0.5);
+}
+
+.career-hero__desc {
+  max-width: 620px;
+  margin: 0 0 30px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: clamp(16px, 1.5vw, 19px);
+  line-height: 1.7;
+}
+
+@media (max-width: 767px) {
+  .career-hero { padding: 128px 0 72px; }
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   SHARED SECTION HEAD
+   ──────────────────────────────────────────────────────────────────────── */
+.career-section {
+  padding: clamp(64px, 8vw, 100px) 0;
+}
+
+.career-section__head {
+  max-width: 640px;
+  margin: 0 auto 44px;
+  text-align: center;
+}
+
+.career-section__head .subtitle {
+  margin-bottom: 14px;
+}
+
+.career-section__head--dark .title {
+  color: var(--color-white);
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   VALUE CARDS
+   ──────────────────────────────────────────────────────────────────────── */
+.career-value-card {
+  height: 100%;
+  padding: 30px 24px;
+  border-radius: 18px;
+  background: var(--color-white);
+  border: 1px solid rgba(23, 32, 51, 0.08);
+  box-shadow: 0 18px 44px -28px rgba(23, 32, 51, 0.26);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.career-value-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(47, 87, 239, 0.3);
+  box-shadow: 0 30px 60px -24px rgba(47, 87, 239, 0.28);
+}
+
+.career-value-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 16px;
+  border-radius: 13px;
+  background: var(--primary-opacity, rgba(47, 87, 239, 0.1));
+  color: var(--color-primary);
+  font-size: 20px;
+}
+
+.career-value-card h4 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.career-value-card p {
+  margin: 0;
+  color: var(--color-body);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   CURRENT OPENINGS
+   ──────────────────────────────────────────────────────────────────────── */
+.career-openings {
+  padding-top: 0;
+}
+
+.career-openings__panel {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 44px clamp(24px, 5vw, 56px);
+  border-radius: 22px;
+  text-align: center;
+  background: var(--primary-opacity, rgba(47, 87, 239, 0.05));
+  border: 1px solid rgba(47, 87, 239, 0.14);
+}
+
+.career-openings__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: var(--color-white);
+  box-shadow: 0 12px 30px -14px rgba(47, 87, 239, 0.4);
+  color: var(--color-primary);
+  font-size: 22px;
+}
+
+.career-openings__panel .subtitle {
+  margin-bottom: 14px;
+}
+
+.career-openings__panel .description {
+  margin: 0 auto;
+  max-width: 640px;
+}
+
+.career-openings__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 32px 0 8px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(23, 32, 51, 0.1);
+}
+
+.career-openings__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.career-openings__stat strong {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-heading);
+}
+
+.career-openings__stat span {
+  font-size: 13px;
+  color: var(--color-body);
+  line-height: 1.5;
+}
+
+@media (max-width: 575px) {
+  .career-openings__stats { grid-template-columns: 1fr; text-align: center; }
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   BENEFITS — dark animated backdrop
+   ──────────────────────────────────────────────────────────────────────── */
+.career-benefits {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(64px, 8vw, 100px) 0;
+  background: linear-gradient(160deg, #0a0d16 0%, #131a2e 50%, #171a30 100%);
+}
+
+/* Static, not animated — this grid sits behind backdrop-filter cards
+   (.career-benefit-card below), and a continuously-drifting layer under a
+   backdrop-filter forces the browser to keep resampling the blur every
+   frame for as long as the section is in view. See the matching note on
+   .rbt-industries-backdrop__grid in global-effects.css. */
+.career-benefits__grid-bg {
+  position: absolute;
+  inset: -20px;
+  z-index: -2;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+.career-benefits__glow {
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.5;
+}
+
+.career-benefits__glow--one {
+  top: -16%;
+  left: -8%;
+  width: 480px;
+  height: 480px;
+  background: rgba(185, 102, 231, 0.4);
+}
+
+.career-benefits__glow--two {
+  bottom: -18%;
+  right: -8%;
+  width: 480px;
+  height: 480px;
+  background: rgba(47, 87, 239, 0.4);
+}
+
+.career-benefit-card {
+  height: 100%;
+  padding: 26px 24px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.4s ease, background 0.4s ease;
+}
+
+.career-benefit-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.26);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.career-benefit-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
+  font-size: 19px;
+}
+
+.career-benefit-card h4 {
+  margin: 0 0 8px;
+  color: var(--color-white);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.career-benefit-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   PROCESS STEPS
+   ──────────────────────────────────────────────────────────────────────── */
+.career-step-card {
+  position: relative;
+  height: 100%;
+  padding: 30px 24px;
+  border-radius: 18px;
+  background: var(--color-white);
+  border: 1px solid rgba(23, 32, 51, 0.08);
+}
+
+.career-step-card__num {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--primary-opacity, rgba(47, 87, 239, 0.35));
+}
+
+.career-step-card h4 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.career-step-card p {
+  margin: 0;
+  color: var(--color-body);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   OPEN ROLES
+   ──────────────────────────────────────────────────────────────────────── */
+.career-roles__list {
+  display: flex;
+  flex-direction: column;
+  max-width: 860px;
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(23, 32, 51, 0.08);
+  box-shadow: 0 18px 44px -30px rgba(23, 32, 51, 0.3);
+}
+
+.career-role-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 26px;
+  background: var(--color-white);
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.career-role-row + .career-role-row {
+  border-top: 1px solid rgba(23, 32, 51, 0.07);
+}
+
+.career-role-row:hover {
+  background: var(--primary-opacity, rgba(47, 87, 239, 0.05));
+}
+
+.career-role-row__title {
+  font-weight: 700;
+  font-size: 15.5px;
+  color: var(--color-heading);
+}
+
+.career-role-row__type {
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: rgba(23, 32, 51, 0.06);
+  color: var(--color-body);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.career-role-row__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 13.5px;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+.career-role-row__cta-icon--disabled {
+  display: none;
+}
+
+/* Applications-closed state — toggle with ROLES_APPLY_ENABLED in
+   CareersPage.js. Rows read as visibly inactive (dimmed, "not-allowed"
+   cursor) and swap the arrow icon for a disabled/slash icon on hover,
+   instead of just silently doing nothing on click. */
+.career-roles__list--disabled .career-role-row {
+  cursor: not-allowed;
+  background: rgba(23, 32, 51, 0.02);
+}
+
+.career-roles__list--disabled .career-role-row:hover {
+  background: rgba(23, 32, 51, 0.02);
+}
+
+.career-roles__list--disabled .career-role-row__title,
+.career-roles__list--disabled .career-role-row__type {
+  opacity: 0.5;
+}
+
+.career-roles__list--disabled .career-role-row__cta {
+  opacity: 0.55;
+  color: var(--color-body);
+}
+
+.career-roles__list--disabled .career-role-row:hover .career-role-row__cta {
+  color: #dc2626;
+}
+
+.career-roles__list--disabled .career-role-row:hover .career-role-row__cta-icon:not(.career-role-row__cta-icon--disabled) {
+  display: none;
+}
+
+.career-roles__list--disabled .career-role-row:hover .career-role-row__cta-icon--disabled {
+  display: inline-block;
+}
+
+.career-roles__note {
+  max-width: 640px;
+  margin: 36px auto 0;
+  text-align: center;
+  color: var(--color-body);
+}
+
+.career-roles__note a {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+@media (max-width: 575px) {
+  .career-role-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}

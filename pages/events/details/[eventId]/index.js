@@ -26,7 +26,11 @@ const index = () => {
 
     <>
 
-        <PageHead title="Event Details | SmartTech Solutions" />
+        <PageHead
+          title="Event Details | SmartTech Solutions"
+          description="Get the full schedule, speakers, and venue details for this SmartTech Solutions event."
+          image="/app_images/event/event_landing_bg_image.jpg"
+        />
 
         <Provider store={Store}>
             <Context>

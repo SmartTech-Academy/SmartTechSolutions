@@ -8,11 +8,10 @@ const ALT_OVERRIDES = {
   EXPERT_WRITERS: "Expert Writers",
   GEOPLOX: "Geoplox",
   JPGOLDCOIN: "JP Gold Coin",
-  "REAL-RIBIAX": "Real Ribiax",
+  "REAL-RIBIAX": "Ribiax Engineering",
   FLATSHARE: "Flatshare",
-  DATAQUEUE: "DataQueue",
-  RIBIAX: "Ribiax",
-  SCALABU: "Scalabu",
+  DATAQUEUE: "DataQueue Limited",
+  SCALABU: "Scalabu Digital",
 };
 
 const toTitleCase = (name) =>

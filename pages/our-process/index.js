@@ -26,6 +26,7 @@ const index = () => {
         <PageHead
           title="Our Process | SmartTech Solutions"
           description="From discovery to launch support, see how SmartTech Solutions plans, designs, builds, and ships web, mobile, AI, and blockchain products with precision at every phase."
+          image="/app_images/services/why_smarttech_team.webp"
           path="/our-process"
         />
 

@@ -26,6 +26,17 @@ export const ROUTE = {
   ai_development_service: "/services/ai-development",
   two_D_art_service: "/services/2D-arts",
   mvp_development_service: "/services/mvp-development",
+  cybersecurity_service: "/services/cybersecurity",
+
+  careers: "/careers",
+
+  // solutions routes (ERP/CRM implementation partner pages)
+  solutions: "/solutions",
+  netsuite_solution: "/solutions/netsuite",
+  sap_solution: "/solutions/sap-business-one",
+  zoho_solution: "/solutions/zoho-crm",
+  odoo_solution: "/solutions/odoo",
+  dynamics_365_bc_solution: "/solutions/dynamics-365-business-central",
 
   project: "/projects",
   digistate_project: "/projects/digistate",
@@ -37,6 +48,25 @@ export const ROUTE = {
   lodapoint_project: "/projects/lodapoint",
   mfm_project: "/projects/mfm",
   jpgc_project: "/projects/jpgc",
+
+  // industries routes
+  industries: "/industries",
+  automotive_industry: "/industries/automotive",
+  b2b_software_industry: "/industries/b2b-software",
+  healthcare_industry: "/industries/healthcare",
+  education_industry: "/industries/education",
+  ecommerce_industry: "/industries/ecommerce",
+  food_industry: "/industries/food",
+  travel_industry: "/industries/travel",
+  fashion_industry: "/industries/fashion-and-apparel",
+  crm_industry: "/industries/crm-development",
+  logistics_industry: "/industries/logistics",
+  manufacturing_industry: "/industries/manufacturing",
+  legal_industry: "/industries/legal",
+  agriculture_industry: "/industries/agriculture",
+  finance_industry: "/industries/finance",
+  real_estate_industry: "/industries/real-estate",
+  hospitality_industry: "/industries/hospitality",
 
   our_process: "/our-process",
   course_details: "/courses/details/",
