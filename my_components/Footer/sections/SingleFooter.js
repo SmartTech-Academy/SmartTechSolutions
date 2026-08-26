@@ -10,7 +10,7 @@ const SingleFooter = ({ classOne, title, data }) => {
         <ul className="ft-link">
           {data.map((value, innerIndex) => (
             <li key={innerIndex}>
-              <Link href={value.link}>{value.text}</Link>
+              <Link prefetch={false} href={value.link}>{value.text}</Link>
             </li>
           ))}
         </ul>

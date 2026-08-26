@@ -8,7 +8,6 @@ import EventList from "@/my_components/_Events/sections/Events";
 import EventData from "@/my_data/events.json";
 
 import CourseFilter from "@/my_components/_Courses/Filters/CourseFilter";
-import TrustedBrands from "@/my_components/Brand/Brands";
 import BlogGridMinimal from "@/my_components/Blogs/Components/BlogGridMinimal";
 import Newsletter_2 from "@/my_components/Newsletters/Newsletter_2";
 import EventCarouse from "@/my_components/Events/EventCarouse";
@@ -212,7 +211,7 @@ const EventsOnSmartTech = () => {
                         <div className="load-more-btn text-start text-lg-end">
                             <a className="rbt-btn btn-border icon-hover radius-round color-white-off" href={ROUTE.blog}>
                                 <span className="btn-text">See All Articles</span>
-                                <span className="btn-icon"><i className="feather-a~rrow-right"></i></span>
+                                <span className="btn-icon"><i className="feather-arrow-right"></i></span>
                             </a>
                         </div>
                     </div>
@@ -264,15 +263,6 @@ const EventsOnSmartTech = () => {
 
     
 
-      <div className="rbt-brand-area bg-color-white ptb--60">
-          <div className="container">
-            <div className="row align-items-center">
-                <div className="col-lg-10 offset-lg-1">
-                <TrustedBrands />
-                </div>
-            </div>
-          </div>
-      </div>
 
 
 

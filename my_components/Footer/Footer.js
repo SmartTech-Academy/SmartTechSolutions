@@ -34,7 +34,7 @@ const Footer = ({bg="white"}) => {
                   <div className="col-lg-4 col-md-6 col-sm-6 col-12 mt--30">
                     <div className="footer-widget">
                       <div className="logo">
-                        <Link href={ ROUTE.home }>
+                        <Link prefetch={false} href={ ROUTE.home }>
                           {isLightTheme ? (
                             <Image src={logo} width={152} height={50} priority={true} alt="SmartTech Solutions Logo" />
                           ) : (
@@ -47,7 +47,7 @@ const Footer = ({bg="white"}) => {
                       +"our focus is to build products that delivers enduring value and drive profitability."}</p>
 
                       <div className="contact-btn mt--30">
-                        <Link className="rbt-btn hover-icon-reverse btn-border-gradient radius-round" href={ ROUTE.contact }>
+                        <Link prefetch={false} className="rbt-btn hover-icon-reverse btn-border-gradient radius-round" href={ ROUTE.contact }>
                           <div className="icon-reverse-wrapper">
                             <span className="btn-text">Contact With Us</span>
                             <span className="btn-icon">

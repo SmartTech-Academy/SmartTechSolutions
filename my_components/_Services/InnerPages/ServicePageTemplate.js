@@ -59,6 +59,15 @@ const ServicePageTemplate = ({ service }) => {
         </div>
       </div>
 
+      {/* ══════════════ PARTNER MARQUEE — moved directly under the headline,
+          above the hero image, matching Cubix's hero → trust row → hero
+          image order ══════════════ */}
+      <div className="rbt-brand-area bg-color-white svc-trusted-brands">
+        <div className="container">
+          <Brands2 hide_text="false" title="Trusted by ambitious teams and brands" />
+        </div>
+      </div>
+
       <div className="rbt-reveal" style={{ "--reveal-delay": "0.2s" }}>
         <ServiceHero
           mode={service.heroMode}
@@ -91,13 +100,6 @@ const ServicePageTemplate = ({ service }) => {
             name_3="Satisfied Clients Globally"
             counter_3={400}
           />
-        </div>
-      </div>
-
-      {/* ══════════════ PARTNER MARQUEE ══════════════ */}
-      <div className="rbt-brand-area bg-color-white svc-trusted-brands">
-        <div className="container">
-          <Brands2 hide_text="false" title="Trusted by ambitious teams and brands" />
         </div>
       </div>
 

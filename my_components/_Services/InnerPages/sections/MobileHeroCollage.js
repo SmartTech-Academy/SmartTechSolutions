@@ -22,11 +22,17 @@ const TILES = [
   { src: tile7, alt: "MFM eBooks store app screen", cls: "t7" },
 ];
 
-// Same 7 screens, reversed order — reused (not re-downloaded, the browser
-// already cached them from the row above) to build a second, receding
-// layer instead of duplicating the image budget.
-const BACK_TILES = [...TILES].reverse();
-
+/**
+ * Two-layer collage — a "back" field (the same 7 tiles, rotated/scaled/
+ * offset as one block, sitting in the upper half with no alt text since
+ * it's a purely decorative echo) behind a "front" field of the real,
+ * individually-tilted tiles in the lower half. Both fields render the same
+ * seven images; only the front copy is meaningful content, so the back
+ * copy is aria-hidden and unlabeled. This mirrors ServiceHero.js's
+ * .svc-collage structure exactly (same field/layer/tile naming, just under
+ * the "mad-" namespace) — the two were built and are still styled
+ * separately, but the DOM shape is intentionally identical.
+ */
 const MobileHeroCollage = () => {
   return (
     <div className="mad-collage" aria-hidden="true">
@@ -36,16 +42,9 @@ const MobileHeroCollage = () => {
 
       <div className="mad-collage__layer mad-collage__layer--back">
         <div className="mad-collage__field mad-collage__field--back">
-          {BACK_TILES.map((tile) => (
+          {TILES.map((tile) => (
             <div className={`mad-collage__tile mad-collage__tile--back mad-collage__tile--${tile.cls}`} key={`back-${tile.cls}`}>
-              <Image
-                src={tile.src}
-                alt=""
-                fill
-                sizes="(max-width: 767px) 34vw, (max-width: 1199px) 18vw, 260px"
-                placeholder="blur"
-                className="mad-collage__img"
-              />
+              <Image src={tile.src} alt="" fill sizes="14vw" placeholder="blur" className="mad-collage__img" />
             </div>
           ))}
         </div>
@@ -59,9 +58,9 @@ const MobileHeroCollage = () => {
                 src={tile.src}
                 alt={tile.alt}
                 fill
-                sizes="(max-width: 767px) 40vw, (max-width: 1199px) 22vw, 320px"
+                sizes="(max-width: 767px) 22vw, (max-width: 1199px) 14vw, 130px"
                 placeholder="blur"
-                priority={index < 3}
+                priority={index < 4}
                 className="mad-collage__img"
               />
             </div>

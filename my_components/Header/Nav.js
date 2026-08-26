@@ -29,11 +29,12 @@ const Nav = () => {
     <nav className="mainmenu-nav">
       <ul className="mainmenu">
         <li className="with-megamenu has-menu-child-item position-static">
-          <Link className={`${isActive(ROUTE.about) ? "active d-block" : ""}`} href={ROUTE.about}>About</Link>
+          <Link prefetch={false} className={`${isActive(ROUTE.about) ? "active d-block" : ""}`} href={ROUTE.about}>About</Link>
         </li>
 
         <li className="with-megamenu has-menu-child-item rbt-has-real-dropdown position-static">
           <Link
+            prefetch={false}
             href="#"
             className={`${isActive(ROUTE.industries) ? "active d-block" : ""}${openMenu === "industries" ? " open" : ""}`}
             onClick={(event) => {
@@ -53,6 +54,7 @@ const Nav = () => {
                       {column.map((industry) => (
                         <li key={industry.slug}>
                           <Link
+                            prefetch={false}
                             href={industry.href}
                             className={isActive(industry.href) ? "active" : ""}
                             onClick={() => setOpenMenu(null)}
@@ -66,7 +68,7 @@ const Nav = () => {
                 ))}
               </div>
               <div className="rbt-industries-menu__footer">
-                <Link href={ROUTE.industries} onClick={() => setOpenMenu(null)}>
+                <Link prefetch={false} href={ROUTE.industries} onClick={() => setOpenMenu(null)}>
                   View all industries <i className="feather-arrow-right"></i>
                 </Link>
               </div>
@@ -75,19 +77,20 @@ const Nav = () => {
         </li>
 
         <li className="with-megamenu has-menu-child-item position-static">
-          <Link className={`${isActive(ROUTE.our_process) ? "active d-block" : ""}`} href={ROUTE.our_process}>Process</Link>
+          <Link prefetch={false} className={`${isActive(ROUTE.our_process) ? "active d-block" : ""}`} href={ROUTE.our_process}>Process</Link>
         </li>
 
         <li className="with-megamenu has-menu-child-item position-static">
-          <Link className={`${isActive(ROUTE.service) ? "active d-block" : ""}`} href={ROUTE.service}>Services</Link>
+          <Link prefetch={false} className={`${isActive(ROUTE.service) ? "active d-block" : ""}`} href={ROUTE.service}>Services</Link>
         </li>
 
         <li className="with-megamenu has-menu-child-item position-static">
-          <Link className={`${isActive(ROUTE.project) ? "active d-block" : ""}`} href={ROUTE.project}>Projects</Link>
+          <Link prefetch={false} className={`${isActive(ROUTE.project) ? "active d-block" : ""}`} href={ROUTE.project}>Projects</Link>
         </li>
 
         <li className="has-dropdown has-menu-child-item rbt-has-real-dropdown">
           <Link
+            prefetch={false}
             href="#"
             className={`${isActive(ROUTE.solutions) ? "active d-block" : ""}${openMenu === "solutions" ? " open" : ""}`}
             onClick={(event) => {
@@ -102,6 +105,7 @@ const Nav = () => {
             {SOLUTIONS.map((solution) => (
               <li key={solution.slug}>
                 <Link
+                  prefetch={false}
                   href={solution.href}
                   className={isActive(solution.href) ? "active" : ""}
                   onClick={() => setOpenMenu(null)}
@@ -114,11 +118,11 @@ const Nav = () => {
         </li>
 
         <li className="with-megamenu has-menu-child-item position-static">
-          <Link className={`${isActive(ROUTE.blog) ? "active d-block" : ""}`} href={ROUTE.blog}>Blog</Link>
+          <Link prefetch={false} className={`${isActive(ROUTE.blog) ? "active d-block" : ""}`} href={ROUTE.blog}>Blog</Link>
         </li>
 
         <li className="with-megamenu has-menu-child-item position-static">
-          <Link className={`${isActive(ROUTE.enquiry) ? "active d-block" : ""}`} href={ROUTE.contact}>Contact</Link>
+          <Link prefetch={false} className={`${isActive(ROUTE.enquiry) ? "active d-block" : ""}`} href={ROUTE.contact}>Contact</Link>
         </li>
       </ul>
     </nav>

@@ -38,10 +38,9 @@ const BlogMagazineGrid = ({ posts, leadCard }) => {
             >
               <span className="blog-grid__media">
                 <Image
-                  src={image_url(post.image, true)}
-                  width={post.width}
-                  height={post.height}
-                  alt={post.title}
+                  src={post.image || image_url("/app_images/blog/blog_hero_bg.webp", true)}
+                  fill
+                  alt={post.imageAlt || post.title}
                   sizes={isLead ? "(max-width: 767px) 100vw, 66vw" : "(max-width: 767px) 100vw, 33vw"}
                 />
                 <span className="blog-grid__scrim" aria-hidden="true" />

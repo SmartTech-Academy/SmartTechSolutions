@@ -9,6 +9,14 @@ const nextConfig = {
         protocol: "https",
         hostname: "img.youtube.com",
       },
+      {
+        protocol: "https",
+        hostname: "blog.smarttech.ng",
+      },
+      {
+        protocol: "https",
+        hostname: "secure.gravatar.com",
+      },
     ],
   },
   async headers() {

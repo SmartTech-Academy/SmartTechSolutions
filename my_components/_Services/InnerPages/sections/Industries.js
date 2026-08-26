@@ -19,6 +19,11 @@ const Industries = ({ data, type = "light", variant = "pastel" }) => {
           >
             <div className="inner">
               <div className="content">
+                {industries.icon ? (
+                  <span className="rbt-industry-icon" aria-hidden="true">
+                    <i className={`feather-${industries.icon}`}></i>
+                  </span>
+                ) : null}
                 <h4 className={`rbt-card-title${type === "light" && !isDark ? "" : " color-white"}`}>{industries.title}</h4>
                 <p className="has-medium-font-size"> {industries.desc} </p>
 

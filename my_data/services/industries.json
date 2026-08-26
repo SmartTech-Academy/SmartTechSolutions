@@ -40,59 +40,67 @@
   "industries_served_2": [
     {
       "bg_color_style": "3",
+      "icon": "credit-card",
       "title": "Fintech",
       "desc": "Empowering financial institutions to embrace digital innovation, our NFT marketplace solutions deliver secure, transparent trading of digital assets, broadening your product suite and unlocking new revenue streams.",
       "apps": ["CRM", "Asset Tokenization", "NFT Trading", "Listing", "Analytics"]
     },
     {
       "bg_color_style": "5",
+      "icon": "home",
       "title": "Real Estate",
       "desc": "Our real estate solutions optimize operations, making property management and sales effortless.",
       "apps": ["VR Tours", "Listing", "CRM", "Tenant management", "Asset Tokenization", "Investments"]
     },
     {
       "bg_color_style": "2",
+      "icon": "heart",
       "title": "Healthcare",
       "desc": "We optimize healthcare with solutions that streamline processes and improving patient care.",
       "apps": ["TeleHealth", "EMR", "Remote Monitoring", "eRx", "Patient Portal"]
     },
     {
       "bg_color_style": "3",
+      "icon": "image",
       "title": "Art",
       "desc": "Our NFT development platforms offer artists a secure sanctuary where they can confidently trade and showcase their creations, free from any concerns over copyright infringement.",
       "apps": ["Inventory", "CRM", "Market Place", "Analytics", "Tokenization"]
     },
     {
       "bg_color_style": "2",
+      "icon": "trending-up",
       "title": "Finance",
       "desc": "Empower your financial services with scalable solutions that boost efficiency and fortify security.",
       "apps": ["CRM", "Payment Gateways", "Analytics", "Savings System", "Loan Management"]
     },
     {
       "bg_color_style": "5",
+      "icon": "book-open",
       "title": "Education",
       "desc": "Transform ed-tech with solutions that enhance student engagement and streamline learning.",
       "apps": ["Student portal", "CRM", "VR Classroom", "Exam Apps", "Analytics", "Online Learning"]
     },
     {
       "bg_color_style": "3",
+      "icon": "umbrella",
       "title": "Hospitality",
       "desc": "Experience intuitive solutions that elevate guest experiences and drive customer satisfaction.",
       "apps": ["Bookings", "CRM", "Events", "Guest Management", "Loyalty"]
     },
     {
       "bg_color_style": "2",
+      "icon": "play",
       "title": "Gaming",
       "desc": "Leverage our NFT development services to seamlessly and securely transfer rare in-game items—whether it's exclusive skins or unique avatars, while ensuring gamers enjoy full, indisputable ownership rights through our state-of-the-art NFT solutions.",
       "apps": ["Asset Tokenization", "CRM", "Inventory"]
     },
     {
       "bg_color_style": "5",
+      "icon": "truck",
       "title": "Automotive",
       "desc": "Streamline vehicle management and elevate customer satisfaction with tailored solutions.",
       "apps": ["Fleet Management", "CRM", "Dealer Portal", "Inventory", "Telematics"]
     }
-    
   ],
   "industries_served_for_web3": [
     {

@@ -22,7 +22,7 @@ const HeaderRight = () => {
       
 
       <div className="rbt-btn-wrapper d-none d-xl-block">
-        <Link className="rbt-btn rbt-switch-btn btn-gradient btn-sm hover-transform-none" href={ROUTE.appointment}>
+        <Link prefetch={false} className="rbt-btn rbt-switch-btn btn-gradient btn-sm hover-transform-none" href={ROUTE.appointment}>
           <span data-text="Book Appointment">Book Appointment</span>
         </Link>
       </div>

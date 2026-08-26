@@ -130,6 +130,7 @@ const SmartTechProcess = () => {
                             <div className="row mb--60">
                                 <div className="col-lg-12">
                                     <div className="section-title text-start">
+                                        <span className="subtitle bg-white-opacity">Who We Serve</span>
                                         <h2 className="title">{"Industries "}<span className="theme-gradient">{"we serve"}</span></h2>
                                         <p className="description has-medium-font-size mt--20">
                                             {"With deep expertise across diverse industries and a comprehensive suite of services, we understand your unique challenges and deliver tailored solutions that create measurable impact."}
@@ -315,7 +316,7 @@ const SmartTechProcess = () => {
                                     <div className="load-more-btn text-start text-lg-end">
                                         <a className="rbt-btn btn-border icon-hover radius-round color-white-off" href={ROUTE.blog}>
                                             <span className="btn-text">See All Articles</span>
-                                            <span className="btn-icon"><i className="feather-a~rrow-right"></i></span>
+                                            <span className="btn-icon"><i className="feather-arrow-right"></i></span>
                                         </a>
                                     </div>
                                 </div>

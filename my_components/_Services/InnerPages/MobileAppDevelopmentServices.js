@@ -15,7 +15,7 @@ import MobileHeroCollage from "./sections/MobileHeroCollage";
 import MobileSuccessStories from "./sections/MobileSuccessStories";
 import MobileIndustriesShowcase from "./sections/MobileIndustriesShowcase";
 import MobileReadyCta from "./sections/MobileReadyCta";
-import MobileWhyVisual from "./sections/MobileWhyVisual";
+import ServiceWhyVisual from "./sections/ServiceWhyVisual";
 import MobileFaqVisual from "./sections/MobileFaqVisual";
 
 // RADUX STORE
@@ -52,6 +52,15 @@ const MobileAppDevelopmentServices = () => {
               solutions that ensure flawless performance and a seamless experience for every user.
             </p>
           </div>
+        </div>
+      </div>
+
+      {/* ══════════════ PARTNER MARQUEE — moved directly under the headline,
+          above the hero image, matching Cubix's hero → trust row → hero
+          image order ══════════════ */}
+      <div className="rbt-brand-area bg-color-white ptb--60">
+        <div className="container">
+          <Brands2 hide_text="false" title="Trusted by ambitious teams and brands" />
         </div>
       </div>
 
@@ -149,7 +158,10 @@ const MobileAppDevelopmentServices = () => {
               <div className="row row--30 gy-5 align-items-center">
                 <ScrollRevealSection className="col-lg-6 col-xl-5">
                   <div className="thumbnail rbt-shadow-box mad-why-img">
-                    <MobileWhyVisual />
+                    <ServiceWhyVisual
+                      src={image_url("/app_images/services/why_smarttech_cybersecurity.webp", true)}
+                      alt="A SmartTech mobile engineer reviewing an app build"
+                    />
                   </div>
                 </ScrollRevealSection>
 

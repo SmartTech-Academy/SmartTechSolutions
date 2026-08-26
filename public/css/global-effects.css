@@ -1,4 +1,247 @@
 /* ════════════════════════════════════════════════════════════════════════
+   "BLOG POSTS" WIDGET — equal-height lead + stacked-list columns
+   Paired with my_components/Blogs/Widgets/BlogWidget.js, embedded across
+   ~15 otherwise-unrelated pages. `.rbt-card-title`/`.rbt-card.variation-02`/
+   `.card-list` are generic, widely-reused template classes (Projects,
+   Services, and other cards use them too), so every rule here is scoped
+   under `.rbt-blog-widget` and must not be loosened to a bare selector.
+   The real posts behind this widget carry titles far longer than the
+   placeholder copy the template shipped with ("SmartTech Academy Is More
+   Than Learning: Introducing Free Event Posting..." vs. "Why Is Education
+   So Famous?") — the lead card had no height cap at all, while the 3
+   stacked list cards were hard-capped at 150px each (_card.scss's
+   `.card-list`), so a long real title made the lead column visibly taller
+   than the fixed-height list column instead of the two matching, as they
+   did with the old short placeholder titles. Line-clamping bounds each
+   title/excerpt to a predictable height regardless of content length, and
+   stretching both columns via flex (instead of a fixed 150px cap) means
+   they always end up equal — whichever is naturally taller sets the height
+   for both sides.
+   ════════════════════════════════════════════════════════════════════════ */
+.rbt-blog-widget {
+  align-items: stretch;
+}
+
+.rbt-blog-widget > [class*="col-"] {
+  display: flex;
+}
+
+.rbt-blog-widget > [class*="col-"]:last-child {
+  flex-direction: column;
+}
+
+.rbt-blog-widget .rbt-card.height-330 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.rbt-blog-widget .rbt-card.height-330 .rbt-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.rbt-blog-widget .rbt-card.height-330 .rbt-card-bottom {
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+/* !important is required here: pages/_app.js imports this file *before*
+   public/scss/styles.scss (which compiles _card.scss's `.rbt-card.card-list`
+   rule), and both selectors have identical specificity (two classes) — on a
+   tie, whichever stylesheet loads later wins the cascade, so without
+   !important the base template's `max-height: 150px` silently overrides
+   this and the 150px cap comes right back. */
+.rbt-blog-widget .card-list {
+  max-height: none !important;
+  flex: 1 1 0 !important;
+  min-height: 0 !important;
+}
+
+.rbt-blog-widget .rbt-card-title,
+.rbt-blog-widget .rbt-card-title a {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.rbt-blog-widget .rbt-card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .rbt-blog-widget > [class*="col-"] {
+    display: block;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   "SEE ALL ARTICLES" BUTTON — text was wrapping onto a second line
+   `.rbt-btn` (public/scss/elements/_button.scss) sets a fixed
+   `height: 60px; line-height: 60px` tuned for single-line content, but
+   never sets `white-space: nowrap` on itself or its `.btn-text`/`.btn-icon`
+   children (both `display: inline-block`) — so whenever this button's
+   container was narrow enough (this exact button appears in a `col-lg-6`
+   next to a heading, across ~20 pages via BlogGridMinimal's "Latest News"
+   section and its many near-duplicates), "See All Articles" plus its arrow
+   icon wrapped onto a second line and rendered squashed inside the fixed
+   60px-tall box instead of growing to fit. `.rbt-btn` is reused for every
+   button on the site, so the fix belongs on the base class, not a one-off.
+   ════════════════════════════════════════════════════════════════════════ */
+.rbt-btn {
+  white-space: nowrap;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   "SEE ALL ARTICLES" BUTTON — unequal space before/after the label
+   Same button as above (`.load-more-btn .rbt-btn.icon-hover`, the
+   "See All Articles"/"View All Articles" link paired with BlogGridMinimal's
+   "Latest News" section, duplicated across ~20 pages). Two compounding
+   causes, both from the shared `.icon-hover` rest-state rule in
+   _button.scss (`.btn-text { transform: translateX(7px) }`, meant to
+   visually center the label against the arrow icon that slides in on
+   hover): (1) that +7px shift alone pushes the label right, shrinking the
+   gap after it and growing the gap before it; (2) several copies of this
+   exact button also had the icon's class name typo'd as
+   "feather-a~rrow-right" (fixed at the source in each component), so the
+   arrow rendered with ~0 width instead of its real ~17px, leaving nothing
+   to balance the shift on the right. Measured on the homepage: 35px before
+   the label vs. 14px after it. Scoped to `.load-more-btn` (this button's
+   consistent wrapper across every page it appears on) rather than the bare
+   `.icon-hover` class, which plenty of unrelated buttons elsewhere on the
+   site also use for the same slide-in animation and should keep as-is.
+   ════════════════════════════════════════════════════════════════════════ */
+.load-more-btn .rbt-btn.icon-hover .btn-text {
+  transform: none;
+}
+
+/* The icon itself is still invisible at rest (`opacity: 0`, from the base
+   rule) — but it also still occupies real inline width there (its own glyph
+   width, net of the base rule's -7px margin), which reads as extra blank
+   space after the label that the left side never had. Collapsing it to 0
+   width at rest removes that, then restoring its width on hover reveals it
+   same as before. */
+.load-more-btn .rbt-btn.icon-hover .btn-icon {
+  width: 0;
+  margin-inline-start: 0;
+  overflow: hidden;
+}
+
+.load-more-btn .rbt-btn.icon-hover:hover .btn-text {
+  transform: none;
+}
+
+.load-more-btn .rbt-btn.icon-hover:hover .btn-icon {
+  width: 24px;
+  margin-inline-start: 8px;
+}
+
+.load-more-btn .rbt-btn.icon-hover:hover .btn-icon i {
+  transform: none;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   BLOG "SIMILAR POST" THUMBNAIL — collapsed to 0×0, unclickable
+   Paired with my_components/_Blog/sections/BlogList-Items.js (the related-
+   posts cards on the blog detail page). `.rbt-card-img` (public/scss's
+   generic `.card-list` styles) was written for a plain <img> with intrinsic
+   size, which naturally sizes its containing <a>/<div>. Swapping in next/
+   image's `fill` mode renders the <img> as `position: absolute`, which
+   removes it from normal flow entirely — with nothing else giving the
+   wrapper a size, `.rbt-card-img` and the <a> inside it collapsed to 0×0,
+   making the whole thumbnail invisible AND unclickable (confirmed via
+   getBoundingClientRect — both were exactly 0×0). Giving the wrapper an
+   explicit width (mirroring _card.scss's own 290px/200px/100% breakpoints
+   for `.card-list img`) restores a real box for the fill image — and the
+   `<a>` — to size against.
+   ════════════════════════════════════════════════════════════════════════ */
+.rbt-card-img--fill {
+  position: relative;
+  width: 290px;
+  min-width: 290px;
+  flex-shrink: 0;
+}
+
+.rbt-card-img--fill a {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 580 / 300;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .rbt-card-img--fill {
+    width: 200px;
+    min-width: 200px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .rbt-card-img--fill {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   BLOG COMMENT AVATAR FALLBACK
+   Paired with my_components/_BlogDetails/sections/Comment.js. WordPress
+   comments from a commenter with no Gravatar-linked email have no avatar
+   URL at all — this fills the same 70x70 circle _blog-details.scss already
+   reserves for `.comment-img img` with an initial letter instead of a
+   broken <Image>.
+   ════════════════════════════════════════════════════════════════════════ */
+.comment-avatar-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   ROOT-LEVEL HORIZONTAL OVERFLOW GUARD
+   _typography.scss already sets `overflow-x: hidden` on <body>, but the
+   actual scrolling element in standards mode is <html> — which was left
+   at the default `overflow: visible`. Harmless on most pages, but the
+   off-canvas panels (`.popup-mobile-menu` in Header/MobileMenu.js,
+   `.rbt-cart-side-menu` in Header/Offcanvas/Cart.js — see _mobilemenu.scss
+   / _minicart.scss) position their sliding inner panel with a plain
+   `left`/`right` offset instead of a hard clip, so while "closed" they
+   still sit a few hundred px outside the viewport. With <html> allowed to
+   overflow, that panel silently widened the whole page's horizontal
+   scroll range on any page that renders <Cart /> (book-appointment,
+   projects, and others) — confirmed via a live scrollWidth check, not
+   visible unless you actually tried to scroll right. This is the single
+   guard that catches that panel and any future one like it, without
+   having to chase down each offender's own CSS.
+   Also now the sole real scroll container for the page: giving <html> its
+   own overflow-x disables the CSS spec's "propagate <body>'s overflow to
+   the viewport" mechanism, so <body>'s own overflow-y (in _typography.scss)
+   was changed from `scroll` to `visible` to stop it becoming a second,
+   independent scroll container — that mismatch (two scrollers, only one of
+   which is `document.scrollingElement`) is what broke `position: sticky`
+   site-wide. The permanent-scrollbar-gutter behavior body's old
+   `overflow-y: scroll` provided moves here instead, onto the element that's
+   now actually driving the page's scroll.
+   ════════════════════════════════════════════════════════════════════════ */
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
    GLOBAL IMAGE LOADING SKELETON
    Paired with my_components/_Global/GlobalImageLoadingEffect.js, which
    marks any <img> in the document with data-gil-loading until it loads.
@@ -302,8 +545,7 @@ img:not([data-gil-loading]) {
 }
 
 .rbt-industries-backdrop__content .service-card-6 {
-  box-shadow: 0 20px 45px -14px rgba(0, 0, 0, 0.55);
-  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   opacity: 0;
   transform: translateY(36px);
 }
@@ -330,51 +572,121 @@ img:not([data-gil-loading]) {
   box-shadow: 0 6px 11px 0 rgba(214, 191, 242, 0.14);
 }
 
-.rbt-industries-card--dark .rbt-badge-2 {
-  box-shadow: 0 6px 11px 0 rgba(0, 0, 0, 0.2);
-}
+/* ────────────────────────────────────────────────────────────────────────
+   MATERIAL DESIGN CARD — .rbt-industries-card--dark
+   Replaces the old flat glass-blur treatment with an actual Material 3
+   "elevated surface": a tonal (not glassy-transparent) dark surface color,
+   a layered multi-shadow that reads as true elevation rather than a single
+   flat drop-shadow, a large 20px corner radius (M3's card token), and a
+   "surface tint" — a faint wash of the brand's primary/secondary colors
+   mixed into the surface, which is how Material communicates elevation
+   through color instead of only through shadow depth. Hover raises the
+   card to the next elevation tier (bigger shadow + lift) and brightens the
+   tint slightly, standing in for Material's state-layer overlay.
 
-/* Dark-glass industry cards — used instead of the light bg-card-color-N
-   pastel variants whenever Industries renders on a dark photo backdrop,
-   so text always stays legible instead of dark-on-pastel-on-dark-photo. */
+   Previously the outer `.service-card-6.rbt-industries-card--dark` div and
+   its `.inner` child (padding/radius/border from the base, un-Material,
+   5px-radius template rule in _service.scss) were two separately-styled
+   boxes with mismatched radii and a doubled-up border — harmless under
+   heavy blur, but visibly wrong once the blur was replaced with a crisp
+   Material surface. `.inner`'s own radius/border are neutralized below so
+   there's a single coherent surface.
+   ──────────────────────────────────────────────────────────────────────── */
 .rbt-industries-card--dark {
-  background: rgba(255, 255, 255, 0.07) !important;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  border-radius: 20px;
+  overflow: hidden;
+  background:
+    linear-gradient(155deg, rgba(47, 87, 239, 0.16) 0%, rgba(185, 102, 231, 0.08) 45%, rgba(255, 255, 255, 0.03) 100%),
+    #1a1e30 !important;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.3),
+    0 8px 24px -8px rgba(6, 8, 16, 0.55),
+    0 20px 44px -20px rgba(6, 8, 16, 0.5);
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 0.35s ease, background 0.35s ease, border-color 0.35s ease;
 }
 
+.rbt-industries-card--dark .inner {
+  border-radius: 0;
+  border: none;
+  padding: 40px 32px;
+}
+
 .rbt-industries-card--dark:hover {
-  background: rgba(255, 255, 255, 0.12) !important;
-  border-color: rgba(255, 255, 255, 0.32);
+  border-color: rgba(255, 255, 255, 0.18);
+  background:
+    linear-gradient(155deg, rgba(47, 87, 239, 0.24) 0%, rgba(185, 102, 231, 0.13) 45%, rgba(255, 255, 255, 0.05) 100%),
+    #1a1e30 !important;
+}
+
+/* Leading icon avatar — Material's "icon in a tonal container" pattern.
+   The soft gradient fill echoes the card's own surface tint above, so the
+   icon reads as part of the same tonal system rather than a bolted-on
+   badge. */
+.rbt-industry-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 22px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(47, 87, 239, 0.55), rgba(185, 102, 231, 0.55));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14);
+}
+
+.rbt-industry-icon i {
+  font-size: 22px;
+  color: var(--color-white);
+  stroke-width: 2px;
 }
 
 .rbt-industries-card--dark .rbt-card-title {
   color: var(--color-white);
+  letter-spacing: -0.01em;
 }
 
 .rbt-industries-card--dark p {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.72);
 }
 
+/* Chips restyled as Material "assist chips" — the template's default
+   .rbt-badge-2 (50px tall, heavy box-shadow, built for a light background)
+   is scaled down to a proper chip size and switched to a thin tonal
+   outline instead of a shadow, which is how Material distinguishes chips
+   from elevated surfaces: chips stay flat, cards get the elevation. */
 .rbt-industries-card--dark .rbt-badge-2 {
-  background: rgba(255, 255, 255, 0.12);
-  color: var(--color-white);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  height: 34px;
+  line-height: 34px;
+  padding: 0 16px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: none;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.rbt-industries-card--dark:hover .rbt-badge-2 {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.28);
 }
 
 .rbt-industries-backdrop__content .service-card-6:hover {
   transform: translateY(-6px);
-  box-shadow: 0 28px 60px -12px rgba(0, 0, 0, 0.6);
 }
 
 @media (prefers-reduced-motion: reduce) {
   .rbt-industries-backdrop__content .service-card-6 {
     opacity: 1;
     transform: none;
-    transition: box-shadow 0.35s ease;
+  }
+
+  .rbt-industries-backdrop__content .service-card-6:hover {
+    transform: none;
   }
 }
 
@@ -564,6 +876,89 @@ img:not([data-gil-loading]) {
 
   .digi-hero {
     padding-top: 170px !important;
+  }
+}
+
+/* `.breadcrumb-image-container.breadcrumb-style-max-width` without the
+   `.rbt-banner-8.variation-02` classes above it (Terms of Service, Privacy
+   Policy, and the blog post detail breadcrumb — see Blog-BreadCrumb.js) —
+   same fixed-header clearance problem, different template. Its own scss
+   (_breadcrumb.scss) gives it `margin-top: 120px` on desktop but zeroes
+   that margin out entirely below 479px while keeping only a flat 44px
+   padding-top, well under the ~73-79px fixed mobile header. */
+@media (max-width: 767px) {
+  .breadcrumb-image-container.breadcrumb-style-max-width {
+    padding-top: 108px !important;
+  }
+}
+
+/* `.rbt-breadcrumb-default` — third distinct breadcrumb-hero template on
+   the site (FAQ via KnowledgeBase.js, Event Details, and the shared but
+   currently-unused Common/BreadCrumb.js). The template's `.ptb_sm--30`
+   utility (public/scss/default/_spacing.scss) drops top/bottom padding to
+   a flat 30px under 767px — under the ~73-79px fixed mobile header, so
+   the "Frequently Asked Questions" / event title heading rendered right
+   behind it, half-hidden. `.ptb_sm--30` is itself a single-class
+   `!important` rule, same specificity as a single-class override here —
+   the compound selector (both classes) is what actually outranks it
+   regardless of stylesheet load order (see the `.rbt-banner-area.rbt-
+   banner-19` note above for the same reasoning). */
+@media (max-width: 767px) {
+  .rbt-breadcrumb-default.ptb_sm--30 {
+    padding-top: 108px !important;
+  }
+}
+
+/* `.rbt-page-banner-wrapper` — fourth breadcrumb-hero template, used by
+   the Student Dashboard "My Profile" banner (StudentDashboardHeader.js)
+   and the Events/Courses category heads. Its own scss (_breadcrumb.scss)
+   drops padding to a flat 40px under the $sm-layout breakpoint — under
+   the ~73-79px fixed mobile header, so the avatar/name row rendered
+   partly behind it. */
+@media (max-width: 767px) {
+  .rbt-page-banner-wrapper {
+    padding-top: 108px !important;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   TESTIMONIAL AVATAR — explicit width, not just height/min-width
+   Paired with Testimonials/Testimonial-Scroll/Scroll.js, Testimonial_2.js,
+   Testimonial_3.js — each passes next/image a 494x494 source. The
+   template's own scss (_testimonial.scss) sizes `.thumb` with `height`
+   (definite) but only `min-width` (not a hard `width`), while its `img`
+   child is `width: 100%; height: 100%`. That leaves the child's width
+   resolving against a shrink-to-fit box with an indeterminate width — a
+   genuinely ambiguous case in the CSS sizing spec that some mobile
+   browsers resolve using the image's own intrinsic 494px size instead of
+   the intended 70px (40px for `.style-2`), rendering a huge, stretched
+   avatar circle. An explicit `width` removes the ambiguity outright.
+   ════════════════════════════════════════════════════════════════════════ */
+.rbt-testimonial-box .clint-info-wrapper .thumb {
+  width: 70px !important;
+}
+
+.rbt-testimonial-box.style-2 .clint-info-wrapper .thumb {
+  width: 40px !important;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   ABOUT PAGE — kill scroll-parallax drift on mobile
+   Paired with components/Abouts/About-Two.js — its three "Vision and
+   Mission" collage images each get a react-scroll-parallax `translateY`
+   applied as an inline `style`, scroll-linked and independent of layout.
+   The section's own scss (.about-style-1, _about.scss) already re-stacks
+   the images to full width under $sm-layout, but never accounted for the
+   JS-driven transform still running underneath — so on a phone, where the
+   image column sits directly above the text column instead of beside it,
+   that live translateY drift regularly pushes an image down (or up) far
+   enough to overlap the text block below (confirmed: image-3 encroaching
+   ~22-50px into the text at various scroll depths). `!important` beats
+   the inline `style` regardless of source order.
+   ════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 767px) {
+  .about-style-1 .thumbnail-wrapper .thumbnail {
+    transform: none !important;
   }
 }
 

@@ -1,47 +1,33 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
+/**
+ * `author` here is the real WordPress post author (see
+ * helper/wpgraphql.js's normalizePostFull) — just a name, an optional
+ * Gravatar avatar, and a bio. WordPress has no per-author "social links"
+ * concept out of the box, unlike the old hand-authored fixture data, so
+ * that row is simply omitted rather than faked.
+ */
 const BlogAuthor = ({ author }) => {
-  const { name, about, info, img, social } = author;
+  const { name, bio, avatarUrl } = author;
   return (
-    <>
-      <div className="media">
+    <div className="media">
+      {avatarUrl ? (
         <div className="thumbnail">
-          <Link href="#">
-            <Image
-              src={img}
-              width={105}
-              height={105}
-              priority
-              alt="Author Images"
-            />
-          </Link>
+          <Image src={avatarUrl} width={105} height={105} alt={name} />
         </div>
-        <div className="media-body">
-          <div className="author-info">
-            <h5 className="title">
-              <Link className="hover-flip-item-wrapper" href="#">
-                {name}
-              </Link>
-            </h5>
-            <span className="b3 subtitle">{about}</span>
-          </div>
+      ) : null}
+      <div className="media-body">
+        <div className="author-info">
+          <h5 className="title">{name}</h5>
+        </div>
+        {bio ? (
           <div className="content">
-            <p className="description">{info}</p>
-            <ul className="social-icon social-default icon-naked justify-content-start">
-              {social.map((socialItem, innerIndex) => (
-                <li key={innerIndex}>
-                  <Link href={socialItem.url}>
-                    <i className={socialItem.icon}></i>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <p className="description">{bio}</p>
           </div>
-        </div>
+        ) : null}
       </div>
-    </>
+    </div>
   );
 };
 

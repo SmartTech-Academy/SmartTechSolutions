@@ -19,7 +19,7 @@ const MobileMenu = () => {
           <div className="inner-top">
             <div className="content">
               <div className="logo">
-                <Link href="/">
+                <Link prefetch={false} href="/">
                   {isLightTheme ? (
                     <Image
                       src={logo}
@@ -70,6 +70,7 @@ const MobileMenu = () => {
           <div className="mobile-menu-bottom">
             <div className="rbt-btn-wrapper mb--20">
               <Link
+                prefetch={false}
                 className="rbt-btn btn-border-gradient radius-round btn-sm hover-transform-none w-100 justify-content-center text-center"
                 href={ROUTE.appointment}
               >

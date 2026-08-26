@@ -1,82 +1,63 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
+
+const CommentAvatar = ({ name, avatarUrl }) => {
+  if (avatarUrl) {
+    return <Image src={avatarUrl} width={70} height={70} alt={name} />;
+  }
+  // WordPress comments from unregistered/no-gravatar commenters have no
+  // avatar at all — an initial-letter placeholder beats a broken <Image>.
+  return (
+    <span className="comment-avatar-fallback" aria-hidden="true">
+      {name ? name.charAt(0).toUpperCase() : "?"}
+    </span>
+  );
+};
 
 const Comment = ({ comnt }) => {
   return (
-    <>
-      <li className="comment">
-        <div className="comment-body">
-          <div className="single-comment">
-            <div className="comment-img">
-              <Image
-                src={comnt.img}
-                width={70}
-                height={70}
-                priority
-                alt="Author Images"
-              />
+    <li className="comment">
+      <div className="comment-body">
+        <div className="single-comment">
+          <div className="comment-img">
+            <CommentAvatar name={comnt.name} avatarUrl={comnt.avatarUrl} />
+          </div>
+          <div className="comment-inner">
+            <h6 className="commenter">{comnt.name}</h6>
+            <div className="comment-meta">
+              <div className="time-spent">{comnt.date}</div>
             </div>
-            <div className="comment-inner">
-              <h6 className="commenter">
-                <Link href="#">{comnt.name}</Link>
-              </h6>
-              <div className="comment-meta">
-                <div className="time-spent">{comnt.date}</div>
-                <div className="reply-edit">
-                  <div className="reply">
-                    <Link className="comment-reply-link" href="#">
-                      Reply
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="comment-text">
-                <p className="b2">{comnt.desc}</p>
-              </div>
+            <div className="comment-text">
+              <p className="b2">{comnt.content}</p>
             </div>
           </div>
         </div>
-        {comnt.children &&
-          comnt.children.map((child, childIndex) => (
-            <ul className="children" key={childIndex}>
-              <li className="comment">
-                <div className="comment-body">
-                  <div className="single-comment">
-                    <div className="comment-img">
-                      <Image
-                        src={child.img}
-                        width={70}
-                        height={70}
-                        priority
-                        alt="Author Images"
-                      />
+      </div>
+      {comnt.children && comnt.children.length > 0 && (
+        <ul className="children">
+          {comnt.children.map((child, childIndex) => (
+            <li className="comment" key={childIndex}>
+              <div className="comment-body">
+                <div className="single-comment">
+                  <div className="comment-img">
+                    <CommentAvatar name={child.name} avatarUrl={child.avatarUrl} />
+                  </div>
+                  <div className="comment-inner">
+                    <h6 className="commenter">{child.name}</h6>
+                    <div className="comment-meta">
+                      <div className="time-spent">{child.date}</div>
                     </div>
-                    <div className="comment-inner">
-                      <h6 className="commenter">
-                        <Link href="#">{child.name}</Link>
-                      </h6>
-                      <div className="comment-meta">
-                        <div className="time-spent">{child.date}</div>
-                        <div className="reply-edit">
-                          <div className="reply">
-                            <Link className="comment-reply-link" href="#">
-                              Reply
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="comment-text">
-                        <p className="b2">{child.desc}</p>
-                      </div>
+                    <div className="comment-text">
+                      <p className="b2">{child.content}</p>
                     </div>
                   </div>
                 </div>
-              </li>
-            </ul>
+              </div>
+            </li>
           ))}
-      </li>
-    </>
+        </ul>
+      )}
+    </li>
   );
 };
 

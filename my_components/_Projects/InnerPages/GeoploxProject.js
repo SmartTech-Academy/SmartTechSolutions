@@ -36,27 +36,27 @@ const galleryImages = screens.map((s) => ({ src: geoImg(s.file), label: s.label 
 const challenges = [
   {
     title: "Structuring Fragmented Property Data",
-    body: "Aggregating and standardising real estate data from disparate sources — ownership records, valuation histories, development timelines, and market activity — into a single, trusted intelligence layer that every stakeholder can rely on to make high-stakes decisions.",
+    body: "Aggregating and standardising real estate data from disparate sources, ownership records, valuation histories, development timelines, and market activity, into a single trusted intelligence layer that every stakeholder can rely on to make high-stakes decisions.",
   },
   {
     title: "Multi-Stakeholder Role Architecture",
-    body: "Engineering contextually appropriate experiences for five distinct participant types — developers, property owners, investors, professionals, and capital providers — each with different data needs, workflows, and access permissions, within one neutral and coherent platform.",
+    body: "Engineering contextually appropriate experiences for five distinct participant types, developers, property owners, investors, professionals, and capital providers; each with different data needs, workflows, and access permissions, within one neutral and coherent platform.",
   },
   {
     title: "Building Trust Without Intermediation",
-    body: "Creating a data validation and credibility layer that strengthens trust between parties without making advisory opinions, participating in transactions, or influencing outcomes — a philosophically and technically demanding design constraint that shaped every product decision.",
+    body: "Creating a data validation and credibility layer that strengthens trust between parties without making advisory opinions, participating in transactions, or influencing outcomes; a philosophically and technically demanding design constraint that shaped every product decision.",
   },
   {
     title: "Real-Time Property Intelligence Delivery",
-    body: "Delivering live market activity, development status, ecosystem participation, and property-level intelligence in real time — with the accuracy, consistency, and reliability that stakeholders need when evaluating and coordinating around significant property opportunities.",
+    body: "Delivering live market activity, development status, ecosystem participation, and property-level intelligence in real time with the accuracy, consistency, and reliability that stakeholders need when evaluating and coordinating around significant property opportunities.",
   },
   {
     title: "Neutral Ecosystem Connectivity at Scale",
-    body: "Engineering a platform that connects developers, owners, investors, and service providers without acting as an intermediary — enabling visibility, coordination, and collaboration across fully independent actors without creating dependency or conflict of interest.",
+    body: "Engineering a platform that connects developers, owners, investors, and service providers without acting as an intermediary, enabling visibility, coordination, and collaboration across fully independent actors without creating dependency or conflict of interest.",
   },
   {
     title: "Infrastructure for Emerging Market Conditions",
-    body: "Designing platform architecture that performs reliably where data quality, network conditions, and digital literacy vary significantly — ensuring Geoplox delivers consistent intelligence value whether deployed in mature markets or fragmented emerging property ecosystems.",
+    body: "Designing platform architecture that performs reliably where data quality, network conditions, and digital literacy vary significantly ensuring Geoplox delivers consistent intelligence value whether deployed in mature markets or fragmented emerging property ecosystems.",
   },
 ];
 
@@ -76,17 +76,17 @@ const processSteps = [
   {
     num: "03",
     title: "Multi-Role UI/UX Design & Prototyping",
-    body: "Every stakeholder dashboard was designed for clarity and purpose — from investor discovery flows to admin approval workflows. All interfaces validated in high-fidelity Figma prototypes with real users before a single line of code was written.",
+    body: "Every stakeholder dashboard was designed for clarity and purpose, from investor discovery flows to admin approval workflows. All interfaces validated in high-fidelity Figma prototypes with real users before a single line of code was written.",
   },
   {
     num: "04",
     title: "Backend API & Data Pipeline Development",
-    body: "Laravel API, MySQL database, and Redis caching layer built to power real-time property intelligence — with the Vite-powered NextJS frontend consuming structured data endpoints designed for performance and reliability.",
+    body: "Laravel API, MySQL database, and Redis caching layer built to power real-time property intelligence, with the Vite-powered NextJS frontend consuming structured data endpoints designed for performance and reliability.",
   },
   {
     num: "05",
     title: "Platform Workflow & Coordination Systems",
-    body: "Stakeholder coordination tools, property approval workflows, ecosystem connectivity features, agent management systems, and the admin operations suite — all integrated and tested against live data scenarios.",
+    body: "Stakeholder coordination tools, property approval workflows, ecosystem connectivity features, agent management systems, and the admin operations suite; all integrated and tested against live data scenarios.",
   },
   {
     num: "06",
@@ -101,22 +101,22 @@ const craftFeatures = [
   {
     icon: "feather-bar-chart-2",
     title: "Intelligence-First Interface Design",
-    body: "Every layout decision prioritises surfacing the right property intelligence at the right moment — turning complex, multi-source data into a clear visual narrative that any stakeholder can act on with confidence.",
+    body: "Every layout decision prioritises surfacing the right property intelligence at the right moment, turning complex, multi-source data into a clear visual narrative that any stakeholder can act on with confidence.",
   },
   {
     icon: "feather-eye",
     title: "Transparent Data Visualisation",
-    body: "Property status, market activity, development timelines, and ecosystem participation are presented with visual clarity that communicates truthfulness — building the credibility the platform is built on.",
+    body: "Property status, market activity, development timelines, and ecosystem participation are presented with visual clarity that communicates truthfulness, building the credibility the platform is built on.",
   },
   {
     icon: "feather-users",
     title: "Stakeholder-Specific Information Architecture",
-    body: "Each participant type sees exactly what they need — not a generic dashboard. Developer views, investor discovery, agent management, and admin oversight are each architected for the specific job they perform.",
+    body: "Each participant type sees exactly what they need, not a generic dashboard. Developer views, investor discovery, agent management, and admin oversight are each architected for the specific job they perform.",
   },
   {
     icon: "feather-shield",
     title: "Infrastructure-Grade UX Reliability",
-    body: "For a platform positioned as foundational infrastructure, UI performance is not a feature — it is the standard. Every interaction was optimised for speed, predictability, and error-free execution under real-world conditions.",
+    body: "For a platform positioned as foundational infrastructure, UI performance is not a feature, it is the standard. Every interaction was optimised for speed, predictability, and error-free execution under real-world conditions.",
   },
 ];
 
@@ -126,22 +126,22 @@ const results = [
   {
     icon: "feather-globe",
     title: "Unified Real Estate Intelligence Platform",
-    body: "A single trusted source of property data — structured, validated, and consistently available — giving every ecosystem participant a shared factual baseline for confident decision-making.",
+    body: "A single trusted source of property data, structured, validated, and consistently available, giving every ecosystem participant a shared factual baseline for confident decision-making.",
   },
   {
     icon: "feather-grid",
     title: "Multi-Stakeholder Ecosystem Hub",
-    body: "A neutral platform where developers, property owners, investors, professionals, and capital providers connect, discover opportunities, and coordinate — without friction, duplication, or dependency on a central intermediary.",
+    body: "A neutral platform where developers, property owners, investors, professionals, and capital providers connect, discover opportunities, and coordinate, without friction, duplication, or dependency on a central intermediary.",
   },
   {
     icon: "feather-database",
     title: "Structured Property Data Layer",
-    body: "A production-ready property intelligence infrastructure — organising real estate information into usable, queryable, and verifiable data that supports every decision made on the platform.",
+    body: "A production-ready property intelligence infrastructure, organising real estate information into usable, queryable, and verifiable data that supports every decision made on the platform.",
   },
   {
     icon: "feather-check-circle",
     title: "Credibility & Transparency Infrastructure",
-    body: "A data validation and documentation layer that improves trust between parties — allowing stakeholders to engage with greater confidence while retaining full autonomy over negotiations and outcomes.",
+    body: "A data validation and documentation layer that improves trust between parties, allowing stakeholders to engage with greater confidence while retaining full autonomy over negotiations and outcomes.",
   },
   {
     icon: "feather-repeat",
@@ -151,7 +151,7 @@ const results = [
   {
     icon: "feather-shield",
     title: "Admin & Operations Management Suite",
-    body: "A comprehensive admin console giving platform operators full visibility over approvals, user management, property listings, ecosystem activity, and platform health — all from a single organised interface.",
+    body: "A comprehensive admin console giving platform operators full visibility over approvals, user management, property listings, ecosystem activity, and platform health, all from a single organised interface.",
   },
 ];
 
@@ -164,6 +164,8 @@ const results = [
 
 
 const GeoploxProject = () => {
+
+
 
   useEffect(() => {
     sal({ threshold: 0.01, once: true });
@@ -191,6 +193,7 @@ const GeoploxProject = () => {
       document.body.style.overflow = "";
     };
   }, [lbOpen]);
+
 
 
 
@@ -225,7 +228,7 @@ const GeoploxProject = () => {
 
                   <p className="digi-hero-lead" data-sal="slide-up" data-sal-duration="700" data-sal-delay="160">
                     A real estate intelligence and ecosystem infrastructure platform that transforms
-                    fragmented property data into clear, actionable intelligence — creating a single
+                    fragmented property data into clear, actionable intelligence creating a single
                     trusted source of truth that helps developers, investors, and property owners
                     move with confidence and clarity.
                   </p>
@@ -238,9 +241,9 @@ const GeoploxProject = () => {
                         <span className="btn-icon"><i className="feather-arrow-right"></i></span>
                       </span>
                     </Link>
-                    <Link className="rbt-btn btn-border hover-icon-reverse" href={ROUTE.project}>
+                    <Link className="rbt-btn btn-border hover-icon-reverse" href={ROUTE.service}>
                       <span className="icon-reverse-wrapper">
-                        <span className="btn-text">View More Work</span>
+                        <span className="btn-text">Our Services</span>
                         <span className="btn-icon"><i className="feather-arrow-right"></i></span>
                         <span className="btn-icon"><i className="feather-arrow-right"></i></span>
                       </span>
@@ -249,8 +252,8 @@ const GeoploxProject = () => {
 
                   <div className="digi-hero-glass-stats" data-sal="slide-up" data-sal-duration="700" data-sal-delay="240">
                     {[
-                      { val: "5+",  suffix: "",  label: "Stakeholder Roles" },
-                      { val: "12",  suffix: "",  label: "App Screens"       },
+                      { val: "5",  suffix: "",  label: "Stakeholder Roles" },
+                      { val: "35",  suffix: "+",  label: "App Screens"       },
                       { val: "6+",  suffix: "",  label: "Core Modules"      },
                       { val: "1",   suffix: "",  label: "Source of Truth"   },
                     ].map(({ val, suffix, label }) => (
@@ -297,7 +300,7 @@ const GeoploxProject = () => {
             <div className="digi-info-row">
               {[
                 { icon: "feather-database",     num: "Data",      label: "Intelligence Layer" },
-                { icon: "feather-users",         num: "5+",        label: "Stakeholder Roles"  },
+                { icon: "feather-monitor",         num: "1",        label: "Platforms"  },
                 { icon: "feather-map-pin",       num: "Property",  label: "Level Intelligence" },
                 { icon: "feather-shield",        num: "Trust",     label: "Infrastructure"     },
                 { icon: "feather-repeat",        num: "Workflow",  label: "Coordination"       },
@@ -315,6 +318,19 @@ const GeoploxProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── ABOUT THE CLIENT ─────────────────────────────────────── */}
         <section className="rbt-section-gap bg-color-white">
           <div className="container">
@@ -327,22 +343,22 @@ const GeoploxProject = () => {
                   <p>
                     Geoplox is a real estate intelligence and ecosystem infrastructure company built to
                     fix a fundamental weakness in the property industry: fragmentation. Real estate
-                    involves many capable players — developers, property owners, investors, professionals,
-                    and capital providers — yet they often operate in isolation, with poor information
+                    involves many capable players, developers, property owners, investors, professionals,
+                    and capital providers, yet they often operate in isolation, with poor information
                     flow and limited coordination.
                   </p>
                   <p>
                     Geoplox exists to connect these players through a neutral, data-led platform that
                     enables trust, efficiency, and scale. Intentionally independent and conflict-free,
-                    Geoplox does not compete with brokers or advisors — it strengthens their ability
+                    Geoplox does not compete with brokers or advisors, it strengthens their ability
                     to operate by providing the shared intelligence infrastructure they lack.
                   </p>
                 </div>
                 <div className="digi-client-badge">
-                  <div className="digi-cb-icon"><i className="feather-map-pin"></i></div>
+                  <div className="digi-cb-icon"><i className="feather-briefcase"></i></div>
                   <div>
                     <strong>Estate Informant Ltd.</strong>
-                    <small>Product Owner · Real Estate Intelligence</small>
+                    <small>Product Owner</small>
                   </div>
                 </div>
               </div>
@@ -359,9 +375,9 @@ const GeoploxProject = () => {
                     { icon: "feather-briefcase",  label: "Industry",     value: "Real Estate Intelligence & PropTech Infrastructure" },
                     { icon: "feather-database",   label: "Product",      value: "Real Estate Intelligence & Ecosystem Infrastructure Platform" },
                     { icon: "feather-monitor",    label: "Platform",     value: "Web Application (Responsive)" },
-                    { icon: "feather-code",       label: "Tech Stack",   value: "NextJS · Laravel · Vite · Proxy Pattern · MySQL · Redis" },
+                    { icon: "feather-code",       label: "Tech Stack",   value: "NextJS · Laravel · Vite · Proxy Pattern · MySQL · Redis · REST API · ReactJS · Tailwind CSS · WebSocket" },
                     { icon: "feather-users",      label: "Stakeholders", value: "Developers · Property Owners · Investors · Agents · Admins" },
-                    { icon: "feather-users",      label: "Team",         value: "6 Engineers, 2 UI/UX Designers, 2 QA Specialists" },
+                    { icon: "feather-users",      label: "Team",         value: "5 Engineers, 1 UI/UX Designer, 4 QA Specialists" },
                     { icon: "feather-award",      label: "Delivered By", value: "SmartTech Solutions", highlight: true },
                   ].map(({ icon, label, value, highlight }, i) => (
                     <div
@@ -388,6 +404,23 @@ const GeoploxProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── ABOUT THE APP ────────────────────────────────────────── */}
         <section className="rbt-section-gap digi-app-section">
           <div className="container">
@@ -401,26 +434,22 @@ const GeoploxProject = () => {
                 <div className="digi-app-body">
                   <p>
                     Geoplox is a data-led platform that transforms how real estate stakeholders
-                    discover, verify, and coordinate around property opportunities. It structures
-                    property-level data — development status, market activity, ownership records,
-                    and ecosystem participation — into a shared intelligence layer that any
-                    qualified participant can access and act on from a common factual baseline.
-                  </p>
-                  <p>
-                    The platform serves five distinct stakeholder types — developers, property
-                    owners, investors, agents, and platform administrators — each with purpose-built
+                    discover, verify, and coordinate around property opportunities. The platform 
+                    serves five distinct stakeholder types, developers, property
+                    owners, investors, agents, and platform administrators, each with purpose-built
                     dashboards, appropriate data access, and tailored workflow tools. A structured
                     property upload and validation pipeline ensures every listing meets the platform's
                     data integrity standards before entering the ecosystem.
                   </p>
                   <p>
                     Built on a Laravel API with NextJS frontend, Vite build tooling, Redis caching,
-                    and a MySQL data layer — Geoplox delivers institutional-grade property intelligence
+                    and a MySQL data layer. Geoplox delivers institutional-grade property intelligence
                     with the performance and reliability of modern web infrastructure, at scale.
                   </p>
                 </div>
                 <div className="digi-stack">
-                  {["NextJS", "Laravel", "Vite", "Proxy Pattern", "MySQL", "Redis", "REST API", "WebSocket"].map((t, i) => (
+                  
+                  {["NextJS", "Laravel", "Vite", "Proxy Pattern", "MySQL", "Redis", "REST API", "ReactJS", "Tailwind CSS", "WebSocket"].map((t, i) => (
                     <span
                       key={t}
                       className="digi-stack-tag"
@@ -459,6 +488,24 @@ const GeoploxProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── THE CHALLENGE ────────────────────────────────────────── */}
         <section className="rbt-section-gap digi-challenge-section">
           <div className="container">
@@ -492,6 +539,17 @@ const GeoploxProject = () => {
             </div>
           </div>
         </section>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -552,6 +610,20 @@ const GeoploxProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── THE PROCESS ──────────────────────────────────────────── */}
         <section className="rbt-section-gap digi-process-section">
           <div className="container">
@@ -565,7 +637,7 @@ const GeoploxProject = () => {
               <div className="col-lg-5" data-sal="slide-left" data-sal-duration="700">
                 <p className="digi-process-lead mt_md--20 mt_sm--20">
                   Six structured phases took Geoplox from a market thesis to a production-ready
-                  intelligence platform — research-led, architecture-first, and built with zero
+                  intelligence platform, research-led, architecture-first, and built with zero
                   compromises on data integrity or stakeholder experience.
                 </p>
               </div>
@@ -591,6 +663,22 @@ const GeoploxProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── ENHANCING EXPERIENCE ─────────────────────────────────── */}
         <section className="rbt-section-gap digi-craft-section">
           <div className="container">
@@ -603,7 +691,7 @@ const GeoploxProject = () => {
                 </h2>
                 <div className="digi-craft-body">
                   <p>
-                    Geoplox is positioned as foundational infrastructure — and foundational
+                    Geoplox is positioned as foundational infrastructure and foundational
                     infrastructure must look and feel like it. When stakeholders land on a
                     platform that holds their property data, investment intelligence, and
                     workflow coordination, the UI must communicate reliability, clarity,
@@ -611,7 +699,7 @@ const GeoploxProject = () => {
                   </p>
                   <p>
                     SmartTech Solutions applied the same UI craft to Geoplox that you expect
-                    from the world&apos;s leading data platforms and PropTech products — precise,
+                    from the world&apos;s leading data platforms and PropTech products, precise,
                     purposeful, and architected for the specific cognitive demands of real
                     estate intelligence. The result is a platform that feels as trustworthy
                     as the data it delivers.
@@ -668,6 +756,22 @@ const GeoploxProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── SOLUTION & RESULTS ───────────────────────────────────── */}
         <section className="rbt-section-gap digi-solution-section">
           <div className="container">
@@ -681,7 +785,7 @@ const GeoploxProject = () => {
                 <div className="digi-solution-body">
                   <p>
                     SmartTech Solutions architected, designed, and delivered the complete Geoplox
-                    platform — from the Laravel API and MySQL intelligence layer to the NextJS
+                    platform, from the Laravel API and MySQL intelligence layer to the NextJS
                     web application, multi-role dashboards, data validation pipeline, and
                     admin operations suite.
                   </p>

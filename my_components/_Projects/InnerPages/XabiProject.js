@@ -35,27 +35,27 @@ const galleryImages = screens.map((s) => ({ src: xabiImg(s.file), label: s.label
 const challenges = [
   {
     title: "Multi-Feature Financial Architecture",
-    body: "Designing a single, coherent system that simultaneously handles rental savings, loan origination, wallet management, peer transfers, and a property marketplace — each with its own data model, business logic, and compliance requirements — without performance or reliability trade-offs.",
+    body: "Designing a single, coherent system that simultaneously handles rental savings, loan origination, wallet management, peer transfers, and a property marketplace, each with its own data model, business logic, and compliance requirements, without performance or reliability trade-offs.",
   },
   {
     title: "Rental Savings Engine & Affordability Logic",
-    body: "Building a savings engine that deducts a configured portion of a user's monthly salary for rent accumulation — with flexible contribution schedules, grace periods, interest calculations, and goal-tracking — while keeping the remaining salary accessible and visible in real time.",
+    body: "Building a savings engine that deducts a configured portion of a user's monthly salary for rent accumulation, with flexible contribution schedules, grace periods, interest calculations, and goal-tracking, while keeping the remaining salary accessible and visible in real time.",
   },
   {
     title: "Rental Loan Origination & Credit Assessment",
-    body: "Engineering a short-cycle rental loan system with automated eligibility checks, repayment scheduling, and interest computation — designed for users with no formal credit history, requiring alternative data signals and a robust risk-scoring model built from the ground up.",
+    body: "Engineering a short-cycle rental loan system with automated eligibility checks, repayment scheduling, and interest computation, designed for users with no formal credit history, requiring alternative data signals and a robust risk-scoring model built from the ground up.",
   },
   {
     title: "Property Marketplace & Smart Search",
-    body: "Building a full-featured property discovery platform with location-based smart search, filter-and-sort logic, listing management for agents, and a seamless inquiry-to-transaction flow — all optimised for the bandwidth and device constraints of Nigerian users.",
+    body: "Building a full-featured property discovery platform with location-based smart search, filter-and-sort logic, listing management for agents, and a seamless inquiry-to-transaction flow, all optimised for the bandwidth and device constraints of Nigerian users.",
   },
   {
     title: "Mobile-First Cross-Platform Delivery",
-    body: "Delivering a consistent, high-performance product across web (NextJS), iOS (React Native), and Android (React Native) from a single codebase — while optimising layouts, touch interactions, and performance specifically for mobile-primary users across varying network conditions.",
+    body: "Delivering a consistent, high-performance product across web (NextJS), iOS (React Native), and Android (React Native) from a single codebase, while optimising layouts, touch interactions, and performance specifically for mobile-primary users across varying network conditions.",
   },
   {
     title: "Financial Trust & Security in a Sensitive Market",
-    body: "Building the security layer that earns user trust in a market with high fintech scepticism — end-to-end encrypted transactions, multi-factor authentication, real-time fraud signals, and transparent audit trails on every financial action across wallets, loans, and savings.",
+    body: "Building the security layer that earns user trust in a market with high fintech scepticism, end-to-end encrypted transactions, multi-factor authentication, real-time fraud signals, and transparent audit trails on every financial action across wallets, loans, and savings.",
   },
 ];
 
@@ -65,12 +65,12 @@ const processSteps = [
   {
     num: "01",
     title: "Discovery & Financial Product Design",
-    body: "In-depth sessions with Ribiax stakeholders mapped every user financial journey — saving targets, loan needs, property discovery, and wallet behaviour. Output: full PRD, user personas, and a validated product architecture.",
+    body: "In-depth sessions with Ribiax stakeholders mapped every user financial journey, saving targets, loan needs, property discovery, and wallet behaviour. Output: full PRD, user personas, and a validated product architecture.",
   },
   {
     num: "02",
     title: "Platform Architecture & Systems Design",
-    body: "Architects designed the Laravel API, MySQL schema, savings engine, loan origination system, wallet transaction ledger, property data model, and the proxy pattern that connects all surfaces — web, iOS, and Android.",
+    body: "Architects designed the Laravel API, MySQL schema, savings engine, loan origination system, wallet transaction ledger, property data model, and the proxy pattern that connects all surfaces, web, iOS, and Android.",
   },
   {
     num: "03",
@@ -80,12 +80,12 @@ const processSteps = [
   {
     num: "04",
     title: "Backend API & Financial Engine Development",
-    body: "Laravel API built with the rental savings engine, loan origination logic, wallet ledger, Xabi Tokens system, and property listing management — running on a MySQL data layer with Redis session caching and real-time transaction processing.",
+    body: "Laravel API built with the rental savings engine, loan origination logic, wallet ledger, Xabi Tokens system, and property listing management, running on a MySQL data layer with Redis session caching and real-time transaction processing.",
   },
   {
     num: "05",
     title: "Web & Mobile Application Development",
-    body: "NextJS web app and React Native mobile apps built in parallel sprints — sharing a single API contract. Vite-powered build pipeline, Tailwind CSS design system, and continuous cross-platform testing at every milestone.",
+    body: "NextJS web app and React Native mobile apps built in parallel sprints, sharing a single API contract. Vite-powered build pipeline, Tailwind CSS design system, and continuous cross-platform testing at every milestone.",
   },
   {
     num: "06",
@@ -100,22 +100,22 @@ const craftFeatures = [
   {
     icon: "feather-smartphone",
     title: "Mobile-First Design Precision",
-    body: "Every screen was designed for thumbs first — touch targets, gesture flows, and information density all calibrated for users who live on their phones and need instant access to their rent savings and wallet.",
+    body: "Every screen was designed for thumbs first, touch targets, gesture flows, and information density all calibrated for users who live on their phones and need instant access to their rent savings and wallet.",
   },
   {
     icon: "feather-shield",
     title: "Financial Trust Interface Design",
-    body: "In a market where fintech scepticism is high, every UI decision — colour, microcopy, feedback state — was made to communicate security, reliability, and transparency at every financial interaction.",
+    body: "In a market where fintech scepticism is high, every UI decision, colour, microcopy, feedback state, was made to communicate security, reliability, and transparency at every financial interaction.",
   },
   {
     icon: "feather-map-pin",
     title: "Property Discovery Experience",
-    body: "The property marketplace was designed to make finding a home feel fast and effortless — smart search filters, rich listing cards, and a seamless transition from discovery to enquiry to transaction.",
+    body: "The property marketplace was designed to make finding a home feel fast and effortless, smart search filters, rich listing cards, and a seamless transition from discovery to enquiry to transaction.",
   },
   {
     icon: "feather-monitor",
     title: "Cross-Platform Visual Consistency",
-    body: "Web and mobile share a single design language. Users switch between browser and phone with zero friction — the Xabi experience is identical across every surface, every time.",
+    body: "Web and mobile share a single design language. Users switch between browser and phone with zero friction, the Xabi experience is identical across every surface, every time.",
   },
 ];
 
@@ -135,32 +135,47 @@ const results = [
   {
     icon: "feather-credit-card",
     title: "Rental Loan Management",
-    body: "A short-cycle rental loan system with in-app origination, automated eligibility assessment, flexible repayment scheduling, and full loan history — giving users a financial bridge when savings fall short.",
+    body: "A short-cycle rental loan system with in-app origination, automated eligibility assessment, flexible repayment scheduling, and full loan history, giving users a financial bridge when savings fall short.",
   },
   {
     icon: "feather-dollar-sign",
     title: "Wallet & Transaction Infrastructure",
-    body: "A full-featured in-app wallet supporting deposits, withdrawals, peer-to-peer transfers, and a complete transaction ledger — giving users a single financial hub for every Xabi activity.",
+    body: "A full-featured in-app wallet supporting deposits, withdrawals, peer-to-peer transfers, and a complete transaction ledger, giving users a single financial hub for every Xabi activity.",
   },
   {
     icon: "feather-gift",
     title: "Refer & Earn Programme",
-    body: "A built-in referral system that rewards users with Xabi Tokens for every successful invite — driving organic growth, deepening engagement, and creating a loyalty layer within the financial product.",
+    body: "A built-in referral system that rewards users with Xabi Tokens for every successful invite, driving organic growth, deepening engagement, and creating a loyalty layer within the financial product.",
   },
   {
     icon: "feather-layers",
     title: "Web + Mobile Dual-Platform Delivery",
-    body: "A complete NextJS web application and React Native mobile apps (iOS & Android) — sharing one API, one design system, and one brand identity — giving every Nigerian user access to Xabi on any device.",
+    body: "A complete NextJS web application and React Native mobile apps (iOS & Android), sharing one API, one design system, and one brand identity, giving every Nigerian user access to Xabi on any device.",
   },
 ];
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 const XabiProject = () => {
+
 
   useEffect(() => {
     sal({ threshold: 0.01, once: true });
   }, []);
+
 
   const [lbIndex, setLbIndex] = useState(0);
   const [lbOpen,  setLbOpen]  = useState(false);
@@ -169,6 +184,7 @@ const XabiProject = () => {
   const closeLightbox = ()    => setLbOpen(false);
   const prevImg = () => setLbIndex((i) => (i - 1 + galleryImages.length) % galleryImages.length);
   const nextImg = () => setLbIndex((i) => (i + 1) % galleryImages.length);
+
 
   useEffect(() => {
     if (!lbOpen) return;
@@ -219,8 +235,8 @@ const XabiProject = () => {
                   <p className="digi-hero-lead" data-sal="slide-up" data-sal-duration="700" data-sal-delay="160">
                     An all-in-one real estate solution built to relieve the mental stress of
                     rent for every Nigerian. Rental savings, rental loans, a property marketplace,
-                    wallets, and Xabi Tokens — everything a renter needs in a single mobile-first
-                    product designed for speed, trust, and financial dignity.
+                    wallets, and Xabi Tokens, everything a renter needs in a single mobile-first
+                    product designed for speed, trust and financial dignity.
                   </p>
 
                   <div className="digi-hero-actions" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">
@@ -242,9 +258,9 @@ const XabiProject = () => {
 
                   <div className="digi-hero-glass-stats" data-sal="slide-up" data-sal-duration="700" data-sal-delay="240">
                     {[
-                      { val: "6+",  suffix: "",  label: "Core Features"     },
-                      { val: "3",   suffix: "",  label: "Platforms"         },
-                      { val: "11",  suffix: "",  label: "App Screens"       },
+                      { val: "5",  suffix: "",  label: "Core Features"     },
+                      { val: "2",   suffix: "",  label: "Platforms"         },
+                      { val: "40",  suffix: "+",  label: "App Screens"       },
                       { val: "1",   suffix: "",  label: "App for All Renters"},
                     ].map(({ val, suffix, label }) => (
                       <div className="digi-glass-stat" key={label}>
@@ -284,6 +300,18 @@ const XabiProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── METRICS STRIP ────────────────────────────────────────── */}
         <div className="digi-metrics-strip">
           <div className="container">
@@ -308,6 +336,17 @@ const XabiProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
         {/* ── ABOUT THE CLIENT ─────────────────────────────────────── */}
         <section className="rbt-section-gap bg-color-white">
           <div className="container">
@@ -315,19 +354,19 @@ const XabiProject = () => {
 
               <div className="col-lg-6" data-sal="slide-right" data-sal-duration="700">
                 <span className="digi-kicker">About the Client</span>
-                <h2 className="digi-client-heading">Ribiax Engineering Limited</h2>
+                <h2 className="digi-client-heading">Ribiax Estate Limited</h2>
                 <div className="digi-client-body">
                   <p>
-                    Ribiax Engineering Limited is a technology-driven engineering and innovation
+                    Ribiax Estate Limited is a technology-driven real estate and innovation
                     company headquartered in Nigeria. The firm specialises in building transformative
-                    digital platforms that address deep inefficiencies in high-value sectors —
+                    digital platforms that address deep inefficiencies in high-value sectors,
                     with a particular focus on real estate, financial technology, and digital
                     product innovation for the Nigerian market.
                   </p>
                   <p>
                     Having identified rent as one of Nigeria&apos;s most persistent sources of financial
-                    stress — where millions face landlord pressure, lump-sum demands, and no
-                    structured way to save or borrow for shelter — Ribiax commissioned Xabi as
+                    stress, where millions face landlord pressure, lump-sum demands, and no
+                    structured way to save or borrow for shelter, Ribiax commissioned Xabi as
                     its response: a mobile-first, all-in-one platform that gives every Nigerian
                     renter the financial tools they need to take control of their housing situation.
                   </p>
@@ -335,7 +374,7 @@ const XabiProject = () => {
                 <div className="digi-client-badge">
                   <div className="digi-cb-icon"><i className="feather-briefcase"></i></div>
                   <div>
-                    <strong>Ribiax Engineering Limited</strong>
+                    <strong>Ribiax Estate Limited</strong>
                     <small>Product Owner · Nigeria</small>
                   </div>
                 </div>
@@ -353,9 +392,9 @@ const XabiProject = () => {
                     { icon: "feather-briefcase",  label: "Industry",     value: "Real Estate, FinTech & Consumer Financial Technology" },
                     { icon: "feather-home",        label: "Product",      value: "All-in-One Real Estate & Rental Finance Platform"     },
                     { icon: "feather-monitor",     label: "Platforms",    value: "Web Application, Mobile App (iOS & Android)"          },
-                    { icon: "feather-code",        label: "Tech Stack",   value: "NextJS · Laravel · ReactJS · React Native · Tailwind CSS · Vite" },
+                    { icon: "feather-code",        label: "Tech Stack",   value: "NextJS · Laravel · Java · ReactJS · React Native · Tailwind CSS · Vite · MySQL · REST API · Redis" },
                     { icon: "feather-layers",      label: "Core Features",value: "Savings · Loans · Wallet · Marketplace · Refer & Earn" },
-                    { icon: "feather-users",       label: "Team",         value: "8 Engineers, 2 UI/UX Designers, 2 QA Specialists"     },
+                    { icon: "feather-users",       label: "Team",         value: "6 Engineers, 1 UI/UX Designers, 3 QA Specialists"     },
                     { icon: "feather-award",       label: "Delivered By", value: "SmartTech Solutions", highlight: true                 },
                   ].map(({ icon, label, value, highlight }, i) => (
                     <div
@@ -382,6 +421,20 @@ const XabiProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── ABOUT THE APP ────────────────────────────────────────── */}
         <section className="rbt-section-gap digi-app-section">
           <div className="container">
@@ -395,28 +448,26 @@ const XabiProject = () => {
                 <div className="digi-app-body">
                   <p>
                     Xabi is built on a simple, powerful truth: shelter is a right, not a
-                    privilege — and no Nigerian should face landlord embarrassment, lump-sum
+                    privilege, and no Nigerian should face landlord embarrassment, lump-sum
                     rent panic, or financial paralysis because they lack the right tools.
                     Xabi puts those tools in every renter&apos;s pocket.
                   </p>
                   <p>
                     Users can set up a rental savings plan that automatically sets aside a
-                    configured portion of their monthly salary toward rent — leaving the rest
+                    configured portion of their monthly salary toward rent, leaving the rest
                     of their income intact. When savings fall short, Xabi&apos;s rental loan
                     system provides fast, in-app financing with clear repayment terms.
-                    The built-in wallet handles all transactions — deposits, transfers, and
-                    payments — in one place.
                   </p>
                   <p>
                     Beyond finance, Xabi&apos;s property marketplace makes finding a rental or
-                    purchase property fast and seamless — smart search, rich listings, and
+                    purchase property fast and seamless, smart search, rich listings, and
                     a direct path from discovery to enquiry. A Refer &amp; Earn programme
                     and Xabi Tokens layer rewards on top of every action, making the platform
                     as engaging as it is useful.
                   </p>
                 </div>
                 <div className="digi-stack">
-                  {["NextJS", "Laravel", "ReactJS", "React Native", "Tailwind CSS", "Vite", "MySQL", "REST API"].map((t, i) => (
+                  {["NextJS", "Laravel", "Java", "ReactJS", "React Native", "Tailwind CSS", "Vite", "MySQL", "REST API", "Redis"].map((t, i) => (
                     <span
                       key={t}
                       className="digi-stack-tag"
@@ -455,6 +506,23 @@ const XabiProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── THE CHALLENGE ────────────────────────────────────────── */}
         <section className="rbt-section-gap digi-challenge-section">
           <div className="container">
@@ -466,7 +534,7 @@ const XabiProject = () => {
                 </h2>
                 <p className="digi-challenge-lead">
                   Xabi had to simultaneously solve savings, lending, payments, property
-                  discovery, and cross-platform delivery — in a market where fintech
+                  discovery, and cross-platform delivery, in a market where fintech
                   trust is hard-won, data infrastructure is uneven, and users live on
                   mobile. These were the six hardest problems we solved.
                 </p>
@@ -493,6 +561,21 @@ const XabiProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── USER ENGAGEMENT — Marquee ─────────────────────────────── */}
         <section className="rbt-section-gap digi-engage-section">
           <div className="container">
@@ -505,7 +588,7 @@ const XabiProject = () => {
               </h2>
               <p className="digi-engage-desc">
                 From property discovery and rental savings to in-app loans, wallet
-                transactions, and referral rewards — every Xabi screen was designed
+                transactions, and referral rewards, every Xabi screen was designed
                 to make financial empowerment feel intuitive, fast, and within reach
                 for every Nigerian renter.
               </p>
@@ -550,6 +633,19 @@ const XabiProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── THE PROCESS ──────────────────────────────────────────── */}
         <section className="rbt-section-gap digi-process-section">
           <div className="container">
@@ -563,7 +659,7 @@ const XabiProject = () => {
               <div className="col-lg-5" data-sal="slide-left" data-sal-duration="700">
                 <p className="digi-process-lead mt_md--20 mt_sm--20">
                   Six structured phases took Xabi from a market insight about rent stress to
-                  a production-ready, multi-feature fintech and property platform — designed
+                  a production-ready, multi-feature fintech and property platform, designed
                   mobile-first and built with no shortcuts in financial engineering or user trust.
                 </p>
               </div>
@@ -589,6 +685,24 @@ const XabiProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── ENHANCING EXPERIENCE ─────────────────────────────────── */}
         <section className="rbt-section-gap digi-craft-section">
           <div className="container">
@@ -601,14 +715,14 @@ const XabiProject = () => {
                 </h2>
                 <div className="digi-craft-body">
                   <p>
-                    Xabi deals with money, shelter, and financial anxiety — three of the
+                    Xabi deals with money, shelter, and financial anxiety, three of the
                     most emotionally charged areas in any user&apos;s life. When a platform
                     handles rent savings, short-term loans, and wallet transactions, the
                     UI has to do more than look good. It has to communicate safety,
                     clarity, and control at every single interaction.
                   </p>
                   <p>
-                    SmartTech Solutions applied world-class UI craft to Xabi — the same
+                    SmartTech Solutions applied world-class UI craft to Xabi, the same
                     level of precision you expect from the best global fintech products,
                     calibrated for Nigerian users, Nigerian behaviour patterns, and the
                     mobile-first reality of how people engage with financial tools in
@@ -666,6 +780,29 @@ const XabiProject = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* ── SOLUTION & RESULTS ───────────────────────────────────── */}
         <section className="rbt-section-gap digi-solution-section">
           <div className="container">
@@ -679,7 +816,7 @@ const XabiProject = () => {
                 <div className="digi-solution-body">
                   <p>
                     SmartTech Solutions designed, architected, and delivered the complete Xabi
-                    platform — from the Laravel financial API and MySQL data layer to the NextJS
+                    platform, from the Laravel financial API and MySQL data layer to the NextJS
                     web app, React Native mobile apps, savings engine, loan system, wallet
                     infrastructure, and property marketplace.
                   </p>

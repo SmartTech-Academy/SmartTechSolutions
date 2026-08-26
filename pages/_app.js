@@ -1,6 +1,12 @@
 import React, { useEffect } from "react";
 
 import "bootstrap/scss/bootstrap.scss";
+// The only Euclid Circular @font-face import — public/css/plugins/euclid-
+// circulara.css used to be imported too (below), but it's a stale compiled
+// copy of this exact file (same 10 @font-face rules, byte-for-byte
+// identical font URLs) minus `font-display: swap`, so every page shipped
+// the same font declarations twice and the later, swap-less copy could win
+// the cascade for font-display. Removed there instead of duplicated here.
 import "../public/scss/default/euclid-circulara.scss";
 
 // ========= Plugins CSS START =========
@@ -9,7 +15,6 @@ import "../public/css/plugins/fontawesome.min.css";
 import "../public/css/plugins/feather.css";
 import "../public/css/plugins/odometer.css";
 import "../public/css/plugins/animation.css";
-import "../public/css/plugins/euclid-circulara.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-cards";

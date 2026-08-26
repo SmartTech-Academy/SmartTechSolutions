@@ -16,7 +16,27 @@ import { Provider } from "react-redux";
 import Store from "@/redux/store";
 import Footer from "@/my_components/Footer/Footer";
 
-const index = () => {
+import { getAllPosts } from "@/helper/wpgraphql";
+
+// Statically generated at build time from the headless WordPress blog
+// (blog.smarttech.ng/graphql), then refreshed in the background at most
+// once a minute (ISR) so a newly published post shows up without a full
+// redeploy.
+export async function getStaticProps() {
+  let posts = [];
+  try {
+    posts = await getAllPosts();
+  } catch (err) {
+    console.error("Failed to fetch posts from WPGraphQL:", err);
+  }
+
+  return {
+    props: { posts },
+    revalidate: 60,
+  };
+}
+
+const index = ({ posts }) => {
 
 
   return (
@@ -36,7 +56,7 @@ const index = () => {
                 <HeaderContainer headerSticky="rbt-sticky" headerType="" blendWithHero />
                 <Cart />
 
-                <AllBlogs />
+                <AllBlogs posts={posts} />
                 <BackToTop />
 
                 <Separator />

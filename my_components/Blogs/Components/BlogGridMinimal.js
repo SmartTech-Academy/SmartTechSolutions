@@ -1,85 +1,66 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import Image from "next/image";
 
-import BlogData from "@/data/blog/blog.json";
+import { ROUTE } from "@/route/app_routes.js";
+import useRecentPosts from "@/my_components/_Global/useRecentPosts";
 
-
-
-
-
-
-
-
+/**
+ * Compact 3-card "Latest News" grid embedded across ~20 otherwise-unrelated
+ * pages — the most recent posts from WordPress's "NEWS" category only
+ * (blog.smarttech.ng), newest first, fetched client-side on mount.
+ * Previously read a `BlogData.blogGrid` key that didn't exist in
+ * data/blog/blog.json (always undefined), rendered no image at all, and
+ * linked to `/blog-details/<id>`, a route that doesn't exist anywhere in
+ * this app (the real one is ROUTE.blog_details = "/blog/post/").
+ */
 const BlogGridMinimal = () => {
+  const { posts, loading } = useRecentPosts(3, "NEWS");
 
-
-  const [blogs, setBlogs] = useState([]);
-  const [page, setPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(0);
-
-  const startIndex = (page - 1) * 9;
-  const selectedGridBlogs = blogs.slice(startIndex, startIndex + 9);
-
-
-
-  const handleClick = (num) => {
-    setPage(num);
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
-
-  useEffect(() => {
-    setBlogs(BlogData.blogGrid);
-    setTotalPages(Math.ceil(BlogData.blogGrid.length / 9));
-  }, [setTotalPages, setBlogs]);
-
-
-
+  if (!loading && posts.length === 0) return null;
 
   return (
-    <>
-      <div className="row g-5">
-        {BlogData && selectedGridBlogs.slice(0, 3).map((data, index) => (
+    <div className="row g-5">
+      {posts.map((post) => (
+        <div className="col-lg-4 col-md-6 col-sm-6 col-12 mt--30" key={post.slug}>
+          <div className="rbt-card variation-02 rbt-hover card-minimal">
+            {post.image ? (
+              <div className="rbt-card-img">
+                <Link href={ROUTE.blog_details + post.slug}>
+                  <Image src={post.image} width={580} height={300} alt={post.imageAlt} />
+                </Link>
+              </div>
+            ) : null}
 
-            <div className="col-lg-4 col-md-6 col-sm-6 col-12 mt--30"
-              // data-sal-delay="150"
-              // data-sal="slide-up"
-              // data-sal-duration="800"
-              key={index}>
+            <div className="rbt-card-body">
+              <ul className="meta-list justify-content-start mb--30">
+                <li className="list-item">
+                  <i className="feather-clock"></i>
+                  <span>{post.date}</span>
+                </li>
+              </ul>
 
-              <div className="rbt-card variation-02 rbt-hover card-minimal">
-                <div className="rbt-card-body">
+              <h4 className="rbt-card-title">
+                <Link href={ROUTE.blog_details + post.slug}>{post.title}</Link>
+              </h4>
 
-                  <ul className="meta-list justify-content-start mb--30">
-                    <li className="list-item">
-                      <i className="feather-clock"></i>
-                      <span>{data.date}</span>
-                    </li>
-                  </ul>
-
-                  <h4 className="rbt-card-title">
-                    <Link href={`/blog-details/${data.id}`}>{data.title}</Link>
-                  </h4>
-
-                  <div className="rbt-card-bottom mt--40">
-                    <Link className="transparent-button" href={`/blog-details/${data.id}`}>
-                      Learn More 
-                      <i> <svg width="17" height="12" xmlns="http://www.w3.org/2000/svg"> <g stroke="#27374D" fill="none" fillRule="evenodd"> <path d="M10.614 0l5.629 5.629-5.63 5.629" /> <path strokeLinecap="square" d="M.663 5.572h14.594" /> </g> </svg> </i>
-                    </Link>
-                  </div>
-
-                </div>
+              <div className="rbt-card-bottom mt--40">
+                <Link className="transparent-button" href={ROUTE.blog_details + post.slug}>
+                  Learn More
+                  <i>
+                    <svg width="17" height="12" xmlns="http://www.w3.org/2000/svg">
+                      <g stroke="#27374D" fill="none" fillRule="evenodd">
+                        <path d="M10.614 0l5.629 5.629-5.63 5.629" />
+                        <path strokeLinecap="square" d="M.663 5.572h14.594" />
+                      </g>
+                    </svg>
+                  </i>
+                </Link>
               </div>
             </div>
-
-          ))}
-
-      </div>
-      
-    </>
+          </div>
+        </div>
+      ))}
+    </div>
   );
 };
 

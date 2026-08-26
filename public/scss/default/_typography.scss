@@ -2,11 +2,13 @@
  * Typography
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap');
-
-/*
-	font-family: 'Source Serif Pro', serif; 
-*/
+/* Google Fonts @import removed — it fetched "Source Serif Pro" (an
+   external, render-blocking network request that must complete before the
+   browser can continue parsing the rest of this stylesheet), but the
+   `--font-alt` variable that points at it (_variables.scss) was never
+   referenced by any rule in the codebase. Confirmed via a repo-wide grep
+   for "font-alt" before removing — genuinely dead weight, not a font
+   actually shown anywhere on the site. */
 
 * {
 	box-sizing: border-box;
@@ -26,8 +28,24 @@ body {
 	font-weight: 400;
 	scroll-behavior: auto;
 	position: relative;
-	overflow-y: scroll;
-	overflow-x: hidden;
+	// No overflow-x/-y here on purpose (both used to read `hidden`/`scroll`).
+	// Before <html> declared any overflow of its own, the CSS spec
+	// propagated <body>'s overflow up to the viewport — <body> itself never
+	// scrolled internally. Once <html> got its own `overflow-x: hidden` (see
+	// global-effects.css's "ROOT-LEVEL HORIZONTAL OVERFLOW GUARD"), that
+	// propagation is disabled by spec, so any non-`visible` overflow value
+	// here — even just `overflow-x: hidden` alone, which forces overflow-y
+	// to compute as `auto` per the CSS overflow-pairing rule — turns <body>
+	// into a second, independent scroll container distinct from <html>
+	// (which is `document.scrollingElement`). A sticky descendant then
+	// computes its containing block against whichever scroll container is
+	// nearer (<body>), but <body> never actually receives scroll input, so
+	// it just sits still: confirmed on the homepage's "Our Product
+	// Development Process" scroll-pinned section, whose sticky panel's
+	// rect.top decreased 1:1 with page scroll instead of holding at its
+	// `top` offset — it never stuck at all. <html> alone now owns both the
+	// horizontal clip and the permanent-scrollbar-gutter behavior this used
+	// to provide — see global-effects.css.
 	scrollbar-width: thin;
 
 	@media #{$sm-layout} {

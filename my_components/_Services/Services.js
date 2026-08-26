@@ -45,12 +45,12 @@ const deliveryPillars = [
 
 
 const heroServiceStack = [
-  "Web Platforms",
-  "Mobile Apps",
-  "AI Systems",
-  "Blockchain",
-  "Cybersecurity",
-  "Games & 3D",
+  { label: "Web Platforms", href: ROUTE.web_dev_service },
+  { label: "Mobile Apps", href: ROUTE.mobile_dev_service },
+  { label: "AI Systems", href: ROUTE.ai_development_service },
+  { label: "Blockchain", href: ROUTE.blockchain_dev_service },
+  { label: "Cybersecurity", href: ROUTE.cybersecurity_service },
+  { label: "Games & 3D", href: ROUTE.game_dev_service },
 ];
 
 
@@ -158,13 +158,14 @@ const Services = () => {
                     <span>Service Stack</span>
                     <div className="command-grid">
                       {heroServiceStack.map((item, index) => (
-                        <div
-                          key={item}
+                        <Link
+                          href={item.href}
+                          key={item.label}
                           className="rbt-reveal"
                           style={{ "--reveal-delay": `${0.45 + index * 0.06}s` }}
                         >
-                          <small>{item}</small>
-                        </div>
+                          <small>{item.label}</small>
+                        </Link>
                       ))}
                     </div>
                   </div>

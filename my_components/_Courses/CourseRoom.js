@@ -7,7 +7,6 @@ import Image from "next/image";
 import Contact from "../Contacts/Contact";
 import ContactForm from "../Contacts/Contact-Form";
 import Instagram from "../Instagram/Instagram";
-import TrustedBrands from "@/my_components/Brand/Brands";
 
 import CourseDetails from "@/data/course-details/courseData.json";
 
@@ -156,7 +155,7 @@ const CourseRoom = () => {
                                 <div className="load-more-btn text-start text-lg-end">
                                     <a className="rbt-btn btn-border icon-hover radius-round color-white-off" href={ROUTE.blog}>
                                         <span className="btn-text">See All Articles</span>
-                                        <span className="btn-icon"><i className="feather-a~rrow-right"></i></span>
+                                        <span className="btn-icon"><i className="feather-arrow-right"></i></span>
                                     </a>
                                 </div>
                             </div>
@@ -195,15 +194,6 @@ const CourseRoom = () => {
 
 
 
-            <div className="rbt-brand-area bg-color-white ptb--60">
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-lg-10 offset-lg-1">
-                        <TrustedBrands />
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         
         </>

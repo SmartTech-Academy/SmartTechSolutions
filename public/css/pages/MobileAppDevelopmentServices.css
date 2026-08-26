@@ -7,7 +7,13 @@
    ════════════════════════════════════════════════════════════════════════ */
 
 /* ────────────────────────────────────────────────────────────────────────
-   HERO COLLAGE — two staggered layers of real shipped app screens
+   HERO COLLAGE — two-layer photo-pile collage: a "back" field (the same 7
+   tiles, rotated/scaled/offset as one block, mostly hidden behind the
+   front field and the edge scrim) sitting above a "front" field of real,
+   individually-tilted, gently floating tiles. Same field/layer/tile shape
+   as ServiceHero.js's .svc-collage (see ServicePages.css) — this is that
+   exact system under the mad- namespace, since MobileHeroCollage.js is a
+   separate component from ServiceHero.js.
    ──────────────────────────────────────────────────────────────────────── */
 .mad-collage {
   position: relative;
@@ -18,10 +24,6 @@
   background: linear-gradient(150deg, #0d1220 0%, #171d33 45%, #1c1830 100%);
 }
 
-/* Static dot-grid + two soft color blobs instead of the previous flat
-   pastel gradient — decorative only, no animation (see the note on
-   .rbt-industries-backdrop__grid in global-effects.css for why decorative
-   backdrops on this site no longer drift continuously behind cards). */
 .mad-collage__grid-bg {
   position: absolute;
   inset: 0;
@@ -113,11 +115,6 @@
 .mad-collage__tile--t6 { margin-top: -18px; rotate: 3deg; animation-delay: 0.9s; }
 .mad-collage__tile--t7 { margin-top: 30px; rotate: -2deg; animation-delay: 1.5s; }
 
-@keyframes mad-tile-float {
-  0%, 100% { translate: 0 0; }
-  50% { translate: 0 -12px; }
-}
-
 .mad-collage__scrim {
   position: absolute;
   inset: 0;
@@ -126,6 +123,11 @@
     linear-gradient(90deg, rgba(13, 18, 32, 0.9) 0%, transparent 14%, transparent 86%, rgba(28, 24, 48, 0.9) 100%),
     linear-gradient(180deg, rgba(13, 18, 32, 0.55) 0%, transparent 22%, transparent 74%, rgba(13, 18, 32, 0.7) 100%);
   pointer-events: none;
+}
+
+@keyframes mad-tile-float {
+  0%, to { translate: 0 0; }
+  50% { translate: 0 -12px; }
 }
 
 @media (max-width: 1199px) {

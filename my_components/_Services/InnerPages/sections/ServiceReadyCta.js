@@ -1,14 +1,12 @@
 import Link from "next/link";
 
 import ScrollRevealSection from "@/my_components/_Global/ScrollRevealSection";
-import ServiceBuildAbstract from "./ServiceBuildAbstract";
 import { ROUTE } from "@/route/app_routes.js";
 
 /**
- * Dark accent-grid CTA with an abstract "under construction" visual —
- * generalized from MobileReadyCta.js so every service page closes on the
- * same premium, non-literal graphic instead of a screenshot repeated from
- * elsewhere on the page.
+ * Dark accent-grid CTA, closing with a real number instead of a decorative
+ * illustration — the page's own stat (statValue/statLabel) inside an
+ * orbiting accent ring, tinted per page via --accent.
  */
 const ServiceReadyCta = ({ eyebrow = "Let's build", title, description, accent, statValue, statLabel }) => {
   return (
@@ -41,11 +39,10 @@ const ServiceReadyCta = ({ eyebrow = "Let's build", title, description, accent, 
           </ScrollRevealSection>
 
           <ScrollRevealSection className="svc-cta__visual" threshold={0.1}>
-            <div className="svc-cta__stage">
-              <ServiceBuildAbstract accent={accent} />
-            </div>
             {statValue ? (
-              <div className="svc-cta__float">
+              <div className="svc-cta__stat">
+                <span className="svc-cta__stat-ring" aria-hidden="true" />
+                <span className="svc-cta__stat-ring svc-cta__stat-ring--inner" aria-hidden="true" />
                 <strong>{statValue}</strong>
                 <span>{statLabel}</span>
               </div>

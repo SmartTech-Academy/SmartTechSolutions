@@ -107,14 +107,14 @@ export const Banner = () => {
                 style={{ "--wonder-delay": "0.56s" }}
                 onAnimationEnd={clearAnimation}
               >
-                <Link className="rbt-btn btn-white hover-icon-reverse" href={ROUTE.appointment}>
+                <Link prefetch={false} className="rbt-btn btn-white hover-icon-reverse" href={ROUTE.appointment}>
                   <div className="icon-reverse-wrapper">
                     <span className="btn-text">Lets Talk About Your Project</span>
                     <span className="btn-icon"><i className="feather-arrow-right"></i></span>
                     <span className="btn-icon"><i className="feather-arrow-right"></i></span>
                   </div>
                 </Link>
-                <Link className="rbt-btn btn-border color-white hover-icon-reverse" href={ROUTE.service}>
+                <Link prefetch={false} className="rbt-btn btn-border color-white hover-icon-reverse" href={ROUTE.service}>
                   <div className="icon-reverse-wrapper">
                     <span className="btn-text">Our Services</span>
                     <span className="btn-icon"><i className="feather-arrow-right"></i></span>

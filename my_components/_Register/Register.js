@@ -282,7 +282,7 @@ const Register = () => {
                             <div className="load-more-btn text-start text-lg-end">
                                 <a className="rbt-btn btn-border icon-hover radius-round color-white-off" href={ROUTE.blog}>
                                     <span className="btn-text">See All Articles</span>
-                                    <span className="btn-icon"><i className="feather-a~rrow-right"></i></span>
+                                    <span className="btn-icon"><i className="feather-arrow-right"></i></span>
                                 </a>
                             </div>
                         </div>
