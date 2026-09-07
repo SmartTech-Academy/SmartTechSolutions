@@ -1,10 +1,64 @@
+import { useRef, useState } from "react";
 import Image from "next/image";
 
 import { image_url } from "@/helper/Utilities";
+import { postToBackend, getFormRenderedAt } from "@/helper/api";
+import Honeypot from "@/my_components/_Global/Honeypot";
+import FormAlert from "@/my_components/_Global/FormAlert";
+
+
+
+const INITIAL_FORM_STATE = {
+  name: "",
+  email: "",
+  phone: "",
+  subject: "",
+  message: "",
+};
 
 
 
 const ContactForm = ({ gap }) => {
+
+  const [formData, setFormData] = useState(INITIAL_FORM_STATE);
+  const [honeypot, setHoneypot] = useState("");
+  const [submitState, setSubmitState] = useState({ status: null, message: "" });
+  const formRenderedAt = useRef(getFormRenderedAt());
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    if (submitState.status === "submitting") return;
+
+    setSubmitState({ status: "submitting", message: "" });
+
+    const result = await postToBackend("/contact", {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      subject: formData.subject,
+      message: formData.message,
+      website: honeypot,
+      form_rendered_at: formRenderedAt.current,
+    });
+
+    if (result.ok) {
+      setSubmitState({
+        status: "success",
+        message: result.message || "Message sent successfully! Our team will get back to you within one business day.",
+      });
+      setFormData(INITIAL_FORM_STATE);
+      setHoneypot("");
+      formRenderedAt.current = getFormRenderedAt();
+    } else {
+      setSubmitState({ status: "error", message: result.message });
+    }
+  };
 
   return (
     <>
@@ -24,20 +78,24 @@ const ContactForm = ({ gap }) => {
 
                 <form
                   id="contact-form"
-                  method="POST"
-                  action="mail.php"
                   className="rainbow-dynamic-form max-width-auto"
+                  onSubmit={handleSubmit}
+                  noValidate
                 >
+                  <Honeypot value={honeypot} onChange={(event) => setHoneypot(event.target.value)} />
+
                   <div className="form-group form-group-premium">
                     <label htmlFor="contact-name" className="form-label-premium">Full Name</label>
                     <div className="input-wrap">
                       <i className="feather-user input-icon"></i>
                       <input
-                        name="contact-name"
+                        name="name"
                         id="contact-name"
                         type="text"
                         placeholder="e.g. Jordan Adeyemi"
                         required
+                        value={formData.name}
+                        onChange={handleChange}
                       />
                     </div>
                     <span className="focus-border"></span>
@@ -48,18 +106,36 @@ const ContactForm = ({ gap }) => {
                     <div className="input-wrap">
                       <i className="feather-mail input-icon"></i>
                       <input
-                        name="contact-phone"
+                        name="email"
                         id="contact-email"
                         type="email"
                         placeholder="you@company.com"
                         required
+                        value={formData.email}
+                        onChange={handleChange}
                       />
                     </div>
                     <span className="focus-border"></span>
                   </div>
 
                   <div className="form-group form-group-premium">
-                    <label htmlFor="subject" className="form-label-premium">Subject</label>
+                    <label htmlFor="contact-phone" className="form-label-premium">Phone Number</label>
+                    <div className="input-wrap">
+                      <i className="feather-phone input-icon"></i>
+                      <input
+                        name="phone"
+                        id="contact-phone"
+                        type="tel"
+                        placeholder="2348030000000"
+                        value={formData.phone}
+                        onChange={handleChange}
+                      />
+                    </div>
+                    <span className="focus-border"></span>
+                  </div>
+
+                  <div className="form-group form-group-premium">
+                    <label htmlFor="subject" className="form-label-premium">Reason for contacting us</label>
                     <div className="input-wrap">
                       <i className="feather-edit-3 input-icon"></i>
                       <input
@@ -68,6 +144,8 @@ const ContactForm = ({ gap }) => {
                         name="subject"
                         placeholder="What's this about?"
                         required
+                        value={formData.subject}
+                        onChange={handleChange}
                       />
                     </div>
                     <span className="focus-border"></span>
@@ -78,10 +156,12 @@ const ContactForm = ({ gap }) => {
                     <div className="input-wrap input-wrap-textarea">
                       <i className="feather-message-square input-icon input-icon-textarea"></i>
                       <textarea
-                        name="contact-message"
+                        name="message"
                         id="contact-message"
                         placeholder="Tell us a bit about your project, goals, and timeline..."
                         required
+                        value={formData.message}
+                        onChange={handleChange}
                       ></textarea>
                     </div>
                     <span className="focus-border"></span>
@@ -93,9 +173,12 @@ const ContactForm = ({ gap }) => {
                       type="submit"
                       id="submit"
                       className="rbt-btn btn-md btn-gradient hover-icon-reverse w-100"
+                      disabled={submitState.status === "submitting"}
                     >
                       <span className="icon-reverse-wrapper">
-                        <span className="btn-text">Send Message</span>
+                        <span className="btn-text">
+                          {submitState.status === "submitting" ? "Sending..." : "Send Message"}
+                        </span>
                         <span className="btn-icon">
                           <i className="feather-arrow-right"></i>
                         </span>
@@ -104,6 +187,7 @@ const ContactForm = ({ gap }) => {
                         </span>
                       </span>
                     </button>
+                    <FormAlert status={submitState.status} message={submitState.message} />
                   </div>
                 </form>
               </div>

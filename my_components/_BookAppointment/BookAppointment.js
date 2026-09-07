@@ -1,11 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import sal from "sal.js";
 
 import Brands2 from "@/my_components/TrustedByBrands/Brands2";
+import Honeypot from "@/my_components/_Global/Honeypot";
+import FormAlert from "@/my_components/_Global/FormAlert";
 
 import { CONFIG } from "@/app_config.js";
+import { postToBackend, getFormRenderedAt } from "@/helper/api";
 
 import heroBg from "@/public/app_images/banner/book_appointment_hero_bg.webp";
 import supportVisual from "@/public/app_images/services/book_appointment_visual.webp";
@@ -128,14 +131,66 @@ const FAQS = [
 
 
 
+const INITIAL_FORM_STATE = {
+  name: "",
+  email: "",
+  phone: "",
+  company: "",
+  service: "",
+  solution: "",
+  budget: "",
+  timeline: "",
+  message: "",
+};
+
 const BookAppointment = () => {
 
-  const [service, setService] = useState("");
-  const showSolutionField = service === "ERP / CRM Solution Implementation";
+  const [formData, setFormData] = useState(INITIAL_FORM_STATE);
+  const [honeypot, setHoneypot] = useState("");
+  const [submitState, setSubmitState] = useState({ status: null, message: "" });
+  const formRenderedAt = useRef(getFormRenderedAt());
+
+  const showSolutionField = formData.service === "ERP / CRM Solution Implementation";
 
   useEffect(() => {
     sal({ threshold: 0.01, once: true });
   }, []);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    if (submitState.status === "submitting") return;
+
+    setSubmitState({ status: "submitting", message: "" });
+
+    const result = await postToBackend("/appointments-booking", {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      company: formData.company,
+      services: [formData.service],
+      solution: showSolutionField ? formData.solution : "",
+      budget: formData.budget,
+      timeline: formData.timeline,
+      message: formData.message,
+      website: honeypot,
+      form_rendered_at: formRenderedAt.current,
+    });
+
+    if (result.ok) {
+      setSubmitState({ status: "success", message: result.message });
+      setFormData(INITIAL_FORM_STATE);
+      setHoneypot("");
+      formRenderedAt.current = getFormRenderedAt();
+    } else {
+      setSubmitState({ status: "error", message: result.message });
+    }
+  };
 
 
   return (
@@ -210,15 +265,25 @@ const BookAppointment = () => {
 
                 <form
                   id="appointment-form"
-                  method="POST"
-                  action="mail.php"
                   className="rainbow-dynamic-form rbt-appointment-form"
+                  onSubmit={handleSubmit}
+                  noValidate
                 >
+                  <Honeypot value={honeypot} onChange={(event) => setHoneypot(event.target.value)} />
+
                   <div className="row g-4">
                     <div className="col-md-6">
                       <div className="form-group">
                         <label htmlFor="appointment-name">Full name</label>
-                        <input id="appointment-name" name="appointment-name" type="text" placeholder="Jane Okafor" required />
+                        <input
+                          id="appointment-name"
+                          name="name"
+                          type="text"
+                          placeholder="Jane Okafor"
+                          required
+                          value={formData.name}
+                          onChange={handleChange}
+                        />
                         <span className="focus-border"></span>
                       </div>
                     </div>
@@ -226,7 +291,15 @@ const BookAppointment = () => {
                     <div className="col-md-6">
                       <div className="form-group">
                         <label htmlFor="appointment-email">Work email</label>
-                        <input id="appointment-email" name="appointment-email" type="email" placeholder="jane@company.com" required />
+                        <input
+                          id="appointment-email"
+                          name="email"
+                          type="email"
+                          placeholder="jane@company.com"
+                          required
+                          value={formData.email}
+                          onChange={handleChange}
+                        />
                         <span className="focus-border"></span>
                       </div>
                     </div>
@@ -234,7 +307,15 @@ const BookAppointment = () => {
                     <div className="col-md-6">
                       <div className="form-group">
                         <label htmlFor="appointment-phone">Phone number</label>
-                        <input id="appointment-phone" name="appointment-phone" type="tel" placeholder="+1 555 000 0000" />
+                        <input
+                          id="appointment-phone"
+                          name="phone"
+                          type="tel"
+                          placeholder="2348030000000"
+                          required
+                          value={formData.phone}
+                          onChange={handleChange}
+                        />
                         <span className="focus-border"></span>
                       </div>
                     </div>
@@ -242,7 +323,14 @@ const BookAppointment = () => {
                     <div className="col-md-6">
                       <div className="form-group">
                         <label htmlFor="appointment-company">Company / project name</label>
-                        <input id="appointment-company" name="appointment-company" type="text" placeholder="Acme Inc." />
+                        <input
+                          id="appointment-company"
+                          name="company"
+                          type="text"
+                          placeholder="Acme Inc."
+                          value={formData.company}
+                          onChange={handleChange}
+                        />
                         <span className="focus-border"></span>
                       </div>
                     </div>
@@ -252,9 +340,10 @@ const BookAppointment = () => {
                         <label htmlFor="appointment-service">Service you need</label>
                         <select
                           id="appointment-service"
-                          name="appointment-service"
-                          value={service}
-                          onChange={(event) => setService(event.target.value)}
+                          name="service"
+                          required
+                          value={formData.service}
+                          onChange={handleChange}
                         >
                           <option value="" disabled>Choose a service</option>
                           {SERVICE_OPTIONS.map((option) => (
@@ -269,7 +358,12 @@ const BookAppointment = () => {
                       <div className="col-md-6">
                         <div className="form-group">
                           <label htmlFor="appointment-solution">Which platform?</label>
-                          <select id="appointment-solution" name="appointment-solution" defaultValue="">
+                          <select
+                            id="appointment-solution"
+                            name="solution"
+                            value={formData.solution}
+                            onChange={handleChange}
+                          >
                             <option value="" disabled>Choose a solution</option>
                             {SOLUTION_OPTIONS.map((option) => (
                               <option value={option} key={option}>{option}</option>
@@ -283,7 +377,12 @@ const BookAppointment = () => {
                     <div className="col-md-6">
                       <div className="form-group">
                         <label htmlFor="appointment-budget">Estimated budget</label>
-                        <select id="appointment-budget" name="appointment-budget" defaultValue="">
+                        <select
+                          id="appointment-budget"
+                          name="budget"
+                          value={formData.budget}
+                          onChange={handleChange}
+                        >
                           <option value="" disabled>Choose a range</option>
                           {BUDGET_OPTIONS.map((option) => (
                             <option value={option} key={option}>{option}</option>
@@ -296,7 +395,12 @@ const BookAppointment = () => {
                     <div className="col-md-6">
                       <div className="form-group">
                         <label htmlFor="appointment-timeline">Preferred timeline</label>
-                        <select id="appointment-timeline" name="appointment-timeline" defaultValue="">
+                        <select
+                          id="appointment-timeline"
+                          name="timeline"
+                          value={formData.timeline}
+                          onChange={handleChange}
+                        >
                           <option value="" disabled>Choose a timeline</option>
                           {TIMELINE_OPTIONS.map((option) => (
                             <option value={option} key={option}>{option}</option>
@@ -311,9 +415,12 @@ const BookAppointment = () => {
                         <label htmlFor="appointment-message">Tell us about your project</label>
                         <textarea
                           id="appointment-message"
-                          name="appointment-message"
+                          name="message"
                           rows={5}
                           placeholder="What are you building, and what problem does it solve?"
+                          required
+                          value={formData.message}
+                          onChange={handleChange}
                         ></textarea>
                         <span className="focus-border"></span>
                       </div>
@@ -321,9 +428,15 @@ const BookAppointment = () => {
                   </div>
 
                   <div className="form-submit-group">
-                    <button type="submit" className="rbt-btn btn-gradient hover-icon-reverse w-100">
+                    <button
+                      type="submit"
+                      className="rbt-btn btn-gradient hover-icon-reverse w-100"
+                      disabled={submitState.status === "submitting"}
+                    >
                       <span className="icon-reverse-wrapper">
-                        <span className="btn-text">Request My Appointment</span>
+                        <span className="btn-text">
+                          {submitState.status === "submitting" ? "Sending..." : "Request My Appointment"}
+                        </span>
                         <span className="btn-icon"><i className="feather-arrow-right"></i></span>
                         <span className="btn-icon"><i className="feather-arrow-right"></i></span>
                       </span>
@@ -331,6 +444,7 @@ const BookAppointment = () => {
                     <p className="form-fineprint">
                       By submitting, you agree to be contacted by SmartTech Solutions about your request.
                     </p>
+                    <FormAlert status={submitState.status} message={submitState.message} />
                   </div>
                 </form>
               </div>
