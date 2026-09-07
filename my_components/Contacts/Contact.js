@@ -18,7 +18,6 @@ const Contact = () => {
               <span className="rbt-contact-card__eyebrow">Talk to us</span>
               <h4 className="rbt-contact-card__title">{"Contact Phone Number"}</h4>
               <p className="rbt-contact-card__line"> <Link href={`tel:${CONFIG.PHONE_1}`}>{CONFIG.PHONE_1}</Link> </p>
-              <p className="rbt-contact-card__line"> <Link href={`tel:${CONFIG.PHONE_2}`}>{CONFIG.PHONE_2}</Link> </p>
             </div>
           </div>
         </div>

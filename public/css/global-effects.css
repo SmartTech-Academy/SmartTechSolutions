@@ -121,6 +121,20 @@
   transform: none;
 }
 
+/* Text also rode too low inside the button's 60px-tall pill, its bottom
+   edge crossing the border. `.btn-text` is `display: inline-block` with no
+   `vertical-align` set (base rule in _button.scss), so it defaults to
+   `baseline` — aligning the *text's own baseline* to the surrounding line
+   box's baseline, which sits well below center for a line-height this
+   tall. `.hover-icon-reverse` buttons elsewhere don't have this problem
+   because they wrap their text/icon in a flex container with
+   `align-items: center` instead of relying on inline baseline alignment at
+   all; this button has no such wrapper, so fixing it here directly. */
+.load-more-btn .rbt-btn.icon-hover .btn-text,
+.load-more-btn .rbt-btn.icon-hover .btn-icon {
+  vertical-align: middle;
+}
+
 /* The icon itself is still invisible at rest (`opacity: 0`, from the base
    rule) — but it also still occupies real inline width there (its own glyph
    width, net of the base rule's -7px margin), which reads as extra blank
@@ -573,38 +587,29 @@ img:not([data-gil-loading]) {
 }
 
 /* ────────────────────────────────────────────────────────────────────────
-   MATERIAL DESIGN CARD — .rbt-industries-card--dark
-   Replaces the old flat glass-blur treatment with an actual Material 3
-   "elevated surface": a tonal (not glassy-transparent) dark surface color,
-   a layered multi-shadow that reads as true elevation rather than a single
-   flat drop-shadow, a large 20px corner radius (M3's card token), and a
-   "surface tint" — a faint wash of the brand's primary/secondary colors
-   mixed into the surface, which is how Material communicates elevation
-   through color instead of only through shadow depth. Hover raises the
-   card to the next elevation tier (bigger shadow + lift) and brightens the
-   tint slightly, standing in for Material's state-layer overlay.
+   CLASSIC ELEVATED CARD — .rbt-industries-card--dark
+   A restrained, single-tone dark surface — no gradient wash, no color-
+   shifting hover state. Elevation comes from a plain layered shadow and a
+   quiet 1px border alone, the way a traditional (non-"Material") premium
+   card is built. Previously used a blue-to-purple gradient tint across
+   the whole surface plus a matching gradient icon fill, which read as
+   busy/flashy rather than the clean, classic look asked for.
 
-   Previously the outer `.service-card-6.rbt-industries-card--dark` div and
-   its `.inner` child (padding/radius/border from the base, un-Material,
-   5px-radius template rule in _service.scss) were two separately-styled
+   The outer `.service-card-6.rbt-industries-card--dark` div and its
+   `.inner` child (padding/radius/border from the base, un-restyled,
+   5px-radius template rule in _service.scss) are two separately-styled
    boxes with mismatched radii and a doubled-up border — harmless under
    heavy blur, but visibly wrong once the blur was replaced with a crisp
-   Material surface. `.inner`'s own radius/border are neutralized below so
-   there's a single coherent surface.
+   surface. `.inner`'s own radius/border are neutralized below so there's
+   a single coherent surface.
    ──────────────────────────────────────────────────────────────────────── */
 .rbt-industries-card--dark {
-  border-radius: 20px;
+  border-radius: 16px;
   overflow: hidden;
-  background:
-    linear-gradient(155deg, rgba(47, 87, 239, 0.16) 0%, rgba(185, 102, 231, 0.08) 45%, rgba(255, 255, 255, 0.03) 100%),
-    #1a1e30 !important;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  box-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.3),
-    0 8px 24px -8px rgba(6, 8, 16, 0.55),
-    0 20px 44px -20px rgba(6, 8, 16, 0.5);
-  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.35s ease, background 0.35s ease, border-color 0.35s ease;
+  background: #181c2c !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 12px 28px -16px rgba(6, 8, 16, 0.5);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .rbt-industries-card--dark .inner {
@@ -614,31 +619,27 @@ img:not([data-gil-loading]) {
 }
 
 .rbt-industries-card--dark:hover {
-  border-color: rgba(255, 255, 255, 0.18);
-  background:
-    linear-gradient(155deg, rgba(47, 87, 239, 0.24) 0%, rgba(185, 102, 231, 0.13) 45%, rgba(255, 255, 255, 0.05) 100%),
-    #1a1e30 !important;
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 16px 34px -16px rgba(6, 8, 16, 0.55);
 }
 
-/* Leading icon avatar — Material's "icon in a tonal container" pattern.
-   The soft gradient fill echoes the card's own surface tint above, so the
-   icon reads as part of the same tonal system rather than a bolted-on
-   badge. */
+/* Leading icon — a plain neutral tonal square, the accent color reserved
+   for the glyph itself rather than washed across a gradient fill. */
 .rbt-industry-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   margin-bottom: 22px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, rgba(47, 87, 239, 0.55), rgba(185, 102, 231, 0.55));
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .rbt-industry-icon i {
-  font-size: 22px;
-  color: var(--color-white);
+  font-size: 20px;
+  color: rgba(var(--accent, 47 87 239), 1);
   stroke-width: 2px;
 }
 
@@ -994,6 +995,27 @@ img:not([data-gil-loading]) {
   width: 900px;
   max-width: calc(100vw - 40px);
   transform: translateX(-50%);
+}
+
+/* The centering rule above is a *desktop* dropdown fix, but `Nav.js` (and
+   its `.rbt-industries-menu` class) is the same component reused inside
+   the mobile offcanvas (MobileMenu.js) — with no media-query guard, that
+   `left: 50%; transform: translateX(-50%)` also applied there, where the
+   menu is a plain static-flow block, not an absolutely-positioned
+   dropdown. `transform` still visually shifts a statically-positioned
+   element by half its own (900px-capped) width even though `left` itself
+   has no effect on it — a real element ends up rendered ~130px+ off the
+   left edge of a narrow offcanvas panel, which is why "Industries" looked
+   impossible to browse on mobile. Neutralizing every property the desktop
+   rule sets, scoped to the mobile popup specifically, is simpler and more
+   robust than chasing the exact breakpoint the two navs already switch at
+   independently elsewhere. */
+.popup-mobile-menu .rbt-industries-menu.grid-item-4 {
+  left: auto;
+  right: auto;
+  width: 100%;
+  max-width: 100%;
+  transform: none;
 }
 
 .rbt-industries-menu .wrapper {
