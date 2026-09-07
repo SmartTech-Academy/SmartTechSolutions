@@ -18,8 +18,7 @@ export const CONFIG = {
     SITE_URL: "https://smarttechacademy.org",
     PHONE_1: "+234 803 443 6977",
     PHONE_2: "+234 802 326 6696",
-    EMAIL_1: "hello@smarttechacademy.org",
-    EMAIL_2: "support@smarttechacademy.org",
+    EMAIL_1: "hello@smarttech.ng",
     ADDRESS: "No 9 Church Street, Shomolu, Lagos, Nigeria",
   
     // IN-APP FRONTEND CONFIGURATION

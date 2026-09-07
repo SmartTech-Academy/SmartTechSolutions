@@ -8,6 +8,7 @@ import Nav from "./Nav";
 import { useAppContext } from "@/context/Context";
 import { ROUTE } from "@/route/app_routes.js";
 import { CONFIG } from "@/app_config.js";
+import { XIcon, TikTokIcon } from "@/my_components/_Global/SocialIcons";
 
 const MobileMenu = () => {
   const { mobile, setMobile, isLightTheme } = useAppContext();
@@ -88,12 +89,17 @@ const MobileMenu = () => {
                 </li>
                 <li>
                   <Link href={ROUTE.TWITTER} target="_blank" rel="noopener noreferrer">
-                    <i className="feather-twitter"></i>
+                    <XIcon />
                   </Link>
                 </li>
                 <li>
                   <Link href={ROUTE.INSTAGRAM} target="_blank" rel="noopener noreferrer">
                     <i className="feather-instagram"></i>
+                  </Link>
+                </li>
+                <li>
+                  <Link href={ROUTE.TIKTOK} target="_blank" rel="noopener noreferrer">
+                    <TikTokIcon />
                   </Link>
                 </li>
                 <li>

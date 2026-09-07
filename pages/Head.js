@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 import { CONFIG } from "@/app_config.js";
+import { ROUTE } from "@/route/app_routes.js";
 
 const DEFAULT_DESCRIPTION =
   "SmartTech Solutions is a full-cycle software, AI, and blockchain product studio — we design, build, and launch web apps, mobile apps, AI systems, blockchain products, and games for ambitious teams.";
@@ -45,11 +46,11 @@ const PageHead = ({
       },
     ],
     sameAs: [
-      "https://www.facebook.com/smarttechacademy",
-      "https://www.x.com/smarttechacademy",
-      "https://www.instagram.com/smarttechacademy",
-      "https://www.linkedin.com/company/smarttechacademy",
-      "https://www.youtube.com/smarttechacademy",
+      ROUTE.FACEBOOK,
+      ROUTE.TWITTER,
+      ROUTE.INSTAGRAM,
+      ROUTE.LINKEDIN,
+      ROUTE.TIKTOK,
     ],
   };
 

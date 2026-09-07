@@ -5,6 +5,7 @@ import HeaderTopData from "../../../data/headerTop";
 import { useAppContext } from "@/context/Context";
 import { useRouter } from "next/router";
 import { ROUTE } from "@/route/app_routes.js";
+import { XIcon, TikTokIcon } from "@/my_components/_Global/SocialIcons";
 
 
 
@@ -93,33 +94,28 @@ const TopBar = ({ bgColor, gapSpaceBetween, container, flexDirection }) => {
                     <div className="header-info d-none d-xl-block">
                       <ul className="social-share-transparent">
                         <li>
-                          <Link href={ROUTE.FACEBOOK}>
+                          <Link href={ROUTE.FACEBOOK} target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-facebook-f"></i>
                           </Link>
                         </li>
                         <li>
-                          <Link href={ROUTE.TWITTER}>
-                            <i className="fab fa-twitter"></i>
+                          <Link href={ROUTE.TWITTER} target="_blank" rel="noopener noreferrer">
+                            <XIcon />
                           </Link>
                         </li>
                         <li>
-                          <Link href={ROUTE.LINKEDIN}>
+                          <Link href={ROUTE.LINKEDIN} target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-linkedin-in"></i>
                           </Link>
                         </li>
                         <li>
-                          <Link href={ROUTE.INSTAGRAM}>
+                          <Link href={ROUTE.INSTAGRAM} target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-instagram"></i>
                           </Link>
                         </li>
                         <li>
-                          <Link href={ROUTE.SKYPE}>
-                            <i className="fab fa-skype"></i>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={ROUTE.YOUTUBE}>
-                            <i className="fab fa-youtube"></i>
+                          <Link href={ROUTE.TIKTOK} target="_blank" rel="noopener noreferrer">
+                            <TikTokIcon />
                           </Link>
                         </li>
                       </ul>

@@ -110,12 +110,11 @@ export const ROUTE = {
   BOOTSTRAP: "https://getbootstrap.com",
 
   // SOCIALS LINKS
-  FACEBOOK: "https://www.facebook.com/smarttechacademy",
-  TWITTER: "https://www.x.com/smarttechacademy",
-  INSTAGRAM: "https://www.instagram.com/smarttechacademy",
-  LINKEDIN: "https://www.linkedin.com/company/smarttechacademy",
-  SKYPE: "https://www.skype.com/smarttechacademy",
-  YOUTUBE: "https://www.youtube.com/smarttechacademy",
+  FACEBOOK: "https://www.facebook.com/smarttechsolutionsng",
+  TWITTER: "https://www.x.com/smarttechsolng",
+  INSTAGRAM: "https://www.instagram.com/smarttechsolng",
+  LINKEDIN: "https://www.linkedin.com/company/smarttechsolng",
+  TIKTOK: "https://www.tiktok.com/@smarttechsolng",
 };
 
 export const protectedRoutes = [

@@ -8,6 +8,7 @@ import FooterData from "@/data/footer.json";
 import SingleFooter from "./sections/SingleFooter";
 import CopyRight from "./sections/CopyRight";
 import { useAppContext } from "@/context/Context";
+import { XIcon, TikTokIcon } from "@/my_components/_Global/SocialIcons";
 
 // CONFIGS AND ROUTE
 import { ROUTE } from "@/route/app_routes.js";
@@ -100,11 +101,11 @@ const Footer = ({bg="white"}) => {
                       </ul>
 
                       <ul className="social-icon social-default icon-naked justify-content-start mt--20">
-                        <li key={"1"}> <Link href={ROUTE.FACEBOOK}> <i className={"feather-facebook"}></i> </Link> </li>
-                        <li key={"2"}> <Link href={ROUTE.TWITTER}> <i className={"feather-twitter"}></i> </Link> </li>
-                        <li key={"3"}> <Link href={ROUTE.INSTAGRAM}> <i className={"feather-instagram"}></i> </Link> </li>
-                        <li key={"4"}> <Link href={ROUTE.LINKEDIN}> <i className={"feather-linkedin"}></i> </Link> </li>
-                        <li key={"5"}> <Link href={ROUTE.YOUTUBE}> <i className={"feather-youtube"}></i> </Link> </li>
+                        <li key={"1"}> <Link href={ROUTE.FACEBOOK} target="_blank" rel="noopener noreferrer"> <i className={"feather-facebook"}></i> </Link> </li>
+                        <li key={"2"}> <Link href={ROUTE.TWITTER} target="_blank" rel="noopener noreferrer"> <XIcon /> </Link> </li>
+                        <li key={"3"}> <Link href={ROUTE.INSTAGRAM} target="_blank" rel="noopener noreferrer"> <i className={"feather-instagram"}></i> </Link> </li>
+                        <li key={"4"}> <Link href={ROUTE.TIKTOK} target="_blank" rel="noopener noreferrer"> <TikTokIcon /> </Link> </li>
+                        <li key={"5"}> <Link href={ROUTE.LINKEDIN} target="_blank" rel="noopener noreferrer"> <i className={"feather-linkedin"}></i> </Link> </li>
                       </ul>
                     </div>
                   </div>

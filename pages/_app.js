@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Script from "next/script";
 
 import "bootstrap/scss/bootstrap.scss";
 // The only Euclid Circular @font-face import — public/css/plugins/euclid-
@@ -81,6 +82,40 @@ export default function App({ Component, pageProps }) {
           <Component {...pageProps} />
         </RouteTransition>
       </Context>
+
+      {/* Google Analytics (gtag.js) — afterInteractive: fires once the page
+          is interactive, same timing Next.js recommends for GA so it never
+          competes with the initial render/hydration for main-thread time. */}
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-P4VX9EEPCC"
+      />
+      <Script id="ga-gtag" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-P4VX9EEPCC');
+        `}
+      </Script>
+
+      {/* Tawk.to live chat — lazyOnload: a chat widget isn't needed for the
+          first paint or for anything above the fold, so it loads dead last,
+          once the browser is idle, instead of competing with real content
+          for bandwidth/main-thread time during the page's critical path. */}
+      <Script id="tawkto" strategy="lazyOnload">
+        {`
+          var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+          (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/6a593f50e816a01d463923a3/1jtm9ulaq';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+          })();
+        `}
+      </Script>
     </Provider>
   );
 
