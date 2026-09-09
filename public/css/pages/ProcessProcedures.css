@@ -139,31 +139,29 @@
 }
 
 /* ── "Industries we serve" backdrop cards — scroll jank fix ──
-   Up to 9 .rbt-industries-card--dark cards render at once, each with a
-   `backdrop-filter: blur(14px)` (expensive to composite, especially many
-   at once) plus a shared global-effects.css transition list that includes
-   box-shadow/background/border-color alongside transform/opacity. Those
-   non-GPU-composited properties don't actually change value when the
-   `.is-in-view` class toggles (only :hover changes them), but keeping them
-   in the always-on transition-property list still makes the browser set up
-   paint-watching machinery for every card during the ~1.2s staggered
-   reveal window, which is what makes the scroll feel heavy. This override
-   trims the reveal-time transition to just the compositable
-   transform/opacity, restoring box-shadow/background/border-color to the
-   transition list only while :hover is active (single element at a time,
-   so cheap). `contain: paint` isolates each card's paint/backdrop-filter
-   work so it isn't recomputed by unrelated scroll repaints elsewhere on
-   the page. No visual change — box-shadow/background/backdrop-filter
+   Up to 9 .rbt-industries-card cards render at once, and a shared
+   global-effects.css transition list includes box-shadow/border-color
+   alongside transform/opacity. Those non-GPU-composited properties don't
+   actually change value when the `.is-in-view` class toggles (only :hover
+   changes them), but keeping them in the always-on transition-property
+   list still makes the browser set up paint-watching machinery for every
+   card during the ~1.2s staggered reveal window, which is what makes the
+   scroll feel heavy. This override trims the reveal-time transition to
+   just the compositable transform/opacity, restoring box-shadow/
+   border-color to the transition list only while :hover is active (single
+   element at a time, so cheap). `contain: paint` isolates each card's
+   paint work so it isn't recomputed by unrelated scroll repaints
+   elsewhere on the page. No visual change — box-shadow/border-color
    values themselves are untouched, only what's listed as "animated". */
 .rbt-industries-backdrop .service-card-6,
-.rbt-industries-backdrop .rbt-industries-card--dark {
+.rbt-industries-backdrop .rbt-industries-card {
   transition-property: transform, opacity;
   contain: paint;
 }
 
 .rbt-industries-backdrop .service-card-6:hover,
-.rbt-industries-backdrop .rbt-industries-card--dark:hover {
-  transition-property: transform, opacity, box-shadow, background, border-color;
+.rbt-industries-backdrop .rbt-industries-card:hover {
+  transition-property: transform, opacity, box-shadow, border-color;
 }
 
 /* ── "Why SmartTech Solutions" image ── */

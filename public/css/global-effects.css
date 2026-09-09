@@ -481,9 +481,58 @@ img:not([data-gil-loading]) {
   filter: brightness(0) invert(1) opacity(1);
 }
 
+/* Testimonial_1's cards alternate a white surface with a purple/blue
+   gradient one, regardless of the site-wide theme toggle — a normal-ink
+   logo painted on the purple cards is just as invisible as one on a
+   dark-mode page, so the same white-out applies there independent of
+   .active-dark-mode. The gradient only actually lands on every OTHER
+   card (see _testimonial.scss: `.bg-theme-gradient-odd:nth-child(odd)`,
+   `.bg-theme-gradient-even:nth-child(even)` — the "-odd"/"-even" class is
+   on every card, but only bites on alternating positions), so the
+   selector has to mirror that same nth-child gate or it would invert the
+   logo on the plain white cards too. */
+.bg-theme-gradient-odd:nth-child(odd) .brand-logo:not(.brand-logo--keep-color) img,
+.bg-theme-gradient-even:nth-child(even) .brand-logo:not(.brand-logo--keep-color) img {
+  filter: brightness(0) invert(1);
+}
+
 .client-info__logo {
   margin-top: 10px;
   opacity: 0.85;
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   TESTIMONIAL FOOTER LOGO — Scroll.js cards only (Testimonial_2, the
+   "What People Are Saying About Us!" section). These cards already carry
+   a decorative quote-mark glyph in the top-right corner, so the company
+   logo moved there would compete with it; a quiet credibility line below
+   the quote — separated by a hairline, logo kept deliberately small — is
+   the "somewhere nice" spot instead.
+   ──────────────────────────────────────────────────────────────────────── */
+.rbt-testimonial-box__logo-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(23, 32, 51, 0.08);
+}
+
+.rbt-testimonial-box__logo-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-body);
+  opacity: 0.65;
+}
+
+.rbt-testimonial-box__logo-footer img {
+  opacity: 0.8;
+}
+
+.active-dark-mode .rbt-testimonial-box__logo-footer {
+  border-top-color: rgba(255, 255, 255, 0.1);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -521,243 +570,75 @@ img:not([data-gil-loading]) {
 }
 
 /* ════════════════════════════════════════════════════════════════════════
-   "INDUSTRIES WE SERVE" PHOTO BACKDROP
-   Paired with my_components/_Services/InnerPages/sections/IndustriesBackdrop.js.
-   Reused on the homepage and the Our Process page from one shared asset.
+   "INDUSTRIES WE SERVE"
+   Paired with my_components/_Services/InnerPages/sections/IndustriesBackdrop.js
+   and Industries.js. Reused on the homepage and the Our Process page.
+
+   Previously a near-black gradient backdrop with blue/purple glow blobs
+   behind cards only one shade lighter than the backdrop itself (#181c2c
+   on #0a0d16–#171d35) — low-contrast, and exactly the "dark hero with one
+   bright accent" look that's become an AI-generated-design default rather
+   than a considered choice for this brand. Rebuilt as a quiet, warm-white
+   editorial section: a single restrained brand-blue accent, crisp white
+   cards with real elevation against the section's soft off-white floor,
+   and generous, confident whitespace. Classic rather than trendy.
    ════════════════════════════════════════════════════════════════════════ */
 .rbt-industries-backdrop {
   position: relative;
-  isolation: isolate;
-  overflow: hidden;
   width: 100%;
-  padding: clamp(48px, 7vw, 90px) 0;
-  background: linear-gradient(155deg, #0a0d16 0%, #12172a 45%, #171d35 100%);
+  padding: clamp(64px, 8vw, 110px) 0;
+  background: linear-gradient(180deg, #f6f7fb 0%, #eef1f7 100%);
+  border-top: 1px solid rgba(23, 32, 51, 0.06);
+  border-bottom: 1px solid rgba(23, 32, 51, 0.06);
 }
 
-/* Faint dot-grid, standing in for the old photo backdrop — cheap to render
-   (one repeating radial-gradient). Static rather than continuously
-   transform-animated: this section sits directly behind several
-   backdrop-filter glass cards (.service-card-6 / dark industry cards
-   further down this file), and a backdrop-filter has to resample whatever
-   is moving underneath it on every single frame it's on screen. An
-   infinite drift here, multiplied across a handful of blurred cards, was
-   sustained GPU/compositor load for as long as this section stayed in
-   view — the kind of load that has been known to crash the renderer on
-   real (non-headless) mobile GPUs mid-scroll. Static removes that cost
-   entirely while keeping the exact same visual pattern. */
-.rbt-industries-backdrop__grid {
-  position: absolute;
-  inset: -20px;
-  z-index: -2;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
-  background-size: 26px 26px;
-}
-
-.rbt-industries-backdrop__glow {
-  position: absolute;
-  z-index: -1;
-  border-radius: 50%;
-  filter: blur(70px);
-  opacity: 0.55;
-}
-
-.rbt-industries-backdrop__glow--one {
-  top: -120px;
-  left: -80px;
-  width: 420px;
-  height: 420px;
-  background: rgba(47, 87, 239, 0.45);
-}
-
-.rbt-industries-backdrop__glow--two {
-  bottom: -140px;
-  right: -100px;
-  width: 460px;
-  height: 460px;
-  background: rgba(185, 102, 231, 0.35);
-}
-
-.rbt-industries-backdrop__content .section-title .title,
-.rbt-industries-backdrop__content .section-title .title span {
-  color: var(--color-white);
-}
-
-.rbt-industries-backdrop__content .section-title .description {
-  color: rgba(255, 255, 255, 0.78);
-}
-
-.rbt-industries-backdrop__content .service-card-6 {
-  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+/* Big, unmistakable reveal — ScrollRevealSection (wrapping this whole
+   section) tracks live intersection rather than firing "once", so
+   `.is-in-view` toggles both ways: this plays forward scrolling in and
+   the exact same distance/scale in reverse scrolling back out. The
+   header drops in first (badge, then title, then description), the card
+   grid follows staggered — one deliberate sequence, not scattered
+   twitching, per card. */
+.rbt-industries-backdrop__content .section-title > * {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
   opacity: 0;
-  transform: translateY(36px);
+  transform: translateY(46px);
 }
 
-.rbt-industries-backdrop__content.is-in-view .service-card-6 {
+.rbt-industries-backdrop__content .section-title > *:nth-child(1) { transition-delay: 0s; }
+.rbt-industries-backdrop__content .section-title > *:nth-child(2) { transition-delay: 0.09s; }
+.rbt-industries-backdrop__content .section-title > *:nth-child(3) { transition-delay: 0.18s; }
+
+.rbt-industries-backdrop__content.is-in-view .section-title > * {
   opacity: 1;
   transform: translateY(0);
 }
 
-.rbt-industries-backdrop__content .row > div:nth-child(1) .service-card-6 { transition-delay: 0.05s; }
-.rbt-industries-backdrop__content .row > div:nth-child(2) .service-card-6 { transition-delay: 0.12s; }
-.rbt-industries-backdrop__content .row > div:nth-child(3) .service-card-6 { transition-delay: 0.19s; }
-.rbt-industries-backdrop__content .row > div:nth-child(4) .service-card-6 { transition-delay: 0.26s; }
-.rbt-industries-backdrop__content .row > div:nth-child(5) .service-card-6 { transition-delay: 0.33s; }
-.rbt-industries-backdrop__content .row > div:nth-child(6) .service-card-6 { transition-delay: 0.4s; }
-.rbt-industries-backdrop__content .row > div:nth-child(n+7) .service-card-6 { transition-delay: 0.46s; }
-
-/* Industry-card capsule pills — halves the template's default box-shadow
-   (0 12px 22px 0 rgb(214 191 242 / 28%)), which read as too heavy. Scoped
-   to .service-card-6 so it only affects the Industries component, applied
-   automatically everywhere that component is reused (homepage, Our
-   Process, and any future page). */
-.service-card-6 .rbt-badge-2 {
-  box-shadow: 0 6px 11px 0 rgba(214, 191, 242, 0.14);
+.rbt-industries-backdrop__content .service-card-6 {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.55s ease;
+  opacity: 0;
+  transform: translateY(90px) scale(0.9);
 }
 
-/* ────────────────────────────────────────────────────────────────────────
-   CLASSIC ELEVATED CARD — .rbt-industries-card--dark
-   A restrained, single-tone dark surface — no gradient wash, no color-
-   shifting hover state. Elevation comes from a plain layered shadow and a
-   quiet 1px border alone, the way a traditional (non-"Material") premium
-   card is built. Previously used a blue-to-purple gradient tint across
-   the whole surface plus a matching gradient icon fill, which read as
-   busy/flashy rather than the clean, classic look asked for.
-
-   The outer `.service-card-6.rbt-industries-card--dark` div and its
-   `.inner` child (padding/radius/border from the base, un-restyled,
-   5px-radius template rule in _service.scss) are two separately-styled
-   boxes with mismatched radii and a doubled-up border — harmless under
-   heavy blur, but visibly wrong once the blur was replaced with a crisp
-   surface. `.inner`'s own radius/border are neutralized below so there's
-   a single coherent surface.
-   ──────────────────────────────────────────────────────────────────────── */
-.rbt-industries-card--dark {
-  position: relative;
-  isolation: isolate;
-  border-radius: 16px;
-  overflow: hidden;
-  background: #181c2c !important;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 12px 28px -16px rgba(6, 8, 16, 0.5);
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+.rbt-industries-backdrop__content.is-in-view .service-card-6 {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
-.rbt-industries-card--dark .inner {
-  position: relative;
-  border-radius: 0;
-  border: none;
-  padding: 40px 32px;
-}
-
-.rbt-industries-card--dark::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 3px;
-  background: rgb(var(--accent, 47 87 239));
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.45s ease;
-  z-index: 2;
-}
-
-.rbt-industries-card--dark:hover::before {
-  transform: scaleX(1);
-}
-
-.rbt-industries-card--dark:hover {
-  border-color: rgb(var(--accent, 255 255 255) / 0.35);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 20px 40px -18px rgb(var(--accent, 6 8 16) / 0.35);
-}
-
-/* Large, low-opacity glyph echoing the card's own icon in its corner — the
-   same "ghost watermark" language as the homepage service tiles
-   (.rbt-service-tile__watermark), so the two capability grids read as one
-   consistent system rather than two unrelated card styles. */
-.rbt-industry-card__watermark {
-  position: absolute;
-  right: -14px;
-  bottom: -18px;
-  z-index: 0;
-  font-size: 120px;
-  line-height: 1;
-  color: rgb(var(--accent, 47 87 239));
-  opacity: 0.07;
-  transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-  pointer-events: none;
-}
-
-.rbt-industries-card--dark:hover .rbt-industry-card__watermark {
-  opacity: 0.12;
-  transform: scale(1.06) rotate(-4deg);
-}
-
-/* Leading icon — a tonal square tinted with the card's own accent, the
-   full color reserved for the glyph and this soft wash rather than a loud
-   gradient fill. */
-.rbt-industry-icon {
-  position: relative;
-  z-index: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  margin-bottom: 22px;
-  border-radius: 12px;
-  background: rgb(var(--accent, 255 255 255) / 0.12);
-  border: 1px solid rgb(var(--accent, 255 255 255) / 0.22);
-}
-
-.rbt-industry-icon i {
-  font-size: 20px;
-  color: rgb(var(--accent, 47 87 239));
-  stroke-width: 2px;
-}
-
-.rbt-industries-card--dark .content {
-  position: relative;
-  z-index: 1;
-}
-
-.rbt-industries-card--dark .rbt-card-title {
-  color: var(--color-white);
-  letter-spacing: -0.01em;
-}
-
-.rbt-industries-card--dark p {
-  color: rgba(255, 255, 255, 0.72);
-}
-
-/* Chips restyled as Material "assist chips" — the template's default
-   .rbt-badge-2 (50px tall, heavy box-shadow, built for a light background)
-   is scaled down to a proper chip size and switched to a thin tonal
-   outline instead of a shadow, which is how Material distinguishes chips
-   from elevated surfaces: chips stay flat, cards get the elevation. */
-.rbt-industries-card--dark .rbt-badge-2 {
-  height: 34px;
-  line-height: 34px;
-  padding: 0 16px;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0;
-  background: rgba(255, 255, 255, 0.06);
-  color: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: none;
-  transition: background 0.3s ease, border-color 0.3s ease;
-}
-
-.rbt-industries-card--dark:hover .rbt-badge-2 {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.28);
-}
+.rbt-industries-backdrop__content .row > div:nth-child(1) .service-card-6 { transition-delay: 0.24s; }
+.rbt-industries-backdrop__content .row > div:nth-child(2) .service-card-6 { transition-delay: 0.32s; }
+.rbt-industries-backdrop__content .row > div:nth-child(3) .service-card-6 { transition-delay: 0.4s; }
+.rbt-industries-backdrop__content .row > div:nth-child(4) .service-card-6 { transition-delay: 0.48s; }
+.rbt-industries-backdrop__content .row > div:nth-child(5) .service-card-6 { transition-delay: 0.56s; }
+.rbt-industries-backdrop__content .row > div:nth-child(6) .service-card-6 { transition-delay: 0.64s; }
+.rbt-industries-backdrop__content .row > div:nth-child(n+7) .service-card-6 { transition-delay: 0.72s; }
 
 .rbt-industries-backdrop__content .service-card-6:hover {
-  transform: translateY(-6px);
+  transform: translateY(-14px) scale(1.03);
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .rbt-industries-backdrop__content .section-title > *,
   .rbt-industries-backdrop__content .service-card-6 {
     opacity: 1;
     transform: none;
@@ -766,6 +647,149 @@ img:not([data-gil-loading]) {
   .rbt-industries-backdrop__content .service-card-6:hover {
     transform: none;
   }
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   CARD — .rbt-industries-card
+   A plain white surface, a quiet 1px border, and a soft shadow that only
+   deepens on hover — elevation earned through light and shadow, not a
+   color wash. One accent (brand blue) used consistently across every
+   card: icon, hover border, hover shadow tint, watermark. Rotating
+   accent colors per card was tried and looked arbitrary rather than
+   intentional; one color, used with confidence, reads as considered.
+
+   The outer `.service-card-6.rbt-industries-card` div and its `.inner`
+   child (padding/radius/border from the base, un-restyled, 5px-radius
+   template rule in _service.scss) are two separately-styled boxes with
+   mismatched radii and a doubled-up border — `.inner`'s own radius/border
+   are neutralized below so there's a single coherent surface.
+   ──────────────────────────────────────────────────────────────────────── */
+.rbt-industries-card {
+  position: relative;
+  isolation: isolate;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #ffffff !important;
+  border: 1px solid rgba(23, 32, 51, 0.08);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.03), 0 8px 20px -16px rgba(16, 24, 40, 0.08);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.rbt-industries-card .inner {
+  position: relative;
+  border-radius: 0;
+  border: none;
+  padding: 28px 24px;
+}
+
+.rbt-industries-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s ease;
+  z-index: 2;
+}
+
+.rbt-industries-card:hover::before {
+  transform: scaleX(1);
+}
+
+.rbt-industries-card:hover {
+  border-color: rgba(47, 87, 239, 0.32);
+  box-shadow: 0 2px 4px rgba(16, 24, 40, 0.05), 0 40px 64px -24px rgba(47, 87, 239, 0.4);
+}
+
+/* Large, low-opacity glyph echoing the card's own icon in its corner —
+   a quiet, embossed-on-fine-stationery touch rather than a loud effect. */
+.rbt-industry-card__watermark {
+  position: absolute;
+  right: -14px;
+  bottom: -18px;
+  z-index: 0;
+  font-size: 120px;
+  line-height: 1;
+  color: var(--color-primary);
+  opacity: 0.045;
+  transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+.rbt-industries-card:hover .rbt-industry-card__watermark {
+  opacity: 0.08;
+  transform: scale(1.06) rotate(-4deg);
+}
+
+/* Leading icon — a tonal square in the one brand accent. */
+.rbt-industry-icon {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 16px;
+  border-radius: 11px;
+  background: rgba(47, 87, 239, 0.08);
+  border: 1px solid rgba(47, 87, 239, 0.16);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), background 0.3s ease, border-color 0.3s ease;
+}
+
+.rbt-industries-card:hover .rbt-industry-icon {
+  transform: translateY(-3px) scale(1.08);
+  background: rgba(47, 87, 239, 0.14);
+  border-color: rgba(47, 87, 239, 0.3);
+}
+
+.rbt-industry-icon i {
+  font-size: 17px;
+  color: var(--color-primary);
+  stroke-width: 2px;
+}
+
+.rbt-industries-card .content {
+  position: relative;
+  z-index: 1;
+}
+
+.rbt-industries-card .rbt-card-title {
+  color: var(--color-heading);
+  letter-spacing: -0.01em;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.rbt-industries-card p {
+  color: var(--color-body);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Chips restyled as flat "assist chips" — the template's default
+   .rbt-badge-2 (50px tall, heavy box-shadow, tuned for a colored surface)
+   is scaled down to a proper chip size with a thin neutral outline, so
+   chips stay flat and the card itself carries the elevation. */
+.rbt-industries-card .rbt-badge-2 {
+  height: 26px;
+  line-height: 26px;
+  padding: 0 12px;
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0;
+  background: #f6f7fb;
+  color: var(--color-heading);
+  border: 1px solid rgba(23, 32, 51, 0.08);
+  box-shadow: none;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.rbt-industries-card:hover .rbt-badge-2 {
+  background: rgba(47, 87, 239, 0.06);
+  border-color: rgba(47, 87, 239, 0.18);
 }
 
 /* ════════════════════════════════════════════════════════════════════════

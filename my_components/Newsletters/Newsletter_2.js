@@ -59,7 +59,7 @@ const Newsletter_2 = () => {
               <input
                 className="rbt-border"
                 type="email"
-                placeholder="Enter Your E-Email"
+                placeholder="Enter your email"
                 required
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}

@@ -1,50 +1,11 @@
 import LogoMarquee from "@/my_components/_Global/LogoMarquee";
-import { isBrandLogoColorLocked } from "@/helper/Utilities";
+import { BRAND_LOGOS } from "@/helper/brandLogos";
 
-// Known filename -> friendlier alt text. Anything dropped into the folder
-// that isn't listed here still works — it just falls back to an
-// auto-title-cased version of the filename (see toTitleCase below).
-const ALT_OVERRIDES = {
-  JAPAUL: "Japaul",
-  EXPERT_WRITERS: "Expert Writers",
-  GEOPLOX: "Geoplox",
-  JPGOLDCOIN: "JP Gold Coin",
-  "REAL-RIBIAX": "Ribiax Engineering",
-  FLATSHARE: "Flatshare",
-  DATAQUEUE: "DataQueue Limited",
-  SCALABU: "Scalabu Digital",
-};
-
-const toTitleCase = (name) =>
-  name
-    .replace(/[-_]+/g, " ")
-    .toLowerCase()
-    .replace(/\b\w/g, (letter) => letter.toUpperCase());
-
-// Pulls every image directly inside public/app_images/trusted_by_brands at
-// build time — drop a new logo in that folder (or delete one) and it shows
-// up here automatically, no code change needed. `require.context` is a
-// webpack feature (Next.js Pages Router runs on webpack), resolved once at
-// build time, so this has zero runtime cost.
-const logosContext = require.context(
-  "../../public/app_images/trusted_by_brands",
-  false,
-  /\.(png|jpe?g|webp|svg)$/i
-);
-
-const LOGOS = logosContext
-  .keys()
-  .sort()
-  .map((key) => {
-    const mod = logosContext(key);
-    const fileName = key.replace("./", "").replace(/\.[^.]+$/, "");
-    const src = mod.default || mod;
-    return {
-      src,
-      alt: ALT_OVERRIDES[fileName] || toTitleCase(fileName),
-      keepColor: isBrandLogoColorLocked(fileName),
-    };
-  });
+const LOGOS = BRAND_LOGOS.map((logo) => ({
+  src: logo.src,
+  alt: logo.name,
+  keepColor: logo.keepColor,
+}));
 
 const Brands2 = ({ hide_text = "true", title }) => {
   return (

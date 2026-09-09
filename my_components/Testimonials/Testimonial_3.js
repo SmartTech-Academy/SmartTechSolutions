@@ -7,7 +7,8 @@ import { Navigation } from "swiper/modules";
 import TestimonialData from "../../data/elements/testimonial.json";
 
 
-import { image_url, isBrandLogoColorLocked } from "@/helper/Utilities";
+import { image_url } from "@/helper/Utilities";
+import { getBrandLogoByIndex } from "@/helper/brandLogos";
 
 
 
@@ -43,47 +44,45 @@ const Testimonial_3 = () => {
             992: { slidesPerView: 3, },
           }}>
 
-          {TestimonialData.testimonialTwo[0].left.map((data, index) => (
+          {TestimonialData.testimonialTwo[0].left.map((data, index) => {
+            const logo = getBrandLogoByIndex(index);
+            return (
+              <SwiperSlide className="swiper-wrapper" key={index}>
+                <div className="swiper-slide">
+                  <div className="single-slide">
+                    <div className="rbt-testimonial-box">
+                      <div className="inner bg-no-shadow bg-color-primary-opacity">
 
-            <SwiperSlide className="swiper-wrapper" key={index}>
-              <div className="swiper-slide">
-                <div className="single-slide">
-                  <div className="rbt-testimonial-box">
-                    <div className="inner bg-no-shadow bg-color-primary-opacity">
-
-                      <div className="clint-info-wrapper">
-                        <div className="thumb">
-                          <Image src={image_url(data.img)} width={494} height={494} alt="Clint Images" />
-                        </div>
-                        <div className="client-info">
-                          <h5 className="title">{data.title}</h5>
-                          <span>{data.position}</span>
-                          {data.companyLogo ? (
-                            <div className={`client-info__logo brand-logo${isBrandLogoColorLocked(data.companyLogo) ? " brand-logo--keep-color" : ""}`}>
+                        <div className="clint-info-wrapper">
+                          <div className="thumb">
+                            <Image src={image_url(data.img)} width={494} height={494} alt={`Photo of ${data.title}`} />
+                          </div>
+                          <div className="client-info">
+                            <h5 className="title">{data.title}</h5>
+                            <span>{data.position}</span>
+                            <div className={`client-info__logo brand-logo${logo.keepColor ? " brand-logo--keep-color" : ""}`}>
                               <Image
-                                src={data.companyLogo}
+                                src={logo.src}
                                 width={110}
                                 height={38}
-                                style={{ width: "auto", height: "auto", maxWidth: "110px", maxHeight: "38px", objectFit: "contain" }}
-                                alt={data.company ? data.company.replace(/^@\s*/, "") : "Client company logo"}
+                                style={{ objectFit: "contain" }}
+                                alt={`${logo.name} logo`}
                               />
                             </div>
-                          ) : (
-                            <i>{data.company}</i>
-                          )}
+                          </div>
                         </div>
-                      </div>
 
-                      <div className="description">
-                        <p className="subtitle-3">{data.desc}</p>
-                      </div>
+                        <div className="description">
+                          <p className="subtitle-3">{data.desc}</p>
+                        </div>
 
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
+              </SwiperSlide>
+            );
+          })}
 
 
           <div className="rbt-swiper-arrow rbt-arrow-left">

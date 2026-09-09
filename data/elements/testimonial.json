@@ -58,7 +58,7 @@
           "isSelected": true,
           "desc": "SmartTech Solutions rebuilt our entire checkout flow in six weeks and conversions jumped 42% in the first month alone. They didn't just write code, they understood our business and shipped like it was their own company on the line.",
           "name": "Adaeze Nwankwo",
-          "post": "Founder & CEO, Marketplace Naija"
+          "post": "Founder & CEO"
         },
         {
           "tab": "testimonial-tab2-tab",
@@ -66,7 +66,7 @@
           "isSelected": false,
           "desc": "We interviewed five agencies before choosing SmartTech Solutions, and it was the easiest decision we made all year. Our mobile app went from concept to App Store in ten weeks, with zero crash reports in the first quarter post-launch.",
           "name": "Marcus Ferreira",
-          "post": "CTO, PayBridge Africa"
+          "post": "CTO"
         },
         {
           "tab": "testimonial-tab3-tab",
@@ -74,7 +74,7 @@
           "isSelected": false,
           "desc": "Their Odoo ERP rollout cut our monthly reporting time from three days to under two hours. If you are still stitching spreadsheets together to run your business, talk to SmartTech Solutions before your competitors do.",
           "name": "Priya Ramaswamy",
-          "post": "Chief Operating Officer, Veltrix Logistics"
+          "post": "Chief Operating Officer"
         },
         {
           "tab": "testimonial-tab4-tab",
@@ -82,7 +82,7 @@
           "isSelected": false,
           "desc": "SmartTech Solutions' security audit found two critical vulnerabilities our previous vendor missed entirely, one week before a scheduled investor due-diligence review. That single engagement was worth ten times what we paid for it.",
           "name": "Daniel Okonjo",
-          "post": "Head of Engineering, Cedarbank Fintech"
+          "post": "Head of Engineering"
         },
         {
           "tab": "testimonial-tab5-tab",
@@ -90,7 +90,7 @@
           "isSelected": false,
           "desc": "We came to them with a napkin sketch and a deadline. Six weeks later we had a working MVP that closed our seed round. SmartTech Solutions moves faster than any in-house team I've managed, and the quality never slipped.",
           "name": "Grace Muthoni",
-          "post": "Founder, Shamba Direct"
+          "post": "Founder"
         },
         {
           "tab": "testimonial-tab6-tab",
@@ -98,7 +98,7 @@
           "isSelected": false,
           "desc": "The blockchain settlement layer SmartTech Solutions built for us processes three times the transaction volume of our old system, with reconciliation errors down to nearly zero. Our finance team actually thanked engineering for once.",
           "name": "Tobenna Achufusi",
-          "post": "VP of Product, ChainRoute Payments"
+          "post": "VP of Product"
         },
         {
           "tab": "testimonial-tab7-tab",
@@ -106,7 +106,7 @@
           "isSelected": false,
           "desc": "Every deadline hit, every update proactive, every question answered within the hour. SmartTech Solutions redesigned our entire UI/UX and our support tickets dropped 30% simply because people could finally find what they needed.",
           "name": "Helena Castilho",
-          "post": "Director of Design, Norvento Health"
+          "post": "Director of Design"
         },
         {
           "tab": "testimonial-tab8-tab",
@@ -114,7 +114,7 @@
           "isSelected": false,
           "desc": "Our mobile game hit 120,000 downloads in its first month, something we never thought possible with our tiny budget. SmartTech Solutions' game development team treated our idea like it was the next big studio launch.",
           "name": "Kwame Boadi",
-          "post": "Founder, Kente Interactive"
+          "post": "Founder"
         }
       ]
     }
@@ -124,148 +124,112 @@
       "left": [
         {
           "img": "/images/testimonial/client-01.png",
-          "companyLogo": "/app_images/trusted_by_brands/DATAQUEUE.png",
           "title": "Ifeoma Anagbogu",
           "position": "Head of Digital Transformation",
-          "company": "@ DataQueue",
           "desc": "Migrating four legacy systems into one Zoho CRM sounded impossible until SmartTech Solutions mapped it out and delivered on time, every phase."
         },
         {
           "img": "/images/testimonial/client-02.png",
-          "companyLogo": "/app_images/trusted_by_brands/EXPERT_WRITERS.png",
           "title": "Rahul Deshmukh",
           "position": "Chief Executive Officer",
-          "company": "@ Expert Writers",
           "desc": "We scaled from 3,000 to 80,000 monthly active users on the platform SmartTech Solutions built, and it never once buckled under the load."
         },
         {
           "img": "/images/testimonial/client-03.png",
-          "companyLogo": "/app_images/trusted_by_brands/FLATSHARE.png",
           "title": "Chioma Ezeigwe",
           "position": "Chief Marketing Officer",
-          "company": "@ FlatShare",
           "desc": "Our new e-commerce site loads in under a second and holiday-season sales grew 58% year over year. This team simply delivers results."
         },
         {
           "img": "/images/testimonial/client-04.png",
-          "companyLogo": "/app_images/trusted_by_brands/GEOPLOX.png",
           "title": "Emeka Obiora",
           "position": "Managing Director",
-          "company": "@ Geoplox",
           "desc": "SmartTech Solutions automated our claims workflow with AI and cut processing time from five days to four hours. Our customers noticed immediately."
         },
         {
           "img": "/images/testimonial/client-05.png",
-          "companyLogo": "/app_images/trusted_by_brands/JAPAUL.png",
           "title": "Fatima Al-Sayed",
           "position": "Head of Operations",
-          "company": "@ Japaul Group",
           "desc": "Their SAP Business One implementation gave us real-time visibility across three warehouses for the first time in company history."
         },
         {
           "img": "/images/testimonial/client-06.png",
-          "companyLogo": "/app_images/trusted_by_brands/JPGOLDCOIN.png",
           "title": "Benjamin Osei",
           "position": "Founder & Managing Partner",
-          "company": "@ JP Gold Coin",
           "desc": "Every recommendation SmartTech Solutions made during the audit paid for itself within the quarter. Sharp, honest, and technically excellent."
         },
         {
           "img": "/images/testimonial/client-07.png",
-          "companyLogo": "/app_images/trusted_by_brands/REAL-RIBIAX.png",
           "title": "Ngozi Chukwuemeka",
           "position": "VP of Engineering",
-          "company": "@ Ribiax Real Estates",
           "desc": "They rescued a project two prior vendors had abandoned and delivered a production-ready platform in nine weeks. Absolute lifesavers."
         },
         {
           "img": "/images/testimonial/client-08.png",
-          "companyLogo": "/app_images/trusted_by_brands/SCALABU.png",
           "title": "Lucas Whitfield",
           "position": "Chief Technology Officer",
-          "company": "@ Scalabu",
           "desc": "The property management platform they built runs our entire portfolio now, from listings to lease renewals. Flawless handoff, flawless support."
         },
         {
           "img": "/images/testimonial/client-01.png",
-          "companyLogo": "/app_images/trusted_by_brands/DATAQUEUE.png",
           "title": "Aisha Bello",
           "position": "Product Director",
-          "company": "@ DataQueue",
           "desc": "20,000 students now use the learning platform SmartTech Solutions built, and uptime has been 99.98% since launch. Unshakeable engineering."
         }
       ],
       "right": [
         {
           "img": "/images/testimonial/client-01.png",
-          "companyLogo": "/app_images/trusted_by_brands/EXPERT_WRITERS.png",
           "title": "Samuel Adegoke",
           "position": "Chief Information Officer",
-          "company": "@ Expert Writers",
           "desc": "Their Dynamics 365 rollout across four branches finished two weeks ahead of schedule with zero downtime during cutover. Remarkable execution."
         },
         {
           "img": "/images/testimonial/client-02.png",
-          "companyLogo": "/app_images/trusted_by_brands/FLATSHARE.png",
           "title": "Nkechi Umeadi",
           "position": "Founder",
-          "company": "@ FlatShare",
           "desc": "From idea to a fully booked launch week, SmartTech Solutions carried our brand's first digital product like it was their own baby."
         },
         {
           "img": "/images/testimonial/client-03.png",
-          "companyLogo": "/app_images/trusted_by_brands/GEOPLOX.png",
           "title": "Oluwaseun Fagbenro",
           "position": "Head of Product",
-          "company": "@ Geoplox",
           "desc": "They shipped our internal tooling rebuild in half the time our last vendor quoted, and it has not gone down once since launch."
         },
         {
           "img": "/images/testimonial/client-04.png",
-          "companyLogo": "/app_images/trusted_by_brands/JAPAUL.png",
           "title": "Isabella Marchetti",
           "position": "Regional Operations Director",
-          "company": "@ Japaul Group",
           "desc": "SmartTech Solutions untangled a decade of spreadsheet chaos into one clean CRM. Our regional teams finally see the same numbers."
         },
         {
           "img": "/images/testimonial/client-05.png",
-          "companyLogo": "/app_images/trusted_by_brands/JPGOLDCOIN.png",
           "title": "Tunde Bakare",
           "position": "Chief Financial Officer",
-          "company": "@ JP Gold Coin",
           "desc": "Every settlement now reconciles automatically overnight. What used to take our finance team two days now takes minutes."
         },
         {
           "img": "/images/testimonial/client-06.png",
-          "companyLogo": "/app_images/trusted_by_brands/REAL-RIBIAX.png",
           "title": "Grace Odumosu",
           "position": "Chief Experience Officer",
-          "company": "@ Ribiax Real Estates",
           "desc": "Listing to lease is now a five-minute workflow instead of a two-day back-and-forth. Buyers notice, and so does our close rate."
         },
         {
           "img": "/images/testimonial/client-07.png",
-          "companyLogo": "/app_images/trusted_by_brands/SCALABU.png",
           "title": "Miguel Torres",
           "position": "Founder & CEO",
-          "company": "@ Scalabu",
           "desc": "We went from a pitch deck to a fully functioning product demo in five weeks. Investors could not believe how far along we were."
         },
         {
           "img": "/images/testimonial/client-08.png",
-          "companyLogo": "/app_images/trusted_by_brands/DATAQUEUE.png",
           "title": "Patricia Nakamura",
           "position": "VP of Data & Analytics",
-          "company": "@ DataQueue",
           "desc": "The dashboard SmartTech Solutions built compresses a week of manual reporting into a live view that updates itself. Leadership loves it."
         },
         {
           "img": "/images/testimonial/client-09.png",
-          "companyLogo": "/app_images/trusted_by_brands/EXPERT_WRITERS.png",
           "title": "Chukwuemeka Nnadi",
           "position": "Editorial Operations Lead",
-          "company": "@ Expert Writers",
           "desc": "Our editorial platform handles ten times the submission volume it used to, without adding a single person to the review team."
         }
       ]
@@ -308,26 +272,20 @@
       "body": [
         {
           "img": "/images/testimonial/client-01.png",
-          "companyLogo": "/app_images/trusted_by_brands/GEOPLOX.png",
           "title": "Winifred Achebe",
           "position": "Founder & Managing Director",
-          "company": "@ Geoplox",
           "desc": "We walked into SmartTech Solutions with nothing but a property-listing headache and a tight budget. Six months later we had a full platform, a mobile app, and a support team on standby. If you're on the fence about who to trust with your product, stop looking and call them today."
         },
         {
           "img": "/images/testimonial/client-05.png",
-          "companyLogo": "/app_images/trusted_by_brands/SCALABU.png",
           "title": "Julian Reyes",
           "position": "Co-Founder & CTO",
-          "company": "@ Scalabu",
           "desc": "Two previous freelancers had walked away from our build, and morale on our side was low. SmartTech Solutions stepped in, rebuilt the architecture from the ground up, and delivered a production-ready platform in nine weeks flat. They didn't just save the project, they saved the company."
         },
         {
           "img": "/images/testimonial/client-06.png",
-          "companyLogo": "/app_images/trusted_by_brands/FLATSHARE.png",
           "title": "Amara Okoye",
           "position": "Head of Growth",
-          "company": "@ FlatShare",
           "desc": "SmartTech Solutions treated our tiny seed-stage budget like it was a fortune-500 contract. Every deadline hit, every question answered same-day. Eighteen months later we've raised our Series A, and the platform they built hasn't needed a single major rewrite."
         }
       ]
@@ -340,26 +298,20 @@
       "body": [
         {
           "img": "/images/testimonial/client-01.png",
-          "companyLogo": "/app_images/trusted_by_brands/JAPAUL.png",
           "title": "Chinedu Obasi",
           "position": "IT Director",
-          "company": "@ Japaul Group",
           "desc": "Our four warehouses finally speak to each other in real time. SmartTech Solutions' SAP rollout paid for itself within the first quarter."
         },
         {
           "img": "/images/testimonial/client-02.png",
-          "companyLogo": "/app_images/trusted_by_brands/JPGOLDCOIN.png",
           "title": "Sophia Nwachukwu",
           "position": "Head of Compliance",
-          "company": "@ JP Gold Coin",
           "desc": "Every transaction now reconciles itself against our ledger automatically. Our audit prep time dropped from three weeks to three days."
         },
         {
           "img": "/images/testimonial/client-03.png",
-          "companyLogo": "/app_images/trusted_by_brands/REAL-RIBIAX.png",
           "title": "David Falana",
           "position": "Sales Director",
-          "company": "@ Ribiax Real Estates",
           "desc": "Our agents close deals almost twice as fast now that listings, leads, and paperwork all live in one place SmartTech Solutions built for us."
         }
       ]
@@ -370,130 +322,112 @@
       "left": [
         {
           "client": "/images/testimonial/client-01.png",
-          "img": "/app_images/trusted_by_brands/DATAQUEUE.png",
           "title": "Zainab Yusuf",
-          "position": "Founder & CEO, DataQueue",
+          "position": "Founder & CEO",
           "desc": "SmartTech Solutions rebuilt our analytics pipeline from scratch and cut our reporting lag from a full day to under a minute."
         },
         {
           "client": "/images/testimonial/client-02.png",
-          "img": "/app_images/trusted_by_brands/EXPERT_WRITERS.png",
           "title": "Robert Chen",
-          "position": "Managing Editor, Expert Writers",
+          "position": "Managing Editor",
           "desc": "Their platform handles triple our old submission volume without adding a single reviewer. Genuinely transformative work."
         },
         {
           "client": "/images/testimonial/client-03.png",
-          "img": "/app_images/trusted_by_brands/FLATSHARE.png",
           "title": "Bukola Adeyemi",
-          "position": "Product Lead, FlatShare",
+          "position": "Product Lead",
           "desc": "Matching renters used to take our team hours per listing. Now it happens automatically, and satisfaction scores are up 40%."
         },
         {
           "client": "/images/testimonial/client-04.png",
-          "img": "/app_images/trusted_by_brands/GEOPLOX.png",
           "title": "Adaobi Chukwu",
-          "position": "COO, Geoplox",
+          "position": "COO",
           "desc": "SmartTech Solutions gave us a property verification workflow our field agents actually enjoy using. Adoption hit 100% in a month."
         },
         {
           "client": "/images/testimonial/client-05.png",
-          "img": "/app_images/trusted_by_brands/JAPAUL.png",
           "title": "Ibrahim Suleiman",
-          "position": "Regional Manager, Japaul Group",
+          "position": "Regional Manager",
           "desc": "Real-time inventory across every warehouse changed how fast we can respond to demand. This should have happened years ago."
         },
         {
           "client": "/images/testimonial/client-06.png",
-          "img": "/app_images/trusted_by_brands/JPGOLDCOIN.png",
           "title": "Chiamaka Eze",
-          "position": "Treasury Lead, JP Gold Coin",
+          "position": "Treasury Lead",
           "desc": "The custody dashboard they built gives our treasury team full visibility for the first time. No more end-of-day guesswork."
         },
         {
           "client": "/images/testimonial/client-07.png",
-          "img": "/app_images/trusted_by_brands/REAL-RIBIAX.png",
           "title": "Henry Okafor",
-          "position": "Broker Relations Manager, Ribiax Real Estates",
+          "position": "Broker Relations Manager",
           "desc": "Our brokers close listings in days instead of weeks now. The platform just gets out of their way and lets them sell."
         },
         {
           "client": "/images/testimonial/client-08.png",
-          "img": "/app_images/trusted_by_brands/SCALABU.png",
           "title": "Victoria Adebayo",
-          "position": "Founder, Scalabu",
+          "position": "Founder",
           "desc": "They took our rough idea and turned it into a working product in under two months. Best decision we made all year."
         },
         {
           "client": "/images/testimonial/client-09.png",
-          "img": "/app_images/trusted_by_brands/DATAQUEUE.png",
           "title": "Anthony Ibe",
-          "position": "VP Engineering, DataQueue",
+          "position": "VP Engineering",
           "desc": "Migrating our entire data warehouse felt terrifying until SmartTech Solutions mapped out every step. Zero downtime, zero surprises."
         }
       ],
       "right": [
         {
           "client": "/images/testimonial/client-01.png",
-          "img": "/app_images/trusted_by_brands/EXPERT_WRITERS.png",
           "title": "Funmilayo Adeleke",
-          "position": "Operations Manager, Expert Writers",
+          "position": "Operations Manager",
           "desc": "Support tickets dropped by half after the redesign SmartTech Solutions shipped. Writers actually enjoy using the tool now."
         },
         {
           "client": "/images/testimonial/client-02.png",
-          "img": "/app_images/trusted_by_brands/FLATSHARE.png",
           "title": "Kelechi Nwosu",
-          "position": "Co-Founder, FlatShare",
+          "position": "Co-Founder",
           "desc": "We scaled to five new cities in a single quarter without adding a single backend engineer. The architecture just held."
         },
         {
           "client": "/images/testimonial/client-03.png",
-          "img": "/app_images/trusted_by_brands/GEOPLOX.png",
           "title": "Segun Owolabi",
-          "position": "Field Operations Director, Geoplox",
+          "position": "Field Operations Director",
           "desc": "Our verification backlog went from three weeks to same-day. Field agents finally have a tool that keeps up with them."
         },
         {
           "client": "/images/testimonial/client-04.png",
-          "img": "/app_images/trusted_by_brands/JAPAUL.png",
           "title": "Patience Umeh",
-          "position": "Finance Controller, Japaul Group",
+          "position": "Finance Controller",
           "desc": "Month-end close used to take a week of manual reconciliation. Now our books close in a single afternoon."
         },
         {
           "client": "/images/testimonial/client-05.png",
-          "img": "/app_images/trusted_by_brands/JPGOLDCOIN.png",
           "title": "Olumide Bankole",
-          "position": "Head of Product, JP Gold Coin",
+          "position": "Head of Product",
           "desc": "The wallet experience SmartTech Solutions built feels as smooth as any consumer fintech app. Our users noticed immediately."
         },
         {
           "client": "/images/testimonial/client-06.png",
-          "img": "/app_images/trusted_by_brands/REAL-RIBIAX.png",
           "title": "Amina Lawal",
-          "position": "Marketing Director, Ribiax Real Estates",
+          "position": "Marketing Director",
           "desc": "Our listing pages now convert visitors into leads at almost triple the rate of our old site. The redesign paid for itself in weeks."
         },
         {
           "client": "/images/testimonial/client-07.png",
-          "img": "/app_images/trusted_by_brands/SCALABU.png",
           "title": "Daniel Uzo",
-          "position": "Head of Engineering, Scalabu",
+          "position": "Head of Engineering",
           "desc": "They rebuilt our entire infrastructure without a single hour of downtime for our customers. Textbook execution from start to finish."
         },
         {
           "client": "/images/testimonial/client-08.png",
-          "img": "/app_images/trusted_by_brands/DATAQUEUE.png",
           "title": "Rita Effiong",
-          "position": "Head of Customer Success, DataQueue",
+          "position": "Head of Customer Success",
           "desc": "Onboarding time for new customers dropped from two weeks to two days. Our churn numbers have never looked better."
         },
         {
           "client": "/images/testimonial/client-09.png",
-          "img": "/app_images/trusted_by_brands/EXPERT_WRITERS.png",
           "title": "Godwin Etim",
-          "position": "CTO, Expert Writers",
+          "position": "CTO",
           "desc": "SmartTech Solutions is the rare partner that writes code like it's their own product. Every handoff has been flawless."
         }
       ]

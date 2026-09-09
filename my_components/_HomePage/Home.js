@@ -386,7 +386,7 @@ const HomePageContents = () => {
             <div className="row mb--60">
               <div className="col-lg-12">
                 <div className="section-title text-start">
-                  <span className="subtitle bg-white-opacity">Who We Serve</span>
+                  <span className="subtitle bg-primary-opacity">Who We Serve</span>
                   <h2 className="title">{"Industries "}<span className="theme-gradient">{"we serve"}</span></h2>
                   <p className="description has-medium-font-size mt--20">
                     {"With deep expertise across diverse industries and a comprehensive suite of services, we understand your unique challenges and deliver tailored solutions that create measurable impact."}
@@ -394,7 +394,7 @@ const HomePageContents = () => {
                 </div>
               </div>
             </div>
-            <Industries data={IndustriesData.industries_served_2} variant="dark-glass" />
+            <Industries data={IndustriesData.industries_served_2} />
           </IndustriesBackdrop>
         </div>
 
