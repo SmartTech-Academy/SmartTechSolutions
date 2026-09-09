@@ -2,9 +2,11 @@
 // NEXT_PUBLIC_API_BASE_URL overrides this (set in .env.local for dev, already gitignored, pointing at
 // http://localhost:8000/api/v1/user; set it in the host's dashboard for a staging API instead). Since that
 // env file never reaches the deployed build, the fallback below targets the live SiteGround-hosted API at
-// https://www.apis.smarttech.ng so production works even if the hosting provider's env var isn't configured.
+// https://apis.smarttech.ng so production works even if the hosting provider's env var isn't configured.
+// Note: no "www" here, the TLS cert is a single-level wildcard (*.smarttech.ng) and doesn't cover
+// www.apis.smarttech.ng, that hostname fails to connect entirely.
 export const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_BASE_URL || "https://www.apis.smarttech.ng/api/v1/user";
+  process.env.NEXT_PUBLIC_API_BASE_URL || "https://apis.smarttech.ng/api/v1/user";
 
 // Generic POST helper for the public forms (appointment booking, contact, newsletter).
 // Normalizes Laravel's success/validation-error response shapes into one predictable object,
