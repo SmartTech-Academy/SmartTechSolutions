@@ -16,6 +16,22 @@
   .rbt-hero-editorial.height-800 {
     height: auto;
     min-height: 760px;
+    /* The header is position:fixed (see _header.scss's .rbt-sticky) and this
+       hero is the page's first section, so it starts at the very top of the
+       document, directly under the fixed header. .height-800's centering
+       (align-items: center) has room to clear the header on the 880px
+       desktop hero, but on mobile/tablet the shorter viewport leaves too
+       little space above the centered content, letting the hero badge
+       render underneath/overlapping the header. Padding on this flex
+       container shifts the centered content down without it, guaranteeing
+       clearance regardless of viewport height. */
+    padding-top: 120px;
+  }
+}
+
+@media (max-width: 767px) {
+  .rbt-hero-editorial.height-800 {
+    padding-top: 108px;
   }
 }
 

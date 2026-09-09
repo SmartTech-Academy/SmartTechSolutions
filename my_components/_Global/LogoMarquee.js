@@ -13,7 +13,7 @@ const LogoMarquee = ({ logos = [], speed = 32 }) => {
     <ul className="logo-marquee__track" aria-hidden={hidden || undefined}>
       {logos.map((logo, index) => (
         <li key={`${hidden ? "dup" : "src"}-${index}`}>
-          <div className="logo-marquee__logo">
+          <div className={`logo-marquee__logo brand-logo${logo.keepColor ? " brand-logo--keep-color" : ""}`}>
             <Image
               src={logo.src}
               width={logo.width || 120}

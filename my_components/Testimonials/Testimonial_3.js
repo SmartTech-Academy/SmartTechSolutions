@@ -7,7 +7,7 @@ import { Navigation } from "swiper/modules";
 import TestimonialData from "../../data/elements/testimonial.json";
 
 
-import { image_url } from "@/helper/Utilities";
+import { image_url, isBrandLogoColorLocked } from "@/helper/Utilities";
 
 
 
@@ -57,7 +57,20 @@ const Testimonial_3 = () => {
                         </div>
                         <div className="client-info">
                           <h5 className="title">{data.title}</h5>
-                          <span> {data.position} <i>{data.company}</i> </span>
+                          <span>{data.position}</span>
+                          {data.companyLogo ? (
+                            <div className={`client-info__logo brand-logo${isBrandLogoColorLocked(data.companyLogo) ? " brand-logo--keep-color" : ""}`}>
+                              <Image
+                                src={data.companyLogo}
+                                width={110}
+                                height={38}
+                                style={{ width: "auto", height: "auto", maxWidth: "110px", maxHeight: "38px", objectFit: "contain" }}
+                                alt={data.company ? data.company.replace(/^@\s*/, "") : "Client company logo"}
+                              />
+                            </div>
+                          ) : (
+                            <i>{data.company}</i>
+                          )}
                         </div>
                       </div>
 

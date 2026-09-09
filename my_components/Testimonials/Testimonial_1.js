@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import TestimonialData from "../../data/elements/testimonial.json";
+import { isBrandLogoColorLocked } from "@/helper/Utilities";
 
 const Testimonial_1 = () => {
   return (
@@ -20,12 +20,13 @@ const Testimonial_1 = () => {
                 >
                   <div className="rbt-testimonial-box style-2">
                     <div className="inner">
-                      <div className="icons">
+                      <div className={`icons brand-logo${isBrandLogoColorLocked(item.img) ? " brand-logo--keep-color" : ""}`}>
                         <Image
                           src={item.img}
-                          width={item.wtd ? item.wtd : 97}
-                          height={item.ht ? item.ht : 50}
-                          alt="Clint Images"
+                          width={130}
+                          height={46}
+                          style={{ width: "auto", height: "auto", maxWidth: "130px", maxHeight: "46px", objectFit: "contain" }}
+                          alt={`${item.position} company logo`}
                         />
                       </div>
                       <div className="description">
@@ -36,7 +37,7 @@ const Testimonial_1 = () => {
                               src={item.client}
                               width={160}
                               height={160}
-                              alt="Clint Images"
+                              alt={`Photo of ${item.title}`}
                             />
                           </div>
                           <div className="client-info">
@@ -60,19 +61,20 @@ const Testimonial_1 = () => {
             key={index}
           >
             <div className="scroll-animation scroll-left-right">
-              {data.left.map((item, innerIndex) => (
+              {data.right.map((item, innerIndex) => (
                 <div
                   className="single-column-20 bg-theme-gradient-even"
                   key={innerIndex}
                 >
                   <div className="rbt-testimonial-box style-2">
                     <div className="inner">
-                      <div className="icons">
+                      <div className={`icons brand-logo${isBrandLogoColorLocked(item.img) ? " brand-logo--keep-color" : ""}`}>
                         <Image
                           src={item.img}
-                          width={item.wtd ? item.wtd : 97}
-                          height={item.ht ? item.ht : 50}
-                          alt="Clint Images"
+                          width={130}
+                          height={46}
+                          style={{ width: "auto", height: "auto", maxWidth: "130px", maxHeight: "46px", objectFit: "contain" }}
+                          alt={`${item.position} company logo`}
                         />
                       </div>
                       <div className="description">
@@ -83,7 +85,7 @@ const Testimonial_1 = () => {
                               src={item.client}
                               width={160}
                               height={160}
-                              alt="Clint Images"
+                              alt={`Photo of ${item.title}`}
                             />
                           </div>
                           <div className="client-info">

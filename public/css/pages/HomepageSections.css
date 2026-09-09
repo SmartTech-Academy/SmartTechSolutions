@@ -1,92 +1,153 @@
 /* ════════════════════════════════════════════════════════════════════════
-   "OUR CORE SERVICES" — rbt-service-pro
+   "OUR CORE SERVICES" — rbt-service-tile
    Paired with my_components/_HomePage/Home-Sections/HomepageServices.js
+
+   Deliberately icon-led rather than photo-led: a full-width photo, title,
+   excerpt and "read more" link is exactly the rhythm of a blog listing
+   card, which is what this replaces. An icon chip + tight one-liner + a
+   large ghost-icon watermark reads as a capability, not an article.
    ════════════════════════════════════════════════════════════════════════ */
-.rbt-service-pro__inner {
+.rbt-service-tiles {
+  --tile-bg: var(--color-white);
+  --tile-border: rgba(23, 32, 51, 0.1);
+  --tile-shadow: 0 24px 48px -30px rgba(23, 32, 51, 0.22);
+  --tile-shadow-hover: 0 30px 60px -22px rgba(47, 87, 239, 0.28);
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.rbt-service-tile {
   position: relative;
-  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+  padding: 40px 36px;
+  border-radius: 20px;
+  border: 1px solid var(--tile-border);
+  background: var(--tile-bg);
+  box-shadow: var(--tile-shadow);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
-.rbt-service-pro__inner:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 24px 48px -18px var(--primary-opacity, rgba(47, 87, 239, 0.35));
+.rbt-service-tile:hover {
+  transform: translateY(-6px);
+  border-color: rgba(47, 87, 239, 0.35);
+  box-shadow: var(--tile-shadow-hover);
 }
 
-.rbt-service-pro__inner::before {
+.rbt-service-tile::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  inset: 0 0 auto 0;
   height: 3px;
   background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.45s ease;
-  z-index: 3;
 }
 
-.rbt-service-pro__inner:hover::before {
+.rbt-service-tile:hover::before {
   transform: scaleX(1);
 }
 
-.rbt-service-pro__img {
-  position: relative;
-  overflow: hidden;
-}
-
-.rbt-service-pro__img img {
-  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.rbt-service-pro__inner:hover .rbt-service-pro__img img {
-  transform: scale(1.08);
-}
-
-.rbt-service-pro__glow {
+.rbt-service-tile__watermark {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 40%, rgba(17, 20, 33, 0.55) 100%);
-  opacity: 0;
-  transition: opacity 0.4s ease;
+  right: -18px;
+  bottom: -22px;
+  font-size: 148px;
+  line-height: 1;
+  color: var(--color-primary);
+  opacity: 0.05;
+  transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
   pointer-events: none;
 }
 
-.rbt-service-pro__inner:hover .rbt-service-pro__glow {
-  opacity: 1;
+.rbt-service-tile:hover .rbt-service-tile__watermark {
+  opacity: 0.08;
+  transform: scale(1.06) rotate(-4deg);
 }
 
-.rbt-service-pro__cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 600;
-  color: var(--color-primary);
-  transition: gap 0.3s ease;
-}
-
-.rbt-service-pro__cta-icon {
+.rbt-service-tile__icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: var(--primary-opacity, rgba(47, 87, 239, 0.1));
-  color: var(--color-primary);
-  transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
-}
-
-.rbt-service-pro__cta:hover {
-  gap: 14px;
-}
-
-.rbt-service-pro__cta:hover .rbt-service-pro__cta-icon {
-  background: var(--color-primary);
+  width: 60px;
+  height: 60px;
+  margin-bottom: 28px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   color: var(--color-white);
-  transform: translateX(3px);
+  font-size: 26px;
+  box-shadow: 0 14px 24px -10px rgba(47, 87, 239, 0.5);
+}
+
+.rbt-service-tile__title {
+  position: relative;
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.rbt-service-tile__desc {
+  position: relative;
+  margin-bottom: 28px;
+  color: var(--color-body);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.rbt-service-tile__cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.rbt-service-tile__cta i {
+  transition: transform 0.3s ease;
+}
+
+.rbt-service-tile:hover .rbt-service-tile__cta i {
+  transform: translate(3px, -3px);
+}
+
+.active-dark-mode .rbt-service-tiles {
+  --tile-bg: var(--color-darker);
+  --tile-border: var(--dark-color-border);
+  --tile-shadow: var(--dark-shadow-2);
+  --tile-shadow-hover: 0 30px 60px -22px rgba(47, 87, 239, 0.4);
+}
+
+.active-dark-mode .rbt-service-tile__watermark {
+  opacity: 0.08;
+}
+
+.active-dark-mode .rbt-service-tile:hover .rbt-service-tile__watermark {
+  opacity: 0.14;
+}
+
+@media (max-width: 991px) {
+  .rbt-service-tiles {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  .rbt-service-tile {
+    padding: 32px 28px;
+  }
+}
+
+@media (max-width: 575px) {
+  .rbt-service-tiles {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ════════════════════════════════════════════════════════════════════════

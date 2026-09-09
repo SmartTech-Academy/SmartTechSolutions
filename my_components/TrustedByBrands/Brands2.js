@@ -1,4 +1,5 @@
 import LogoMarquee from "@/my_components/_Global/LogoMarquee";
+import { isBrandLogoColorLocked } from "@/helper/Utilities";
 
 // Known filename -> friendlier alt text. Anything dropped into the folder
 // that isn't listed here still works — it just falls back to an
@@ -37,9 +38,11 @@ const LOGOS = logosContext
   .map((key) => {
     const mod = logosContext(key);
     const fileName = key.replace("./", "").replace(/\.[^.]+$/, "");
+    const src = mod.default || mod;
     return {
-      src: mod.default || mod,
+      src,
       alt: ALT_OVERRIDES[fileName] || toTitleCase(fileName),
+      keepColor: isBrandLogoColorLocked(fileName),
     };
   });
 

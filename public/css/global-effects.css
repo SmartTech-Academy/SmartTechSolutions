@@ -458,6 +458,34 @@ img:not([data-gil-loading]) {
   to { transform: translateX(-50%); }
 }
 
+/* ════════════════════════════════════════════════════════════════════════
+   PARTNER/BRAND LOGOS — dark-mode treatment
+   Shared by the trust-logo marquee (Brands2.js/LogoMarquee.js) and every
+   testimonial component's company logo (Testimonial_1.js, Scroll.js,
+   Testimonial_3.js). Most of these logos are dark ink on a transparent
+   background, invisible against a dark page, so they're painted solid
+   white via a filter (brightness(0) then invert(1) — crush to black,
+   flip to white — which preserves the source alpha/silhouette exactly).
+   Logos already vivid enough to read on dark (see isBrandLogoColorLocked
+   in helper/Utilities.js) opt out via .brand-logo--keep-color.
+   ════════════════════════════════════════════════════════════════════════ */
+.active-dark-mode .brand-logo:not(.brand-logo--keep-color):not(.logo-marquee__logo) img {
+  filter: brightness(0) invert(1);
+}
+
+.active-dark-mode .logo-marquee__logo.brand-logo:not(.brand-logo--keep-color) {
+  filter: brightness(0) invert(1) opacity(0.55);
+}
+
+.active-dark-mode .logo-marquee__logo.brand-logo:not(.brand-logo--keep-color):hover {
+  filter: brightness(0) invert(1) opacity(1);
+}
+
+.client-info__logo {
+  margin-top: 10px;
+  opacity: 0.85;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .logo-marquee__rail {
     animation: none;
@@ -604,6 +632,8 @@ img:not([data-gil-loading]) {
    a single coherent surface.
    ──────────────────────────────────────────────────────────────────────── */
 .rbt-industries-card--dark {
+  position: relative;
+  isolation: isolate;
   border-radius: 16px;
   overflow: hidden;
   background: #181c2c !important;
@@ -613,19 +643,61 @@ img:not([data-gil-loading]) {
 }
 
 .rbt-industries-card--dark .inner {
+  position: relative;
   border-radius: 0;
   border: none;
   padding: 40px 32px;
 }
 
-.rbt-industries-card--dark:hover {
-  border-color: rgba(255, 255, 255, 0.14);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 16px 34px -16px rgba(6, 8, 16, 0.55);
+.rbt-industries-card--dark::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: rgb(var(--accent, 47 87 239));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s ease;
+  z-index: 2;
 }
 
-/* Leading icon — a plain neutral tonal square, the accent color reserved
-   for the glyph itself rather than washed across a gradient fill. */
+.rbt-industries-card--dark:hover::before {
+  transform: scaleX(1);
+}
+
+.rbt-industries-card--dark:hover {
+  border-color: rgb(var(--accent, 255 255 255) / 0.35);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 20px 40px -18px rgb(var(--accent, 6 8 16) / 0.35);
+}
+
+/* Large, low-opacity glyph echoing the card's own icon in its corner — the
+   same "ghost watermark" language as the homepage service tiles
+   (.rbt-service-tile__watermark), so the two capability grids read as one
+   consistent system rather than two unrelated card styles. */
+.rbt-industry-card__watermark {
+  position: absolute;
+  right: -14px;
+  bottom: -18px;
+  z-index: 0;
+  font-size: 120px;
+  line-height: 1;
+  color: rgb(var(--accent, 47 87 239));
+  opacity: 0.07;
+  transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+.rbt-industries-card--dark:hover .rbt-industry-card__watermark {
+  opacity: 0.12;
+  transform: scale(1.06) rotate(-4deg);
+}
+
+/* Leading icon — a tonal square tinted with the card's own accent, the
+   full color reserved for the glyph and this soft wash rather than a loud
+   gradient fill. */
 .rbt-industry-icon {
+  position: relative;
+  z-index: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -633,14 +705,19 @@ img:not([data-gil-loading]) {
   height: 48px;
   margin-bottom: 22px;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgb(var(--accent, 255 255 255) / 0.12);
+  border: 1px solid rgb(var(--accent, 255 255 255) / 0.22);
 }
 
 .rbt-industry-icon i {
   font-size: 20px;
-  color: rgba(var(--accent, 47 87 239), 1);
+  color: rgb(var(--accent, 47 87 239));
   stroke-width: 2px;
+}
+
+.rbt-industries-card--dark .content {
+  position: relative;
+  z-index: 1;
 }
 
 .rbt-industries-card--dark .rbt-card-title {
@@ -1073,6 +1150,20 @@ img:not([data-gil-loading]) {
     flex: 0 0 50%;
     max-width: 50%;
   }
+}
+
+/* The two-column split above is meant only for the desktop dropdown at
+   tablet-ish widths — `.rbt-industries-menu` is the same shared class used
+   inside the mobile offcanvas (see the comment on `.popup-mobile-menu
+   .rbt-industries-menu.grid-item-4` above), where it was splitting
+   "Industries" into two half-width columns of stacked items (Real Estate/
+   Healthcare/Logistics/Education on the left, the next four on the right)
+   instead of one straightforward list running top to bottom. Higher
+   specificity than the media-query rule above (extra `.popup-mobile-menu`
+   ancestor class) wins regardless of viewport width. */
+.popup-mobile-menu .rbt-industries-menu.grid-item-4 .row > .single-mega-item {
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 
 /* ════════════════════════════════════════════════════════════════════════
