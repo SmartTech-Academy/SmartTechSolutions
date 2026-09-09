@@ -18,10 +18,10 @@ export function image_url(url, take_from_remote_location = false){
 
 // Partner/brand logos (public/app_images/trusted_by_brands) get painted solid white in dark
 // mode via a CSS filter (see the ".brand-logo" rules in global-effects.css) so they read
-// cleanly against a dark background instead of showing their light-mode ink color. Japaul and
-// JP Gold Coin are already vivid, multi-color marks that stay legible on dark backgrounds, so
-// they're excluded and keep their real colors in both themes.
-const BRAND_LOGOS_KEEP_COLOR_IN_DARK_MODE = ["JAPAUL", "JPGOLDCOIN"];
+// cleanly against a dark background instead of showing their light-mode ink color. Every logo
+// gets this treatment — list a filename fragment here only if a future logo should keep its
+// real colors in dark mode instead.
+const BRAND_LOGOS_KEEP_COLOR_IN_DARK_MODE = [];
 
 export function isBrandLogoColorLocked(src) {
     return BRAND_LOGOS_KEEP_COLOR_IN_DARK_MODE.some((name) => src.includes(name));
