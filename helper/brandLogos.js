@@ -37,7 +37,16 @@ export const BRAND_LOGOS = logosContext
   .sort()
   .map((key) => {
     const mod = logosContext(key);
-    const fileName = key.replace("./", "").replace(/\.[^.]+$/, "");
+    // `require.context` key formats aren't guaranteed identical between the
+    // server and client webpack bundles (Next.js builds both) — one has been
+    // observed returning a short "./DATAQUEUE.png" key and the other a full
+    // "public/app_images/trusted_by_brands/DATAQUEUE.png" path, and a naive
+    // `.replace("./", "")` only strips a literal leading "./", leaving the
+    // full directory path (then title-cased into gibberish like "Public/App
+    // Images/Trusted By Brands/Dataqueue") when the longer form is returned.
+    // Taking just the last path segment is correct regardless of which
+    // format a given bundle produces.
+    const fileName = key.split("/").pop().replace(/\.[^.]+$/, "");
     return {
       src: mod.default || mod,
       name: NAME_OVERRIDES[fileName] || toTitleCase(fileName),
