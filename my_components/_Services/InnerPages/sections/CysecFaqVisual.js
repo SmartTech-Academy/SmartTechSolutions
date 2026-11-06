@@ -2,11 +2,10 @@
  * Bespoke inline-SVG "security operations" visual for the Cybersecurity FAQ
  * section. The shared ServiceFaq component normally shows a generic stock
  * photo (my_data/services/faq.json -> faq.webp, reused across all 12
- * service pages) — on Cybersecurity that generic image read as unrelated
+ * service pages), on Cybersecurity that generic image read as unrelated
  * to the page's subject. Rendered as vector instead of a sourced photo: it
  * ships as a few hundred bytes of markup with zero extra network request,
- * decode cost, or layout shift, and stays pixel-crisp at any size —
- * strictly better for Core Web Vitals than an optimized raster image would
+ * decode cost, or layout shift, and stays pixel-crisp at any size,  * strictly better for Core Web Vitals than an optimized raster image would
  * have been, while actually depicting the page's own capability pillars
  * (MDR/XDR, SIEM, IAM, DFIR) instead of a stand-in photo.
  */
@@ -19,7 +18,7 @@ const PILLS = [
 
 const CysecFaqVisual = () => {
   return (
-    <div className="cysec-faq-visual" role="img" aria-label="SmartTech security operations — real-time monitoring across MDR/XDR, SIEM, IAM, and DFIR">
+    <div className="cysec-faq-visual" role="img" aria-label="SmartTech security operations, real-time monitoring across MDR/XDR, SIEM, IAM, and DFIR">
       <svg viewBox="0 0 526 560" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="cysecBg" x1="0" y1="0" x2="1" y2="1">

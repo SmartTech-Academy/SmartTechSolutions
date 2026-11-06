@@ -8,7 +8,7 @@ import LazyImage from "@/my_components/_Global/LazyImage";
 import Brands2 from "@/my_components/TrustedByBrands/Brands2";
 
 /**
- * Single reusable shell for all 16 "Industries we serve" pages — each page
+ * Single reusable shell for all 16 "Industries we serve" pages, each page
  * component just imports its entry from my_data/industries/industries.js
  * and renders <IndustryPageTemplate industry={...} />. Keeping one template
  * means a design/UX fix lands on all 16 pages at once instead of being
@@ -97,7 +97,7 @@ const IndustryPageTemplate = ({ industry }) => {
         </div>
       </section>
 
-      {/* ══════════════ CAPABILITIES — dark animated backdrop ══════════════ */}
+      {/* ══════════════ CAPABILITIES, dark animated backdrop ══════════════ */}
       <section className="ind-capabilities">
         <span className="ind-capabilities__grid-bg" aria-hidden="true" />
         <span className="ind-capabilities__glow" aria-hidden="true" />
@@ -125,7 +125,7 @@ const IndustryPageTemplate = ({ industry }) => {
         </div>
       </section>
 
-      {/* ══════════════ RELATED WORK (conditional — only real shipped projects) ══════════════ */}
+      {/* ══════════════ RELATED WORK (conditional, only real shipped projects) ══════════════ */}
       {relatedProjects.length > 0 ? (
         <section className="ind-section">
           <div className="container">
@@ -219,7 +219,7 @@ const IndustryPageTemplate = ({ industry }) => {
         <div className="container">
           <ScrollRevealSection className="ind-section__head">
             <span className="subtitle bg-primary-opacity">Common questions</span>
-            <h2 className="title">FAQ — {industry.name} software development</h2>
+            <h2 className="title">FAQ, {industry.name} software development</h2>
           </ScrollRevealSection>
 
           <div className="row g-5 justify-content-center">
@@ -264,7 +264,7 @@ const IndustryPageTemplate = ({ industry }) => {
             <h2 className="title">
               Let&apos;s build your next {industry.name.toLowerCase()} product
             </h2>
-            <p>Tell us what you&apos;re building — we&apos;ll bring the engineering and design to ship it.</p>
+            <p>Tell us what you&apos;re building, we&apos;ll bring the engineering and design to ship it.</p>
             <div className="rbt-button-group justify-content-center">
               <Link className="rbt-btn btn-gradient hover-icon-reverse" href={ROUTE.appointment}>
                 <span className="icon-reverse-wrapper">

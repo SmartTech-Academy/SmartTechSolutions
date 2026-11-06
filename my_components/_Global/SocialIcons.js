@@ -1,6 +1,5 @@
 // X (formerly Twitter) and TikTok have no glyph in the bundled feather/
-// FontAwesome subsets this project ships (both are tree-shaken builds —
-// confirmed via grep before adding these, rather than shipping a class
+// FontAwesome subsets this project ships (both are tree-shaken builds, // confirmed via grep before adding these, rather than shipping a class
 // that silently renders nothing). Plain inline SVGs sized to match the
 // surrounding icon-font glyphs (1em square, currentColor) so they drop
 // into the same `<i>`-style icon slots without any extra CSS.

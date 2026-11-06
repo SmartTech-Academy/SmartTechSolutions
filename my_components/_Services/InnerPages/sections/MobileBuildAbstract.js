@@ -1,6 +1,5 @@
 /**
- * Abstract "app under construction" visual for the "Let's build" CTA —
- * previously a literal screenshot reused from the hero collage. A wireframe
+ * Abstract "app under construction" visual for the "Let's build" CTA,  * previously a literal screenshot reused from the hero collage. A wireframe
  * phone outline with floating, dashed-line-connected UI blocks reads as
  * "assembling an app" rather than showing one specific finished project,
  * which fits a generic "ready to build?" CTA better than a single client's
@@ -73,7 +72,7 @@ const MobileBuildAbstract = () => {
           <rect x="12" y="34" width="32" height="6" rx="3" fill="rgba(255,255,255,0.7)" />
         </g>
 
-        {/* screen content — abstract layout blocks, not a real app */}
+        {/* screen content, abstract layout blocks, not a real app */}
         <g transform="translate(146 110)">
           <rect width="132" height="30" rx="8" fill="rgba(255,255,255,0.14)" />
           <rect width="80" height="46" rx="10" y="42" fill="rgba(255,255,255,0.1)" />

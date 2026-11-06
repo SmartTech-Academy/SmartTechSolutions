@@ -26,7 +26,7 @@ const Two_Dimension_Art = () => {
 
             <PageHead
                 title="2D Art Services | SmartTech Solutions"
-                description="SmartTech Solutions crafts bespoke 2D art — from sleek corporate visuals to whimsical illustrations — for brands across tech, healthcare, and entertainment."
+                description="SmartTech Solutions crafts bespoke 2D art, from sleek corporate visuals to whimsical illustrations, for brands across tech, healthcare, and entertainment."
                 image="/app_images/services/service_images/smarttech_2d_arts.png"
                 path="/services/2D-arts"
             />

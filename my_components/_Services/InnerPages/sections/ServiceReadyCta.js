@@ -5,7 +5,7 @@ import { ROUTE } from "@/route/app_routes.js";
 
 /**
  * Dark accent-grid CTA, closing with a real number instead of a decorative
- * illustration — the page's own stat (statValue/statLabel) inside an
+ * illustration, the page's own stat (statValue/statLabel) inside an
  * orbiting accent ring, tinted per page via --accent.
  */
 const ServiceReadyCta = ({ eyebrow = "Let's build", title, description, accent, statValue, statLabel }) => {

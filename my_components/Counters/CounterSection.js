@@ -2,7 +2,7 @@ import Image from "next/image";
 
 /**
  * Shared photo-backdrop wrapper for the "Our journey toward lasting
- * success" counters — reused on the homepage and the services page so
+ * success" counters, reused on the homepage and the services page so
  * both stay visually in sync from a single background asset.
  */
 const CounterSection = ({ image, children }) => {

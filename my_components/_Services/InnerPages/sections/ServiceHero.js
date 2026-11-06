@@ -6,20 +6,20 @@ import Image from "next/image";
  * actually exists for that craft (see my_data/services/service_pages.js):
  *
  * - "collage": a two-layer photo-pile of real screenshots (Web, Blockchain,
- *   NFT, MVP) — a "back" field (the same tiles, rotated/scaled/offset as
+ *   NFT, MVP), a "back" field (the same tiles, rotated/scaled/offset as
  *   one block, mostly hidden behind the front field and the edge scrim)
  *   sitting above a "front" field of the real, individually-tilted,
  *   gently floating tiles. `tileShape` picks the frame: "phone" (portrait,
- *   9:18.4 — for mobile screenshots) or "browser" (landscape, with a fake
- *   browser chrome bar — for desktop/web screenshots). `layout` (1-4)
+ *   9:18.4, for mobile screenshots) or "browser" (landscape, with a fake
+ *   browser chrome bar, for desktop/web screenshots). `layout` (1-4)
  *   picks one of four different rotation/scale/stagger presets so the four
  *   pages using this mode don't all look identical.
  * - "single": one real featured image, optionally with a "play" affordance
  *   if a showcase video exists (used instead of a fabricated collage when
  *   only one real asset exists for that service). If no usable real asset
- *   exists at all — or the only one found turns out to be an unlicensed
+ *   exists at all, or the only one found turns out to be an unlicensed
  *   "preview image only" stock photo, as the game-development stock asset
- *   did — pass `visual` (a React node, typically a bespoke inline-SVG
+ *   did, pass `visual` (a React node, typically a bespoke inline-SVG
  *   illustration) instead of `image` to render that in the same frame.
  */
 const ServiceHero = ({ mode, tiles, tileShape = "phone", layout = 1, image, imageAlt, videoId, visual }) => {

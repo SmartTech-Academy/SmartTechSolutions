@@ -1,6 +1,6 @@
 import ScrollRevealSection from "@/my_components/_Global/ScrollRevealSection";
 
-// Copy written specifically for mobile app delivery per industry — not the
+// Copy written specifically for mobile app delivery per industry, not the
 // shared industries.json (which carries NFT-marketplace leftover text from
 // an older page).
 const INDUSTRIES = [
@@ -18,7 +18,7 @@ const INDUSTRIES = [
  * Modeled directly on cubix.co/hybrid-app-development-services's "Proven
  * Hybrid App Development Expertise Tailored for Industries" section: a
  * plain light background, a split header (large heading left, supporting
- * paragraph right), and a flat, uniform grid of minimal cards — name plus
+ * paragraph right), and a flat, uniform grid of minimal cards, name plus
  * one line, no icons, no borders, no dark theme. Replaces the previous
  * interactive tabbed directory to match that reference exactly.
  */

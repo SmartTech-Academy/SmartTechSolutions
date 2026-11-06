@@ -1,0 +1,431 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   SmartTechAcademyProject — Indigo / Amber EdTech Theme
+   All rules are scoped to .smarttech-academy-theme so they never bleed
+   into other project pages. Import via pages/_app.js.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── CSS variable overrides ───────────────────────────────────────────── */
+.smarttech-academy-theme {
+  --digi-orange: #4338ca;
+  --digi-green:  #f59e0b;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   HERO
+   ════════════════════════════════════════════════════════════════════════ */
+
+.smarttech-academy-theme .digi-hero {
+  background:
+    radial-gradient(ellipse at 72% 14%, rgba(67, 56, 202, 0.38) 0%, transparent 42%),
+    radial-gradient(ellipse at 18% 82%, rgba(245, 158, 11, 0.16) 0%, transparent 32%),
+    radial-gradient(ellipse at 45% 55%, rgba(49, 46, 129, 0.16) 0%, transparent 50%),
+    linear-gradient(155deg, #0b0a1f 0%, #141133 55%, #0a0918 100%);
+}
+
+/* Aurora blobs — indigo + amber */
+.smarttech-academy-theme .digi-aurora span:nth-child(1) {
+  background: radial-gradient(circle, rgba(67, 56, 202, 0.52) 0%, transparent 70%);
+  animation-duration: 19s;
+}
+.smarttech-academy-theme .digi-aurora span:nth-child(2) {
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.30) 0%, transparent 70%);
+  animation-duration: 25s;
+  animation-delay: -8s;
+}
+.smarttech-academy-theme .digi-aurora span:nth-child(3) {
+  background: radial-gradient(circle, rgba(129, 140, 248, 0.26) 0%, transparent 70%);
+  animation-duration: 31s;
+  animation-delay: -14s;
+}
+
+/* Gradient text — indigo-to-amber shimmer */
+.smarttech-academy-theme .digi-hero-title .digi-gradient {
+  background: linear-gradient(90deg,
+    #4338ca 0%,
+    #6366f1 25%,
+    #f59e0b 50%,
+    #6366f1 75%,
+    #4338ca 100%
+  );
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero tags */
+.smarttech-academy-theme .digi-hero-tag.tag-primary {
+  background:   rgba(67, 56, 202, 0.20);
+  border-color: rgba(67, 56, 202, 0.48);
+  color: #a5b4fc;
+}
+.smarttech-academy-theme .digi-hero-tag.tag-accent {
+  background:   rgba(245, 158, 11, 0.16);
+  border-color: rgba(245, 158, 11, 0.38);
+  color: #fcd34d;
+}
+
+/* Scroll cue */
+.smarttech-academy-theme .digi-scroll-mouse {
+  border-color: rgba(129, 140, 248, 0.5);
+}
+.smarttech-academy-theme .digi-scroll-mouse::after {
+  background: #fcd34d;
+}
+
+/* HV glow */
+.smarttech-academy-theme .digi-hv-glow {
+  background: radial-gradient(ellipse at center, rgba(67, 56, 202, 0.32) 0%, transparent 70%);
+}
+
+/* Browser chrome — first dot indigo */
+.smarttech-academy-theme .digi-hv-db-chrome span:nth-child(1) { background: #4338ca; }
+
+/* Glass stats */
+.smarttech-academy-theme .digi-glass-stat strong { color: #a5b4fc; }
+.smarttech-academy-theme .digi-glass-stat strong em { color: #fcd34d; }
+
+/* ════════════════════════════════════════════════════════════════════════
+   KICKER & HEADING SHIMMER
+   ════════════════════════════════════════════════════════════════════════ */
+
+.smarttech-academy-theme .digi-kicker::before {
+  background: #4338ca;
+}
+
+.smarttech-academy-theme .digi-client-heading::before,
+.smarttech-academy-theme .digi-app-heading::before,
+.smarttech-academy-theme .digi-process-heading::before,
+.smarttech-academy-theme .digi-craft-heading::before,
+.smarttech-academy-theme .digi-engage-heading::before {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(67, 56, 202, 0.38) 50%,
+    transparent 100%
+  );
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   FACTS TABLE
+   ════════════════════════════════════════════════════════════════════════ */
+
+.smarttech-academy-theme .digi-facts-header {
+  background: linear-gradient(135deg, #312e81 0%, #4338ca 50%, #4f46e5 100%);
+}
+.smarttech-academy-theme .digi-fact-row:hover { background: #eef2ff; }
+.smarttech-academy-theme .digi-fact-row--highlight span { color: #4338ca; }
+.smarttech-academy-theme .digi-fact-row--highlight { background: linear-gradient(90deg, #e0e7ff 0%, #ffffff 100%); }
+
+/* Client badge icon */
+.smarttech-academy-theme .digi-cb-icon {
+  background: rgba(67, 56, 202, 0.12);
+  color: #4338ca;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   ABOUT THE APP
+   ════════════════════════════════════════════════════════════════════════ */
+
+.smarttech-academy-theme .digi-app-visual-glow {
+  background: radial-gradient(ellipse at 80% 50%, rgba(67, 56, 202, 0.22) 0%, transparent 65%);
+}
+
+.smarttech-academy-theme .digi-app-browser-chrome span:nth-child(1) { background: #4338ca; }
+
+/* Browser chrome standard dots */
+.smarttech-academy-theme .digi-browser-chrome span:nth-child(1) { background: #fc5f5a; }
+.smarttech-academy-theme .digi-browser-chrome span:nth-child(2) { background: #fdbc40; }
+.smarttech-academy-theme .digi-browser-chrome span:nth-child(3) { background: #35cd4b; }
+
+/* No-phone visual — browser takes full height, matches app-section layout without a phone mockup */
+.smarttech-academy-theme .digi-app-visual .digi-app-browser {
+  width: 100%;
+  position: relative;
+  bottom: auto;
+  right: auto;
+  transform: none;
+  animation: digi-app-float-browser 6s ease-in-out infinite;
+}
+
+/* Stack tags */
+.smarttech-academy-theme .digi-stack-tag {
+  background:   rgba(67, 56, 202, 0.08);
+  border-color: rgba(67, 56, 202, 0.30);
+  color: #4338ca;
+}
+.smarttech-academy-theme .digi-stack-tag:hover {
+  background:   rgba(67, 56, 202, 0.16);
+  border-color: rgba(67, 56, 202, 0.52);
+  box-shadow: 0 6px 18px rgba(67, 56, 202, 0.22);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   CHALLENGE
+   ════════════════════════════════════════════════════════════════════════ */
+
+.smarttech-academy-theme .digi-challenge-section {
+  background:
+    radial-gradient(ellipse at 80% 12%, rgba(67, 56, 202, 0.22) 0%, transparent 40%),
+    radial-gradient(ellipse at 10% 88%, rgba(245, 158, 11, 0.14) 0%, transparent 36%),
+    linear-gradient(160deg, #0b0a1f 0%, #141133 60%, #0a0918 100%);
+}
+
+.smarttech-academy-theme .digi-challenge-num {
+  background: rgba(67, 56, 202, 0.18);
+  color: #a5b4fc;
+}
+.smarttech-academy-theme .digi-challenge-card:hover {
+  border-color: rgba(67, 56, 202, 0.52);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(67, 56, 202, 0.20);
+}
+.smarttech-academy-theme .digi-challenge-card:hover h4         { color: #c7d2fe; }
+.smarttech-academy-theme .digi-challenge-card:hover .digi-challenge-num {
+  background: rgba(67, 56, 202, 0.30);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   MARQUEE (USER ENGAGEMENT)
+   ════════════════════════════════════════════════════════════════════════ */
+
+.smarttech-academy-theme .digi-engage-section {
+  background: linear-gradient(180deg, #eef2ff 0%, #e0e7ff 55%, #fef3c7 100%);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   MOBILE EXPERIENCE — phone-frame showcase grid
+   ════════════════════════════════════════════════════════════════════════ */
+
+.sta-mobile-section {
+  background: linear-gradient(150deg, #fafaff 0%, #f5f3ff 55%, #fffbeb 100%);
+}
+
+.sta-mobile-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px 24px;
+}
+
+@media (max-width: 1199px) {
+  .sta-mobile-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 767px) {
+  .sta-mobile-grid { grid-template-columns: repeat(2, 1fr); gap: 24px 16px; }
+}
+
+.sta-phone-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sta-phone-frame {
+  position: relative;
+  width: 100%;
+  max-width: 180px;
+  aspect-ratio: 9 / 19.5;
+  border: 7px solid #0b1220;
+  border-radius: 26px;
+  background: #0b1220;
+  overflow: hidden;
+  box-shadow: 0 18px 44px rgba(49, 46, 129, 0.22), 0 2px 10px rgba(0, 0, 0, 0.12);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.sta-phone-card:hover .sta-phone-frame {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 26px 60px rgba(67, 56, 202, 0.30), 0 2px 10px rgba(0, 0, 0, 0.14);
+}
+
+.sta-phone-notch {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 38%;
+  height: 14px;
+  background: #0b1220;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.sta-phone-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.sta-phone-label {
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #312e81;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.active-dark-mode .sta-mobile-section {
+  background: linear-gradient(150deg, #0b0a1f 0%, #141133 100%);
+}
+.active-dark-mode .sta-phone-label {
+  color: #c7d2fe;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   PROCESS
+   ════════════════════════════════════════════════════════════════════════ */
+
+.smarttech-academy-theme .digi-process-section {
+  background:
+    radial-gradient(ellipse at 88% 10%, rgba(67, 56, 202, 0.22) 0%, transparent 42%),
+    radial-gradient(ellipse at 8%  90%, rgba(245, 158, 11, 0.14) 0%, transparent 38%),
+    radial-gradient(ellipse at 50% 50%, rgba(49, 46, 129, 0.12) 0%, transparent 65%),
+    linear-gradient(150deg, #0a0918 0%, #171440 45%, #090817 100%);
+}
+
+.smarttech-academy-theme .digi-process-section .digi-kicker { color: rgba(255, 255, 255, 0.65); }
+.smarttech-academy-theme .digi-process-heading { color: #ffffff; }
+.smarttech-academy-theme .digi-process-lead    { color: rgba(255, 255, 255, 0.62); }
+
+.smarttech-academy-theme .digi-process-card {
+  background:   rgba(255, 255, 255, 0.06);
+  border-color: rgba(67, 56, 202, 0.30);
+}
+.smarttech-academy-theme .digi-process-card h4 { color: #ffffff; }
+.smarttech-academy-theme .digi-process-card p  { color: rgba(255, 255, 255, 0.60); }
+
+.smarttech-academy-theme .digi-process-card::before {
+  background: linear-gradient(90deg, #4338ca, #f59e0b);
+}
+
+.smarttech-academy-theme .digi-process-num {
+  color: rgba(67, 56, 202, 0.24);
+}
+
+.smarttech-academy-theme .digi-process-card:hover {
+  background:   rgba(67, 56, 202, 0.12);
+  border-color: rgba(67, 56, 202, 0.55);
+  box-shadow:   0 28px 68px rgba(10, 9, 24, 0.60);
+}
+.smarttech-academy-theme .digi-process-card:hover .digi-process-num {
+  color:       rgba(99, 102, 241, 0.42);
+  text-shadow: 0 0 40px rgba(99, 102, 241, 0.48);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   ENHANCING EXPERIENCE (CRAFT)
+   ════════════════════════════════════════════════════════════════════════ */
+
+.smarttech-academy-theme .digi-craft-section {
+  background:
+    radial-gradient(ellipse at 70% 30%, rgba(67, 56, 202, 0.08) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 75%, rgba(245, 158, 11, 0.06) 0%, transparent 45%),
+    linear-gradient(150deg, #eef2ff 0%, #e0e7ff 45%, #fffbeb 100%);
+}
+
+.smarttech-academy-theme .digi-li-icon {
+  background: rgba(67, 56, 202, 0.10);
+  color: #4338ca;
+}
+.smarttech-academy-theme .digi-craft-list li:hover .digi-li-icon {
+  background: rgba(67, 56, 202, 0.20);
+}
+.smarttech-academy-theme .digi-craft-list li:hover {
+  box-shadow:   0 8px 30px rgba(67, 56, 202, 0.12);
+  border-color: rgba(67, 56, 202, 0.32);
+}
+
+.smarttech-academy-theme .digi-float-card {
+  border-color: rgba(67, 56, 202, 0.24);
+}
+.smarttech-academy-theme .digi-float-card strong { color: #4338ca; }
+
+/* ════════════════════════════════════════════════════════════════════════
+   SOLUTION & RESULTS
+   ════════════════════════════════════════════════════════════════════════ */
+
+.smarttech-academy-theme .digi-solution-section {
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(67, 56, 202, 0.18) 0%, transparent 40%),
+    radial-gradient(ellipse at 80% 20%, rgba(245, 158, 11, 0.12) 0%, transparent 38%),
+    linear-gradient(155deg, #0b0a1f 0%, #141133 60%, #0a0918 100%);
+}
+
+.smarttech-academy-theme .digi-result-icon {
+  background: rgba(67, 56, 202, 0.18);
+  color: #a5b4fc;
+}
+.smarttech-academy-theme .digi-result-card:hover {
+  border-color: rgba(67, 56, 202, 0.42);
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.40), 0 0 0 1px rgba(67, 56, 202, 0.18);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   METRICS STRIP
+   ════════════════════════════════════════════════════════════════════════ */
+
+.smarttech-academy-theme .digi-metrics-strip {
+  background: linear-gradient(135deg, #0b0a1f 0%, #141133 60%, #0a0918 100%);
+  border-top:    1px solid rgba(67, 56, 202, 0.16);
+  border-bottom: 1px solid rgba(67, 56, 202, 0.16);
+}
+.smarttech-academy-theme .digi-info-icon  { color: #a5b4fc; }
+.smarttech-academy-theme .digi-info-num   { color: #fcd34d; }
+.smarttech-academy-theme .digi-info-label { color: rgba(255, 255, 255, 0.50); }
+.smarttech-academy-theme .digi-info-item  { border-right-color: rgba(67, 56, 202, 0.16); }
+.smarttech-academy-theme .digi-info-item:hover { background: rgba(67, 56, 202, 0.09); }
+
+/* ════════════════════════════════════════════════════════════════════════
+   ENHANCED HOVER & TRANSITION OVERRIDES (indigo variants)
+   ════════════════════════════════════════════════════════════════════════ */
+
+.smarttech-academy-theme .digi-client-badge:hover {
+  border-color: rgba(67, 56, 202, 0.38);
+  box-shadow: 0 8px 32px rgba(67, 56, 202, 0.14);
+}
+.smarttech-academy-theme .digi-client-badge:hover .digi-cb-icon {
+  background: rgba(67, 56, 202, 0.22);
+}
+
+.smarttech-academy-theme .digi-web-card:hover {
+  box-shadow: 0 32px 80px rgba(10, 9, 24, 0.22),
+              0 0 0 2px rgba(67, 56, 202, 0.26);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   DARK MODE OVERRIDES
+   ════════════════════════════════════════════════════════════════════════ */
+
+.active-dark-mode .smarttech-academy-theme .digi-engage-section {
+  background: linear-gradient(180deg, #0b0a1f 0%, #0f0e24 100%);
+}
+.active-dark-mode .smarttech-academy-theme .digi-process-section {
+  background:
+    radial-gradient(ellipse at 88% 10%, rgba(67, 56, 202, 0.16) 0%, transparent 42%),
+    linear-gradient(150deg, #090817 0%, #141032 45%, #080715 100%);
+}
+.active-dark-mode .smarttech-academy-theme .digi-process-card {
+  background:   rgba(255, 255, 255, 0.05);
+  border-color: rgba(67, 56, 202, 0.24);
+}
+.active-dark-mode .smarttech-academy-theme .digi-craft-section {
+  background: linear-gradient(150deg, #0b0a1f 0%, #0f0e24 100%);
+}
+.active-dark-mode .smarttech-academy-theme .digi-fact-row:hover {
+  background: rgba(67, 56, 202, 0.08);
+}
+.active-dark-mode .smarttech-academy-theme .digi-float-card {
+  border-color: rgba(67, 56, 202, 0.20);
+  background: rgba(67, 56, 202, 0.06);
+}
+.active-dark-mode .smarttech-academy-theme .digi-stack-tag {
+  background:   rgba(67, 56, 202, 0.08);
+  border-color: rgba(67, 56, 202, 0.26);
+  color: #c7d2fe;
+}
+.active-dark-mode .smarttech-academy-theme .digi-result-card:hover {
+  box-shadow: 0 8px 32px rgba(67, 56, 202, 0.14);
+}

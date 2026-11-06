@@ -23,7 +23,7 @@ const AllBlogs = ({ posts = [] }) => {
   }, []);
 
   // The masthead leads with exactly one non-NEWS story and one NEWS story
-  // — `posts` is already sorted newest-first (WPGraphQL's default), so
+  //, `posts` is already sorted newest-first (WPGraphQL's default), so
   // `.find()` picks up the latest post of each kind. The full set
   // (including these 2 again) still flows through the magazine grid below.
   const latestNonNewsPost = posts.find((post) => !post.categories.includes("NEWS"));
@@ -56,7 +56,7 @@ const AllBlogs = ({ posts = [] }) => {
                 Ideas, engineering &amp; <span className="theme-gradient rbt-blog-hero-gradient">innovation</span> notes
               </h1>
               <p className="blog-hero__desc">
-                Stay informed with the latest updates and announcements from {CONFIG.NICK_NAME} — product
+                Stay informed with the latest updates and announcements from {CONFIG.NICK_NAME}, product
                 deep-dives, engineering breakdowns, AI experiments and the occasional build-in-public story.
               </p>
             </div>

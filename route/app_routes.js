@@ -40,6 +40,7 @@ export const ROUTE = {
 
   project: "/projects",
   digistate_project: "/projects/digistate",
+  smarttech_academy_project: "/projects/smarttech-academy",
   jpgc_app_project: "/projects/jpgc-app",
   flatshare_project: "/projects/flatshare",
   dts_project: "/projects/dts",

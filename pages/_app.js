@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Script from "next/script";
 
 import "bootstrap/scss/bootstrap.scss";
-// The only Euclid Circular @font-face import — public/css/plugins/euclid-
+// The only Euclid Circular @font-face import, public/css/plugins/euclid-
 // circulara.css used to be imported too (below), but it's a stale compiled
 // copy of this exact file (same 10 @font-face rules, byte-for-byte
 // identical font URLs) minus `font-display: swap`, so every page shipped
@@ -52,6 +52,7 @@ import "../public/css/pages/XabiProject.css";
 import "../public/css/pages/LodapointProject.css";
 import "../public/css/pages/MfmEbookProject.css";
 import "../public/css/pages/JpgcAndNftProject.css";
+import "../public/css/pages/SmartTechAcademyProject.css";
 // ========= Page-level CSS END =========
 
 import Context from "@/context/Context";
@@ -83,7 +84,7 @@ export default function App({ Component, pageProps }) {
         </RouteTransition>
       </Context>
 
-      {/* Google Analytics (gtag.js) — afterInteractive: fires once the page
+      {/* Google Analytics (gtag.js), afterInteractive: fires once the page
           is interactive, same timing Next.js recommends for GA so it never
           competes with the initial render/hydration for main-thread time. */}
       <Script
@@ -99,7 +100,7 @@ export default function App({ Component, pageProps }) {
         `}
       </Script>
 
-      {/* Tawk.to live chat — lazyOnload: a chat widget isn't needed for the
+      {/* Tawk.to live chat, lazyOnload: a chat widget isn't needed for the
           first paint or for anything above the fold, so it loads dead last,
           once the browser is idle, instead of competing with real content
           for bandwidth/main-thread time during the page's critical path. */}

@@ -44,12 +44,12 @@ export const Banner = () => {
   // leaving the (finished, identity-transform) animation attached. Some
   // engines keep an animated element promoted to its own compositing
   // layer for a while after a transform animation ends, which can make
-  // text on that layer render a touch softer than normal — most visible
+  // text on that layer render a touch softer than normal, most visible
   // on the large title. Clearing `animation` on animationend forces a
   // clean repaint back in the normal (non-layered) text rendering path.
   const clearAnimation = (event) => {
     const el = event.currentTarget;
-    // The base .rbt-hero-wonder rule starts at opacity: 0 — that was only
+    // The base .rbt-hero-wonder rule starts at opacity: 0, that was only
     // ever being held at 1 by the (now finished) animation's fill-mode,
     // so it must be pinned explicitly before the animation is cleared or
     // the element snaps straight back to its hidden starting state.

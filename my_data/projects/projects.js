@@ -1,7 +1,7 @@
 import { ROUTE } from "@/route/app_routes.js";
 import { image_url } from "@/helper/Utilities";
 
-// Single source of truth for project case-study data — shared by the
+// Single source of truth for project case-study data, shared by the
 // "Our Projects" page (my_components/_Projects/SmartTechProjects.js) and
 // the homepage's "Top Projects" section (my_components/Cards/ProjectsCards.js)
 // so both always show the same cover images, taglines, and links.
@@ -31,8 +31,24 @@ export const projects = [
     ],
   },
   {
-    id: 2,
+    id: 12,
     number: "02",
+    label: "EdTech · Internal Product",
+    name: "SmartTech Academy",
+    tagline: "Free Tech Education, Engineered Like a Product.",
+    description:
+      "SmartTech Academy is the digital brainchild of SmartTech Academy, a free technology academy platform with live classrooms, courses, quizzes, ticketed events, and publicly verifiable certification, engineered end to end by SmartTech Solutions.",
+    industry: "Education Technology · Free Learning",
+    platform: "Web Application + Dedicated Mobile Experience",
+    team: "6 Developers & Designers · 3 QA Engineers",
+    cover: image_url("/app_images/projects/smarttech_academy/desktop/home.webp", true),
+    href: ROUTE.smarttech_academy_project,
+    cta: "View Case Study",
+    stack: ["NextJS", "Laravel", "MySQL", "Redis", "Docker", "Nginx", "REST API", "Queue Workers"],
+  },
+  {
+    id: 2,
+    number: "03",
     label: "Web3 · Digital Asset",
     name: "Japaul Gold Coin & NFT",
     tagline: "Gold Backed Crypto & NFT",
@@ -48,7 +64,7 @@ export const projects = [
   },
   {
     id: 3,
-    number: "03",
+    number: "04",
     label: "Haulage · Logitech",
     name: "Lodapoint App",
     tagline: "Connecting Cargo, Empowering Journeys.",
@@ -162,7 +178,7 @@ export const projects = [
   // },
   {
     id: 10,
-    number: "10",
+    number: "09",
     label: "FaithTech · RelTech",
     name: "MFM eBooks",
     tagline: "Growing Believers. Transforming Lives.",
@@ -178,7 +194,7 @@ export const projects = [
   },
   {
     id: 11,
-    number: "11",
+    number: "10",
     label: "Real Estate · PropTech",
     name: "Xabi",
     tagline: "Modern Real Estate, Reimagined.",

@@ -4,10 +4,10 @@ import Link from "next/link";
 import { projects } from "@/my_data/projects/projects.js";
 import ScrollRevealSection from "@/my_components/_Global/ScrollRevealSection";
 
-// Same three case studies that lead the real "Our Projects" page — kept in
+// Same four case studies that lead the real "Our Projects" page, kept in
 // sync from the single shared `projects` data module so the homepage never
 // drifts from the actual project content/images again.
-const FEATURED_PROJECT_IDS = [1, 2, 3];
+const FEATURED_PROJECT_IDS = [1, 12, 2, 3];
 
 const ProjectsCards = ({ invoked = "homepage" }) => {
   const featured = FEATURED_PROJECT_IDS

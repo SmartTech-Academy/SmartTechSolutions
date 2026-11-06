@@ -17,7 +17,7 @@ const Careers = () => {
     <>
       <PageHead
         title="Careers at SmartTech Solutions | Join Our Team"
-        description="Join SmartTech Solutions — a senior, remote-friendly team building web, mobile, AI, and blockchain products for real clients. See open roles and our hiring process."
+        description="Join SmartTech Solutions, a senior, remote-friendly team building web, mobile, AI, and blockchain products for real clients. See open roles and our hiring process."
         image="/app_images/careers/careers_hero.webp"
         path="/careers"
       />

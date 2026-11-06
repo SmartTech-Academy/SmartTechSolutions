@@ -22,7 +22,7 @@ const EventHead = () => {
                   <div className=" title-wrapper">
                     <h1 className="title mb--0">Top trending Events in { "{Nigeria}" }</h1>
                   </div>
-                  <p className="description"> Your next extraordinary adventure awaits—unlock it with just one click.{" "} </p>
+                  <p className="description"> Your next extraordinary adventure awaits, unlock it with just one click.{" "} </p>
                 </div>
               </div>
             </div>

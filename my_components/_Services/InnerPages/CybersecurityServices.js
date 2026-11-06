@@ -10,14 +10,14 @@ import ServiceFaq from "./sections/ServiceFaq";
 import CysecFaqVisual from "./sections/CysecFaqVisual";
 import FaqData from "@/my_data/services/faq.json";
 
-// Problem-first framing before the capability catalog — the risk a
+// Problem-first framing before the capability catalog, the risk a
 // business is actually carrying is what makes the 12 pillars below land as
 // necessary rather than a generic vendor checklist.
 const RISK_DRIVERS = [
-  { icon: "feather-trending-up", title: "Threats are outpacing generic defenses", desc: "Attackers now automate reconnaissance and phishing at scale — a static firewall-and-antivirus setup from five years ago isn't a real defense against them anymore." },
+  { icon: "feather-trending-up", title: "Threats are outpacing generic defenses", desc: "Attackers now automate reconnaissance and phishing at scale, a static firewall-and-antivirus setup from five years ago isn't a real defense against them anymore." },
   { icon: "feather-alert-triangle", title: "A breach costs more than the breach itself", desc: "Downtime, customer trust, and regulatory exposure under frameworks like GDPR, HIPAA, and ISO 27001 usually outweigh the direct cost of the incident." },
-  { icon: "feather-globe", title: "Your attack surface keeps expanding", desc: "Cloud infrastructure, remote teams, and connected devices all add new doors in — each one needs to be accounted for, not just the network perimeter." },
-  { icon: "feather-user-x", title: "People are still the easiest way in", desc: "Most breaches start with a convincing email, not a sophisticated exploit — technology alone can't close a gap that begins with human behavior." },
+  { icon: "feather-globe", title: "Your attack surface keeps expanding", desc: "Cloud infrastructure, remote teams, and connected devices all add new doors in, each one needs to be accounted for, not just the network perimeter." },
+  { icon: "feather-user-x", title: "People are still the easiest way in", desc: "Most breaches start with a convincing email, not a sophisticated exploit, technology alone can't close a gap that begins with human behavior." },
 ];
 
 // The 12 capability pillars behind SmartTech's Cybersecurity practice.
@@ -32,15 +32,15 @@ const CAPABILITIES = [
   { icon: "feather-search", title: "Vulnerability Management", desc: "Continuous scanning, prioritization, and remediation of security gaps before attackers find them first." },
   { icon: "feather-server", title: "Infrastructure Security", desc: "Hardened cloud, network, and server architecture built to resist intrusion from day one, not patched after the fact." },
   { icon: "feather-eye", title: "Threat Intelligence", desc: "Real-time visibility into the tactics, actors, and vulnerabilities actively targeting your industry." },
-  { icon: "feather-radio", title: "MDR/XDR", desc: "24/7 managed detection and response across endpoints, network, and cloud — backed by real analysts, not just alerts." },
-  { icon: "feather-shield", title: "DFIR — Digital Forensics & Incident Response", desc: "Rapid breach containment, root-cause investigation, and recovery support when an incident does happen." },
+  { icon: "feather-radio", title: "MDR/XDR", desc: "24/7 managed detection and response across endpoints, network, and cloud, backed by real analysts, not just alerts." },
+  { icon: "feather-shield", title: "DFIR, Digital Forensics & Incident Response", desc: "Rapid breach containment, root-cause investigation, and recovery support when an incident does happen." },
 ];
 
 const WHY_POINTS = [
-  "Full-stack security thinking — baked into architecture, not bolted on after launch",
+  "Full-stack security thinking, baked into architecture, not bolted on after launch",
   "24/7 monitoring and managed detection & response (MDR/XDR) coverage",
-  "Real incident response experience — containment, forensics, and recovery",
-  "Compliance-ready controls mapped to GDPR, HIPAA, and ISO 27001 — access logging, encryption, and audit trails by default",
+  "Real incident response experience, containment, forensics, and recovery",
+  "Compliance-ready controls mapped to GDPR, HIPAA, and ISO 27001, access logging, encryption, and audit trails by default",
   "Security awareness training that actually changes employee behavior",
   "One accountable partner instead of a dozen disconnected vendors",
 ];
@@ -74,8 +74,7 @@ const CybersecurityServices = () => {
               Security that keeps pace with what you&apos;re building
             </h1>
             <p className="cysec-hero__desc">
-              From identity and access management to 24/7 managed detection and incident response —
-              we design and run the security layer serious software deserves, so a breach never becomes
+              From identity and access management to 24/7 managed detection and incident response,               we design and run the security layer serious software deserves, so a breach never becomes
               the story of your business.
             </p>
             <div className="rbt-button-group">
@@ -107,12 +106,12 @@ const CybersecurityServices = () => {
         </div>
       </section>
 
-      {/* ══════════════ WHY SECURITY CAN'T WAIT — problem-first framing ══════════════ */}
+      {/* ══════════════ WHY SECURITY CAN'T WAIT, problem-first framing ══════════════ */}
       <section className="cysec-section rbt-section-gapTop">
         <div className="container">
           <ScrollRevealSection className="cysec-section__head">
             <span className="subtitle bg-primary-opacity">Why this matters now</span>
-            <h2 className="title">The risk isn&apos;t hypothetical — it&apos;s already at your door</h2>
+            <h2 className="title">The risk isn&apos;t hypothetical, it&apos;s already at your door</h2>
           </ScrollRevealSection>
 
           <div className="row row--15 mt_dec--30">
@@ -141,7 +140,7 @@ const CybersecurityServices = () => {
                   Security engineered by the same team that <span className="theme-gradient">builds your software.</span>
                 </h2>
                 <p className="description has-medium-font-size mt--20">
-                  We don&apos;t bolt security on after launch — it&apos;s designed into every architecture
+                  We don&apos;t bolt security on after launch, it&apos;s designed into every architecture
                   decision, from the first line of code to the systems monitoring it in production.
                 </p>
               </div>
@@ -151,7 +150,7 @@ const CybersecurityServices = () => {
         </div>
       </div>
 
-      {/* ══════════════ CAPABILITIES — dark animated backdrop ══════════════ */}
+      {/* ══════════════ CAPABILITIES, dark animated backdrop ══════════════ */}
       <section className="cysec-caps">
         <span className="cysec-caps__grid-bg" aria-hidden="true" />
         <span className="cysec-caps__glow cysec-caps__glow--one" aria-hidden="true" />
@@ -162,7 +161,7 @@ const CybersecurityServices = () => {
             <span className="subtitle bg-primary-opacity">Full coverage</span>
             <h2 className="title color-white">12 pillars of a real security program</h2>
             <p className="description">
-              Not a checklist — a connected security practice, each pillar reinforcing the next.
+              Not a checklist, a connected security practice, each pillar reinforcing the next.
             </p>
           </ScrollRevealSection>
 
@@ -204,7 +203,7 @@ const CybersecurityServices = () => {
                   <div className="section-title">
                     <h2 className="title">Why SmartTech for Cybersecurity Services</h2>
                     <p className="b1 mt--15">
-                      Security isn&apos;t a product we resell — it&apos;s a discipline we practice on every
+                      Security isn&apos;t a product we resell, it&apos;s a discipline we practice on every
                       system we build and every client we protect, backed by real engineers who understand
                       how the software underneath actually works.
                     </p>

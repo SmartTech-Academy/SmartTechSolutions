@@ -1,10 +1,10 @@
 /**
- * Bespoke inline-SVG hero illustration for the Game Development page — the
+ * Bespoke inline-SVG hero illustration for the Game Development page, the
  * only "real" game-specific asset in the project library (project_3.webp)
  * turned out to be a mismatched, watermarked "preview image only" stock
  * photo unrelated to any shipped SmartTech game, so it isn't used here.
  * This is an original, abstract game-development scene (controller,
- * level HUD, character silhouette) instead — vector, no network request,
+ * level HUD, character silhouette) instead, vector, no network request,
  * crisp at any size, tinted by the page's own accent color.
  */
 const GameHeroVisual = () => {

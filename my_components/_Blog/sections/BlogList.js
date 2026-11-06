@@ -13,7 +13,7 @@ const BlogList = ({ posts = [], isPagination }) => {
   const [page, setPage] = useState(1);
 
   // Category pills are derived from whatever the fetched posts actually
-  // carry — a fixed list would silently drift out of sync with WordPress
+  // carry, a fixed list would silently drift out of sync with WordPress
   // the moment someone adds/renames a category over there.
   const categories = useMemo(() => {
     const unique = new Set(posts.map((post) => post.category).filter(Boolean));
@@ -73,7 +73,7 @@ const BlogList = ({ posts = [], isPagination }) => {
         <ScrollRevealSection className="blog-empty" threshold={0.1}>
           <i className="feather-inbox" aria-hidden="true"></i>
           <h5>No articles here yet</h5>
-          <p>We haven&apos;t published in this category yet — check back soon or explore another topic.</p>
+          <p>We haven&apos;t published in this category yet, check back soon or explore another topic.</p>
         </ScrollRevealSection>
       )}
 

@@ -37,7 +37,7 @@ const MobileAppDevelopmentServices = () => {
 
   return (
     <>
-      {/* ══════════════ HERO — heading + real-project screen collage ══════════════ */}
+      {/* ══════════════ HERO, heading + real-project screen collage ══════════════ */}
       <div className="rbt-banner-area rbt-banner-8 variation-02 breadcrumb-image-container breadcrumb-style-max-width">
         <div className="container">
           <div className="breadcrumb-content-top text-left rbt-reveal" style={{ "--reveal-delay": "0.05s" }}>
@@ -55,7 +55,7 @@ const MobileAppDevelopmentServices = () => {
         </div>
       </div>
 
-      {/* ══════════════ PARTNER MARQUEE — moved directly under the headline,
+      {/* ══════════════ PARTNER MARQUEE, moved directly under the headline,
           above the hero image, matching Cubix's hero → trust row → hero
           image order ══════════════ */}
       <div className="rbt-brand-area bg-color-white ptb--60">
@@ -97,17 +97,17 @@ const MobileAppDevelopmentServices = () => {
         </div>
       </div>
 
-      {/* ══════════════ PARTNER MARQUEE — dynamic, auto-loads from /trusted_by_brands ══════════════ */}
+      {/* ══════════════ PARTNER MARQUEE, dynamic, auto-loads from /trusted_by_brands ══════════════ */}
       <div className="rbt-brand-area bg-color-white ptb--60">
         <div className="container">
           <Brands2 hide_text="false" title="Trusted by ambitious teams and brands" />
         </div>
       </div>
 
-      {/* ══════════════ MOBILE APP SUCCESS STORIES — real shipped projects ══════════════ */}
+      {/* ══════════════ MOBILE APP SUCCESS STORIES, real shipped projects ══════════════ */}
       <MobileSuccessStories />
 
-      {/* ══════════════ ALL-IN-ONE SERVICES — dark animated backdrop ══════════════ */}
+      {/* ══════════════ ALL-IN-ONE SERVICES, dark animated backdrop ══════════════ */}
       <div className="mad-services">
         <span className="mad-services__grid-bg" aria-hidden="true" />
         <span className="mad-services__glow mad-services__glow--one" aria-hidden="true" />
@@ -242,10 +242,10 @@ const MobileAppDevelopmentServices = () => {
         <Testimonial_1 />
       </div>
 
-      {/* ══════════════ INDUSTRIES — bespoke interactive bento showcase ══════════════ */}
+      {/* ══════════════ INDUSTRIES, bespoke interactive bento showcase ══════════════ */}
       <MobileIndustriesShowcase />
 
-      {/* ══════════════ READY-TO-START CTA — dark accent-grid + phone mockup ══════════════ */}
+      {/* ══════════════ READY-TO-START CTA, dark accent-grid + phone mockup ══════════════ */}
       <MobileReadyCta />
 
       {/* ══════════════ FAQ ══════════════ */}

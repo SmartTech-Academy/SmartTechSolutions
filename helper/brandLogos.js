@@ -1,8 +1,7 @@
 import { isBrandLogoColorLocked } from "@/helper/Utilities";
 
 // Known filename -> friendlier display name. Anything dropped into
-// public/app_images/trusted_by_brands that isn't listed here still works —
-// it just falls back to an auto-title-cased version of the filename.
+// public/app_images/trusted_by_brands that isn't listed here still works, // it just falls back to an auto-title-cased version of the filename.
 const NAME_OVERRIDES = {
   JAPAUL: "Japaul Group",
   EXPERT_WRITERS: "Expert Writers",
@@ -21,7 +20,7 @@ const toTitleCase = (name) =>
     .replace(/\b\w/g, (letter) => letter.toUpperCase());
 
 // Pulls every image directly inside public/app_images/trusted_by_brands at
-// build time — drop a new logo in that folder (or delete one) and every
+// build time, drop a new logo in that folder (or delete one) and every
 // consumer of BRAND_LOGOS (the homepage/marquee trust strip, and every
 // testimonial component's company logo) picks it up automatically, no code
 // or data-file changes needed. `require.context` is a webpack feature,
@@ -38,7 +37,7 @@ export const BRAND_LOGOS = logosContext
   .map((key) => {
     const mod = logosContext(key);
     // `require.context` key formats aren't guaranteed identical between the
-    // server and client webpack bundles (Next.js builds both) — one has been
+    // server and client webpack bundles (Next.js builds both), one has been
     // observed returning a short "./DATAQUEUE.png" key and the other a full
     // "public/app_images/trusted_by_brands/DATAQUEUE.png" path, and a naive
     // `.replace("./", "")` only strips a literal leading "./", leaving the

@@ -4,11 +4,11 @@ import ScrollRevealSection from "@/my_components/_Global/ScrollRevealSection";
 import LazyImage from "@/my_components/_Global/LazyImage";
 
 /**
- * Full-bleed alternating case-study panels — the generalized version of
+ * Full-bleed alternating case-study panels, the generalized version of
  * MobileSuccessStories.js's "Proof, not promises" section, reused across
  * every service page that has real shipped projects to point to. `items`
  * must be pre-resolved {project, highlight, panelColor} objects (see
- * my_data/services/service_pages.js) — a page with zero matching real
+ * my_data/services/service_pages.js), a page with zero matching real
  * projects simply doesn't render this component rather than fabricating
  * case studies that don't exist.
  */
@@ -36,7 +36,7 @@ const ServiceOutcomes = ({ eyebrow = "Proof, not promises", title, description, 
               <LazyImage
                 wrapperClassName="svc-outcome-row__lazy"
                 src={item.project.cover}
-                alt={`${item.project.name} — as shown on our Projects page`}
+                alt={`${item.project.name}, as shown on our Projects page`}
                 fill
                 sizes="(max-width: 991px) 100vw, 50vw"
                 className="svc-outcome-row__img"

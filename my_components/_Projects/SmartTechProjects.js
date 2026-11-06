@@ -36,10 +36,10 @@ const SmartTechProjects = () => {
   return (
     <main className={`rbt-main-wrapper ${styles.pageRoot}`}>
 
-      {/* ── HERO — rbt-banner-19 template pattern (same as About page) ── */}
+      {/* ── HERO, rbt-banner-19 template pattern (same as About page) ── */}
       <div className="rbt-banner-area rbt-banner-19">
         <div className="wrapper">
-          {/* rbt-banner-activation-2 is required — it provides the vertical padding on .rbt-banner-item */}
+          {/* rbt-banner-activation-2 is required, it provides the vertical padding on .rbt-banner-item */}
           <div className="rbt-banner-activation-2 rbt-arrow-between">
             <div
               className="rbt-banner-item bg_image"
@@ -290,7 +290,7 @@ const SmartTechProjects = () => {
                       href={`https://www.youtube.com/watch?v=${project.youtubeId}`}
                       aria-label={`Watch ${project.name} demo video`}
                     >
-                      {/* plain img — YouTube domain doesn't need Next.js optimisation */}
+                      {/* plain img, YouTube domain doesn't need Next.js optimisation */}
                       <img
                         src={`https://img.youtube.com/vi/${project.youtubeId}/maxresdefault.jpg`}
                         alt={`${project.name} video preview`}

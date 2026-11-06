@@ -5,7 +5,7 @@ import { CONFIG } from "@/app_config.js";
 import { ROUTE } from "@/route/app_routes.js";
 
 const DEFAULT_DESCRIPTION =
-  "SmartTech Solutions is a full-cycle software, AI, and blockchain product studio — we design, build, and launch web apps, mobile apps, AI systems, blockchain products, and games for ambitious teams.";
+  "SmartTech Solutions is a full-cycle software, AI, and blockchain product studio, we design, build, and launch web apps, mobile apps, AI systems, blockchain products, and games for ambitious teams.";
 const DEFAULT_IMAGE = "/app_images/og/smarttech-og-default.webp";
 
 const PageHead = ({

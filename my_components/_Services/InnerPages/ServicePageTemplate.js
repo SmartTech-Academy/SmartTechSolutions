@@ -27,7 +27,7 @@ import { image_url } from "@/helper/Utilities";
 
 /**
  * Single reusable shell for the 10 non-Mobile, non-Cybersecurity service
- * pages — same idea as IndustryPageTemplate.js / SolutionPageTemplate.js:
+ * pages, same idea as IndustryPageTemplate.js / SolutionPageTemplate.js:
  * one template driven by a per-service config object
  * (my_data/services/service_pages.js), instead of 10 hand-duplicated page
  * files each drifting slowly out of sync with each other.
@@ -59,7 +59,7 @@ const ServicePageTemplate = ({ service }) => {
         </div>
       </div>
 
-      {/* ══════════════ PARTNER MARQUEE — moved directly under the headline,
+      {/* ══════════════ PARTNER MARQUEE, moved directly under the headline,
           above the hero image, matching Cubix's hero → trust row → hero
           image order ══════════════ */}
       <div className="rbt-brand-area bg-color-white svc-trusted-brands">
@@ -103,14 +103,14 @@ const ServicePageTemplate = ({ service }) => {
         </div>
       </div>
 
-      {/* ══════════════ OUTCOMES — real shipped projects only ══════════════ */}
+      {/* ══════════════ OUTCOMES, real shipped projects only ══════════════ */}
       <ServiceOutcomes
         title={service.outcomesTitle}
         description={service.outcomesDesc}
         items={outcomeItems}
       />
 
-      {/* ══════════════ ALL-IN-ONE SERVICES — dark animated backdrop ══════════════ */}
+      {/* ══════════════ ALL-IN-ONE SERVICES, dark animated backdrop ══════════════ */}
       <div className="mad-services">
         <span className="mad-services__grid-bg" aria-hidden="true" />
         <span className="mad-services__glow mad-services__glow--one" aria-hidden="true" />

@@ -19,7 +19,7 @@ const index = () => {
 
         <PageHead
           title="FAQ | SmartTech Solutions"
-          description="Answers to common questions about working with SmartTech Solutions — our process, pricing, timelines, and what it's like to build a product with our team."
+          description="Answers to common questions about working with SmartTech Solutions, our process, pricing, timelines, and what it's like to build a product with our team."
           path="/faq"
         />
 

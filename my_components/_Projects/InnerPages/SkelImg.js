@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 /* Drop-in <img> replacement that shows a shimmering skeleton (drawn as the
    img's own background) while the file loads. Because the real <img> element
    stays in the tree with its usual classes, every CSS rule that sizes or
-   positions it — including `.parent img` descendant selectors — keeps
+   positions it, including `.parent img` descendant selectors, keeps
    working, and the skeleton occupies the exact same box. */
 const SkelImg = ({ className = "", ...props }) => {
   const [loaded, setLoaded] = useState(false);

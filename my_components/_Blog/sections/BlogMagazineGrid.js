@@ -9,11 +9,11 @@ import ScrollRevealSection from "@/my_components/_Global/ScrollRevealSection";
 /**
  * Magazine-style post grid for the blog listing page only.
  * NOTE: intentionally a separate component from `BlogList-Items.js`, which
- * is also reused on the blog detail page's "Similar Post" section — keeping
+ * is also reused on the blog detail page's "Similar Post" section, keeping
  * them separate means this redesign never touches that other page.
  *
  * Uses ScrollRevealSection (a per-instance IntersectionObserver) instead of
- * sal.js's global `data-sal` scan — sal() only runs once on mount with
+ * sal.js's global `data-sal` scan, sal() only runs once on mount with
  * `once: true`, so cards that unmount/remount (e.g. filtered out by a
  * category tab, then filtered back in) were never re-observed and stayed
  * stuck at opacity: 0 forever. ScrollRevealSection creates a fresh observer
@@ -80,7 +80,7 @@ const BlogMagazineGrid = ({ posts, leadCard }) => {
           <i className="feather-mail" aria-hidden="true"></i>
           <span className="blog-grid__newsletter-title">Never miss a drop</span>
           <span className="blog-grid__newsletter-desc">
-            New articles on product, engineering, AI and blockchain — straight to your inbox.
+            New articles on product, engineering, AI and blockchain, straight to your inbox.
           </span>
           <span className="blog-grid__cta">
             Subscribe now

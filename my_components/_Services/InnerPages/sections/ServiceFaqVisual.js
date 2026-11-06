@@ -10,12 +10,12 @@ const Star = ({ i }) => (
 );
 
 /**
- * FAQ-section visual for each service page — the same idea as
+ * FAQ-section visual for each service page, the same idea as
  * ServiceWhyVisual.js (a real, service-relevant photo instead of a generic
  * browser-mockup illustration), styled with an accent scrim + floating
  * rating badge so it reads as its own section rather than a repeat of the
  * "Why SmartTech" image above it. `visual` is the Game Development escape
- * hatch (see GameHeroVisual.js — no usable real asset exists for that page).
+ * hatch (see GameHeroVisual.js, no usable real asset exists for that page).
  */
 const ServiceFaqVisual = ({ src, alt, accent, visual }) => {
   if (visual) {

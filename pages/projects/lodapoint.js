@@ -26,7 +26,7 @@ const Lodapoint = () => {
 
             <PageHead
                 title="Lodapoint: Ride-Hailing & Logistics App | SmartTech Solutions"
-                description="How SmartTech Solutions built Lodapoint — rider, driver, and transporter apps sharing one backend for real-time ride-hailing, deliveries, and freight dispatch."
+                description="How SmartTech Solutions built Lodapoint, rider, driver, and transporter apps sharing one backend for real-time ride-hailing, deliveries, and freight dispatch."
                 image="/app_images/projects/lodapoint/lodapoint_display_image.png"
                 path="/projects/lodapoint"
             />

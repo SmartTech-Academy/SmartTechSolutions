@@ -15,12 +15,12 @@ const ReadArticleIcon = () => (
 
 /**
  * "Blog Posts" widget embedded across ~15 otherwise-unrelated pages
- * (homepage, About, Services, Projects, etc.) — the 4 most recent posts
+ * (homepage, About, Services, Projects, etc.), the 4 most recent posts
  * from the headless WordPress blog (blog.smarttech.ng), fetched client-side
  * on mount since none of these host pages have a data-fetching layer of
  * their own. Real featured image, real title, real excerpt, real link.
  *
- * Excludes the "NEWS" category — those posts are reserved for the
+ * Excludes the "NEWS" category, those posts are reserved for the
  * "Latest News" widget (BlogGridMinimal) that appears further down most of
  * these same pages, so a post never shows up twice on one page.
  */

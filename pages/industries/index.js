@@ -17,7 +17,7 @@ const IndustriesPage = () => {
     <>
       <PageHead
         title="Industries We Serve | SmartTech Solutions"
-        description="SmartTech Solutions builds software for 16 industries — from real estate and fintech to healthcare and logistics — shaped by real products we've shipped, not generic templates."
+        description="SmartTech Solutions builds software for 16 industries, from real estate and fintech to healthcare and logistics, shaped by real products we've shipped, not generic templates."
         image="/app_images/industries/real-estate.webp"
         path="/industries"
       />

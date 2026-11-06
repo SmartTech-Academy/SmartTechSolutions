@@ -29,11 +29,11 @@ const screens = [
 const challenges = [
   {
     title: "Secure Offline Content Protection",
-    body: "Building DRM-style encryption so purchased eBooks and audio download safely to a device and stay playable offline — without exposing files to piracy or unauthorised sharing.",
+    body: "Building DRM-style encryption so purchased eBooks and audio download safely to a device and stay playable offline, without exposing files to piracy or unauthorised sharing.",
   },
   {
     title: "Multi-Currency Payment Processing",
-    body: "Supporting a global congregation across 120+ countries meant integrating multiple payment gateways and currencies — NGN, USD, EUR, GBP — into one seamless checkout flow.",
+    body: "Supporting a global congregation across 120+ countries meant integrating multiple payment gateways and currencies, NGN, USD, EUR, GBP, into one seamless checkout flow.",
   },
   {
     title: "Large-Scale Digital Library Management",
@@ -45,7 +45,7 @@ const challenges = [
   },
   {
     title: "Frictionless In-App Purchase Flow",
-    body: "Designing a purchase and download experience simple enough for a non-technical, multi-generational global audience — from browse to preview to buy in a few taps.",
+    body: "Designing a purchase and download experience simple enough for a non-technical, multi-generational global audience, from browse to preview to buy in a few taps.",
   },
   {
     title: "Unified Reading & Listening Experience",
@@ -74,7 +74,7 @@ const processSteps = [
   {
     num: "04",
     title: "Mobile App Development",
-    body: "Built the React Native app — store, library, offline reader, and music player — with native Android and iOS modules for secure local file storage.",
+    body: "Built the React Native app, store, library, offline reader, and music player, with native Android and iOS modules for secure local file storage.",
   },
   {
     num: "05",
@@ -84,7 +84,7 @@ const processSteps = [
   {
     num: "06",
     title: "QA, Testing & Launch",
-    body: "End-to-end testing of purchase flows, offline reading, currency conversion, and library sync — followed by store submission and a phased global rollout.",
+    body: "End-to-end testing of purchase flows, offline reading, currency conversion, and library sync, followed by store submission and a phased global rollout.",
   },
 ];
 
@@ -99,17 +99,17 @@ const craftFeatures = [
   {
     icon: "feather-shield",
     title: "Trust-Driven Visual Language",
-    body: "Every purchase screen was designed to reassure a global congregation handing over payment details — clear pricing, secure checkout, instant access.",
+    body: "Every purchase screen was designed to reassure a global congregation handing over payment details, clear pricing, secure checkout, instant access.",
   },
   {
     icon: "feather-book-open",
     title: "Distraction-Free Reading Experience",
-    body: "The reading and listening experience was stripped of clutter — clean typography, calm colour, and controls that stay out of the way of the content.",
+    body: "The reading and listening experience was stripped of clutter, clean typography, calm colour, and controls that stay out of the way of the content.",
   },
   {
     icon: "feather-zap",
     title: "Optimised for Speed & Flow",
-    body: "From opening the app to reading offline in seconds — every screen engineered to get spiritual content into readers' hands with zero friction.",
+    body: "From opening the app to reading offline in seconds, every screen engineered to get spiritual content into readers' hands with zero friction.",
   },
 ];
 
@@ -134,7 +134,7 @@ const results = [
   {
     icon: "feather-credit-card",
     title: "Multi-Currency In-App Purchases",
-    body: "Readers can pay in NGN, USD, EUR, GBP and more — a checkout experience built for a truly global audience.",
+    body: "Readers can pay in NGN, USD, EUR, GBP and more, a checkout experience built for a truly global audience.",
   },
   {
     icon: "feather-shield",
@@ -222,7 +222,7 @@ const MfmEbookProject = () => {
                   <p className="digi-hero-lead" data-sal="slide-up" data-sal-duration="700" data-sal-delay="160">
                     Discover, purchase, and read anytime, anywhere. MFM eBooks brings
                     Mountain of Fire and Miracles Ministries&apos; prayer books and
-                    devotionals to a global congregation — securely, and fully offline.
+                    devotionals to a global congregation, securely, and fully offline.
                   </p>
 
                   <div className="digi-hero-actions" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">
@@ -270,17 +270,17 @@ const MfmEbookProject = () => {
                   <div className="digi-hv-glow"></div>
                   <div className="mfm-hero-phones">
 
-                    {/* Smallest — furthest back */}
+                    {/* Smallest, furthest back */}
                     <div className="mfm-hero-phone mfm-hero-phone--small">
                       <img src={mfmImg("user_profile")} alt="" loading="eager" />
                     </div>
 
-                    {/* Medium — middle */}
+                    {/* Medium, middle */}
                     <div className="mfm-hero-phone mfm-hero-phone--medium">
                       <img src={mfmImg("ebooks_store")} alt="" loading="eager" />
                     </div>
 
-                    {/* Largest — front */}
+                    {/* Largest, front */}
                     <div className="mfm-hero-phone mfm-hero-phone--large">
                       <img src={mfmImg("dashboard")} alt="" loading="eager" />
                     </div>
@@ -333,13 +333,13 @@ const MfmEbookProject = () => {
                     largest Pentecostal denominations, founded in 1989 by Dr. Daniel
                     Kolawole Olukoya at a prayer meeting in his living room in Yaba, Lagos.
                     Today its International Headquarters sits on Olasimbo Street, Onike,
-                    Yaba — with branches now active in over 120 countries worldwide.
+                    Yaba, with branches now active in over 120 countries worldwide.
                   </p>
                   <p>
                     Known for its teachings on prayer, deliverance, and spiritual warfare,
                     MFM has published a vast library of prayer books and devotionals under
                     Dr. Olukoya&apos;s ministry. MFM eBooks was commissioned as the digital
-                    extension of that publishing work — making decades of prayer books and
+                    extension of that publishing work, making decades of prayer books and
                     audio resources instantly accessible to a global congregation, purchasable
                     and readable offline from anywhere.
                   </p>
@@ -407,19 +407,19 @@ const MfmEbookProject = () => {
                 <div className="digi-app-body">
                   <p>
                     MFM eBooks is a digital bookshop that lets readers buy Christian eBooks
-                    and audio resources and read or listen offline — no internet required
+                    and audio resources and read or listen offline, no internet required
                     after purchase. Every eBook bought is safely stored within the app,
                     protected from end to end.
                   </p>
                   <p>
                     Readers can browse, preview, and purchase from a curated library of
                     prayer books, deliverance guides, and devotionals, alongside a dedicated
-                    music section for worship audio and testimonies — all paid for in the
+                    music section for worship audio and testimonies, all paid for in the
                     currency of their choice, from NGN to USD, EUR, and GBP.
                   </p>
                   <p>
                     The flow is deliberately simple: download the app, create an account,
-                    browse and purchase, then read offline — anytime, anywhere, even
+                    browse and purchase, then read offline, anytime, anywhere, even
                     without a connection.
                   </p>
                 </div>
@@ -499,7 +499,7 @@ const MfmEbookProject = () => {
 
 
 
-        {/* ── USER ENGAGEMENT — Marquee (single line) ───────────────── */}
+        {/* ── USER ENGAGEMENT, Marquee (single line) ───────────────── */}
         <section className="rbt-section-gap digi-engage-section">
           <div className="container">
             <div className="text-center mb--56" data-sal="slide-up" data-sal-duration="700">
@@ -507,7 +507,7 @@ const MfmEbookProject = () => {
                 User Engagement
               </span>
               <h2 className="digi-engage-heading">
-                Simple, secure, and Spirit-filled — on every screen.
+                Simple, secure, and Spirit-filled, on every screen.
               </h2>
               <p className="digi-engage-desc">
                 From the welcome screen to the library shelf, every MFM eBooks screen was
@@ -548,7 +548,7 @@ const MfmEbookProject = () => {
               <div className="col-lg-5" data-sal="slide-left" data-sal-duration="700">
                 <p className="digi-process-lead mt_md--20 mt_sm--20">
                   Six structured phases took MFM eBooks from a shelf of printed books to a
-                  live, global digital bookshop — each stage building on the last with zero
+                  live, global digital bookshop, each stage building on the last with zero
                   shortcuts in security or design.
                 </p>
               </div>
@@ -588,12 +588,11 @@ const MfmEbookProject = () => {
                   <p>
                     MFM eBooks operates in a domain where calm and trust matter more than
                     flash. Every pixel, interaction, and information flow was designed to
-                    let the content — not the interface — hold the reader&apos;s attention.
+                    let the content, not the interface, hold the reader&apos;s attention.
                   </p>
                   <p>
                     SmartTech Solutions applied the same level of UI precision to MFM eBooks
-                    that you&apos;d expect from the world&apos;s leading publishing platforms —
-                    calibrated for a global, multi-generational congregation and their real
+                    that you&apos;d expect from the world&apos;s leading publishing platforms,                     calibrated for a global, multi-generational congregation and their real
                     reading habits.
                   </p>
                 </div>
@@ -658,7 +657,7 @@ const MfmEbookProject = () => {
                 <div className="digi-solution-body">
                   <p>
                     SmartTech Solutions architected, designed, and shipped the complete
-                    MFM eBooks platform — from the secure content and payments backend to
+                    MFM eBooks platform, from the secure content and payments backend to
                     the cross-platform mobile app readers use every day.
                   </p>
                   <p>

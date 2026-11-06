@@ -12,7 +12,7 @@
           "collapsed": true,
           "show": true,
           "subTitle": "Do you offer 24/7 monitoring, or just a one-time security audit?",
-          "text": "Both. We run one-time security assessments for teams that need a clear picture of their exposure, and ongoing 24/7 managed detection and response (MDR/XDR) for teams that want continuous coverage — most clients start with an assessment and move into ongoing monitoring."
+          "text": "Both. We run one-time security assessments for teams that need a clear picture of their exposure, and ongoing 24/7 managed detection and response (MDR/XDR) for teams that want continuous coverage, most clients start with an assessment and move into ongoing monitoring."
         },
         {
           "collapse": "cysecCollapseTwo",
@@ -20,8 +20,8 @@
           "expanded": false,
           "collapsed": false,
           "show": false,
-          "subTitle": "We're a small team — is enterprise-grade security overkill for us?",
-          "text": "No — attackers don't check company size before targeting a business. We scale the same security principles (identity management, monitoring, awareness training) to fit a small team's budget and risk profile, without the enterprise price tag or complexity."
+          "subTitle": "We're a small team, is enterprise-grade security overkill for us?",
+          "text": "No, attackers don't check company size before targeting a business. We scale the same security principles (identity management, monitoring, awareness training) to fit a small team's budget and risk profile, without the enterprise price tag or complexity."
         },
         {
           "collapse": "cysecCollapseThree",
@@ -30,7 +30,7 @@
           "collapsed": false,
           "show": false,
           "subTitle": "Can you help if we've already had a security incident?",
-          "text": "Yes — our DFIR (Digital Forensics & Incident Response) service is built exactly for this: rapid containment, root-cause investigation, and a recovery plan, followed by the hardening work to stop it from happening again."
+          "text": "Yes, our DFIR (Digital Forensics & Incident Response) service is built exactly for this: rapid containment, root-cause investigation, and a recovery plan, followed by the hardening work to stop it from happening again."
         },
         {
           "collapse": "cysecCollapseFour",
@@ -48,7 +48,7 @@
           "collapsed": false,
           "show": false,
           "subTitle": "How is your security work different from a generic IT support company?",
-          "text": "We're the same team that architects and builds the software your security has to protect — so our security decisions come from understanding how the underlying systems actually work, not from a generic checklist applied to unfamiliar infrastructure."
+          "text": "We're the same team that architects and builds the software your security has to protect, so our security decisions come from understanding how the underlying systems actually work, not from a generic checklist applied to unfamiliar infrastructure."
         },
         {
           "collapse": "cysecCollapseSix",
@@ -57,7 +57,7 @@
           "collapsed": false,
           "show": false,
           "subTitle": "How do we get started?",
-          "text": "Reach out at info@smarttechacademy.org or book a call — we start with a short discovery conversation and a security posture review before recommending a scope of work."
+          "text": "Reach out at info@smarttechacademy.org or book a call, we start with a short discovery conversation and a security posture review before recommending a scope of work."
         }
       ]
     }
@@ -174,7 +174,7 @@
           "collapsed": false,
           "show": false,
           "subTitle": "Why should I choose SmartTech over other developers?",
-          "text": "Remember: Anyone can code, but it takes true expertise to build clean, scalable, and production-ready solutions. Our experience working with global brands, proven processes, and certified developers distinguish us—guaranteeing your app is built to impeccable standards."
+          "text": "Remember: Anyone can code, but it takes true expertise to build clean, scalable, and production-ready solutions. Our experience working with global brands, proven processes, and certified developers distinguish us, guaranteeing your app is built to impeccable standards."
         },
         {
           "collapse": "tutioncollapseFive",
@@ -183,7 +183,7 @@
           "collapsed": false,
           "show": false,
           "subTitle": "Can you develop apps for Android TV or wearables?",
-          "text": "We excel in crafting innovative apps for Android TV, WearOS, tablets, and mobile devices—ensuring seamless, engaging experiences across every screen."
+          "text": "We excel in crafting innovative apps for Android TV, WearOS, tablets, and mobile devices, ensuring seamless, engaging experiences across every screen."
         },
         {
           "collapse": "tutioncollapseSix",
@@ -219,7 +219,7 @@
           "collapsed": true,
           "show": true,
           "subTitle": "Cost of Blockchain app development and timeline?",
-          "text": "The cost of Blockchain development depends on several key factors: application complexity, desired features, and the chosen technology stack. At SmartTech, we take all these elements into account to craft a strategic development roadmap that fits within your budget—without compromising on innovation. <br /> <ul> <li><strong>Simple Blockchain App</strong> - $5,000 to $10,000 | <strong>3 to 6 months</strong></li> <li><strong>Moderately Complex App</strong> - $10,000 to $50,000 | <strong>6 to 8 months</strong></li> <li><strong>Highly Complex App</strong> - $50,000 to $200,000+ | <strong>9 to 12+ months</strong></li> </ul> With SmartTech, you're not just getting a development team, you're gaining a partner in innovation. Let's build the future together."
+          "text": "The cost of Blockchain development depends on several key factors: application complexity, desired features, and the chosen technology stack. At SmartTech, we take all these elements into account to craft a strategic development roadmap that fits within your budget, without compromising on innovation. <br /> <ul> <li><strong>Simple Blockchain App</strong> - $5,000 to $10,000 | <strong>3 to 6 months</strong></li> <li><strong>Moderately Complex App</strong> - $10,000 to $50,000 | <strong>6 to 8 months</strong></li> <li><strong>Highly Complex App</strong> - $50,000 to $200,000+ | <strong>9 to 12+ months</strong></li> </ul> With SmartTech, you're not just getting a development team, you're gaining a partner in innovation. Let's build the future together."
         },
         {
           "collapse": "tutioncollapseTwo",
@@ -246,7 +246,7 @@
           "collapsed": false,
           "show": false,
           "subTitle": "Why should I choose SmartTech over other developers?",
-          "text": "Remember: Anyone can code, but it takes true expertise to build clean, scalable, and production-ready solutions. Our experience working with global brands, proven processes, and certified developers distinguish us—guaranteeing your app is built to impeccable standards."
+          "text": "Remember: Anyone can code, but it takes true expertise to build clean, scalable, and production-ready solutions. Our experience working with global brands, proven processes, and certified developers distinguish us, guaranteeing your app is built to impeccable standards."
         }
       ]
     }
@@ -363,7 +363,7 @@
           "collapsed": false,
           "show": false,
           "subTitle": "Is outsourcing video Game development services a good idea?",
-          "text": "It's smart—literally! Outsourcing unlocks global talent and cutting-edge technology in a cost-effective way. Unlike conventional game development agencies, SmartTech leverages international expertise in 3D modeling and AR/VR to elevate game quality and accelerate production."
+          "text": "It's smart, literally! Outsourcing unlocks global talent and cutting-edge technology in a cost-effective way. Unlike conventional game development agencies, SmartTech leverages international expertise in 3D modeling and AR/VR to elevate game quality and accelerate production."
         },
         {
           "collapse": "tutioncollapseSeven",
@@ -615,7 +615,7 @@
           "collapsed": true,
           "show": true,
           "subTitle": "Which techniques does your team use to create 2D art?",
-          "text": "At our studio, we seamlessly blend digital painting with collage, vector art, and photo-painting—always starting with a precise sketch and refined line work before layering rich colors and dynamic shadows, to craft bespoke artworks that perfectly capture and elevate your vision."
+          "text": "At our studio, we seamlessly blend digital painting with collage, vector art, and photo-painting, always starting with a precise sketch and refined line work before layering rich colors and dynamic shadows, to craft bespoke artworks that perfectly capture and elevate your vision."
         },
         {
           "collapse": "tutioncollapseTwo",
@@ -624,7 +624,7 @@
           "collapsed": false,
           "show": false,
           "subTitle": "What is your approach to ensuring art quality?",
-          "text": "With crystal-clear client briefs and seamless team collaboration, guided by our QA specialists, senior artists, and managers—we adopt a step-by-step, iterative art process that ensures every specification is met and allows unlimited, detail-driven revisions so your vision shines flawlessly from concept to completion."
+          "text": "With crystal-clear client briefs and seamless team collaboration, guided by our QA specialists, senior artists, and managers, we adopt a step-by-step, iterative art process that ensures every specification is met and allows unlimited, detail-driven revisions so your vision shines flawlessly from concept to completion."
         },
         {
           "collapse": "tutioncollapseThree",
@@ -633,7 +633,7 @@
           "collapsed": false,
           "show": false,
           "subTitle": "What Is 2D Art?",
-          "text": "2D art transforms flat canvases into vibrant, emotive worlds—leveraging hand-drawn, pixel, vector, or digital techniques to craft visually stunning characters, environments, and interfaces that evoke nostalgia, streamline production timelines, and deliver cohesive, memorable gaming experiences that captivate players and elevate your brand's impact."
+          "text": "2D art transforms flat canvases into vibrant, emotive worlds, leveraging hand-drawn, pixel, vector, or digital techniques to craft visually stunning characters, environments, and interfaces that evoke nostalgia, streamline production timelines, and deliver cohesive, memorable gaming experiences that captivate players and elevate your brand's impact."
         },
         {
           "collapse": "tutioncollapseFive",
@@ -642,7 +642,7 @@
           "collapsed": false,
           "show": false,
           "subTitle": "How Can Your 2D Game Art Services Benefit My Game Development Process?",
-          "text": "Our 2D game art services bring your vision to life with beautifully crafted characters, immersive environments, and intuitive UI designs—delivering high-quality, stylistically versatile assets that captivate players, strengthen your brand identity, and save you precious time and resources so you can focus on building an unforgettable gaming experience."
+          "text": "Our 2D game art services bring your vision to life with beautifully crafted characters, immersive environments, and intuitive UI designs, delivering high-quality, stylistically versatile assets that captivate players, strengthen your brand identity, and save you precious time and resources so you can focus on building an unforgettable gaming experience."
         },
         {
           "collapse": "tutioncollapseSix",
@@ -651,7 +651,7 @@
           "collapsed": false,
           "show": false,
           "subTitle": "Can You Work With Specific Art Styles or Adapt to My Game's Unique Art Direction?",
-          "text": "From nostalgic pixel art to sleek vector illustrations, our seasoned 2D art studio masterfully crafts any style, be it cartoon-charm, monochrome minimalism, or hyper-realistic visuals—ensuring consistent, on-brand artistry that streamlines your production, elevates player engagement, and brings your game's unique vision to life in stunning, unforgettable detail."
+          "text": "From nostalgic pixel art to sleek vector illustrations, our seasoned 2D art studio masterfully crafts any style, be it cartoon-charm, monochrome minimalism, or hyper-realistic visuals, ensuring consistent, on-brand artistry that streamlines your production, elevates player engagement, and brings your game's unique vision to life in stunning, unforgettable detail."
         }
       ]
     }
@@ -741,7 +741,7 @@
           "collapsed": false,
           "show": false,
           "subTitle": "How can AI software development services benefit my business?",
-          "text": "Harness AI services to automate mundane workflows, personalize customer interactions in real time, and extract actionable insights from your data—fueling efficiency gains, data-driven decisions, and a lasting competitive edge."
+          "text": "Harness AI services to automate mundane workflows, personalize customer interactions in real time, and extract actionable insights from your data, fueling efficiency gains, data-driven decisions, and a lasting competitive edge."
         },
         {
           "collapse": "tutioncollapseSix",
@@ -750,7 +750,7 @@
           "collapsed": false,
           "show": false,
           "subTitle": "What are the key components of AI App Development Services?",
-          "text": "From meticulous data preprocessing to robust model training, seamless deployment, and proactive ongoing support, our AI app development delivers scalable, high-performance solutions that evolve with your business needs—driving efficiency, innovation, and sustained competitive advantage."
+          "text": "From meticulous data preprocessing to robust model training, seamless deployment, and proactive ongoing support, our AI app development delivers scalable, high-performance solutions that evolve with your business needs, driving efficiency, innovation, and sustained competitive advantage."
         }
       ]
     }

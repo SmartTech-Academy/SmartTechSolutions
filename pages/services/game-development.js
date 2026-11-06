@@ -26,7 +26,7 @@ const GameDevelopment = () => {
 
             <PageHead
                 title="Game Development Services | SmartTech Solutions"
-                description="SmartTech Solutions builds immersive 2D, 3D, and NFT games in Unity and Unreal Engine — cinematic trailers, play-to-own mechanics, and cross-platform experiences."
+                description="SmartTech Solutions builds immersive 2D, 3D, and NFT games in Unity and Unreal Engine, cinematic trailers, play-to-own mechanics, and cross-platform experiences."
                 image="/app_images/services/service_images/smarttech_game_development.png"
                 path="/services/game-development"
             />

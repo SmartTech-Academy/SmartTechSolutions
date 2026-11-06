@@ -26,7 +26,7 @@ const index = () => {
 
       <PageHead
         title="Ticket Purchase | SmartTech Solutions"
-        description="Secure your spot at this SmartTech Solutions event — complete your ticket purchase in a few quick steps."
+        description="Secure your spot at this SmartTech Solutions event, complete your ticket purchase in a few quick steps."
         noIndex
       />
 

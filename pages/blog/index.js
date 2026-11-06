@@ -45,7 +45,7 @@ const index = ({ posts }) => {
 
         <PageHead
           title="Blog | SmartTech Solutions"
-          description="Ideas, engineering, and innovation notes from SmartTech Solutions — product deep-dives, engineering breakdowns, AI experiments, and build-in-public stories."
+          description="Ideas, engineering, and innovation notes from SmartTech Solutions, product deep-dives, engineering breakdowns, AI experiments, and build-in-public stories."
           image="/app_images/blog/blog_hero_bg.webp"
           path="/blog"
         />

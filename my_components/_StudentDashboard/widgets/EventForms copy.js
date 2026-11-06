@@ -30,7 +30,7 @@ const EventForms = ({ usage_type }) => {
     const [eventDescription, setEventDescription] = useState(usage_type !== "create" ? 
         "The Global Technology Expo (ATE) is where tech and business leaders gather with one clear goal: to make deals happen. It's a space where enterprises, operators, and industry giants "
         +"converge to showcase innovations, build partnerships, and deliver results. For 2025, ATE takes a bold step forward, spotlighting the future of the world's tech with a sharp focus on "
-        +"hardware, telecoms, software, and more—exploring the ideas shaping tomorrow." : ""
+        +"hardware, telecoms, software, and more, exploring the ideas shaping tomorrow." : ""
     );
 
     const formTitle = usage_type === "create" ? "Create Event" : ((usage_type === "edit") ? "Edit Event" : "Re-Purpose Event");

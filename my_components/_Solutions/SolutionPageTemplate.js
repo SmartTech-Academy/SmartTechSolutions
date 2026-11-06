@@ -7,13 +7,13 @@ import LazyImage from "@/my_components/_Global/LazyImage";
 import Brands2 from "@/my_components/TrustedByBrands/Brands2";
 import SpecialistAvatar from "./SpecialistAvatar";
 
-// Universal 5-phase engagement roadmap — true of every ERP/CRM rollout we
+// Universal 5-phase engagement roadmap, true of every ERP/CRM rollout we
 // run, regardless of platform, so it lives here once instead of duplicated
 // per solution entry in my_data/solutions/solutions.js.
 const ROADMAP = [
   { num: "01", title: "Discover", desc: "Map your current processes, data, and integration points before a single screen gets configured." },
   { num: "02", title: "Configure", desc: "Build out modules, workflows, and user roles around how your team actually works, not a generic default." },
-  { num: "03", title: "Migrate", desc: "Move and validate historical data with a full reconciliation pass — nothing silently lost in transit." },
+  { num: "03", title: "Migrate", desc: "Move and validate historical data with a full reconciliation pass, nothing silently lost in transit." },
   { num: "04", title: "Go-live", desc: "A structured cutover with staff training built in, not a system handoff and a wave goodbye." },
   { num: "05", title: "Support", desc: "Ongoing optimization after launch, since real day-to-day usage always surfaces refinements a demo never shows." },
 ];
@@ -25,7 +25,7 @@ const ROADMAP = [
  * split hero with a product panel (instead of a full-bleed dark photo
  * hero), a horizontal engagement roadmap (instead of a dark glass capability
  * grid), and a bordered module checklist (instead of repeating that same
- * card style again) — so a Solutions page reads as a software-implementation
+ * card style again), so a Solutions page reads as a software-implementation
  * partner page, not a re-skinned Industries page.
  */
 const SolutionPageTemplate = ({ solution }) => {
@@ -33,7 +33,7 @@ const SolutionPageTemplate = ({ solution }) => {
 
   return (
     <main className="rbt-main-wrapper sol-page" style={{ "--sol-accent": solution.accent }}>
-      {/* ══════════════ HERO — light editorial split, product panel ══════════════ */}
+      {/* ══════════════ HERO, light editorial split, product panel ══════════════ */}
       <section className="sol-hero-v2">
         <span className="sol-hero-v2__pattern" aria-hidden="true" />
         <span className="sol-hero-v2__blob" aria-hidden="true" />
@@ -125,7 +125,7 @@ const SolutionPageTemplate = ({ solution }) => {
                     ) : (
                       <>
                         SmartTech Solutions brings hands-on <strong>implementation experience</strong> to{" "}
-                        {solution.fullName} deployments — planning, configuring, migrating, and
+                        {solution.fullName} deployments, planning, configuring, migrating, and
                         supporting your rollout end to end.
                       </>
                     )}
@@ -137,7 +137,7 @@ const SolutionPageTemplate = ({ solution }) => {
         </div>
       </section>
 
-      {/* ══════════════ ENGAGEMENT ROADMAP — horizontal stepper, light ══════════════ */}
+      {/* ══════════════ ENGAGEMENT ROADMAP, horizontal stepper, light ══════════════ */}
       <section className="sol-section sol-roadmap">
         <div className="container">
           <ScrollRevealSection className="sol-section__head">
@@ -245,7 +245,7 @@ const SolutionPageTemplate = ({ solution }) => {
         <div className="container">
           <ScrollRevealSection className="sol-section__head">
             <span className="subtitle bg-primary-opacity">Common questions</span>
-            <h2 className="title">FAQ — {solution.name} implementation</h2>
+            <h2 className="title">FAQ, {solution.name} implementation</h2>
           </ScrollRevealSection>
 
           <div className="row g-5 justify-content-center">
@@ -288,7 +288,7 @@ const SolutionPageTemplate = ({ solution }) => {
         <div className="container">
           <ScrollRevealSection className="sol-cta__inner">
             <h2 className="title">Ready to implement {solution.name}?</h2>
-            <p>Tell us about your business — we&apos;ll scope the right rollout plan, not a generic one.</p>
+            <p>Tell us about your business, we&apos;ll scope the right rollout plan, not a generic one.</p>
             <div className="rbt-button-group justify-content-center">
               <Link className="rbt-btn btn-gradient hover-icon-reverse" href={ROUTE.appointment}>
                 <span className="icon-reverse-wrapper">

@@ -103,7 +103,7 @@ const EventForms = ({ usage_type }) => {
     const [eventPreviewVideoLink, setEventPreviewVideoLink] = useState( usage_type !== "create" ? "https://www.vimeo.com/content?video=9876fghjgf" : "https://www.youtube.com/video?url=dghfvjdgf" );
     const [eventDescription, setEventDescription] = useState(
         usage_type !== "create"
-        ? "The Global Technology Expo (ATE) is where tech and business leaders gather with one clear goal: to make deals happen. It's a space where enterprises, operators, and industry giants converge to showcase innovations, build partnerships, and deliver results. For 2025, ATE takes a bold step forward, spotlighting the future of the world's tech with a sharp focus on hardware, telecoms, software, and more—exploring the ideas shaping tomorrow."
+        ? "The Global Technology Expo (ATE) is where tech and business leaders gather with one clear goal: to make deals happen. It's a space where enterprises, operators, and industry giants converge to showcase innovations, build partnerships, and deliver results. For 2025, ATE takes a bold step forward, spotlighting the future of the world's tech with a sharp focus on hardware, telecoms, software, and more, exploring the ideas shaping tomorrow."
         : ""
     );
 
@@ -152,7 +152,7 @@ const EventForms = ({ usage_type }) => {
 
         // TODO: call your backend API here
         console.log("Submitting payload:", payload);
-        alert("Form is valid — payload logged to console. Replace this with API call.");
+        alert("Form is valid, payload logged to console. Replace this with API call.");
         // reset submitted flag or redirect as needed
         } else {
         // focus first invalid field (optional)

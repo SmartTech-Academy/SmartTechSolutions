@@ -5,7 +5,7 @@ import ScrollRevealSection from "@/my_components/_Global/ScrollRevealSection";
 import LazyImage from "@/my_components/_Global/LazyImage";
 
 // The five real SmartTech builds that shipped a native/React Native mobile
-// app — pulled straight from the same data module that powers "Our
+// app, pulled straight from the same data module that powers "Our
 // Projects", so this spotlight never drifts out of sync with the actual
 // case studies. `highlight` is page-specific curation, not project data.
 const MOBILE_PROJECT_IDS = [1, 7, 5, 3, 10];
@@ -18,7 +18,7 @@ const HIGHLIGHTS = {
   10: "SmartTech delivered an offline-first reading experience for React Native, so users keep learning without missing a page, connection or not.",
 };
 
-// Curated per-project brand panel color — Cubix's reference layout gives
+// Curated per-project brand panel color, Cubix's reference layout gives
 // each case study its own full-bleed colored backdrop (matching that
 // product's own brand) behind the phone mockups, rather than a plain photo
 // crop. Picked to match each shipped product's real identity.
@@ -59,7 +59,7 @@ const MobileSuccessStories = () => {
               <LazyImage
                 wrapperClassName="mad-outcome-row__lazy"
                 src={project.cover}
-                alt={`${project.name} — as shown on our Projects page`}
+                alt={`${project.name}, as shown on our Projects page`}
                 fill
                 sizes="(max-width: 991px) 100vw, 50vw"
                 className="mad-outcome-row__img"

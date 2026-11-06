@@ -86,22 +86,22 @@ const challenges = [
   {
     icon: "feather-lock",
     title: "Turning Illiquid Assets into Tradable Tokens",
-    text: "Real estate is naturally illiquid — property value stays tied down until a slow, expensive sale completes. Converting verified properties into digital positions that feel safe and familiar to trade required deep product thinking and a trustworthy onboarding journey.",
+    text: "Real estate is naturally illiquid, property value stays tied down until a slow, expensive sale completes. Converting verified properties into digital positions that feel safe and familiar to trade required deep product thinking and a trustworthy onboarding journey.",
   },
   {
     icon: "feather-file-text",
     title: "Multi-Stage Property Onboarding at Scale",
-    text: "Homeowners needed a serious, structured journey: property details, ownership documents, independent valuation, four sequential approval levels, an IPO bidding window, and IPO closure — all before an asset could enter the exchange as tradable stock.",
+    text: "Homeowners needed a serious, structured journey: property details, ownership documents, independent valuation, four sequential approval levels, an IPO bidding window, and IPO closure, all before an asset could enter the exchange as tradable stock.",
   },
   {
     icon: "feather-refresh-cw",
     title: "Making Web3 Feel Like a Stock App",
-    text: "Investors required a familiar stock-trading experience while dealing with Web3 realities: tokenized assets, wallet funding, eNaira conversion, escrow mechanics, and on-chain order history — all visible and understandable without any blockchain background.",
+    text: "Investors required a familiar stock-trading experience while dealing with Web3 realities: tokenized assets, wallet funding, eNaira conversion, escrow mechanics, and on-chain order history, all visible and understandable without any blockchain background.",
   },
   {
     icon: "feather-sliders",
     title: "Broker Power Without User Risk",
-    text: "Broker institutions needed powerful tools to help both homeowners and investors — but only with explicit per-asset user permission. Building this access-control layer without compromising user ownership was a genuine product architecture challenge.",
+    text: "Broker institutions needed powerful tools to help both homeowners and investors, but only with explicit per-asset user permission. Building this access-control layer without compromising user ownership was a genuine product architecture challenge.",
   },
 ];
 
@@ -202,7 +202,7 @@ const results = [
   {
     icon: "feather-grid",
     title: "Five-Dashboard Ecosystem",
-    text: "A web and mobile product covering homeowners, investors, brokers, verification teams, and exchange administrators — each with a purpose-built interface.",
+    text: "A web and mobile product covering homeowners, investors, brokers, verification teams, and exchange administrators, each with a purpose-built interface.",
   },
   {
     icon: "feather-dollar-sign",
@@ -245,7 +245,7 @@ const DigistateProject = () => {
                 <div className="hero-content" data-sal="slide-up" data-sal-duration="700">
                   <span className="hero-eyebrow">
                     <i className="feather-zap"></i>
-                    DIGISTATE — CASE STUDY
+                    DIGISTATE, CASE STUDY
                   </span>
                   <h1>
                     <span>Real estate,</span>
@@ -255,7 +255,7 @@ const DigistateProject = () => {
                   <p>
                     Digistate is a blockchain-powered real estate exchange that unlocks
                     tied-down property value. Homeowners IPO their assets on-chain, verified
-                    investors trade fractional positions, and brokers facilitate — all powered
+                    investors trade fractional positions, and brokers facilitate, all powered
                     by eNaira wallets and on-chain transparency.
                   </p>
                   <div className="hero-platforms" aria-label="Digistate platform coverage">
@@ -358,7 +358,7 @@ const DigistateProject = () => {
             <div className="phase-divider"></div>
             <div className="phase-meta">
               <strong>About the App</strong>
-              <p>What Digistate is, how it works, and what makes it unique — with a full visual tour of the platform.</p>
+              <p>What Digistate is, how it works, and what makes it unique, with a full visual tour of the platform.</p>
             </div>
             <div className="phase-tags">
               <span>Platform Overview</span>
@@ -610,7 +610,7 @@ const DigistateProject = () => {
             <div className="phase-divider"></div>
             <div className="phase-meta">
               <strong>The Challenge &amp; Solution</strong>
-              <p>Real problems we faced building a regulated, multi-role Web3 exchange — and how we solved each one.</p>
+              <p>Real problems we faced building a regulated, multi-role Web3 exchange, and how we solved each one.</p>
             </div>
             <div className="phase-tags">
               <span>Challenges</span>
@@ -900,7 +900,7 @@ const DigistateProject = () => {
             <div className="phase-divider"></div>
             <div className="phase-meta">
               <strong>Project Results</strong>
-              <p>What we delivered — a launch-ready foundation for tokenized real estate trading at scale.</p>
+              <p>What we delivered, a launch-ready foundation for tokenized real estate trading at scale.</p>
             </div>
             <div className="phase-tags">
               <span>Exchange Infrastructure</span>

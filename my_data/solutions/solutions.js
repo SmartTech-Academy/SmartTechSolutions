@@ -3,7 +3,7 @@ import { ROUTE } from "@/route/app_routes.js";
 // SmartTech Solutions holds formal implementation-partner status for Odoo
 // and Zoho only (`isPartner: true`). For NetSuite, SAP Business One, and
 // Dynamics 365 Business Central we are hands-on implementation specialists
-// without a formal partner certification — copy for those three must never
+// without a formal partner certification, copy for those three must never
 // claim "partner" status. This is the single source of truth for the
 // Solutions nav dropdown (name/icon/href only) and the 5 solution pages.
 export const SOLUTIONS = [
@@ -19,7 +19,7 @@ export const SOLUTIONS = [
     eyebrow: "Oracle NetSuite Implementation Specialists",
     heroTitle: "Run finance, inventory, and operations on one cloud ERP",
     heroDesc:
-      "SmartTech Solutions implements Oracle NetSuite — the cloud ERP built for growing businesses that have outgrown spreadsheets and disconnected tools.",
+      "SmartTech Solutions implements Oracle NetSuite, the cloud ERP built for growing businesses that have outgrown spreadsheets and disconnected tools.",
     about:
       "NetSuite is Oracle's cloud-based ERP suite, unifying financial management, inventory, order management, and CRM in a single system used by tens of thousands of growing businesses worldwide.",
     stats: [
@@ -44,9 +44,9 @@ export const SOLUTIONS = [
     ],
     faqs: [
       { q: "How long does a NetSuite implementation take?", a: "Timelines vary by scope, but a focused financials + inventory rollout typically runs 8-16 weeks; a full multi-module implementation can take longer. We scope this precisely during discovery." },
-      { q: "Can you migrate our data from QuickBooks or another legacy system?", a: "Yes — data migration and validation from legacy accounting and ERP systems is a core part of every NetSuite engagement we run." },
-      { q: "Do you customize NetSuite with SuiteScript?", a: "Yes — where native configuration isn't enough, we build custom SuiteScript workflows and scripts tailored to your specific processes." },
-      { q: "Do you provide support after go-live?", a: "Yes — we offer ongoing support and optimization after launch, since real usage patterns often surface refinements native configuration alone won't catch." },
+      { q: "Can you migrate our data from QuickBooks or another legacy system?", a: "Yes, data migration and validation from legacy accounting and ERP systems is a core part of every NetSuite engagement we run." },
+      { q: "Do you customize NetSuite with SuiteScript?", a: "Yes, where native configuration isn't enough, we build custom SuiteScript workflows and scripts tailored to your specific processes." },
+      { q: "Do you provide support after go-live?", a: "Yes, we offer ongoing support and optimization after launch, since real usage patterns often surface refinements native configuration alone won't catch." },
     ],
   },
   {
@@ -61,7 +61,7 @@ export const SOLUTIONS = [
     eyebrow: "SAP Business One Implementation Specialists",
     heroTitle: "Enterprise-grade ERP, sized for small and midsize business",
     heroDesc:
-      "SmartTech Solutions implements SAP Business One — SAP's ERP built specifically for small and midsize businesses that need enterprise discipline without enterprise complexity.",
+      "SmartTech Solutions implements SAP Business One, SAP's ERP built specifically for small and midsize businesses that need enterprise discipline without enterprise complexity.",
     about:
       "SAP Business One is SAP's ERP solution purpose-built for small and midsize businesses, covering financials, sales, inventory, and production planning in a single integrated system, available on-premise or in the cloud.",
     stats: [
@@ -79,16 +79,16 @@ export const SOLUTIONS = [
     ],
     whyPoints: [
       "Implementation experience across financials, sales, and inventory modules",
-      "Deployment flexibility — on-premise or cloud-hosted, based on your needs",
+      "Deployment flexibility, on-premise or cloud-hosted, based on your needs",
       "Custom add-on development on the SAP Business One SDK",
       "Structured onboarding and staff training, not just a system handoff",
       "Ongoing support tuned to how your team actually works day to day",
     ],
     faqs: [
-      { q: "Is SAP Business One right for a small business, or only larger companies?", a: "SAP Business One was purpose-built for small and midsize businesses — it brings SAP's enterprise discipline in a package sized and priced for growing teams, not large enterprises." },
-      { q: "Cloud or on-premise — which do you recommend?", a: "It depends on your IT resources and compliance needs; we walk through both options during discovery and recommend based on your specific constraints, not a one-size-fits-all default." },
-      { q: "Can you build custom add-ons for our specific workflow?", a: "Yes — where standard modules don't fully match your process, we build custom extensions on the SAP Business One SDK." },
-      { q: "Do you handle staff training after implementation?", a: "Yes — structured onboarding and training for your team is part of our standard implementation process, not an optional extra." },
+      { q: "Is SAP Business One right for a small business, or only larger companies?", a: "SAP Business One was purpose-built for small and midsize businesses, it brings SAP's enterprise discipline in a package sized and priced for growing teams, not large enterprises." },
+      { q: "Cloud or on-premise, which do you recommend?", a: "It depends on your IT resources and compliance needs; we walk through both options during discovery and recommend based on your specific constraints, not a one-size-fits-all default." },
+      { q: "Can you build custom add-ons for our specific workflow?", a: "Yes, where standard modules don't fully match your process, we build custom extensions on the SAP Business One SDK." },
+      { q: "Do you handle staff training after implementation?", a: "Yes, structured onboarding and training for your team is part of our standard implementation process, not an optional extra." },
     ],
   },
   {
@@ -103,7 +103,7 @@ export const SOLUTIONS = [
     eyebrow: "Certified Zoho Implementation Partner",
     heroTitle: "A CRM your sales team will actually use",
     heroDesc:
-      "SmartTech Solutions implements and customizes Zoho CRM — and the wider Zoho One suite — turning an out-of-the-box tool into a system shaped around how your team actually sells.",
+      "SmartTech Solutions implements and customizes Zoho CRM, and the wider Zoho One suite, turning an out-of-the-box tool into a system shaped around how your team actually sells.",
     about:
       "Zoho CRM is part of Zoho's broader Zoho One suite of 45+ business apps spanning sales, marketing, finance, and HR. We implement Zoho CRM as a standalone system or as part of a wider Zoho One rollout, depending on what your business needs.",
     stats: [
@@ -127,10 +127,10 @@ export const SOLUTIONS = [
       "Ongoing optimization as your sales process evolves",
     ],
     faqs: [
-      { q: "Should we start with just Zoho CRM or the full Zoho One suite?", a: "Most teams start with Zoho CRM and expand into Zoho One (books, desk, campaigns, and more) once the core sales process is dialed in — we help you sequence this instead of over-buying up front." },
-      { q: "Can you migrate our data from Salesforce or HubSpot?", a: "Yes — full data migration with deduplication and validation from another CRM is a standard part of a Zoho implementation." },
-      { q: "Do you build custom automation, not just standard workflows?", a: "Yes — where Zoho's built-in automation isn't enough, we write custom Deluge functions and API integrations to match your exact process." },
-      { q: "Can Zoho CRM connect to our marketing and support tools?", a: "Yes — we regularly integrate Zoho CRM with marketing, support, and finance tools so your team works from one connected customer view." },
+      { q: "Should we start with just Zoho CRM or the full Zoho One suite?", a: "Most teams start with Zoho CRM and expand into Zoho One (books, desk, campaigns, and more) once the core sales process is dialed in, we help you sequence this instead of over-buying up front." },
+      { q: "Can you migrate our data from Salesforce or HubSpot?", a: "Yes, full data migration with deduplication and validation from another CRM is a standard part of a Zoho implementation." },
+      { q: "Do you build custom automation, not just standard workflows?", a: "Yes, where Zoho's built-in automation isn't enough, we write custom Deluge functions and API integrations to match your exact process." },
+      { q: "Can Zoho CRM connect to our marketing and support tools?", a: "Yes, we regularly integrate Zoho CRM with marketing, support, and finance tools so your team works from one connected customer view." },
     ],
   },
   {
@@ -145,34 +145,34 @@ export const SOLUTIONS = [
     eyebrow: "Certified Odoo Implementation Partner",
     heroTitle: "One modular ERP that grows one app at a time",
     heroDesc:
-      "SmartTech Solutions implements and customizes Odoo — the open-source, modular ERP that lets you start with what you need today and add modules as your business grows.",
+      "SmartTech Solutions implements and customizes Odoo, the open-source, modular ERP that lets you start with what you need today and add modules as your business grows.",
     about:
-      "Odoo is an open-source suite of business applications covering CRM, accounting, inventory, manufacturing, HR, and ecommerce — all natively integrated, so businesses can adopt exactly the modules they need without paying for what they don't.",
+      "Odoo is an open-source suite of business applications covering CRM, accounting, inventory, manufacturing, HR, and ecommerce, all natively integrated, so businesses can adopt exactly the modules they need without paying for what they don't.",
     stats: [
       { value: "40+", label: "Natively integrated apps" },
       { value: "Modular", label: "Adopt only what you need" },
       { value: "Open-source", label: "Fully customizable core" },
     ],
     capabilities: [
-      { title: "Module selection & rollout", desc: "Sales, inventory, accounting, manufacturing, HR — implemented in the order that matters to you first." },
+      { title: "Module selection & rollout", desc: "Sales, inventory, accounting, manufacturing, HR, implemented in the order that matters to you first." },
       { title: "Custom module development", desc: "New Odoo modules built in Python when standard apps don't cover your workflow." },
       { title: "Data migration", desc: "Structured migration from spreadsheets or a legacy system into Odoo's data model." },
       { title: "Third-party integrations", desc: "Connect Odoo to your ecommerce platform, payment gateway, or existing tools." },
       { title: "Workflow automation", desc: "Automated approvals, notifications, and business rules across modules." },
-      { title: "Ongoing customization", desc: "Odoo evolves with your business — we keep building as new needs surface." },
+      { title: "Ongoing customization", desc: "Odoo evolves with your business, we keep building as new needs surface." },
     ],
     whyPoints: [
       "Implementation experience across Odoo's sales, inventory, accounting, and manufacturing apps",
       "Custom Python module development for workflows standard apps don't cover",
-      "Open-source flexibility — no vendor lock-in on core functionality",
+      "Open-source flexibility, no vendor lock-in on core functionality",
       "Phased rollout strategy so you're not paying for modules you don't need yet",
       "Ongoing development as your processes and headcount grow",
     ],
     faqs: [
-      { q: "Do we have to implement all of Odoo's modules at once?", a: "No — Odoo's modular design means you can start with just accounting and inventory, for example, and add CRM, manufacturing, or HR modules later without disrupting what's already running." },
-      { q: "Can you build custom modules if Odoo doesn't cover our exact process?", a: "Yes — we build custom Odoo modules in Python when the standard apps don't fully match your workflow." },
-      { q: "Is Odoo a good fit for a manufacturing business?", a: "Yes — Odoo's Manufacturing app handles bill-of-materials, work orders, and production planning, and we've implemented it for production-focused businesses." },
-      { q: "Can you migrate us off our current accounting software into Odoo?", a: "Yes — structured, validated data migration from your existing system is a standard part of every Odoo implementation we run." },
+      { q: "Do we have to implement all of Odoo's modules at once?", a: "No, Odoo's modular design means you can start with just accounting and inventory, for example, and add CRM, manufacturing, or HR modules later without disrupting what's already running." },
+      { q: "Can you build custom modules if Odoo doesn't cover our exact process?", a: "Yes, we build custom Odoo modules in Python when the standard apps don't fully match your workflow." },
+      { q: "Is Odoo a good fit for a manufacturing business?", a: "Yes, Odoo's Manufacturing app handles bill-of-materials, work orders, and production planning, and we've implemented it for production-focused businesses." },
+      { q: "Can you migrate us off our current accounting software into Odoo?", a: "Yes, structured, validated data migration from your existing system is a standard part of every Odoo implementation we run." },
     ],
   },
   {
@@ -187,12 +187,12 @@ export const SOLUTIONS = [
     eyebrow: "Microsoft Dynamics 365 Implementation Specialists",
     heroTitle: "ERP that lives inside the Microsoft tools your team already uses",
     heroDesc:
-      "SmartTech Solutions implements Microsoft Dynamics 365 Business Central — cloud ERP for small and midsize businesses, deeply integrated with Excel, Outlook, and the Power Platform.",
+      "SmartTech Solutions implements Microsoft Dynamics 365 Business Central, cloud ERP for small and midsize businesses, deeply integrated with Excel, Outlook, and the Power Platform.",
     about:
-      "Dynamics 365 Business Central is Microsoft's cloud ERP for small and midsize businesses, covering finance, sales, service, and operations — with native integration into Excel, Outlook, Teams, and Power BI that most ERPs can't match.",
+      "Dynamics 365 Business Central is Microsoft's cloud ERP for small and midsize businesses, covering finance, sales, service, and operations, with native integration into Excel, Outlook, Teams, and Power BI that most ERPs can't match.",
     stats: [
       { value: "Native", label: "Excel, Outlook & Teams integration" },
-      { value: "Power Platform", label: "Ready — Power BI, Power Automate" },
+      { value: "Power Platform", label: "Ready, Power BI, Power Automate" },
       { value: "Cloud or hybrid", label: "Deployment options" },
     ],
     capabilities: [
@@ -205,16 +205,16 @@ export const SOLUTIONS = [
     ],
     whyPoints: [
       "Implementation experience across finance, sales, and supply chain modules",
-      "Deep Power Platform integration — Power BI reporting and Power Automate workflows",
+      "Deep Power Platform integration, Power BI reporting and Power Automate workflows",
       "Custom AL-language extensions where standard configuration isn't enough",
       "Migration experience from Dynamics NAV, GP, and other legacy ERPs",
-      "Training built around tools your team already knows — Excel, Outlook, Teams",
+      "Training built around tools your team already knows, Excel, Outlook, Teams",
     ],
     faqs: [
-      { q: "We're migrating from Dynamics NAV or GP — can you help?", a: "Yes — migrating from Dynamics NAV, GP, or another legacy ERP into Business Central is one of the most common engagements we run." },
-      { q: "Does Business Central really integrate with Excel and Outlook?", a: "Yes — natively. You can edit data directly in Excel and sync it back, and Outlook integration surfaces customer and sales data right inside your inbox." },
-      { q: "Can you connect Business Central to Power BI for reporting?", a: "Yes — we build Power BI dashboards directly on your Business Central data, alongside Power Automate workflows where useful." },
-      { q: "Do you build custom extensions if we need something Business Central doesn't do out of the box?", a: "Yes — we build custom AL-language extensions for functionality that falls outside standard configuration." },
+      { q: "We're migrating from Dynamics NAV or GP, can you help?", a: "Yes, migrating from Dynamics NAV, GP, or another legacy ERP into Business Central is one of the most common engagements we run." },
+      { q: "Does Business Central really integrate with Excel and Outlook?", a: "Yes, natively. You can edit data directly in Excel and sync it back, and Outlook integration surfaces customer and sales data right inside your inbox." },
+      { q: "Can you connect Business Central to Power BI for reporting?", a: "Yes, we build Power BI dashboards directly on your Business Central data, alongside Power Automate workflows where useful." },
+      { q: "Do you build custom extensions if we need something Business Central doesn't do out of the box?", a: "Yes, we build custom AL-language extensions for functionality that falls outside standard configuration." },
     ],
   },
 ];

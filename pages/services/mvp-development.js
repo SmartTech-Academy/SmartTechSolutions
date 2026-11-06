@@ -26,7 +26,7 @@ const MVPDevelopment = () => {
 
             <PageHead
                 title="MVP Development Services | SmartTech Solutions"
-                description="SmartTech Solutions turns bold ideas into market-ready MVPs — validate your vision, gather user feedback fast, and cut time-to-market without cutting corners."
+                description="SmartTech Solutions turns bold ideas into market-ready MVPs, validate your vision, gather user feedback fast, and cut time-to-market without cutting corners."
                 image="/app_images/services/service_images/smarttech_mvp_development.png"
                 path="/services/mvp-development"
             />

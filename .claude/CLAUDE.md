@@ -99,3 +99,29 @@ Analyze the entire template (from "./hi-study 3/" folder, in project root direct
 - Dashboard patterns
 
 Use this guide for all future UI generation.
+
+# AI Pattern Removal (MANDATORY, applies to every Claude session, every account)
+
+This rule applies whenever Claude generates, edits, or reviews any textual content for
+this platform (SmartTech Solutions, SmartTech Academy, or any sibling product in this
+monorepo), on the frontend, in the backend, in seed/migration data, or anywhere else.
+It is not limited to UI work and is not optional.
+
+**Rule:** Never let an em dash (the character U+2014, "&mdash;"), or any spaced hyphen
+used as a sentence-break (" - " acting as a dash), stand in finished text. Before any
+text is written to a file, committed, returned to the user, or saved to the database,
+replace every such dash with a comma (", "): remove the dash character and join the two
+clauses with ", " instead, adjusting capitalization/wording minimally so the sentence
+still reads naturally. Do this silently as part of normal writing; do not leave the dash
+and flag it later.
+
+**Why:** Em dashes are a well-known AI writing tell. Their presence across the live site
+erodes visitor trust that the content was written with care, so they must never ship,
+whether in component/page source, markdown, CMS copy, or database-stored strings (blog
+posts, project descriptions, testimonials, etc.).
+
+**Scope:** This covers content Claude originates AND pre-existing content Claude
+encounters while touching a file or table for an unrelated reason, if you are already
+editing a file/row and spot an em dash in it, fix it in the same pass. It does not
+require Claude to proactively hunt the entire codebase/database on every unrelated task;
+a dedicated full-site sweep is a separate, explicitly requested job.

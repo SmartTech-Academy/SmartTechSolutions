@@ -105,7 +105,7 @@ const processSteps = [
   {
     num: "06",
     title: "QA, Testing & Launch",
-    body: "End-to-end testing of booking flows, driver matching, fleet operations, and payment reconciliation — followed by a phased rollout and live monitoring.",
+    body: "End-to-end testing of booking flows, driver matching, fleet operations, and payment reconciliation, followed by a phased rollout and live monitoring.",
   },
 ];
 
@@ -338,17 +338,17 @@ const LodapointProject = () => {
                   <div className="digi-hv-glow"></div>
                   <div className="loda-hero-phones">
 
-                    {/* Smallest — furthest back */}
+                    {/* Smallest, furthest back */}
                     <div className="loda-hero-phone loda-hero-phone--small">
                       <img src={lodaImg("pick_location")} alt="" loading="eager" />
                     </div>
 
-                    {/* Medium — middle */}
+                    {/* Medium, middle */}
                     <div className="loda-hero-phone loda-hero-phone--medium">
                       <img src={lodaImg("Ride Hailing")} alt="" loading="eager" />
                     </div>
 
-                    {/* Largest — front */}
+                    {/* Largest, front */}
                     <div className="loda-hero-phone loda-hero-phone--large">
                       <img src={lodaImg("dashboard")} alt="" loading="eager" />
                     </div>
@@ -636,7 +636,7 @@ const LodapointProject = () => {
 
 
 
-        {/* ── USER ENGAGEMENT — Marquee ─────────────────────────────── */}
+        {/* ── USER ENGAGEMENT, Marquee ─────────────────────────────── */}
         <section className="rbt-section-gap digi-engage-section">
           <div className="container">
             <div className="text-center mb--56" data-sal="slide-up" data-sal-duration="700">

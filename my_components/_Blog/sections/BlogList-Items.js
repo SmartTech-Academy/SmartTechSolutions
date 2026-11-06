@@ -5,7 +5,7 @@ import Image from "next/image";
 import { ROUTE } from "@/route/app_routes.js";
 
 /**
- * "Similar Post" widget on the blog detail page — real related posts
+ * "Similar Post" widget on the blog detail page, real related posts
  * (passed down from pages/blog/post/[postId]/index.js's getStaticProps),
  * not a hardcoded card list that pointed every link at the same article
  * regardless of which post you were reading.

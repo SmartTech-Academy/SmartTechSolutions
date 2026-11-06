@@ -1,7 +1,7 @@
 // Thin client for SmartTech Solutions' headless WordPress blog
 // (https://blog.smarttech.ng), queried over WPGraphQL. Every blog surface
-// on this site — the /blog listing, /blog/post/[slug] detail page, and the
-// "Blog Posts" widgets embedded across ~30 unrelated pages — reads through
+// on this site, the /blog listing, /blog/post/[slug] detail page, and the
+// "Blog Posts" widgets embedded across ~30 unrelated pages, reads through
 // this one file instead of the old data/blog/blog.json fixture.
 
 export const WPGRAPHQL_ENDPOINT = "https://blog.smarttech.ng/graphql";
@@ -26,7 +26,7 @@ async function fetchGraphQL(query, variables = {}) {
 }
 
 // ────────────────────────────────────────────────────────────────────────
-// HTML helpers — WordPress returns title/excerpt/content as HTML strings.
+// HTML helpers, WordPress returns title/excerpt/content as HTML strings.
 // ────────────────────────────────────────────────────────────────────────
 const HTML_ENTITIES = {
   "&hellip;": "…",
@@ -36,10 +36,21 @@ const HTML_ENTITIES = {
   "&#8221;": "”",
   "&#8211;": "–",
   "&#8212;": "—",
+  "&mdash;": "—",
   "&#038;": "&",
   "&amp;": "&",
   "&nbsp;": " ",
 };
+
+// Every em dash coming out of WordPress, whether typed as a literal "—"
+// character or as an &#8212;/&mdash; entity, reads as an AI-writing tell on
+// the live site. This is the one choke point every blog surface (listing,
+// detail page, and the widgets embedded across ~30 other pages) reads
+// through, so normalizing it here is enough to cover the whole site without
+// needing write access to the WordPress database itself.
+function stripEmDashes(text) {
+  return text.replace(/\s*—\s*/g, ", ");
+}
 
 export function stripHtml(html) {
   if (!html) return "";
@@ -47,7 +58,19 @@ export function stripHtml(html) {
   for (const [entity, char] of Object.entries(HTML_ENTITIES)) {
     text = text.split(entity).join(char);
   }
-  return text.replace(/\s+/g, " ").trim();
+  return stripEmDashes(text.replace(/\s+/g, " ").trim());
+}
+
+// Applied to the raw HTML `content` field (rendered via dangerouslySetInnerHTML
+// on the post detail page), so the dash is normalized without disturbing any
+// markup, em dashes never appear inside valid tag/attribute syntax.
+function sanitizeContentHtml(html) {
+  if (!html) return "";
+  let text = html;
+  for (const [entity, char] of Object.entries(HTML_ENTITIES)) {
+    if (char === "—") text = text.split(entity).join(char);
+  }
+  return stripEmDashes(text);
 }
 
 export function formatPostDate(iso) {
@@ -64,7 +87,7 @@ function estimateReadTime(html) {
 }
 
 // WordPress's own permalink (`uri`, e.g. "/2026/07/28/my-post/") is date-
-// prefixed — this site keeps its own clean /blog/post/<slug> URL instead,
+// prefixed, this site keeps its own clean /blog/post/<slug> URL instead,
 // so `slug` is what every card/link uses. Falls back to deriving it from
 // `uri` on the off chance a query only asked for that field.
 function slugFrom(node) {
@@ -74,9 +97,9 @@ function slugFrom(node) {
 }
 
 // ────────────────────────────────────────────────────────────────────────
-// Normalizers — map a raw WPGraphQL `Post` node onto the flat shape the
+// Normalizers, map a raw WPGraphQL `Post` node onto the flat shape the
 // existing blog components already expect (slug, image, category, excerpt,
-// date, readTime — the shape my_components/_Blog/sections/BlogList.js's
+// date, readTime, the shape my_components/_Blog/sections/BlogList.js's
 // old hardcoded array used), so the presentational components barely change.
 // ────────────────────────────────────────────────────────────────────────
 export function normalizePostCard(node) {
@@ -118,7 +141,7 @@ export function normalizePostFull(node) {
   if (!card) return null;
   return {
     ...card,
-    content: node.content || "",
+    content: sanitizeContentHtml(node.content || ""),
     author: {
       name: card.authorName,
       avatarUrl: card.authorAvatar,
@@ -189,7 +212,7 @@ const POST_BY_SLUG_QUERY = `
   }
 `;
 
-/** Every published post, normalized — paginates through WPGraphQL's cursor
+/** Every published post, normalized, paginates through WPGraphQL's cursor
  * connection so this stays correct however many posts the blog grows to
  * (capped at `maxPosts` as a sane upper bound). Used at build time by the
  * blog listing page and by getStaticPaths for the detail route.
@@ -216,7 +239,7 @@ export async function getAllPosts({ maxPosts = 300, categoryName = null } = {}) 
 
 /** Lightweight recent-posts fetch for the "Blog Posts" / "Latest News"
  * widgets embedded across the rest of the site (homepage, about, services,
- * etc.) — a single request, no pagination loop. `categoryName` optionally
+ * etc.), a single request, no pagination loop. `categoryName` optionally
  * restricts to one WP category, already sorted newest-first.
  *
  * `excludeCategoryName` is the complement: used by the "Blog Posts" widget
@@ -225,7 +248,7 @@ export async function getAllPosts({ maxPosts = 300, categoryName = null } = {}) 
  * here has no category-exclusion filter, so this over-fetches a larger
  * recent batch and filters it out using the `categories` every normalized
  * post already carries, then trims back down to `count`. Mutually exclusive
- * with `categoryName` — callers only ever want one or the other. */
+ * with `categoryName`, callers only ever want one or the other. */
 export async function getRecentPosts(count = 4, { categoryName = null, excludeCategoryName = null } = {}) {
   if (!excludeCategoryName) {
     const data = await fetchGraphQL(LIST_QUERY, { first: count, after: null, categoryName });

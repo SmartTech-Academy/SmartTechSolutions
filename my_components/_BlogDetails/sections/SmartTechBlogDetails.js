@@ -5,14 +5,14 @@ import React from "react";
 import Comment from "./Comment";
 
 /**
- * Renders a real WordPress post (fetched over WPGraphQL — see
- * helper/wpgraphql.js) — featured image, the post's own HTML `content`
+ * Renders a real WordPress post (fetched over WPGraphQL, see
+ * helper/wpgraphql.js), featured image, the post's own HTML `content`
  * body verbatim, real categories/author/comments. Previously this rendered
  * a fixed template (descOne…descSeven, titleTwo, a hardcoded quote/gallery)
  * that every post shared identical boilerplate for; WordPress's own content
  * HTML already carries whatever paragraphs, headings, lists, quotes, and
  * inline images the author actually wrote, so there's no fixed shape left
- * to fill in — the WP content block *is* the article.
+ * to fill in, the WP content block *is* the article.
  */
 const SmartTechBlogDetails = ({ post }) => {
   if (!post) return null;

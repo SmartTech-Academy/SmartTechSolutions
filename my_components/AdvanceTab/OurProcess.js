@@ -46,14 +46,14 @@ const TABS = [
 ];
 
 /**
- * "Our Product Development Process" — the tab buttons auto-advance as the
+ * "Our Product Development Process", the tab buttons auto-advance as the
  * section scrolls through view (mapped from scroll progress across a
  * tall pinned wrapper), simulating a click on each button in turn, while
  * still supporting a real click to jump straight to a tab. The three
  * preview images are stacked absolutely and cross-faded with a plain CSS
  * opacity/transform transition (GPU-composited) instead of Bootstrap's
  * .fade/.show pair, which needs a browser reflow between adding the two
- * classes to animate at all — applying both in the same React commit (as
+ * classes to animate at all, applying both in the same React commit (as
  * scroll-driven updates do) skipped the transition entirely and made the
  * swap look like it "hung" and then jump-cut.
  */
@@ -67,7 +67,7 @@ const OurProcess = () => {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReducedMotion) return undefined;
 
-    // Scroll-driven tab switching is a desktop-only flourish — the tall
+    // Scroll-driven tab switching is a desktop-only flourish, the tall
     // pinned wrapper it depends on is also reverted to normal flow below
     // this breakpoint (see HomepageSections.css), so on tablet/mobile the
     // listener is never attached at all and the section just behaves like
@@ -170,9 +170,9 @@ const OurProcess = () => {
                       src={tab.image}
                       width={1080}
                       height={780}
-                      alt={`${tab.plainTitle} — SmartTech Solutions product process`}
+                      alt={`${tab.plainTitle}, SmartTech Solutions product process`}
                       placeholder="blur"
-                      /* All 3 are eager/priority, not just the first — the
+                      /* All 3 are eager/priority, not just the first, the
                          scroll-driven tab switch can flip to image 2 or 3
                          within a fraction of a second of the section
                          entering view, faster than lazy-loading fetches

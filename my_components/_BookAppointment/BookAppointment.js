@@ -67,8 +67,7 @@ const SERVICE_OPTIONS = [
 
 
 
-// Only relevant when "ERP / CRM Solution Implementation" is picked above —
-// mirrors my_data/solutions/solutions.js, the 5 platforms under the
+// Only relevant when "ERP / CRM Solution Implementation" is picked above, // mirrors my_data/solutions/solutions.js, the 5 platforms under the
 // Solutions menu.
 const SOLUTION_OPTIONS = [
   "Odoo ERP",

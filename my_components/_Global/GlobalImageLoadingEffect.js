@@ -3,7 +3,7 @@ import { useEffect } from "react";
 /**
  * Marks any <img> in the document with data-gil-loading until it finishes
  * loading, so global-effects.css can shimmer it. Runs once for the whole
- * app in _app.js — pages/components never need to opt in individually.
+ * app in _app.js, pages/components never need to opt in individually.
  */
 const GlobalImageLoadingEffect = () => {
   useEffect(() => {

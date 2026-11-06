@@ -151,7 +151,7 @@ const Services = () => {
                       width={700}
                       height={500}
                       priority
-                      alt="SmartTech digital product services — web, mobile, AI, and blockchain builds"
+                      alt="SmartTech digital product services, web, mobile, AI, and blockchain builds"
                     />
                   </div>
                   <div className="command-card">

@@ -6,7 +6,7 @@ import useRecentPosts from "@/my_components/_Global/useRecentPosts";
 
 /**
  * Compact 3-card "Latest News" grid embedded across ~20 otherwise-unrelated
- * pages — the most recent posts from WordPress's "NEWS" category only
+ * pages, the most recent posts from WordPress's "NEWS" category only
  * (blog.smarttech.ng), newest first, fetched client-side on mount.
  * Previously read a `BlogData.blogGrid` key that didn't exist in
  * data/blog/blog.json (always undefined), rendered no image at all, and

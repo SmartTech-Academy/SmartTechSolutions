@@ -632,7 +632,7 @@ const DtsProject = () => {
 
 
 
-        {/* ── USER ENGAGEMENT — Marquee ─────────────────────────────── */}
+        {/* ── USER ENGAGEMENT, Marquee ─────────────────────────────── */}
         <section className="rbt-section-gap digi-engage-section">
           <div className="container">
             <div className="text-center mb--56" data-sal="slide-up" data-sal-duration="700">

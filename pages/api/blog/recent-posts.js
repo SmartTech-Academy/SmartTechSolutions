@@ -4,7 +4,7 @@ import { getRecentPosts } from "@/helper/wpgraphql";
 // (BlogWidget.js / BlogGridMinimal.js, embedded across ~30 pages).
 // blog.smarttech.ng/graphql doesn't send an Access-Control-Allow-Origin
 // header, so a browser calling it directly from this site's origin gets
-// blocked by CORS — that only affects requests made *from the browser*,
+// blocked by CORS, that only affects requests made *from the browser*,
 // not server-to-server ones, so this route makes the real WPGraphQL call
 // from Next.js's server (unaffected by CORS) and the browser calls this
 // same-origin endpoint instead.

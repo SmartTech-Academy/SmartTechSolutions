@@ -8,7 +8,7 @@ import { useEffect, useRef, useState } from "react";
  * `threshold` is a ratio of the TARGET's own area, not the viewport's. A
  * section taller than the viewport (e.g. a long stacked card grid on
  * mobile) can never satisfy a ratio like the old 0.18 default while
- * scrolled into its middle — visible area / the section's own huge total
+ * scrolled into its middle, visible area / the section's own huge total
  * area stays under 0.18 even at full-bleed, so `isIntersecting` flips back
  * to false and the content (opacity: 0 until revealed) disappears again
  * mid-scroll. threshold: 0 fires on any non-zero overlap regardless of the

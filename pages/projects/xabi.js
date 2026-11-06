@@ -26,7 +26,7 @@ const Xabi = () => {
 
             <PageHead
                 title="Xabi: Rental Savings & Fintech Platform | SmartTech Solutions"
-                description="How SmartTech Solutions built Xabi — a rental savings, loan, wallet, and property marketplace platform delivered across web, iOS, and Android from one codebase."
+                description="How SmartTech Solutions built Xabi, a rental savings, loan, wallet, and property marketplace platform delivered across web, iOS, and Android from one codebase."
                 image="/app_images/projects/xabi/xabi_display_picture.png"
                 path="/projects/xabi"
             />

@@ -19,7 +19,7 @@ const Nav = () => {
   const router = useRouter();
   const isActive = (href) => router.pathname.startsWith(href);
 
-  // Only the Industries item has a real dropdown right now — everything
+  // Only the Industries item has a real dropdown right now, everything
   // else is a flat link. Kept as a single toggle (not per-item state) since
   // only one dropdown should ever be open at a time.
   const [openMenu, setOpenMenu] = useState(null);

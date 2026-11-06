@@ -5,7 +5,7 @@ import Image from "next/image";
  * Drop-in wrapper around next/image that shows a shimmering skeleton
  * (`.rbt-img-skeleton`, see global-effects.css) for the exact box the
  * image will occupy, until the real file finishes downloading. Meant for
- * any non-priority image sourced/recreated across the site — next/image
+ * any non-priority image sourced/recreated across the site, next/image
  * already lazy-loads by default, this just makes that wait visible and
  * pleasant instead of a blank gap.
  */

@@ -17,7 +17,7 @@ const Cybersecurity = () => {
     <>
       <PageHead
         title="Cybersecurity Services | SmartTech Solutions"
-        description="SmartTech Solutions delivers full-stack cybersecurity — IAM, DLP, SIEM/SOAR, vulnerability management, 24/7 MDR/XDR monitoring, and incident response — built by the same team that engineers your software."
+        description="SmartTech Solutions delivers full-stack cybersecurity, IAM, DLP, SIEM/SOAR, vulnerability management, 24/7 MDR/XDR monitoring, and incident response, built by the same team that engineers your software."
         image="/app_images/services/service_images/smarttech_cybersecurity.webp"
         path="/services/cybersecurity"
       />

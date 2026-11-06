@@ -3,7 +3,7 @@ import React from "react";
 
 /**
  * `author` here is the real WordPress post author (see
- * helper/wpgraphql.js's normalizePostFull) — just a name, an optional
+ * helper/wpgraphql.js's normalizePostFull), just a name, an optional
  * Gravatar avatar, and a bio. WordPress has no per-author "social links"
  * concept out of the box, unlike the old hand-authored fixture data, so
  * that row is simply omitted rather than faked.

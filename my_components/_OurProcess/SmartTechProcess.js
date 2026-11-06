@@ -27,7 +27,7 @@ import visionCtaBg from "@/public/app_images/bg/vision_life_cta_bg.webp";
 // Dynamically import Odometer with SSR disabled
 const Odometer = dynamic(() => import("react-odometerjs"), {
   ssr: false,
-  loading: () => <span>0</span>, // Avoid `loading: () => 0` — return a React element instead
+  loading: () => <span>0</span>, // Avoid `loading: () => 0`, return a React element instead
 });
 
 // import Newsletter from "../../my_components/Newsletters/Newsletter";

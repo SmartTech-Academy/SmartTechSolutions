@@ -15,7 +15,7 @@ const SolutionsHub = () => {
             <span className="subtitle bg-primary-opacity">ERP & CRM implementation</span>
             <h1 className="title">Which platform are you already running?</h1>
             <p className="description">
-              We don&apos;t just build custom software — we implement the leading ERP and CRM
+              We don&apos;t just build custom software, we implement the leading ERP and CRM
               platforms your business already runs on, configured, migrated, and supported by a
               team that understands the software underneath, not just the checkout page. We hold
               certified partner status with Odoo and Zoho, and run hands-on specialist

@@ -1,11 +1,11 @@
 /**
  * Bespoke inline-SVG avatar for the "Dedicated specialist team" trust badge
  * on non-partner Solutions pages (NetSuite, SAP Business One, Dynamics 365)
- * — previously an empty circle, since "feather-tool" isn't part of this
+ *, previously an empty circle, since "feather-tool" isn't part of this
  * project's bundled feather.css icon subset (public/css/plugins/feather.css
  * only ships ~266 of the full set), then a generic silhouette. Now a
- * flat-illustration portrait — a Black woman's face, coily hair, taking a
- * call — reading immediately as "support specialist," matching the
+ * flat-illustration portrait, a Black woman's face, coily hair, taking a
+ * call, reading immediately as "support specialist," matching the
  * "Certified implementation partner" badge's use of a real feather-award
  * icon on the partner pages.
  */

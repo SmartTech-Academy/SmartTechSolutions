@@ -64,7 +64,7 @@ const OPEN_ROLES = [
 
 
 // Flip to `true` the moment real applications should start landing in your
-// inbox — every "Apply" link below re-enables instantly (full opacity,
+// inbox, every "Apply" link below re-enables instantly (full opacity,
 // clickable, normal arrow icon on hover) with no other changes needed.
 const ROLES_APPLY_ENABLED = false;
 
@@ -128,7 +128,7 @@ const CareersPage = () => {
             <span className="career-hero__eyebrow">Careers at SmartTech</span>
             <h1 className="career-hero__title">Build what&apos;s next, with us</h1>
             <p className="career-hero__desc">
-              We&apos;re a small, senior team shipping real products for real companies — real estate
+              We&apos;re a small, senior team shipping real products for real companies, real estate
               exchanges, fintech platforms, and apps used by thousands. If you&apos;d rather build
               things that matter than sit in a sandbox, we should talk.
             </p>
@@ -223,7 +223,7 @@ const CareersPage = () => {
           <ScrollRevealSection className="career-openings__panel">
             <span className="career-openings__icon"><i className="feather-bell"></i></span>
             <span className="subtitle bg-primary-opacity">Current openings</span>
-            <h2 className="title">While we don&apos;t have active listings today, we&apos;re still hiring — just not on a calendar</h2>
+            <h2 className="title">While we don&apos;t have active listings today, we&apos;re still hiring, just not on a calendar</h2>
             <p className="description has-medium-font-size">
               We open a role the moment a real project demands another hand, not on a quarterly
               schedule. Rather than post a job for the sake of posting one, we keep a warm bench of
@@ -255,7 +255,7 @@ const CareersPage = () => {
         </div>
       </section>
 
-      {/* ══════════════ BENEFITS — dark animated backdrop ══════════════ */}
+      {/* ══════════════ BENEFITS, dark animated backdrop ══════════════ */}
       <section className="career-benefits">
         <span className="career-benefits__grid-bg" aria-hidden="true" />
         <span className="career-benefits__glow career-benefits__glow--one" aria-hidden="true" />

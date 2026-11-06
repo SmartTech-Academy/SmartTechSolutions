@@ -1,6 +1,5 @@
 /**
- * Bespoke inline-SVG visual for the Mobile App Development FAQ section —
- * replaces the generic shared stock photo (my_data/services/faq.json's
+ * Bespoke inline-SVG visual for the Mobile App Development FAQ section,  * replaces the generic shared stock photo (my_data/services/faq.json's
  * faq.webp, reused across all 12 service FAQ sections) with a phone/app
  * mockup built specifically for this page's subject. Vector, not a
  * sourced photo: zero extra network request or decode cost, crisp at any

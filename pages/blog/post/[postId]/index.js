@@ -15,8 +15,7 @@ import BlogDetails from "@/my_components/_BlogDetails/BlogDetails";
 import Footer from "@/my_components/Footer/Footer";
 import { getAllPosts, getPostBySlug } from "@/helper/wpgraphql";
 
-// The [postId] segment is treated as the real WordPress `slug` directly —
-// no more regex-extracting a trailing digit and matching a local JSON id
+// The [postId] segment is treated as the real WordPress `slug` directly, // no more regex-extracting a trailing digit and matching a local JSON id
 // (the old data/blog/blog.json approach). Every post gets its own genuine
 // slug-based URL: /blog/post/<slug>.
 export async function getStaticPaths() {
@@ -29,7 +28,7 @@ export async function getStaticPaths() {
 
   return {
     paths: posts.filter((p) => p.slug).map((p) => ({ params: { postId: p.slug } })),
-    // A post published after the last build still resolves — WPGraphQL is
+    // A post published after the last build still resolves, WPGraphQL is
     // queried on that first request, then cached like every other path.
     fallback: "blocking",
   };

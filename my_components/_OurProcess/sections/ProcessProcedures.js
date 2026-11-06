@@ -62,7 +62,7 @@ const ProcessCard = ({ number, title, text, icon, delay }) => (
 /**
  * Renders the 6-step "how we work" card grid. The first two cards pull
  * up over the section above via a negative margin, so the caller's hero
- * must reserve enough bottom padding to match — pass `compact` for
+ * must reserve enough bottom padding to match, pass `compact` for
  * shorter heroes so the pull-up (and its clearance) scale down together.
  */
 const ProcessProcedures = ({ compact = false }) => {

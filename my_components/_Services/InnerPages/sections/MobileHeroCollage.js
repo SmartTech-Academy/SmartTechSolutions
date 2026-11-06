@@ -8,8 +8,8 @@ import tile5 from "@/public/app_images/services/mobile_hero/hero_tile_5_lodapoin
 import tile6 from "@/public/app_images/services/mobile_hero/hero_tile_6_jpgc_dashboard.webp";
 import tile7 from "@/public/app_images/services/mobile_hero/hero_tile_7_mfm_ebooks_store.webp";
 
-// Real native-app screens pulled from live SmartTech builds — Digistate,
-// DTS, Lodapoint, JPGC App, and MFM eBooks — rather than stock UI kits or
+// Real native-app screens pulled from live SmartTech builds, Digistate,
+// DTS, Lodapoint, JPGC App, and MFM eBooks, rather than stock UI kits or
 // responsive/mobile-view crops of a website. Every tile here is an actual
 // phone app screen that shipped to a real user.
 const TILES = [
@@ -23,14 +23,14 @@ const TILES = [
 ];
 
 /**
- * Two-layer collage — a "back" field (the same 7 tiles, rotated/scaled/
+ * Two-layer collage, a "back" field (the same 7 tiles, rotated/scaled/
  * offset as one block, sitting in the upper half with no alt text since
  * it's a purely decorative echo) behind a "front" field of the real,
  * individually-tilted tiles in the lower half. Both fields render the same
  * seven images; only the front copy is meaningful content, so the back
  * copy is aria-hidden and unlabeled. This mirrors ServiceHero.js's
  * .svc-collage structure exactly (same field/layer/tile naming, just under
- * the "mad-" namespace) — the two were built and are still styled
+ * the "mad-" namespace), the two were built and are still styled
  * separately, but the DOM shape is intentionally identical.
  */
 const MobileHeroCollage = () => {

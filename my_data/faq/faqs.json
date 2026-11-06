@@ -74,7 +74,7 @@
           "collapsed": false,
           "show": false,
           "accordionTitle": "Who owns the intellectual property and deliverables?",
-          "desc": "Upon full payment, we transfer all IP rights—including source code, documentation, and design assets—to you, with no hidden licensing fees. Our straightforward IP agreements guarantee you unfettered freedom to extend, adapt, or maintain your solution long after launch."
+          "desc": "Upon full payment, we transfer all IP rights, including source code, documentation, and design assets, to you, with no hidden licensing fees. Our straightforward IP agreements guarantee you unfettered freedom to extend, adapt, or maintain your solution long after launch."
         },
         {
           "collapse": "collapseTwentyEight3",
@@ -128,7 +128,7 @@
           "collapsed": false,
           "show": false,
           "accordionTitle": "What is AI and how can it benefit my business?",
-          "desc": "AI refers to systems that perform tasks requiring human intelligence—like pattern recognition and decision-making—driving automation, insights, and efficiency across industries. <br /><br /> AI can benefit businesses by automating tasks, improving decision-making through data analysis, and enhancing customer experiences."
+          "desc": "AI refers to systems that perform tasks requiring human intelligence, like pattern recognition and decision-making, driving automation, insights, and efficiency across industries. <br /><br /> AI can benefit businesses by automating tasks, improving decision-making through data analysis, and enhancing customer experiences."
         },
         {
           "collapse": "collapseSix3",
@@ -245,7 +245,7 @@
           "collapsed": false,
           "show": false,
           "accordionTitle": "How often should I schedule updates and maintenance?",
-          "desc": "Follow vendor release cycles—monthly or quarterly—for updates, with health checks scheduled per usage patterns."
+          "desc": "Follow vendor release cycles, monthly or quarterly, for updates, with health checks scheduled per usage patterns."
         },
         {
           "collapse": "collapseNinteen3",
@@ -319,7 +319,7 @@
           "collapsed": false,
           "show": false,
           "accordionTitle": "How do I track my progress?",
-          "desc": "Our intuitive dashboard shows you which lessons you've completed, pending exercises, and earned badges. Behind the scenes, we leverage a Skill-XP system—similar to those on leading platforms, to visualize your evolving mastery and motivate your next learning milestone."
+          "desc": "Our intuitive dashboard shows you which lessons you've completed, pending exercises, and earned badges. Behind the scenes, we leverage a Skill-XP system, similar to those on leading platforms, to visualize your evolving mastery and motivate your next learning milestone."
         },
         {
           "collapse": "collapseEight4",
@@ -373,7 +373,7 @@
           "collapsed": false,
           "show": false,
           "accordionTitle": "What kind of technical support is available?",
-          "desc": "If you hit a technical snag—whether it's streaming issues or code environment setup—our dedicated support team is ready to assist you via live chat, email, and a comprehensive help center, ensuring you stay focused on learning rather than troubleshooting."
+          "desc": "If you hit a technical snag, whether it's streaming issues or code environment setup, our dedicated support team is ready to assist you via live chat, email, and a comprehensive help center, ensuring you stay focused on learning rather than troubleshooting."
         },
         {
           "collapse": "collapseForteen4",
@@ -382,7 +382,7 @@
           "collapsed": false,
           "show": false,
           "accordionTitle": "How are assessments and feedback handled?",
-          "desc": "We embed quizzes and capstone projects throughout each track. Automated tests give you instant feedback, while volunteer mentors provide qualitative insights to refine your approach—mirroring real-world development workflows."
+          "desc": "We embed quizzes and capstone projects throughout each track. Automated tests give you instant feedback, while volunteer mentors provide qualitative insights to refine your approach, mirroring real-world development workflows."
         },
         {
           "collapse": "collapseFifteen4",
@@ -409,7 +409,7 @@
           "collapsed": false,
           "show": false,
           "accordionTitle": "Is the curriculum regularly updated to reflect industry trends?",
-          "desc": "Absolutely. Our content team continuously reviews emerging technologies and incorporates the latest videos—so you're always learning cutting-edge skills, whether that's the newest JavaScript framework or breakthroughs in AI and blockchain, etc."
+          "desc": "Absolutely. Our content team continuously reviews emerging technologies and incorporates the latest videos, so you're always learning cutting-edge skills, whether that's the newest JavaScript framework or breakthroughs in AI and blockchain, etc."
         }
       ]
     }

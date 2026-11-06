@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { image_url } from "@/helper/Utilities";
 
-// Industries served — mirrors my_data/services/industries.json (industries_served)
+// Industries served, mirrors my_data/services/industries.json (industries_served)
 const industries = [
   { title: "Real Estate", image: "industry_real_estate.webp", desc: "Smart platforms for listings, tours, and property management" },
   { title: "Healthcare", image: "industry_healthcare.webp", desc: "Secure, compliant systems that streamline patient care" },

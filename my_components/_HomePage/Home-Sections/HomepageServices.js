@@ -4,7 +4,7 @@ import sal from "sal.js";
 import { ROUTE } from "@/route/app_routes.js";
 
 
-// Short, homepage-only taglines — the JSON's `description` field holds the
+// Short, homepage-only taglines, the JSON's `description` field holds the
 // long-form paragraph used on each service's own detail page; a paragraph
 // per card is what made this grid read as a blog listing rather than a
 // services overview, so the grid gets its own tight one-liner instead.

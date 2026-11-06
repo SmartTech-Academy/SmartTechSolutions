@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 /**
  * Thin blue trickle bar pinned to the top of the viewport during route
- * changes — mirrors the classic top-of-page preloader (NProgress-style)
+ * changes, mirrors the classic top-of-page preloader (NProgress-style)
  * but hand-rolled to match --color-primary and to hand off cleanly into
  * RouteTransition's fade/ease-in once the new page is ready.
  */

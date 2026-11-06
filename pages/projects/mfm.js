@@ -26,7 +26,7 @@ const MFM = () => {
 
             <PageHead
                 title="MFM eBook & eMusic App | SmartTech Solutions"
-                description="A case study on the MFM eBook & eMusic app — SmartTech Solutions' secure offline reading and listening platform serving a global congregation in 120+ countries."
+                description="A case study on the MFM eBook & eMusic app, SmartTech Solutions' secure offline reading and listening platform serving a global congregation in 120+ countries."
                 image="/app_images/projects/mfm_ebooks/mfm_display_image.png"
                 path="/projects/mfm"
             />

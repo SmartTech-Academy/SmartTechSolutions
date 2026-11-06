@@ -6,7 +6,7 @@ const CommentAvatar = ({ name, avatarUrl }) => {
     return <Image src={avatarUrl} width={70} height={70} alt={name} />;
   }
   // WordPress comments from unregistered/no-gravatar commenters have no
-  // avatar at all — an initial-letter placeholder beats a broken <Image>.
+  // avatar at all, an initial-letter placeholder beats a broken <Image>.
   return (
     <span className="comment-avatar-fallback" aria-hidden="true">
       {name ? name.charAt(0).toUpperCase() : "?"}

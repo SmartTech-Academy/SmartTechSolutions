@@ -26,7 +26,7 @@ const JPGC = () => {
 
             <PageHead
                 title="Japaul Gold Coin (JPGC) & NFT | SmartTech Solutions"
-                description="A case study on JPGC — SmartTech Solutions' gold-backed, cross-chain token and NFT redemption system built on Solana and Ethereum, listed on BitMart."
+                description="A case study on JPGC, SmartTech Solutions' gold-backed, cross-chain token and NFT redemption system built on Solana and Ethereum, listed on BitMart."
                 image="/app_images/projects/JPGC/SmartTechProject_japaul_gold_coin.png"
                 path="/projects/jpgc"
             />

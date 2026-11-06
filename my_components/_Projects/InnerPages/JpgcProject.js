@@ -315,7 +315,7 @@ const JpgcProject = () => {
                       { val: "2",  suffix: "",  label: "Blockchains"      },
                       { val: "5",  suffix: "+", label: "Developers"    },
                       { val: "7", suffix: "+", label: "QA Engineers"        },
-                      { val: "1",  suffix: "",  label: "CEX — BitMart"   },
+                      { val: "1",  suffix: "",  label: "CEX, BitMart"   },
                     ].map(({ val, suffix, label }) => (
                       <div className="digi-glass-stat" key={label}>
                         <strong>{val}<em>{suffix}</em></strong>
@@ -656,7 +656,7 @@ const JpgcProject = () => {
 
 
 
-        {/* ── USER ENGAGEMENT — Marquee ─────────────────────────────── */}
+        {/* ── USER ENGAGEMENT, Marquee ─────────────────────────────── */}
         <section className="rbt-section-gap digi-engage-section">
           <div className="container">
             <div className="text-center mb--56" data-sal="slide-up" data-sal-duration="700">

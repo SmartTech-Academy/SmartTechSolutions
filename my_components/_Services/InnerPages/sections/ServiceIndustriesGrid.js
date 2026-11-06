@@ -2,7 +2,7 @@ import ScrollRevealSection from "@/my_components/_Global/ScrollRevealSection";
 
 /**
  * Keyword → feather-icon lookup for the industries grid below. Config data
- * only ever carried {title, desc} — adding a hand-picked icon field to
+ * only ever carried {title, desc}, adding a hand-picked icon field to
  * every industry entry across 11 services (70+ rows) wasn't worth the
  * upkeep, so this matches on the title text instead: one shared map, every
  * service page benefits automatically, including any new industry added
@@ -51,7 +51,7 @@ const iconFor = (title) => {
 };
 
 /**
- * Elevated industries grid — real cards (shadow, radius, hover lift) with
+ * Elevated industries grid, real cards (shadow, radius, hover lift) with
  * an accent-tinted icon badge and a quiet decorative index number, instead
  * of the flat hairline-grid table it replaced. `--accent` (already set on
  * <main> per page) drives the icon tint and hover glow, so the same markup
