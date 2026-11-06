@@ -14,6 +14,27 @@
    HERO
    ════════════════════════════════════════════════════════════════════════ */
 
+/* "SmartTech Academy" is much longer than the one-word titles (Digistate,
+   Geoplox, Xabi) the base clamp() was sized for, so at the base max of
+   130px the word "SmartTech" alone overflows the hero column and gets
+   broken mid-word by Bootstrap's reboot `overflow-wrap: break-word`. A
+   smaller, two-word-aware clamp keeps it intact and legible at every width. */
+.smarttech-academy-theme .digi-hero-title {
+  font-size: clamp(38px, 6.4vw, 84px);
+}
+
+@media (max-width: 767px) {
+  .smarttech-academy-theme .digi-hero-title {
+    font-size: clamp(32px, 10vw, 52px);
+  }
+}
+
+@media (max-width: 420px) {
+  .smarttech-academy-theme .digi-hero-title {
+    font-size: clamp(28px, 11vw, 40px);
+  }
+}
+
 .smarttech-academy-theme .digi-hero {
   background:
     radial-gradient(ellipse at 72% 14%, rgba(67, 56, 202, 0.38) 0%, transparent 42%),
@@ -190,6 +211,18 @@
 
 .smarttech-academy-theme .digi-engage-section {
   background: linear-gradient(180deg, #eef2ff 0%, #e0e7ff 55%, #fef3c7 100%);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   MARQUEE IMAGE FIT — our desktop screenshots are a wider aspect ratio than
+   the base card box, which was squashing them horizontally under the base
+   theme's `object-fit: fill`. Cropping instead of stretching keeps them
+   looking sharp and undistorted.
+   ════════════════════════════════════════════════════════════════════════ */
+
+.smarttech-academy-theme .digi-web-card img {
+  object-fit: cover;
+  object-position: top;
 }
 
 /* ════════════════════════════════════════════════════════════════════════

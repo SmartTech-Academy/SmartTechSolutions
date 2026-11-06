@@ -37,7 +37,7 @@ export const projects = [
     name: "SmartTech Academy",
     tagline: "Free Tech Education, Engineered Like a Product.",
     description:
-      "SmartTech Academy is the digital brainchild of SmartTech Academy, a free technology academy platform with live classrooms, courses, quizzes, ticketed events, and publicly verifiable certification, engineered end to end by SmartTech Solutions.",
+      "SmartTech Academy is the digital brainchild of SmartTech Solutions, a free technology academy platform with live classrooms, courses, quizzes, ticketed events, and publicly verifiable certification.",
     industry: "Education Technology · Free Learning",
     platform: "Web Application + Dedicated Mobile Experience",
     team: "6 Developers & Designers · 3 QA Engineers",

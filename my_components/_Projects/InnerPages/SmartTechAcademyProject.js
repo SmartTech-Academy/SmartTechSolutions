@@ -15,28 +15,30 @@ const mobImg  = (name) => `/app_images/projects/smarttech_academy/mobile/${name}
 
 
 
+// Curated, deliberate viewing order (not shuffled), walking a new visitor
+// through the product the way a student would actually encounter it.
 const screens = [
   { file: "home",                       label: "Academy Homepage"          },
-  { file: "student_dashboard",          label: "Student Dashboard"         },
-  { file: "course_room",                label: "Course Room"               },
-  { file: "course_description",         label: "Course Description"        },
-  { file: "classroom",                  label: "Live Classroom"            },
-  { file: "dashboard_course_room",      label: "Dashboard Course Room"     },
-  { file: "quiz_attempts",              label: "Quiz Attempts"             },
-  { file: "certificate",                label: "Certificate"               },
-  { file: "certificate_collection",     label: "Certificate Collection"    },
-  { file: "certificate_summary",        label: "Certificate Summary"       },
-  { file: "certificate_verification",   label: "Certificate Verification" },
-  { file: "student_event_management",   label: "Student Event Management" },
   { file: "event_details",              label: "Event Details"             },
+  { file: "course_description",         label: "Course Description"        },
+  { file: "login",                      label: "Sign In"                   },
+  { file: "student_dashboard",          label: "Dashboard"                 },
+  { file: "student_course_management",  label: "Dashboard Course Management" },
+  { file: "user_profile",               label: "Dashboard Profile"         },
+  { file: "certificate",                label: "Certificate"               },
+  { file: "settings",                   label: "Dashboard Settings"        },
+  { file: "certificate_summary",        label: "Certificate Details"       },
+  { file: "certificate_collection",     label: "Certificate Collection"    },
+  { file: "certificate_verification",   label: "Certificate Verification" },
+  { file: "classroom",                  label: "Live Classroom"            },
+  { file: "course_room",                label: "Course Room"               },
+  { file: "dashboard_course_room",      label: "Dashboard Course Room"     },
+  { file: "signup",                     label: "Sign Up"                   },
+  { file: "student_event_management",   label: "Student Event Management" },
+  { file: "quiz_attempts",              label: "Quiz Attempts"             },
   { file: "lost_event_ticket",          label: "Lost Ticket Recovery"      },
-  { file: "student_course_management",  label: "Course Management"         },
-  { file: "user_profile",               label: "User Profile"              },
-  { file: "settings",                   label: "Settings"                  },
   { file: "notification",               label: "Notifications"             },
   { file: "blog",                       label: "Academy Blog"              },
-  { file: "login",                      label: "Authentication"            },
-  { file: "signup",                     label: "Sign Up"                   },
 ];
 
 const mobileScreens = [
@@ -82,7 +84,7 @@ const challenges = [
   },
   {
     title: "Production Infrastructure for a Free Product",
-    body: "Running a six-service Docker stack, nginx reverse proxy, Laravel API, Next.js frontend, MySQL, Redis, and a dedicated queue worker, with the same reliability standards SmartTech Solutions holds paying clients to, for a product that charges nothing.",
+    body: "Holding a product that charges its students nothing to the same uptime, performance, and reliability standards SmartTech Solutions holds every paying client to, instead of treating it as a side project with lower stakes.",
   },
 ];
 
@@ -107,7 +109,7 @@ const processSteps = [
   {
     num: "04",
     title: "Backend API & Queue Infrastructure",
-    body: "Built the Laravel backend, MySQL data layer, and a dedicated queue-worker container so certificate generation, event ticket emails, and notification delivery run asynchronously without ever blocking a student's session.",
+    body: "Built the Laravel backend, MySQL data layer, and a background job queue so certificate generation, event ticket emails, and notification delivery run asynchronously without ever blocking a student's session.",
   },
   {
     num: "05",
@@ -116,8 +118,8 @@ const processSteps = [
   },
   {
     num: "06",
-    title: "Containerised Deployment & Launch",
-    body: "Shipped as a six-container Docker stack, nginx, Laravel, Next.js, MySQL, Redis, and queue worker, behind an automated Let's Encrypt SSL edge, tested end-to-end before SmartTech Academy opened enrollment to its first cohort.",
+    title: "Deployment & Launch",
+    body: "Shipped to production with automated monitoring and deployment tooling in place, tested end-to-end before SmartTech Academy opened enrollment to its first cohort.",
   },
 ];
 
@@ -166,8 +168,8 @@ const results = [
   },
   {
     icon: "feather-server",
-    title: "Six-Service Production Infrastructure",
-    body: "nginx, Laravel API, Next.js frontend, MySQL, Redis, and an isolated queue-worker container, deployed with automated Let's Encrypt SSL so a restart or spike in one service never takes down the student experience.",
+    title: "Production-Grade Infrastructure",
+    body: "A reliable, secure hosting setup engineered so a routine update or a spike in traffic never takes down the student experience.",
   },
   {
     icon: "feather-zap",
@@ -245,9 +247,9 @@ const SmartTechAcademyProject = () => {
 
                   <p className="digi-hero-lead" data-sal="slide-up" data-sal-duration="700" data-sal-delay="160">
                     A free technology academy platform, the digital brainchild of SmartTech
-                    Academy, engineered end to end by SmartTech Solutions with courses, live
-                    classrooms, events, quizzes, and publicly verifiable certification, built
-                    on the same production standards we hold every paying client to.
+                    Solutions, built for its sister brand SmartTech Academy with courses, live
+                    classrooms, events, quizzes, and publicly verifiable certification, on the
+                    same production standards we hold every paying client to.
                   </p>
 
                   <div className="digi-hero-actions" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">
@@ -269,7 +271,7 @@ const SmartTechAcademyProject = () => {
 
                   <div className="digi-hero-glass-stats" data-sal="slide-up" data-sal-duration="700" data-sal-delay="240">
                     {[
-                      { val: "6",   suffix: "",  label: "Docker Services"   },
+                      { val: "3+",  suffix: "",  label: "User Roles"        },
                       { val: "30",  suffix: "+", label: "App Screens"       },
                       { val: "0",   suffix: "",  label: "Cost to Students"  },
                       { val: "1",   suffix: "",  label: "Verified Credential" },
@@ -320,7 +322,7 @@ const SmartTechAcademyProject = () => {
                 { icon: "feather-award",      num: "Verified",   label: "Certification"        },
                 { icon: "feather-calendar",   num: "Events",     label: "Ticketing Included"   },
                 { icon: "feather-smartphone", num: "Web + Mobile", label: "Full Parity"         },
-                { icon: "feather-server",     num: "6-Service",  label: "Docker Infrastructure" },
+                { icon: "feather-server",     num: "Scalable",   label: "Cloud Infrastructure" },
               ].map(({ icon, num, label }) => (
                 <div className="digi-info-item" key={label}>
                   <i className={`digi-info-icon ${icon}`}></i>
@@ -347,9 +349,9 @@ const SmartTechAcademyProject = () => {
                   <p>
                     SmartTech Academy is a free technology education initiative built to open
                     the door into software, design, and digital careers for anyone willing to
-                    learn, regardless of their ability to pay. This platform is its digital
-                    brainchild, the academy's own home for courses, live classrooms, events,
-                    and certification.
+                    learn, regardless of their ability to pay. This platform is its home for
+                    courses, live classrooms, events, and certification, the digital brainchild
+                    of its sister brand, SmartTech Solutions.
                   </p>
                   <p>
                     Owned and operated by SmartTech Academy and engineered end to end by
@@ -379,7 +381,7 @@ const SmartTechAcademyProject = () => {
                     { icon: "feather-briefcase",  label: "Industry",     value: "Education Technology · Free Learning" },
                     { icon: "feather-book-open",  label: "Product",      value: "Learning Management System with Events & Certification" },
                     { icon: "feather-monitor",    label: "Platform",     value: "Web Application + Dedicated Mobile Experience" },
-                    { icon: "feather-code",       label: "Tech Stack",   value: "NextJS · Laravel · MySQL · Redis · Docker · Nginx · REST API · Queue Workers" },
+                    { icon: "feather-code",       label: "Tech Stack",   value: "NextJS · Laravel · MySQL · Redis · REST API · Queue Workers" },
                     { icon: "feather-users",      label: "Stakeholders", value: "Students · Tutors · Event Organisers · Admins" },
                     { icon: "feather-users",      label: "Team",         value: "6 Engineers, 1 UI/UX Designer, 3 QA Specialists" },
                     { icon: "feather-award",      label: "Delivered By", value: "SmartTech Solutions", highlight: true },
@@ -436,7 +438,7 @@ const SmartTechAcademyProject = () => {
                 </div>
                 <div className="digi-stack">
 
-                  {["NextJS", "Laravel", "MySQL", "Redis", "Docker", "Nginx", "REST API", "ReactJS", "Queue Workers", "Let's Encrypt SSL"].map((t, i) => (
+                  {["NextJS", "Laravel", "MySQL", "Redis", "REST API", "ReactJS", "Queue Workers", "Tailwind CSS", "WebSocket"].map((t, i) => (
                     <span
                       key={t}
                       className="digi-stack-tag"
@@ -543,23 +545,6 @@ const SmartTechAcademyProject = () => {
               ))}
             </div>
           </div>
-
-          <div className="digi-marquee-wrap">
-            <div className="digi-marquee-track digi-marquee-track-rev">
-              {[...screens.slice(7), ...screens.slice(0, 7), ...screens.slice(7), ...screens.slice(0, 7)].map((s, i) => (
-                <div
-                  className="digi-web-card"
-                  key={`r-${i}`}
-                  onClick={() => openLightbox(screens.findIndex(x => x.file === s.file))}
-                >
-                  <div className="digi-browser-chrome">
-                    <span></span><span></span><span></span>
-                  </div>
-                  <img src={deskImg(s.file)} alt={s.label} loading="lazy" />
-                </div>
-              ))}
-            </div>
-          </div>
         </section>
 
 
@@ -620,8 +605,8 @@ const SmartTechAcademyProject = () => {
               <div className="col-lg-5" data-sal="slide-left" data-sal-duration="700">
                 <p className="digi-process-lead mt_md--20 mt_sm--20">
                   Six structured phases took SmartTech Academy from a curriculum outline to a
-                  containerised, production-ready learning platform, built with the same
-                  rigour as any client engagement.
+                  production-ready learning platform, built with the same rigour as any
+                  client engagement.
                 </p>
               </div>
             </div>
@@ -739,8 +724,8 @@ const SmartTechAcademyProject = () => {
                     dedicated mobile experience.
                   </p>
                   <p>
-                    The result is a containerised, production-ready learning platform that
-                    gives SmartTech Academy's students courses, classrooms, events, and
+                    The result is a production-ready learning platform that gives SmartTech
+                    Academy's students courses, classrooms, events, and
                     verifiable certification, proof that SmartTech builds with the same
                     discipline for itself that it brings to every client.
                   </p>
