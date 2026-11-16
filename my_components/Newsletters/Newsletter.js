@@ -5,6 +5,7 @@ import NewsletterData from "../../data/elements/newsletter.json";
 import { postToBackend, getFormRenderedAt } from "@/helper/api";
 import Honeypot from "@/my_components/_Global/Honeypot";
 import FormAlert from "@/my_components/_Global/FormAlert";
+import AltchaWidget from "@/my_components/_Global/AltchaWidget";
 
 const Odometer = dynamic(() => import("react-odometerjs"), {
   ssr: false,
@@ -16,12 +17,19 @@ const Newsletter = () => {
   const [email, setEmail] = useState("");
   const [honeypot, setHoneypot] = useState("");
   const [submitState, setSubmitState] = useState({ status: null, message: "" });
+  const [altchaPayload, setAltchaPayload] = useState(null);
+  const [captchaKey, setCaptchaKey] = useState(0);
   const formRenderedAt = useRef(getFormRenderedAt());
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     if (submitState.status === "submitting") return;
+
+    if (!altchaPayload) {
+      setSubmitState({ status: "error", message: "Please complete the captcha first." });
+      return;
+    }
 
     setSubmitState({ status: "submitting", message: "" });
 
@@ -30,6 +38,7 @@ const Newsletter = () => {
       source: "Newsletter (footer)",
       website: honeypot,
       form_rendered_at: formRenderedAt.current,
+      altcha: altchaPayload,
     });
 
     if (result.ok) {
@@ -43,7 +52,16 @@ const Newsletter = () => {
     } else {
       setSubmitState({ status: "error", message: result.message });
     }
+
+    // Each ALTCHA solve is single-use server-side (consumed by this attempt whether it succeeded
+    // or not), so re-mount the widget to fetch a fresh challenge.
+    setAltchaPayload(null);
+    setCaptchaKey((k) => k + 1);
   };
+
+  // Matches SmartTech Academy: the captcha appears only once an email is being typed, so the many
+  // pages carrying this newsletter box don't each fetch a challenge on load.
+  const showCaptcha = Boolean(email.trim());
 
   return (
     <div className="container">
@@ -74,7 +92,7 @@ const Newsletter = () => {
                   <button
                     type="submit"
                     className="rbt-btn btn-md btn-gradient hover-icon-reverse"
-                    disabled={submitState.status === "submitting"}
+                    disabled={submitState.status === "submitting" || !showCaptcha || !altchaPayload}
                   >
                     <span className="icon-reverse-wrapper">
                       <span className="btn-text">
@@ -89,6 +107,16 @@ const Newsletter = () => {
                     </span>
                   </button>
                 </form>
+
+                {showCaptcha && (
+                  <div className="d-flex justify-content-center mt--20">
+                    <AltchaWidget
+                      key={captchaKey}
+                      onVerified={(payload) => setAltchaPayload(payload)}
+                      onReset={() => setAltchaPayload(null)}
+                    />
+                  </div>
+                )}
 
                 <FormAlert status={submitState.status} message={submitState.message} />
 

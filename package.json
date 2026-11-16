@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.5",
+    "altcha": "^3.6.0",
     "bootstrap": "^5.3.2",
     "framer-motion": "^11.0.8",
     "gray-matter": "^4.0.3",

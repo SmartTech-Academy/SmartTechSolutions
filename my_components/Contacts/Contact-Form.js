@@ -5,6 +5,7 @@ import { image_url } from "@/helper/Utilities";
 import { postToBackend, getFormRenderedAt } from "@/helper/api";
 import Honeypot from "@/my_components/_Global/Honeypot";
 import FormAlert from "@/my_components/_Global/FormAlert";
+import AltchaWidget from "@/my_components/_Global/AltchaWidget";
 
 
 
@@ -23,6 +24,8 @@ const ContactForm = ({ gap }) => {
   const [formData, setFormData] = useState(INITIAL_FORM_STATE);
   const [honeypot, setHoneypot] = useState("");
   const [submitState, setSubmitState] = useState({ status: null, message: "" });
+  const [altchaPayload, setAltchaPayload] = useState(null);
+  const [captchaKey, setCaptchaKey] = useState(0);
   const formRenderedAt = useRef(getFormRenderedAt());
 
   const handleChange = (event) => {
@@ -35,6 +38,11 @@ const ContactForm = ({ gap }) => {
 
     if (submitState.status === "submitting") return;
 
+    if (!altchaPayload) {
+      setSubmitState({ status: "error", message: "Please complete the captcha first." });
+      return;
+    }
+
     setSubmitState({ status: "submitting", message: "" });
 
     const result = await postToBackend("/contact", {
@@ -45,6 +53,7 @@ const ContactForm = ({ gap }) => {
       message: formData.message,
       website: honeypot,
       form_rendered_at: formRenderedAt.current,
+      altcha: altchaPayload,
     });
 
     if (result.ok) {
@@ -58,7 +67,16 @@ const ContactForm = ({ gap }) => {
     } else {
       setSubmitState({ status: "error", message: result.message });
     }
+
+    // Each ALTCHA solve is single-use server-side (consumed by this attempt whether it succeeded
+    // or not), so re-mount the widget to fetch a fresh challenge.
+    setAltchaPayload(null);
+    setCaptchaKey((k) => k + 1);
   };
+
+  // Matches SmartTech Academy: the captcha appears once the visitor starts typing the message
+  // (the form's last field), so pages don't fetch a challenge until someone is actually writing.
+  const showCaptcha = Boolean(formData.message.trim());
 
   return (
     <>
@@ -167,13 +185,23 @@ const ContactForm = ({ gap }) => {
                     <span className="focus-border"></span>
                   </div>
 
+                  {showCaptcha && (
+                    <div className="d-flex justify-content-center mb--20">
+                      <AltchaWidget
+                        key={captchaKey}
+                        onVerified={(payload) => setAltchaPayload(payload)}
+                        onReset={() => setAltchaPayload(null)}
+                      />
+                    </div>
+                  )}
+
                   <div className="form-submit-group">
                     <button
                       name="submit"
                       type="submit"
                       id="submit"
                       className="rbt-btn btn-md btn-gradient hover-icon-reverse w-100"
-                      disabled={submitState.status === "submitting"}
+                      disabled={submitState.status === "submitting" || !showCaptcha || !altchaPayload}
                     >
                       <span className="icon-reverse-wrapper">
                         <span className="btn-text">

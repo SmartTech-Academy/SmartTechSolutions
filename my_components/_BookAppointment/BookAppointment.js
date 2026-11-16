@@ -6,6 +6,7 @@ import sal from "sal.js";
 import Brands2 from "@/my_components/TrustedByBrands/Brands2";
 import Honeypot from "@/my_components/_Global/Honeypot";
 import FormAlert from "@/my_components/_Global/FormAlert";
+import AltchaWidget from "@/my_components/_Global/AltchaWidget";
 
 import { CONFIG } from "@/app_config.js";
 import { postToBackend, getFormRenderedAt } from "@/helper/api";
@@ -147,6 +148,8 @@ const BookAppointment = () => {
   const [formData, setFormData] = useState(INITIAL_FORM_STATE);
   const [honeypot, setHoneypot] = useState("");
   const [submitState, setSubmitState] = useState({ status: null, message: "" });
+  const [altchaPayload, setAltchaPayload] = useState(null);
+  const [captchaKey, setCaptchaKey] = useState(0);
   const formRenderedAt = useRef(getFormRenderedAt());
 
   const showSolutionField = formData.service === "ERP / CRM Solution Implementation";
@@ -165,6 +168,11 @@ const BookAppointment = () => {
 
     if (submitState.status === "submitting") return;
 
+    if (!altchaPayload) {
+      setSubmitState({ status: "error", message: "Please complete the captcha first." });
+      return;
+    }
+
     setSubmitState({ status: "submitting", message: "" });
 
     const result = await postToBackend("/appointments-booking", {
@@ -179,6 +187,7 @@ const BookAppointment = () => {
       message: formData.message,
       website: honeypot,
       form_rendered_at: formRenderedAt.current,
+      altcha: altchaPayload,
     });
 
     if (result.ok) {
@@ -189,7 +198,16 @@ const BookAppointment = () => {
     } else {
       setSubmitState({ status: "error", message: result.message });
     }
+
+    // Each ALTCHA solve is single-use server-side (consumed by this attempt whether it succeeded
+    // or not), so re-mount the widget to fetch a fresh challenge.
+    setAltchaPayload(null);
+    setCaptchaKey((k) => k + 1);
   };
+
+  // Matches SmartTech Academy: the captcha appears once the visitor starts describing their
+  // project (the form's last field), so the page doesn't fetch a challenge on load.
+  const showCaptcha = Boolean(formData.message.trim());
 
 
   return (
@@ -426,11 +444,21 @@ const BookAppointment = () => {
                     </div>
                   </div>
 
+                  {showCaptcha && (
+                    <div className="d-flex justify-content-center mb--20">
+                      <AltchaWidget
+                        key={captchaKey}
+                        onVerified={(payload) => setAltchaPayload(payload)}
+                        onReset={() => setAltchaPayload(null)}
+                      />
+                    </div>
+                  )}
+
                   <div className="form-submit-group">
                     <button
                       type="submit"
                       className="rbt-btn btn-gradient hover-icon-reverse w-100"
-                      disabled={submitState.status === "submitting"}
+                      disabled={submitState.status === "submitting" || !showCaptcha || !altchaPayload}
                     >
                       <span className="icon-reverse-wrapper">
                         <span className="btn-text">

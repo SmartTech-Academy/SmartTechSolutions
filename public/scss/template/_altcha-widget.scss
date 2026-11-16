@@ -1,0 +1,29 @@
+/* ALTCHA (https://altcha.org) captcha widget -- self-hosted, open-source, replacing the
+   previous hand-rolled slider/puzzle captcha. The widget is a web component styled entirely
+   through its own documented CSS custom properties (see node_modules/altcha/dist/types/
+   index.d.ts's CSSVariables), so there is no internal markup to target -- only variables to
+   set on the host element itself.
+
+   Light-mode values below just align the widget's accent/checkbox color with the site's own
+   primary brand color instead of ALTCHA's own default purple. Dark-mode values are a separate,
+   explicit override block -- CSS custom properties do not automatically adapt to this site's
+   `.active-dark-mode`/`.active-gray-mode` body classes, same gotcha as every other themed
+   component here (see the lazy-image skeleton's own dark-mode override next to this file). */
+altcha-widget {
+	--altcha-color-primary: var(--color-primary);
+	--altcha-color-primary-content: var(--color-white);
+	--altcha-color-success: var(--color-primary);
+	--altcha-border-color: var(--color-border);
+	--altcha-border-radius: 10px;
+	--altcha-max-width: 100%;
+}
+
+.active-gray-mode altcha-widget,
+.active-dark-mode altcha-widget {
+	--altcha-color-base: rgba(255, 255, 255, 0.03);
+	--altcha-color-base-content: var(--color-white);
+	--altcha-color-neutral: rgba(255, 255, 255, 0.06);
+	--altcha-color-neutral-content: var(--color-white);
+	--altcha-border-color: var(--dark-color-border);
+	--altcha-checkbox-border-color: var(--dark-color-border);
+}
